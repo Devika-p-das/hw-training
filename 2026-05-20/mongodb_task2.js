@@ -46,3 +46,23 @@ db.employees.deleteMany({
 })
 
 db.employees.find().pretty()
+
+/// Teminal commandsfor the task2
+/// Export JSON
+// mongoexport --db=companyDB --collection=employees --out=employees.json
+
+// /Export CSV
+// mongoexport --db=companyDB --collection=employees --type=csv --fields=empId,name,department,salary,isActive --out=employees.csv
+
+// /Database Dump
+// mongodump --db=companyDB --out=backup
+
+// /Drop Database
+//use companyDB
+//db.dropDatabase()
+
+/// Restore Database
+// mongorestore --db companyDB backup/companyDB
+
+/// Import JSON
+// mongoimport --db=companyDB --collection=importedEmployees --file=employees.json

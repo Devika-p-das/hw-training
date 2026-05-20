@@ -1,0 +1,3 @@
+{"_id":{"$oid":"6a0d48a9148489542fae456f"},"empId":101,"name":"Ravi","department":"IT","salary":82500.0,"isActive":true}
+{"_id":{"$oid":"6a0d4a35148489542fae4570"},"empId":102,"name":"Devi","department":"Mathematics","salary":80000,"isActive":true}
+{"_id":{"$oid":"6a0d4a35148489542fae4572"},"empId":105,"name":"Suresh","department":"IT","salary":88000.0,"isActive":true}
