@@ -1,5 +1,5 @@
 // using database companyDB
-use companyDB
+// use companyDB
 
 // inserting one employee document
 db.employees.insertOne({
