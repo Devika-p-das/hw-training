@@ -1,0 +1,16 @@
+Attended Group Meeting
+Completed Parsera Web extraction tasks
+ Extracted Product  data from the website of Yesstyle including 
+   - Product Name
+   - Brand Name
+   - Breadcrumbs / Category Hierarchy
+   - Product URL
+   - Product ID / SKU
+   - Selling Price / Current Price
+   - Original Price / Regular Price
+   - Discount Percentage
+   - Availability / Stock Status
+   - Product Rating / Star Rating
+   - Total Review Count
+   - Full Product Description
+   - Product Image URLs
