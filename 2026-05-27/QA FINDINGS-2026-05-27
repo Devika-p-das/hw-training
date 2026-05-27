@@ -1,0 +1,41 @@
+QA FINDINGS
+===========
+
+1. File: DataHut_AT_Dm_PriceExtractions_20260527.csv
+----------------------------------------------------
+
+- Total rows present: 16,347
+- All unique IDs are unique.
+- Unique IDs are not of consistent length.
+- The following columns are completely empty:
+  * percentage_discount
+  * pack_size
+  * region
+  * promotion_valid_upto
+- Only 48 records contain values in the promotion_price column.
+
+
+2. File: DataHut_AT_Foodora_Penny_PriceExtractions_20260527.csv
+----------------------------------------------------------------
+
+- Total rows present: 1,450
+- All unique IDs are unique.
+- The following columns are completely empty:
+  * percentage_discount
+  * promotion_price
+  * promotion_valid_from
+  * promotion_valid_upto
+  * region
+  * pack_size
+
+
+3. File: bayut_uae_project_2026_05_04.json
+-------------------------------------------
+
+- Total records present: 2,697 JSON records.
+- For record ID 2695:
+  * The project name "The Collection" is not highlighted during web search validation.
+  * The location provided in the dataset differs from the location displayed on the website.
+
+- For record ID 2697:
+  * The developer name is not highlighted during web search validation.
