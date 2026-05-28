@@ -1,19 +1,4 @@
-QA Report – bahrainfinder_bah_2026_05_04 File Validation
----------------------------------------------------------
-
-A total of 7,923 records were found in the JSON file.
-
-During QA validation, it was identified that the following fields are completely empty across all records:
-
-* price_per
-* rera_permit_number
-* dtcm_licence
-* user_id
-* sub_category_2
-
-No other issues were identified during the validation process.
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+QA Report 
 - DataHut_AT_Interspar_FullDump_20260528.CSV  File Validation
 --------------------------------------------------------------
 
