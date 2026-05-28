@@ -1,0 +1,65 @@
+QA Report – bahrainfinder_bah_2026_05_04 File Validation
+---------------------------------------------------------
+
+A total of 7,923 records were found in the JSON file.
+
+During QA validation, it was identified that the following fields are completely empty across all records:
+
+* price_per
+* rera_permit_number
+* dtcm_licence
+* user_id
+* sub_category_2
+
+No other issues were identified during the validation process.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+- DataHut_AT_Interspar_FullDump_20260528.CSV  File Validation
+--------------------------------------------------------------
+
+A total of 34,540 rows were identified in the CSV file.
+
+During the QA validation process, it was observed that several columns are completely empty across the dataset. Some of the identified empty columns include:
+
+* store_name	
+* store_addressline1	
+* store_addressline2	
+* store_suburb	
+* store_state	
+* store_postcode
+
+Additionally, the following observations were made:
+
+* A price mismatch was identified for the product in the second row. The selling price displayed on the website is 1,09 €, whereas the value present in the CSV file is 1.65.
+
+Duplicate validation was also performed, and all unique IDs were found to be unique. No duplicate unique IDs were identified.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+DataHut_CH_Coop_FullDump_20260528.CSV File Validation
+-----------------------------------------------------
+
+A total of 33,207 rows were identified in the CSV file.
+
+Duplicate validation was performed, and all unique IDs were found to be unique. No duplicate unique IDs were identified.
+
+During the QA validation process, the following observations were made:
+
+* A mismatch was identified in the "Number of Reviews" field for the product in the second row. The value in the CSV file is 30, whereas the website displays 31.
+
+ Several columns are completely empty. 
+* store_name	
+* store_addressline1	
+* store_addressline2	
+* store_suburb	
+* store_state	
+* store_postcode
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+DataHut_SI_Mercator_FullDump_20260528.CSV File Validation
+----------------------------------------------------------
+
+None of the product URLs in the CSV file are accessible. While validating the URLs, the website returned the error:
+
+"ERR_CONNECTION_TIMED_OUT – mercatoronline.si took too long to respond."
+
+Due to this issue, website validation could not be completed.
