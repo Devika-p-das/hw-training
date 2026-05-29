@@ -1,0 +1,23 @@
+QA Report – Sephora CSV Validation
+-------------------------------------
+
+* A total of 696 rows were identified in the CSV file.
+
+* Duplicate validation was performed, and no duplicate unique IDs were found. All PDP URLs were also found to be unique.
+
+* The dataset contains 512 unique product names.
+
+* During the QA validation process, the following observations were made:
+
+* For Unique ID 278072 (Balancing Treatment Lotion Toner), a total of 7 images are available on the website, whereas only 6 image URLs are present in the file.
+* For Unique ID 282994, a total of 8 images are available on the website, whereas only 6 image URLs are present in the file.
+
+The following columns were found to be completely empty across the dataset:
+
+* instructions
+* storage_instructions
+* country_of_origin
+* allergens
+* nutritional_score
+* organic_type
+* upc
