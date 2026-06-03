@@ -1,0 +1,70 @@
+QA Observations
+----------------
+machinerytrader_2026_06_03.csv
+-------------------------------
+
+1. Total records in the file: 8,678.
+
+2. All unique_id values are unique. No duplicate records found.
+
+3. All image URLs are provided in a single column: image_url.
+
+4. The pcid column is completely empty throughout the file.
+
+
+DataHut_AT_Billa_PriceExtractions_20260603.CSV
+----------------------------------------------
+
+1. Total records in the file: 12,381.
+
+2. All unique_id values are unique. No duplicate records found.
+
+3. The following columns are empty throughout the file:
+   - percentage_discount
+   - promotion_valid_from
+   - promotion_valid_upto
+   - price_valid_from
+   - region
+   - pack_size
+
+4. Found records where regular_price is populated even though no regular price is displayed on the website.
+   Example: unique_id = 00-264276.
+   Please verify whether the regular price is sourced from historical data as per the pricing rules.
+
+
+DataHut_AT_Dm_PriceExtractions_20260603.CSV
+--------------------------------------------
+
+1. Total records in the file: 16,494.
+
+2. All unique_id values are unique. No duplicate records found.
+
+3. The following columns are empty throughout the file:
+   - promotion_valid_upto
+   - region
+   - pack_size
+   - promotion_description
+   - percentage_discount
+
+4. Found records where selling_price is stored as an integer or does not contain two decimal places.
+(According to the requirement, the selling_price column should contain floating-point values with exactly two decimal places)
+   Example:
+   - unique_id = 2090000_510539
+   - selling_price = 5
+
+   Expected format: 5.00
+
+DataHut_AT_Spar_PriceExtractions_20260603.CSV
+----------------------------------------------
+
+1. Total records in the file: 39066.
+
+2. All unique_id values are unique. No duplicate records found.
+
+3. The following columns are empty throughout the file:
+   - price_valid_from
+   - percentage_discount
+   - promotion_valid_from
+   - promotion_valid_upto
+   - region
+   - pack_size
