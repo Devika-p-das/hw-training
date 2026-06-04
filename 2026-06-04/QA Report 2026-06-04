@@ -1,0 +1,47 @@
+QA Report 2026-06-04
+--------------------
+DataHut_SI_Mercator_FullDump_20260604.CSV
+__________________________________________
+
+1. Total records in the file: 16,927.
+
+2. Total columns in the file: 132.
+
+3. All unique_id values are unique. No duplicate records found.
+
+4. Multiple columns are empty across the data.
+
+5. PDP URLs are not accessible and require verification.
+
+DataHut_SI_Dm_FullDump_20260604.CSV
+____________________________________
+
+QA Observations
+
+1. Total records in the file: 11,623.
+
+2. Total columns in the file: 132.
+
+3. All unique_id values are unique. No duplicate records found.
+
+4. Multiple columns are empty across the data.There are also empty fields that are not mentioned in the requirement
+
+5. * The barcode field is not empty, although it is given empty in the requirement.
+ 
+   *  The columns file_name_1, file_name_2, file_name_3, file_name_4, file_name_5, and file_name_6 are empty throughout the dataset and are not specified in the requirement.
+
+6. Observed that promotion_valid_from and price_valid_from contain the same values throughout the  file. Verification required.
+
+DataHut_SI_Spar_FullDump_20260604.CSV
+______________________________________
+
+1. Total records in the file: 16285
+
+2. Total columns in the file: 132.
+
+3. All unique_id values are unique. No duplicate records found.
+
+4. Multiple columns are empty across the data.There are also empty fields that are not mentioned  in the requirement(e.g., variants, preparationinstructions, country_of_origin)
+
+5. The competitor name provided in the requirement is dm ,the actual competitor is spar
+
