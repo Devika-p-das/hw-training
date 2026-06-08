@@ -1,0 +1,40 @@
+QA Report 2026-06-08
+
+
+shopee_2026_06_06.csv
+----------------------
+Total Rows: 956
+Total Columns: 83
+
+- All unique_id values are unique; no duplicate records found.
+- File name mismatch: the provided file is "shopee_2026_06_07.csv", while the requirement specifies "shopee_2026_06_06.csv".
+- The regular_price field does not consistently follow the required 2-decimal format (e.g., 64.4, 50.6, 106, 137, 130, 19, 12, 55).
+- The selling_price field does not consistently follow the required 2-decimal format (e.g., 192.9, 61, 23, 109, 57, 127.7).
+- The promotion_price field contains integer and single-decimal values, while the price_was field contains integer values only, which does not comply with the required 2-decimal format.
+- Website-level validation could not be completed because the source website requires login access.
+
+
+sephora_2026_06_07.csv
+-----------------------
+Total Rows: 690
+Total Columns: 69
+
+- All unique_id values are unique; no duplicate records found.
+- The field "other" is empty across the dataset and is not mentioned in the requirement.
+- The regular_price field contains integer values, which do not comply with the required 2-decimal format.
+- The selling_price field contains integer values, which do not comply with the required 2-decimal format.
+- Some selected_variant values contain special characters, which may not comply with the required space-separated format.
+
+lazada_2026_06_07.csv
+----------------------
+Total Rows: 1,185
+Total Columns: 78
+
+- All unique_id values are unique; no duplicate records found.
+- The dataset contains additional fields not mentioned in the requirement: seller_tags, seller_rating, vouchers, product_specifications, rating, reviews, sale, shipping_details, and offer_validity.
+- File name date mismatch: the provided file is "lazad_2026_06_07.csv", whereas the requirement specifies "lazad_2026_05_20.csv".
+- The field "other" is empty across the dataset.
+- The regular_price field contains integer values, which do not comply with the required 2-decimal format.
+- The selling_price field contains integer values, which do not comply with the required 2-decimal format.
+- The promotion field contains additional date information (e.g., 2026.06.05-2026.06.08), which is not part of the promotion text. Promotions are not provided in the required comma-separated format.
+- The selected_variant field contains special characters in place of spaces (e.g., Popstar_Peach, Jazzy_Jam, Lo-Fi_Mauve), which does not comply with the required space-separated format.
