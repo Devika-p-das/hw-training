@@ -1,0 +1,61 @@
+DataHut_AT_Spar_FullDump_20260611.CSV
+--------------------------------------
+Total Rows    : 39,447
+Total Columns : 132
+
+* The field age_of_the_product is specified as empty in the requirement; however, it contains values in the dataset.
+* All unique_id values are unique.
+* All pdp_url values are unique.
+
+DataHut_AT_Billa_PriceExtractions_20260612.CSV
+----------------------------------------------
+Total Rows    : 12,463 
+Total Columns : 21
+
+* All unique_id values are unique.
+* All pdp_url values are unique.
+* The selling_price field does not follow the required two-decimal-place (2f) format.
+* Price inconsistency observed: for some products, promotion_price and selling_price have the same value while regular_price is different, despite only one price being displayed on the website.
+
+DataHut_AT_Dm_PriceExtractions_20260612.CSV
+--------------------------------------------
+Total Rows    : 16,678 
+Total Columns : 21
+
+* All unique_id values are unique.
+* All pdp_url values are unique.
+
+bhgre_2026_06_05.json
+----------------------
+Total Records: 10,064
+Total Fields: 19
+- Count of records is below the given requirement.
+- No duplicate records found.
+- The country field contains values other than "United States" (e.g., "NE", "Jamaica"), which does not meet the requirement.
+- Record 5883 has the country value "NE".
+
+century21_us_2026_06_05.json
+----------------------------
+Total Records: 37,873
+Total Fields: 19
+- Count of records is below the given requirement.
+- No duplicates found
+- The fields "email", "social" and "title" contain values, whereas the requirement specifies that these fields should be empty.
+- Record 10180 has country value "America" instead of "United States" which is againnst the requirement. 
+
+coldwellbankerinternational_2026_06_05.json
+--------------------------------------------
+Total Records: 4166
+Total Fields: 19
+- Count of records is below the given requirement.
+- No duplicates found
+- Found additional fields in the JSON file that are not specified in the requirement: social and profile_url.
+- The field sequence in the JSON file differs from the requirement.
+
+sutton_2026_06_05.json
+-----------------------
+Total Records: 5045
+Total Fields: 19
+- Count of records is below the given requirement.
+-  No duplicates found.
+- For some records, the state value is present in the JSON file but not available on the source website. For example, Record 4 contains the state value "BC", which is not displayed on the website.
