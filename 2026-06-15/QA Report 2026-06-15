@@ -1,0 +1,23 @@
+QA Report 2026-06-15
+
+autodoc_2026_06_15.csv
+-------------------------
+* The requirement specifies 24K+ records; however, only 23,242 records are present in the file.
+* Part number mismatch observed for the product page: https://www.autodoc.be/febi-bilstein/8316593. The part number in the dataset differs from the part number displayed on the website.
+* No other issues were identified during the QA check.
+
+autoteiledirekt_2026_06_15.csv
+-------------------------------
+* Field name mismatch observed: 'Availability' is specified in the requirement, whereas the dataset contains the field 'Stock'.
+* No other issues were identified during the QA check.
+
+autoonderdelen24_2026_06_15.csv
+--------------------------------
+No issues found.
+
+DataHut_AT_Billa_PriceExtractions_20260615.CSV
+-----------------------------------------------
+* Site shown UOM is missing for a product despite being available on the website (unique_id: 00-95499, row: 12008).
+* Unit information mismatch observed for unique_id 00-95499 (row: 12008): the dataset contains "stück", while the website displays "Ab 0,4 kg".
+* Grammage/UOM mismatch observed for unique_id 00-101511: the website shows "40 Beutel Packung", but the dataset contains "1 stück" instead of "40 btl".
+* Grammage/UOM mismatch observed for unique_id 00-101513: the website shows "20 Beutel Packung", but the dataset contains "1 stück" instead of "20 btl".
