@@ -1,0 +1,22 @@
+QA Report 2026-06-16
+
+DataHut_AT_Dm_PriceExtractions_20260616.CSV
+--------------------------------------------
+* Data Count Mismatch: The CSV file contains 16683 records, which exceeds the specified requirement of 16642.
+* No other issues found.
+
+DataHut_AT_Spar_PriceExtractions_20260616.CSV
+----------------------------------------------
+*Data Count Mismatch: The CSV file contains 39707 records, which exceeds the specified requirement of 39065.
+* Product IDs 2020003691744, 2020005796201, and 2020005618824 have both selling price and price-per-unit displayed on the website; however, the price-per-unit information is missing from the file.
+* No other issues found.
+
+DataHut_AT_Billa_PriceExtractions_20260616.CSV
+------------------------------------------------
+*Field name mismatch: The requirement specifies promo_description as a mandatory field, but the dataset contains promotion_description instead.
+* For product with unique ID 00-13851, the selling price and regular price are the same, whereas the promotion price differs. This does not follow the expected pricing pattern where the selling price and promotion price should be equal during a promotion.
+
+DataHut_SI_Dm_PriceExtractions_20260616.CSV
+--------------------------------------------
+*Data Count Mismatch: The CSV file contains 11524 records, which exceeds the specified requirement of 13268.
+* No other issues found.
