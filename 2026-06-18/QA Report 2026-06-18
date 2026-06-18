@@ -1,0 +1,13 @@
+QA Report 2026-06-18
+
+DataHut_CH_Denner_FullDump_20260618.CSV
+----------------------------------------
+* Data Count Mismatch: The CSV file contains 1498 records, the specified requirement of 1500.
+*As per the requirement, when grammage_quantity contains values such as '2 x', '3 x', etc., only the quantity after 'x' should be captured. However, multiple records contain the complete value (e.g., unique_id 1008297: '3 x 500', unique_id 1106675: '3 x 990'), indicating that the rule has not been consistently applied across the dataset.
+
+
+DataHut_CH_Coop_FullDump_20260618.CSV
+--------------------------------------
+*Price validation issue observed for product with unique_id: 3723900. The website displays 3.00 and 0.60/100g, while the extracted data contains regular_price = 3.5, selling_price = 3.5, and price_per_unit = 0.70/100g.
+*Data type mismatch observed: selling_price is stored as Double instead of String as per the requirement.
+*Data type mismatch observed: regular_price is stored as Double instead of String as per the requirement.
