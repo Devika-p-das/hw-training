@@ -1,0 +1,3 @@
+Learned about the Parquet file format and how it is used for efficient data storage and retrieval.
+Learned to convert a CSV file to Parquet format using Python's pandas library,and parquet file to csv,xml,json,xlsx file format using pandas library.
+completed conversion of parquet format file(swiggy_instamart_2026_06_16.parquet) to csv,xml,xlsx,json.             
