@@ -1,0 +1,16 @@
+QA Report 2026-06-19
+
+DataHut_AT_Dm_PriceExtractions_20260619.CSV
+============================================
+* Mismatch in PDP data count: The requirement says 16642 records, but the file contain 16762.
+* No other issues found.
+
+DataHut_SI_Mercator_PriceExtractions_20260619.CSV
+==================================================
+* Mismatch in PDP data count: The requirement says 16067 records, but the file contain 17011.
+* The website is currently unreachable.
+
+DataHut_AT_Spar_PriceExtractions_20260619.CSV
+===============================================
+* Mismatch in PDP data count: The requirement says 39065records, but the file contain 39763.
+* No  other issues found.
