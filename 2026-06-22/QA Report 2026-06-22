@@ -1,0 +1,18 @@
+QA Report 2026-06-22
+
+dari_ae_2026_06_04.json
+========================
+1. Field order does not match the order specified in the requirements.
+2. The requirement specifies only "Broker" as a valid value for the profession field. However, the following additional values were found:
+   - Brokers
+   - Broker Employee
+   - Evaluator
+
+bahrainfinder_bah_2026_06_04.json
+=================================
+1. Field order does not match the order specified in the requirements.
+2. In the furnished field, the required value "Fully Furnished" is not present in the file. All other required furnishing values are available.
+
+nawy_egp_2026_06_04.json
+=========================
+No issues found. The file complies with the specified requirements.
