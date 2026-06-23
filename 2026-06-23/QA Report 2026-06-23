@@ -1,0 +1,20 @@
+QA Report 2026-06-23
+
+dubizzle_bah_2026_06_04.json
+-----------------------------
+* No issues found. The file complies with the specified requirements.
+
+opensooq_bah_2026_06_04.json
+-----------------------------
+* Data count mismatch: The requirement specifies 876 records, whereas the file contains 817 records.
+* Iteration number mismatch: The requirement specifies "2026-06-03", while the file contains "2026-06-04".
+* The field "sub_category_1" is empty across all records, although it is not specified as an empty field in the requirements.
+
+bayut_bah_2026_06_04.json
+--------------------------
+* No issues found. The file complies with the specified requirements.
+
+dubizzle_uae_2026_06_04.json
+-----------------------------
+* Iteration number mismatch: The requirement specifies "2026-06-03", while the file contains "2026-06-04".
+ * The value "سنويا" specified in the requirements is not present in the price_per field.
