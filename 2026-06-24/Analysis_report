@@ -1,301 +1,186 @@
-
-  EDA REPORT — SWIGGY INSTAMART DATASET
-  Date     : 2026-06-24
-  Analyst  : Devika
-  Platform : Swiggy Instamart
 ================================================================
+  DATA ANALYSIS REPORT — SWIGGY INSTAMART
+  Date        : 2026-06-24
+  Platform    : Swiggy Instamart (Bengaluru, Karnataka)
  
+================================================================
+
 DATASET
 -------
-File    : swiggy_instamart_2026_06_23.csv
-Source  : Web-scraped Swiggy Instamart product listings
-Shape   : 63,670 rows x 31 columns (after cleaning: 29 columns)
- 
- 
+File   : swiggy_instamart_2026_06_23.csv
+Shape  : 63,670 records x 31 columns
+Scope  : Single-city crawl — Bengaluru, Karnataka (5 pin codes)
+
+
 TOOLS & LIBRARIES
 -----------------
-Language    : Python
-Environment : Jupyter Notebook
-Libraries   :
-  - pandas       — data loading, cleaning, aggregation
-  - matplotlib   — base plotting (bar, pie, scatter, histogram)
-  - seaborn      — boxplot, countplot, heatmap, histplot
- 
- 
-ANALYSIS STRUCTURE
-------------------
-1. Data Understanding  — shape, dtypes, info, describe, nunique, isnull
-2. Data Cleaning
-3. Univariate Analysis
-4. Bivariate Analysis
-5. Multivariate Analysis
- 
- 
+Language    : Python | Environment : Jupyter Notebook
+  - pandas      — cleaning, aggregation, pivot, crosstab
+  - matplotlib  — bar, pie, scatter, histogram, lollipop
+  - seaborn     — boxplot, heatmap, histplot, countplot
+
+
+ANALYSIS PIPELINE
+-----------------
+Data Loading → Data Understanding → Cleaning → Univariate → Bivariate → Multivariate
+
+
 DATA CLEANING
 -------------
-- Dropped 'unit_price' and 'net_quantity' — both 100% null across
-  all 63,670 rows; no analytical value retained
-- 'out_of_stock_flag' standardized: stripped whitespace, lowercased,
-  mapped {'yes': 1, 'no': 0} for numerical aggregation
- 
- 
+  - Removed 'unit_price' and 'net_quantity' (100% null, 63,670 rows)
+  - Standardized 'out_of_stock_flag': lowercased + mapped yes→1, no→0
+
+
 ================================================================
-UNIVARIATE FINDINGS
+INSIGHTS
 ================================================================
- 
-DEPARTMENTS (9 total)
----------------------
-Rank  Department              Count
-1     Sweet Tooth             12,513   (largest — 19.7% of catalog)
-2     Personal Care            9,170
-3     Beauty & Cosmetics       8,443
-4     Dairy & Breakfast        8,127
-5     Cold Drinks & Juices     7,496
-6     Munchies                 5,548
-7     Bakery & Biscuits        5,526
-8     Atta, Rice & Dal         4,388
-9     Baby Care                2,459   (smallest)
- 
-Sweet Tooth alone accounts for nearly 1 in 5 products listed.
- 
-TOP 10 CATEGORIES
------------------
-Rank  Category                          Count
-1     Cold Drinks and Juices            7,496
-2     Bath and Body                     6,841
-3     Chocolates                        5,942
-4     Biscuits and Cakes                5,526
-5     Chips and Namkeens                4,913
-6     Dairy, Bread and Eggs             4,911
-7     Atta, Rice and Dal                4,388
-8     Ice Creams and Frozen Desserts    4,079
-9     Cereals and Breakfast             3,851
-10    Skincare                          3,741
- 
-Cold Drinks and Juices is the single largest category with 7,496
-listings. Bath and Body (Personal Care) is the largest non-food
-category at 6,841.
- 
-TOP 10 BRANDS
--------------
-Rank  Brand               Count
-1     NOICE               1,567
-2     Amul                1,436
-3     Cadbury             1,089
-4     Britannia             877
-5     The Baker's Dozen     736
-6     Milky Mist            676
-7     Supreme Harvest       592
-8     Plum                  550
-9     Minimalist            531
-10    Paper Boat            525
- 
-NOICE leads product count at 1,567, ahead of legacy brands like
-Amul (1,436) and Cadbury (1,089). Plum and Minimalist represent
-D2C beauty brands entering the top 10.
- 
-PRICE DISTRIBUTION
-------------------
-- Product price is right-skewed; majority of products fall in the
-  low-to-mid price range with a long tail of high-price outliers
-- Discount % shows a multi-modal pattern; a significant portion of
-  products carry 0% discount
- 
-BOX PLOT OBSERVATIONS (6 numeric columns)
-------------------------------------------
-- item_mrp, item_selling_price, product_price : upper-end outliers
-  present, consistent with premium SKUs
-- promo_offer_price : heavy outlier presence; most values clustered low
-- discount_in_percent : median around 15-20%; several zero-discount
-  outliers and some above 50%
-- stock_count : mostly low values; a few SKUs show very high stock
- 
- 
+
+── DEPARTMENT, CATEGORY & BRAND STRUCTURE ──────────────────────
+
+  · Sweet Tooth is the largest department (12,513 SKUs, ~20% of
+    catalog), yet it is the least discounted (11.43% avg).
+  · Cold Drinks and Juices is the largest single category (7,496
+    SKUs), followed by Bath and Body (6,841) and Chocolates (5,942).
+  · NOICE leads brand listing count (1,567), ahead of legacy
+    brands Amul (1,436) and Cadbury (1,089).
+  · Plum and Minimalist — D2C beauty brands — appear in the top
+    10 brands, signaling strong skincare catalog presence.
+  · Product price is extremely right-skewed: most products are
+    priced below ₹500, with a long tail reaching ₹47,000.
+
+
+── DISCOUNT STRATEGY ───────────────────────────────────────────
+
+  · Atta, Rice & Dal (22.02%) and Beauty & Cosmetics (21.63%)
+    receive the highest average discounts — despite lower volumes.
+  · Sweet Tooth (11.43%) and Cold Drinks & Juices (12.08%) are
+    the least discounted departments despite dominating the catalog.
+  · Insight: High-demand, impulse-purchase categories require
+    less price incentive; staples and personal care need more.
+  · The discount gap between the most and least discounted
+    department is 10.59 percentage points.
+  · Baby Care (19.95%) and Bakery & Biscuits (19.82%) sit just
+    below the 20% mark — a near-uniform discount tier.
+
+  Brand-level discount behavior (Top 10):
+  · Supreme Harvest: highest consistent discount (~34% median)
+  · NOICE: frequently discounted (~27% median); occasional 60–75%
+  · Amul: near-zero median discount; selective outliers to ~70%
+  · Paper Boat: almost no discount (~2% median); rare promotions
+  · Minimalist and Plum: stable, consistent discounts (15–20%)
+  · Cadbury and Milky Mist: mostly low discounts; sporadic promos
+  · Insight: Discount is a brand-level strategy, not category-wide
+
+
+── AVAILABILITY & STOCK ────────────────────────────────────────
+
+  · Platform-wide stockout rate: 39.1% (24,905 of 63,670 items
+    are out of stock).
+  · Ice Creams and Frozen Desserts: 52.34% OOS — worst category;
+    more than half of all listed SKUs are unavailable.
+  · Cold Drinks & Juices (48.24%), Dairy, Bread and Eggs (45.96%),
+    and Biscuits and Cakes (44.99%) follow closely.
+  · All top 8 highest-OOS categories are food and beverage —
+    indicating a systemic supply chain gap in food categories.
+  · Sweet Tooth and Cold Drinks & Juices show near 1:1 in-stock
+    to OOS ratios — severe for the two highest-volume departments.
+  · Skincare (22.29%), Makeup (24.41%), and Baby Care (27.49%)
+    are the best-stocked categories.
+  · Personal Care and Beauty & Cosmetics maintain over 73% stock
+    availability — the healthiest departments on the platform.
+
+
+── PRICE vs DISCOUNT RELATIONSHIP ─────────────────────────────
+
+  · Correlation between product_price and discount_in_percent
+    = -0.003 (essentially zero).
+  · Discount is entirely decoupled from product price — expensive
+    products are not given higher discounts, and vice versa.
+  · Scatter analysis confirms: products priced below ₹1,000 show
+    the widest discount range (0%–80%); products above ₹2,000
+    cluster near 0% discount across all top categories.
+  · Insight: Discounting is a brand/category strategy, not a
+    price-sensitivity response.
+
+
+── PREMIUM vs MASS BRAND POSITIONING ──────────────────────────
+
+  · Dyson is the highest average-priced brand (₹45,900 avg)
+    with only 8% avg discount — brand value sustains demand.
+  · HomeBasic is the highest discounted brand (83% avg discount)
+    at ₹999 avg price — heavy promotion drives volume.
+  · Calvin Klein (₹3,585), Olaplex (₹3,200), and Jean Paul
+    Gaultier (₹2,793) lead premium pricing after Dyson.
+  · Most brands cluster below ₹2,000 avg price, confirming
+    Swiggy Instamart is primarily a mass-market grocery platform.
+  · Premium brands compete on brand equity; mass-market brands
+    compete aggressively through discounts.
+
+
+── STORE & LOCATION ANALYSIS ───────────────────────────────────
+
+  · Dataset covers 5 stores across 5 Bengaluru pin codes only —
+    all locations in Karnataka, India.
+  · Store-level avg price ranges from ₹264.95 (Begur, 560114)
+    to ₹291.11 (Kumaraswamy Layout, 560111) — a ₹26 spread.
+  · Pin code-level avg discount range: 16.04% to 16.40% — very
+    narrow, suggesting uniform platform-wide pricing in Bengaluru.
+  · Insight: Location-based price and discount variation is
+    minimal; supply availability varies more than pricing across
+    stores.
+
+  Store x Category OOS highlights (from pivot):
+  · Ice Creams OOS is consistently 49–58% across ALL 5 stores —
+    confirms platform-wide supply failure, not store-specific.
+  · Kanakapura Rd store (560070): highest OOS for Ice Creams
+    (58.28%) and Cereals (51.95%).
+  · Kumaraswamy Layout store (560111): relatively better stock
+    across most categories — lowest OOS in Bath and Body (20.41%)
+    and Makeup (14.83%).
+  · Begur store (560114): most balanced availability overall.
+
+
+── CORRELATION SUMMARY ─────────────────────────────────────────
+
+  · item_selling_price vs product_price = 1.00 (identical columns)
+    → One column is redundant; drop one for modeling/reporting.
+  · item_mrp vs item_selling_price = 0.97 — prices track MRP closely.
+  · discount_in_percent vs all price columns ≈ 0 — no relationship.
+  · stock_count is independent of price, MRP, and discount (~-0.08).
+
+
 ================================================================
-BIVARIATE FINDINGS
+KEY TAKEAWAYS FOR SUBMISSION
 ================================================================
- 
-DEPARTMENT vs AVERAGE DISCOUNT (%)
-------------------------------------
-Department              Avg Discount
-Atta, Rice & Dal        22.02%   ← highest discounted dept
-Beauty & Cosmetics      21.63%
-Baby Care               19.95%
-Bakery & Biscuits       19.82%
-Personal Care           18.51%
-Munchies                16.96%
-Dairy & Breakfast       12.33%
-Cold Drinks & Juices    12.08%
-Sweet Tooth             11.43%   ← lowest discounted dept
- 
-Staples (Atta, Rice & Dal) are discounted most aggressively at 22%.
-Sweet Tooth and Cold Drinks & Juices, despite being the largest
-departments by listing count, offer the lowest average discounts
-(11.43% and 12.08% respectively).
- 
-CATEGORY vs OUT-OF-STOCK RATE (%)
------------------------------------
-Category                          OOS Rate
-Ice Creams and Frozen Desserts    52.34%   ← worst availability
-Cold Drinks and Juices            48.24%
-Dairy, Bread and Eggs             45.96%
-Biscuits and Cakes                44.99%
-Chocolates                        44.80%
-Cereals and Breakfast             44.35%
-Sweet Corner                      43.95%
-Chips and Namkeens                43.23%
-Paan Corner                       39.79%
-Atta, Rice and Dal                33.59%
-Feminine Hygiene                  30.71%
-Hair Care                         28.63%
-Bath and Body                     28.12%
-Baby Care                         27.49%
-Makeup                            24.41%
-Skincare                          22.29%   ← best availability
- 
-Ice Creams and Frozen Desserts has a critical OOS rate of 52.34% —
-more than half the listed SKUs are unavailable. The top 8 categories
-by OOS rate are all food/beverage categories. Personal care and
-beauty categories (Skincare, Makeup, Bath and Body) show
-significantly better availability, with Skincare at just 22.29%.
- 
-DEPARTMENT vs OUT-OF-STOCK (Grouped Count)
--------------------------------------------
-- Food-dominant departments (Sweet Tooth, Cold Drinks & Juices,
-  Dairy & Breakfast) show higher absolute out-of-stock counts
-  due to both higher listing volume and higher OOS rate
-- Baby Care and Atta, Rice & Dal have comparatively better
-  in-stock ratios despite moderate OOS rates
- 
-BRAND vs AVERAGE PRODUCT PRICE (Top 15)
------------------------------------------
-- Premium/niche brands lead average price; mass-market brands
-  like Amul, Britannia, and Cadbury cluster in the mid range
-- NOICE (top by count) is mid-to-low priced, indicating a
-  high-volume, budget-friendly positioning
- 
-BRAND vs DISCOUNT DISTRIBUTION (Top 10 Brands)
-------------------------------------------------
-- High discount variance within each top brand (wide box plots)
-- Some brands show near-zero median discount with high outliers,
-  suggesting selective promotional pricing rather than blanket discounts
- 
-STORE vs AVERAGE PRODUCT PRICE (Top 10)
------------------------------------------
-- Meaningful price differences observed across store locations,
-  indicating store-level or zone-based pricing by Swiggy Instamart
- 
-PIN CODE vs AVERAGE DISCOUNT (Top 15)
----------------------------------------
-- Certain pin codes consistently receive higher average discounts
-  than others, pointing to location-based promotional strategies
- 
- 
-================================================================
-MULTIVARIATE FINDINGS
-================================================================
- 
-DEPARTMENT x CATEGORY x SUB-CATEGORY TAXONOMY
------------------------------------------------
-- Full three-level hierarchy mapped; each department fans into
-  multiple categories and sub-categories confirming a deep catalog
- 
-DEPARTMENT x BRAND x DISCOUNT
--------------------------------
-- Within the same department, individual brands show significantly
-  different average discount levels, confirming brand-level
-  promotional strategies rather than uniform department-wide discounts
- 
-PRICE vs DISCOUNT by CATEGORY (Top 5 Categories)
---------------------------------------------------
-- Scatter plot shows no clear linear relationship between product
-  price and discount percentage across top 5 categories
-- High-priced products do not uniformly carry higher discounts;
-  discount is driven more by category/brand strategy than price
- 
-STORE x CATEGORY OUT-OF-STOCK PIVOT
--------------------------------------
-- Pivot table reveals specific store-category combinations with
-  disproportionately high stockout rates
-- Food categories (Ice Cream, Cold Drinks) show high OOS across
-  most stores, confirming a platform-wide supply issue rather
-  than isolated store problems
- 
-PIN CODE: AVERAGE PRICE vs AVERAGE DISCOUNT (Scatter)
--------------------------------------------------------
-- Some pin codes exhibit both high average price AND high average
-  discount simultaneously — likely premium zones with aggressive
-  promotional targeting
-- Cluster of pin codes at low price + low discount represents
-  standard-tier zones
- 
-CORRELATION MATRIX
-------------------
-                     item_mrp  item_selling_price  product_price  discount_%  stock_count
-item_mrp                 1.00                0.97           0.97        0.14        -0.08
-item_selling_price       0.97                1.00           1.00       -0.00        -0.08
-product_price            0.97                1.00           1.00       -0.00        -0.08
-discount_in_percent      0.14               -0.00          -0.00        1.00         0.00
-stock_count             -0.08               -0.08          -0.08        0.00         1.00
- 
-Key observations:
-- item_mrp, item_selling_price, product_price are near-perfectly
-  correlated (0.97–1.00); they track each other consistently
-- discount_in_percent has near-zero correlation with selling price
-  (-0.00) and very weak correlation with MRP (0.14); price level
-  does NOT drive discount level
-- stock_count is independent of all price and discount variables
-  (correlations -0.08 to 0.00)
- 
-BRAND: AVERAGE PRICE vs AVERAGE DISCOUNT
-------------------------------------------
-- Scatter shows most brands cluster at low-price + low-discount
-- Premium brands are isolated outliers in the high-price zone
-- No brand consistently achieves both high price and high discount
- 
- 
-================================================================
-KEY TAKEAWAYS
-================================================================
- 
-1. CATALOG DOMINANCE
-   Sweet Tooth is the largest department (12,513 SKUs / ~19.7%).
-   Cold Drinks and Juices is the largest single category (7,496).
-   NOICE is the top brand by listing count (1,567), ahead of Amul.
- 
-2. DISCOUNT STRATEGY IS INVERTED
-   Staple categories (Atta, Rice & Dal) are discounted most (22.02%).
-   High-volume impulse categories (Sweet Tooth, Cold Drinks) are
-   discounted least (11.43% and 12.08%), likely due to high demand.
- 
-3. CRITICAL AVAILABILITY PROBLEM IN FOOD CATEGORIES
-   Ice Creams and Frozen Desserts has a 52.34% OOS rate — over half
-   the SKUs listed are unavailable. Cold Drinks (48.24%), Dairy
-   (45.96%), and Biscuits (44.99%) also exceed 44% OOS rates.
-   Personal care categories (Skincare 22.29%, Makeup 24.41%) show
-   far better availability.
- 
-4. PRICE AND DISCOUNT ARE DECOUPLED
-   Correlation between product_price and discount_in_percent is -0.00.
-   Discounting is a brand/category strategy, not a price-driven one.
- 
-5. LOCATION INFLUENCES PRICING AND PROMOTIONS
-   Both store-level and pin code-level analysis show variation in
-   average price and discount, indicating zone-based pricing by
-   Swiggy Instamart.
- 
-6. PRICE COLUMNS ARE REDUNDANT
-   item_selling_price and product_price correlate at 1.00.
-   For modeling or reporting, one of these columns is sufficient.
- 
+
+  1. Swiggy Instamart Bengaluru has a 39.1% platform-wide OOS
+     rate — a critical supply chain problem concentrated in food.
+
+  2. The highest-volume departments (Sweet Tooth, Cold Drinks)
+     are the least discounted and most stocked out — demand
+     exceeds supply without price incentives.
+
+  3. Staple and personal care categories are discounted most
+     aggressively, suggesting price-sensitive consumer targeting.
+
+  4. Discount and price are completely independent (r = -0.003);
+     discounting is brand/category driven, not price driven.
+
+  5. Premium brands (Dyson, Calvin Klein) maintain low discounts;
+     mass-market brands (HomeBasic, Supreme Harvest) lead on offers.
+
+  6. All data originates from 5 Bengaluru stores — findings are
+     city-specific and cannot be generalized nationally.
+
+  7. item_selling_price and product_price are perfectly correlated
+     (r = 1.00) and represent duplicate information in the dataset.
+
 ================================================================
 COLUMNS REMOVED
 ================================================================
-- unit_price   : 100% null across all 63,670 rows
-- net_quantity : 100% null across all 63,670 rows
- 
+  - unit_price   : 100% null (63,670 rows)
+  - net_quantity : 100% null (63,670 rows)
+
 ================================================================
 END OF REPORT
 ================================================================
- 
-
