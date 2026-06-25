@@ -1,0 +1,31 @@
+bayut_uae_2026_06_04.json
+-------------------------
+
+* Additional fields found in the file that are not mentioned in the requirements:
+orn_number, adm_number, 3d_live, 3d_image, 2d_image, ded_number_2, ded_number_3, ded_number_4, trucheck_on, trubroker, property_of_the_week, bln_number, quality_lister, email, rating, no_of_reviews.
+
+* Data count matches the requirement: 623,915 records.
+
+* package_type:
+The values "free" and "" (empty string) specified in the requirements are not present in the file. Only the values "hot", "premium", and "superhot" are available.
+
+* currency:
+Only the value "AED" is present. No empty values were found.
+
+
+bayut_uae_project_2026_06_04.json
+---------------------------------
+
+* Data count mismatch:
+Requirement: 686 records
+File: 2,794 records
+
+* Doubt:
+The dataset appears to contain different types of URLs. Some URLs correspond to Property Detail Pages (PDP), while others appear to be Listing Pages (PLP) or project pages. This may affect the availability and consistency of property-specific attributes.
+
+Examples:
+PLP:
+https://www.bayut.com/for-sale/property/dubai/dubai-south/residential-district/racemosa/
+
+PDP:
+https://www.bayut.com/for-sale/property/dubai/business-bay/hq-by-rove/
