@@ -1,0 +1,50 @@
+woodsbros_2026_07_05.json
+-------------------------
+- Field order does not match the required schema.
+- Data count mismatch.
+- Profile URL mismatch:
+  The URLs in the file point to the listing page instead of the corresponding agent profile page.
+  - https://www.woodsbros.com/roster/agents/1 (First name: Monica)
+  - https://www.woodsbros.com/roster/agents/4 (First name: Jeremy)
+  - https://www.woodsbros.com/roster/agents/19 (First name: Shane)
+- Field "languages" contains values, although it is specified as an empty field in the requirements.
+- Field "email" is completely empty across the dataset but is not mentioned as an empty field in the requirements.
+
+
+robertsbrothers_2026_07_05.json
+-------------------------------
+- Field order does not match the required schema.
+- Data count mismatch.
+- Mandatory field "office_phone_numbers" contains empty arrays ([]) across the dataset.
+
+
+iowarealty_2026_07_05.json
+--------------------------
+- Field order does not match the required schema.
+- Mandatory field "office_phone_numbers" contains empty arrays ([]) across the dataset.
+- For the following profiles, the office phone number has been extracted into the "agent_phone_numbers" field instead of "office_phone_numbers":
+  - https://www.iowarealty.com/bio/patbeck
+  - https://www.iowarealty.com/bio/jonmoberg
+- Field "state" contains empty strings, but it is not mentioned as an empty field in the requirements.
+
+
+harrynorman_2026_07_05.json
+---------------------------
+- Field order does not match the required schema.
+- Data count mismatch.
+- Field "email" is empty across the dataset.
+- Field "state" contains empty strings, but it is not mentioned as an empty field in the requirements.
+
+
+ewm_2026_07_05.json
+-------------------
+- Field order does not match the required schema.
+- No other issues found.
+
+
+rector_hayden_2026_07_05.json
+-----------------------------
+- Field order does not match the required schema.
+- Data count mismatch.
+- For https://www.riddellsmithgroup.com, the "first_name" and "last_name" values in the dataset do not match the information displayed on the website.
+- Field "email" is empty across the dataset.
