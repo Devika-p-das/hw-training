@@ -1,0 +1,25 @@
+haraj_ksa_2026_07.json
+----------------------
+-"For link: https://haraj.com.sa/11182952031/دور_ارضي_اللايجار_طويق_الغروب_3800
+9 images given in the site but number_of_photos in file is 4"
+
+sedd_uae_2026_07.json
+----------------------
+-url is not able to access.
+
+
+wasalt_ksa_2026_07.json
+------------------------
+-"For https://wasalt.com/en/property/sale/apartment-101-sqm-with-3-bedrooms-5862243
+broker , broker_display_name is different from the name given in the website."
+
+
+aqar_ksa/aqar_ksa_2026_07.json
+-----------------------------------
+-field currency also contain empty string "" other than  "ريال"
+-No other issues found.
+
+servicesbahrain/servicesbahrain_bah_2026_07.json
+------------------------------------------------
+- Field "legal_type" contains the values "Corporate CR" and "Individual CR", whereas the requirements specify the expected values as "Corporate" and "Individual CR".
+-No issues found.
