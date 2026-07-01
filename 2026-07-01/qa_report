@@ -1,0 +1,80 @@
+QA Report 2026-07-01
+
+emlakjet_tur_2026_07.json
+-------------------------
+ unable to access url emlakjet.com
+
+hepsiemlak_tur_2026_07.json
+----------------------------
+"mismatch in number of photos:
+https://www.hepsiemlak.com/istanbul-sile-uvezli-satilik/imarli-konut/163153-192
+https://www.hepsiemlak.com/adiyaman-merkez-turgut-reis-kiralik/daire/141911-128 "
+
+bayut_bah_2026_07
+------------------
+No issues found.
+
+home_realestate_2026_07_05.json
+--------------------------------
+mismatch in field order
+"Listing page url present in profile url 
+https://www.homerealestate.com/roster/agents/3
+
+https://www.homerealestate.com/roster/agents/12
+
+https://www.homerealestate.com/roster/agents/13"
+*Field languages contains value which is specipied as empty in the requirement, email is only empty field.
+*city Only conntains value Lincoln ,but requirement says "Lincoln
+Kearney"
+
+semonin_realtors_2026_07_05.json
+---------------------------------
+Mismatch in order
+*data count mismatch
+email is empty across the data not mentioned in the requirement.
+
+reecenichols_2026_07_05.json
+-----------------------------
+mismatch in field order.
+"Listing page url present instead of profile url
+https://www.reecenichols.com/roster/agents/274
+https://www.reecenichols.com/roster/agents/279
+https://www.reecenichols.com/roster/agents/255
+https://www.reecenichols.com/roster/agents/292
+https://www.reecenichols.com/roster/agents/27"
+"
+office_phone_numbers contains values. email is  empty across the data
+"
+
+
+houlihanlawrence_2026_07_05.json
+---------------------------------
+Mismatch in field order.
+"Full name is assigned only on first name: https://www.houlihanlawrence.com/bio/CamilleMordaunt,first_name:""Camille T Allen Mordaunt""
+
+image_url  not found for https://www.houlihanlawrence.com/bio/AndrewSmith"
+there is no empty string " " present in state
+
+
+century21_us_2026_07_05.json
+-----------------------------
+mismatch in field order
+mismatch in datacount
+field email ,title,social mentioned as empty in requirement is not empty,contains values
+"Invalid other_urls found . eg: profile_url:
+https://www.century21.com/ny/mattituck/agents/michael-jablonski/aid-P00200000GDQDgOTuTKgyh5SKGfAHktmtTrF2Rf9
+https://www.century21.com/md/baltimore/agents/tonya-gross/aid-P00200000000034Sy1ql4dcSphekDDJJCKSWONnw
+https://www.century21.com/nj/blackwood/agents/sandy-ferguson/aid-P00200000GrRfZ4vhjDe2jrGzIKVr8VEptLbX3et
+
+for profile_url: https://www.century21.com/ny/mattituck/agents/michael-jablonski/aid-P00200000GDQDgOTuTKgyh5SKGfAHktmtTrF2Rf9 social media url present in site but not in the file"
+
+compass_2026_07_05.json
+-------------------------
+address, city, zipcode, state are completely empty on the file which is mentioned as mandatory  fields.
+
+bhgre_2026_07_05.json
+----------------------
+mismatch in field order.
+datacount mismatch.
+mismatch in image_url for profile:https://www.bhgre.com/in/greenwood/agents/ayo-akinlade/aid-P00200000GvOHBxcSa5P3o1VmTULIVah8jPGX1zc
+country contains [ 'Jamaica', 'United States' ] requirement only mention united states.
