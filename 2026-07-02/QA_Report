@@ -1,0 +1,61 @@
+QA Report 2026-07-02
+
+evrealestate_2026_07_05.json
+----------------------------
+- Data count mismatch.
+- Invalid profile URLs found:
+  https://www.evrealestate.com/en/our-advisors/sel\u00e9na-dub\u00e9/c8c2ae65-9050-4559-a689-42902f0c7d0c?userId=9c44d3e4-7d0f-4d4f-b616-2f68d7d7889b
+  https://www.evrealestate.com/en/our-advisors/s\u00e9bastien-cordeau/5672bc22-808d-41b4-97ae-e3b3f2b70363?userId=5672bc22-808d-41b4-97ae-e3b3f2b70363
+  https://www.evrealestate.com/en/our-advisors/serge-b\u00e9langer/ed4f59de-d4ce-4d0e-85b4-4ab39b85f71c?userId=ed4f59de-d4ce-4d0e-85b4-4ab39b85f71c
+- Special characters (accented characters) were found in some names, and the corresponding profile URLs are not accessible or return "Not Found". Examples include:
+  - S\u00e9bastien
+  - R\u00e9
+  - Ren\u00e9-F\u00e9lix
+
+royallepage_2026_07_05.json
+---------------------------
+- Order mismatch.
+- Data count mismatch.
+- Full name is assigned to the `first_name` field instead of only the first name:
+  https://www.royallepage.ca/en/agent/quebec/st-lambert/bernard-rodrigue-m-urb/23858/
+  https://www.royallepage.ca/en/agent/saskatchewan/saskatoon/mohammad-asif-a-khan/69902/
+  https://www.royallepage.ca/en/agent/ontario/mississauga/helder-bruno-miranda-neiva/52791/
+
+realtysouth_2026_07_05.json
+---------------------------
+- Order mismatch.
+- Data count mismatch.
+- Listing page URLs are provided instead of agent profile URLs:
+  https://www.realtysouth.com/roster/agents/5
+  https://www.realtysouth.com/roster/agents/6
+  https://www.realtysouth.com/roster/agents/8
+  https://www.realtysouth.com/roster/agents/9
+  https://www.realtysouth.com/roster/agents/14
+  https://www.realtysouth.com/roster/agents/18
+  https://www.realtysouth.com/roster/agents/19
+  https://www.realtysouth.com/roster/agents/20
+  https://www.realtysouth.com/roster/agents/23
+  https://www.realtysouth.com/roster/agents/26
+  https://www.realtysouth.com/roster/agents/27
+  https://www.realtysouth.com/roster/agents/28
+  https://www.realtysouth.com/roster/agents/38
+  https://www.realtysouth.com/roster/agents/40
+  https://www.realtysouth.com/roster/agents/52
+  https://www.realtysouth.com/roster/agents/59
+  https://www.realtysouth.com/roster/agents/60
+  https://www.realtysouth.com/roster/agents/66
+  https://www.realtysouth.com/roster/agents/67
+  https://www.realtysouth.com/roster/agents/
+
+alliebeth_2026_07_05.json
+--------------------------
+- Order mismatch.
+- Data count mismatch.
+- Listing page URL is provided instead of the agent profile URL:
+  https://www.alliebeth.com/roster/agents/8
+
+longandfoster_2026_07_05.json
+-----------------------------
+- Order mismatch.
+- Data count mismatch.
+- The `title` field contains values, although it is specified as an empty field in the requirements.
