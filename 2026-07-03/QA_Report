@@ -1,0 +1,40 @@
+QA Report 2026-07-03
+
+coldwellbankerinternational_2026_07_05.json
+-------------------------------------------
+- Data count mismatch.
+- Inconsistent handling of non-person names: Some non-person names are split across `first_name`, `middle_name`, and `last_name`, while others are stored entirely in the `first_name` field.
+  https://www.coldwellbankerinternational.com/agent/rurkshE7nY
+  https://www.coldwellbankerinternational.com/agent/hyY2oFDaQ
+
+kentwood_2026_07_05.json
+-------------------------
+- Inconsistent handling of non-person names: Some non-person names are split across `first_name`, `middle_name`, and `last_name`, while others are stored entirely in the `first_name` field.
+  https://www.kentwood.com/bio/themodglincollection
+  https://www.kentwood.com/bio/pattygreg
+- The `city` field contains additional values (`Colorado Springs` and `Dillon`) that are not specified in the requirements.
+
+DataHut_SI_Spar_PriceExtractions_20260703.CSV
+---------------------------------------------
+- The `percentage_discount` column is empty across all records, but it is not listed as an expected empty field in the requirements.
+
+DataHut_AT_Spar_PriceExtractions_20260703.CSV
+---------------------------------------------
+- Data count mismatch.
+
+DataHut_AT_Dm_PriceExtractions_20260703.CSV
+-------------------------------------------
+- Data count mismatch.
+
+DataHut_SI_Mercator_PriceExtractions_20260703.CSV
+-------------------------------------------------
+- Data count mismatch.
+- `pdp_url` is inaccessible for some records.
+
+DataHut_SI_Dm_PriceExtractions_20260703.CSV
+-------------------------------------------
+- Data count mismatch.
+- For some products, the `grammage_quantity` and `grammage_unit` values do not match the values displayed on the product page.
+  Example:
+  - unique_id: 4066447899450
+  - pdp_url: https://www.dm.si/p/d/1487422/dmbio-bio-mesanica-zeliscnega-caja-20-2-g
