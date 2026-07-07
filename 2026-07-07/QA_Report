@@ -1,0 +1,41 @@
+QA Report 2026-07-07
+
+nawy_egp_2026_07_01.json
+------------------------
+- Data count mismatch.
+
+dubizzle_bah_2026_07_01.json
+----------------------------
+- No issues found.
+
+aqarmap_egp_2026_07_01.json
+---------------------------
+- Data count mismatch.
+- The fields `seller_role`, `listing_type`, and `depth` are empty but are not specified as expected empty fields in the requirements.
+
+dari_ae_2026_07_01.json
+-----------------------
+- Data count mismatch.
+- No other issues found.
+
+bahrainfinder_bah_2026_07_01.json
+---------------------------------
+- The value `Fully furnished` is specified in the requirements but is not present in the `furnished` field.
+- Values found in the file:
+  [
+    '',
+    'Furnished',
+    'Semi Furnished',
+    'Unfurnished',
+    'غير مفروش',
+    'مفروشة بالكامل',
+    'مفروشة جزئيًا'
+  ]
+
+qatarliving_qat_2026_07_01.json
+-------------------------------
+- No issues found.
+
+dubizzle_qat_2026_07_01.json
+----------------------------
+- No issues found.
