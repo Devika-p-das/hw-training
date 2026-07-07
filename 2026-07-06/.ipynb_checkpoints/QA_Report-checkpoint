@@ -1,0 +1,28 @@
+QA Report 
+
+1)DataHut_SI_Spar_PriceExtractions_20260706.CSV
+---------------------------------------------
+- Data count mismatch.
+- The `percentage_discount` column is empty across all records but is not specified as an expected empty field in the requirements.
+- For some products, the `grammage_unit` value in the file does not match the value displayed on the website.
+  Examples:
+  https://online.spar.si/p/obojestranski-lepilni-trak-scotch-12mm-x-63m-23854
+  https://online.spar.si/p/girlanda-perle-rdeca-8-mm-10-m-458585
+  https://online.spar.si/p/girlanda-perle-zlata-8-mm-10-m-458594
+  https://online.spar.si/p/girlanda-perle-srebrna-8-mm-10-m-458569
+
+2)DataHut_AT_Billa_PriceExtractions_20260706.CSV
+----------------------------------------------
+- `promotion_price` does not follow the pricing requirements. It is populated only when `promotion_description` is present, whereas the requirement specifies additional cases where `promotion_price` should also be assigned.
+
+3)DataHut_SI_Dm_PriceExtractions_20260706.CSV
+-------------------------------------------
+- Data count mismatch.
+- For some products, the `grammage_unit` value differs from the value displayed on the website.
+  Example:
+  https://www.dm.si/p/d/1410877/denkmit-tekoci-detergent-za-pranje-obcutljivega-perila-black-sensation
+
+4)DataHut_SI_Mercator_PriceExtractions_20260706.CSV
+-------------------------------------------------
+- Data count mismatch.
+- pdp_url` values are inaccessible.
