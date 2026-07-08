@@ -1,0 +1,11 @@
+QA Report
+
+DataHut_AT_Billa_PriceExtractions_20260708.CSV
+-----------------------------------------------
+
+- As per the updated requirement, if an `Aktion` tag is present with two prices (including a strike-through regular price), `regular_price` should be set to the regular price, `selling_price` and `promotion_price` should be set to the selling price, and `promotion_description` should include `AKTION`. However, `regular_price` is empty for the following product:
+  https://shop.billa.at/produkte/hirter-privat-pils-0021899
+
+- As per the updated requirement, if an `Aktion` tag is present with a single price, `regular_price` should be empty, `selling_price` and `promotion_price` should be set to the selling price, and `promotion_description` should be `AKTION`. However, `regular_price` is populated for the following products:
+  https://shop.billa.at/produkte/tullamore-dew-irish-whiskey-00202192
+  https://shop.billa.at/produkte/bite-me-protein-cookies-peanut-butter-00716586
