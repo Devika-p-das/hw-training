@@ -1,0 +1,25 @@
+QA Report
+
+DataHut_IT_Esselunga_PriceExtractions_20260708.CSV
+---------------------------------------------------
+- The unique counts of `unique_id` and `pdp_url` are the same, but the unique count of `product_name` is lower.
+- A total of 71 `product_name` values are mapped to multiple product records. Each of these product names is associated with 2 unique `unique_id` values and 2 unique `pdp_url` values, indicating that `product_name` is not unique across the dataset.
+eg :Biò Cellulose Pulp Plates 15 pcs
+ -https://spesaonline.esselunga.it/commerce/nav/drive/store/prodotto/833232/bio-piatti-polpa-di-cellulosa-15-pz
+ -https://spesaonline.esselunga.it/commerce/nav/drive/store/prodotto/833231/bio-piatti-polpa-di-cellulosa-15-pz
+- Product prices could not be verified because they are not visible on the website.
+
+DataHut_IT_Eurospin_PriceExtractions_20260708.CSV
+--------------------------------------------------
+- "For product
+https://online.eurospin.com/product/insetticida-ragniragnatele-400ml
+regular price is missing in the file."
+- The same product appears under multiple PDP URLs and unique IDs, indicating duplicate product listings.
+  Example:
+  Aceto balsamico di Modena IGP invecchiato
+  - unique_id: 1113517
+    https://online.eurospin.com/product/aceto-bals-invecceccellente-250ml-amo-essere-eccellente1
+  - unique_id: 1067638
+    https://online.eurospin.com/product/aceto-bals-invecceccellente-250ml-amo-essere-eccellente2
+
+-site shown uom empty for product https://online.eurospin.com/product/lamponi-125g1
