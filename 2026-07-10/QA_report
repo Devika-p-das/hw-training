@@ -1,0 +1,36 @@
+QA Report
+
+DataHut_SI_Spar_FullDump_20260709.CSV
+-------------------------------------
+- Datacount mismatch.
+- Empty field mismatch: alchol_by_volume, barcode, netweight, price_was, promotion_description, promotion_price, and promotion_valid_upto contain values, while age_recommendations, color, competitor_product_key, country_of_origin, dimensions, features, file_name_1–file_name_6, flavour, label_information, labelling, material, packaging, preparationinstructions, rating, retail_limit, review, special_information, tasting_note, and variants are additionally empty but not specified in the requirement.
+
+DataHut_AT_Spar_FullDump_20260709.CSV
+--------------------------------------
+- Datacount mismatch.
+- Empty field mismatch: age_of_the_product contains values although it is expected to be empty as per the requirement.
+
+DataHut_AT_Dm_FullDump_20260709.CSV
+------------------------------------
+- Data count mismatch.
+- "Empty field mismatch: barcode and retail_limit contain values, while file_name_1
+file_name_2
+file_name_3
+file_name_4
+file_name_5
+file_name_6
+and producthierarchy_level5 are additionally empty but not specified in the requirement."
+-Found unescaped | characters in the data. As per the requirement, | should be replaced with \|
+eg:'Seidenfein Strumpfhose bronze 15 DEN, Gr. 40/44', 'Seidenfein Strumpfhose schwarz 15 DEN, Gr. 40/44', 'Seidenfein Strumpfhose amber 15 DEN, Gr. 40/44', 'Seidenfein Strumpfhose teint 15 DEN, Gr. 40/44'], 'size': ['38/40 | S', '40/44 | M', '44-48', '44/48 | L'
+
+
+DataHut_AT_Billa_FullDump_20260709.CSV
+---------------------------------------
+- Data count mismatch
+- Empty field mismatch: age_of_the_product and packaging are not empty; 'file_name_1', 'file_name_2', 'file_name_3', 'file_name_4', 'file_name_5', 'file_name_6' and retail_limit are additional empty fields.
+- site_shown_uom missing for https://shop.billa.at/produkte/ja-natuerlich-hendlruecken-00240470
+
+DataHut_SI_Mercator_FullDump_20260709.CSV
+------------------------------------------
+- Datacount mismatch.
+- site not able to access
