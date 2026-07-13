@@ -56,7 +56,13 @@ def load_file(path: str) -> pd.DataFrame:
     log.info(f"Loading: {path}  ({ext})")
  
     loaders = {
-        ".csv":     lambda: pd.read_csv(path, sep=None, engine="python", dtype=str),
+    ".csv": lambda: pd.read_csv(
+    path,
+    sep=None,
+    engine="python",
+    dtype=str,
+    on_bad_lines="warn"
+),
         ".tsv":     lambda: pd.read_csv(path, sep="\t", dtype=str),
         ".xlsx":    lambda: pd.read_excel(path, dtype=str),
         ".xls":     lambda: pd.read_excel(path, dtype=str),
