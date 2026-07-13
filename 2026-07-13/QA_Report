@@ -1,0 +1,46 @@
+QA Report
+
+DataHut_SI_Mercator_PriceExtraction_20260713.CSV
+-------------------------------------------------
+- File name mismatch: Given file name is "DataHut_Si_Mercatar_PriceExtraction_20260713.CSV"
+
+-Datacount mismatch
+
+- for pdp_url: https://mercatoronline.si/izdelek/5715251/prsut-kras-s-kostjo-zorjen-minimalno-16-mesecev-kras-premium-cena-za-kg
+,unique_id: 5715251 breadcrumbs is missing from the file.
+
+-  For `unique_id` 18605771, pdp_url: https://mercatoronline.si/izdelek/18605771/sir-creme-brie-truffee-president-pakirano-105-g
+ the `currency` value is `EAR` instead of the expected value `EUR`.
+
+-  The `pdp_url` is inaccessible.
+
+DataHut_SI_Dm_PriceExtractions_20260713.CSV
+---------------------------------------------
+- Data count mismatch.
+
+- "- For some products, the `grammage_quantity` and `grammage_unit` values do not match the product details shown on the site. The site displays units such as `pranj` and `vr`, whereas the file contains `grammage_quantity = 1` and `grammage_unit = kos`.
+
+eg: - https://www.dm.si/p/d/1410877/denkmit-tekoci-detergent-za-pranje-obcutljivega-perila-black-sensation,
+https://www.dm.si/p/d/2247085/herba-medica-bio-caj-za-dojece-mamice
+"
+
+Datahut_SI_SPAR_PriceExtraction_20260713.CSV
+---------------------------------------------
+- Filename casing does not match the required naming convention: `Datahut_SI_SPAR_PriceExtraction_20260713`.
+
+- Unique_id not unique.
+
+-Data count missmatch
+
+- Field percentage_discount is also empty,not mentioned as empty in requirement.
+
+- Two different products are assigned the same `unique_id`.
+unique id: 680073, urls: https://online.spar.si/p/patagonski-lignji-spar-360g-573771, https://online.spar.si/p/kozice-na-nabodalu-natur-spar-180g-680073 ,
+
+- Regular price missing for https://online.spar.si/p/rjava-cebula-1kg-278912
+
+- Invalid grammage quantity: for url: https://online.spar.si/p/bio-posuseni-jurcki-spar-vital-25g-663147
+, grammage quantity is "0.02.5 "
+
+- For some products, the `grammage_quantity` and `grammage_unit` values do not match the product details shown on the site
+eg:https://online.spar.si/p/lepilni-trak-15mmx33m-optima-11-499529
