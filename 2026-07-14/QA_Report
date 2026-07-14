@@ -1,0 +1,63 @@
+dubizzle_egp_2026_07_02.json
+----------------------------
+- `depth` values are in title case (`'', 'Elite', 'Featured'`) in the file, whereas the requirements specify lowercase values.
+- `currency` is empty for id: 503683427.
+- Data mismatch for id: 503683477 (https://www.dubizzle.com.eg/en/ad/bargain-chalet-for-sale-in-marina-marassi-north-coast-2-bedrooms-very-prime-view-full-sea-facing-just-steps-from-the-marina-and-the-sea-ID503683427.html). Fields such as `price`, `currency`, `price_per`, `bedrooms`, `bathrooms`, `ownership`, etc. are missing in the file despite being available on the website. Additionally, `furnished` is `No` in the file but `Yes` on the website.
+- `details` are available on the website but missing in the file for:
+  https://www.dubizzle.com.eg/en/ad/bargain-chalet-for-sale-in-marina-marassi-north-coast-2-bedrooms-very-prime-view-full-sea-facing-just-steps-from-the-marina-and-the-sea-ID503683427.html
+
+dubizzle_qat_2026_07_02.json
+----------------------------
+- No issues found.
+
+dubizzle_uae_2026_07_02.json
+----------------------------
+- Data count mismatch.
+- `trakheesi_url` is an extra field present in the file.
+- The expected `price_per` value `سنويا` is missing. Values found:
+  `''`, `Bi-Yearly`, `Daily`, `Monthly`, `Quarterly`, `Yearly`.
+
+dubizzle_bah_2026_07_02.json
+----------------------------
+- No issues found.
+
+nawy_egp_2026_07_02.json
+------------------------
+- Data count mismatch.
+- The property is no longer available on the website:
+  https://www.nawy.com/compound/1287-the-butterfly/property/126177-Studio-for-sale-in-The-Butterfly-with-9-bedrooms-in-Mostakbal-City-by-Madinet-Masr
+- `price` and `max_price` are available on the website but missing in the file for:
+  https://www.nawy.com/compound/1954-el-patio-jade/property/114791-villa-standard-villa-5-bedrooms-for-sale-in-el-patio-jade-by-la-vista-developments
+  https://www.nawy.com/compound/1335-downtown-extension/property/125772-Apartment-for-sale-in-Downtown-Extension-with-21-bedrooms-in-Al-Alamein-by-City-Edge-Developments
+- `price` is available on the website but missing in the file for:
+  https://www.nawy.com/compound/1201-lagoona-la-vista-ras-el-hekma/property/55521-chalet-for-sale-in-la-vista-ras-el-hekma-with-4-bedrooms-in-ras-el-hekma-by-la-vista-developments
+
+bahrainfinder_bah_2026_07_02.json
+---------------------------------
+- The value `Fully Furnished` is missing from the `furnished` field. Additionally, the empty value (`''`) is present in the file but is not specified in the requirements.
+
+Values found:
+[
+  '',
+  'Furnished',
+  'Semi Furnished',
+  'Unfurnished',
+  'غير مفروش',
+  'مفروشة بالكامل',
+  'مفروشة جزئيًا'
+]
+
+aqarmap_egp_2026_07_02.json
+---------------------------
+- Inconsistent formatting: some `details` values use the suffix `M²`, while others use `m^2`.
+- `depth`, `seller_role`, and `listing_type` are empty but are not specified as expected empty fields in the requirements.
+- `price` and `currency` are missing for 1,765 records.
+  Examples:
+  - id: 6992073
+  - id: 6991205
+- The website is unreachable.
+
+qatarliving_qat_2026_07_02.json
+-------------------------------
+- Data count mismatch.
+- No other issues found.
