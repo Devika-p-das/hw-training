@@ -1,0 +1,57 @@
+DataHut_SI_Mercator_PriceExtractions_20260715.CSV
+-------------------------------------------------
+- Data count mismatch.
+- The `product_name` and `site_shown_uom` fields contain identical values.
+- Inconsistency observed between promotion_description and promotion_price: some records contain promotion_description without promotion_price, while others contain    promotion_price without promotion_description. (Eg:unique_id; 34755, 20014827, 14425024). Website verification could not be performed as the site is inaccessible.
+- Website is inaccessible.
+
+DataHut_SI_Dm_PriceExtractions_20260715.CSV
+-------------------------------------------
+- For products with units such as `pranj` and `vr`, the grammage quantity and unit is `1 kos` in the CSV.
+  Examples:
+  https://www.dm.si/p/d/2247085/herba-medica-bio-caj-za-dojece-mamice
+  https://www.dm.si/p/d/2444694/ariel-pralni-prasek-color
+
+DataHut_AT_Spar_PriceExtractions_20260715.CSV
+---------------------------------------------
+- Data count mismatch.
+- No other issues found.
+
+autodoc_2026_07_15.csv
+----------------------
+- `net_price` and `stock` values do not match the website for:
+  https://www.autodoc.be/elring/23696407
+  - `net_price`: `2.29` in the file, `2.59` on the website.
+  - `stock`: `Out of Stock` in the file, but the website shows `In Stock`.
+
+- `part_number` does not match the website for:
+  https://www.autodoc.be/febi-bilstein/1868362
+  - `part_number`: `4903` in the file, `04903` on the website.
+
+- `part_number` formatting does not match the website for:
+  https://www.autodoc.be/elring/23696407
+  - `part_number`: `875.99` in the file, `875.990` on the website.
+
+autoonderdelen24_2026_07_15.csv
+-------------------------------
+- No issues found.
+
+autoteiledirekt_2026_07_15.csv
+------------------------------
+- Field name mismatch: `Availability` is not found in the CSV; `Stock` is present instead.
+- No other issues found.
+
+mister_auto_2026_07_15.csv
+--------------------------
+- Data count mismatch.
+- `net_price` is `0` for 520 records.
+  Examples:
+  https://www.mister-auto.be/fr/kit-distribution-ina-204-530048310-p/
+  https://www.mister-auto.be/fr/disque-embrayage-sachs-032-1878007649-p/
+- `stock` values are `In Stock` / `Out of Stock`, whereas the requirement specifies `Available` / `Not Available`.
+- The webpage fails to render correctly due to missing or unapplied CSS, resulting in a raw HTML layout.
+
+winparts_2026_07_15.csv
+-----------------------
+- `stock` values are `In Stock` / `Out of Stock`, whereas the requirement specifies `Available` / `Not Available`.
+- Website URLs are blocked and inaccessible.
