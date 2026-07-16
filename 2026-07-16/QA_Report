@@ -1,0 +1,80 @@
+QA Report
+
+DataHut_SI_Dm_FullDump_20260716.CSV
+----------------------------------
+- Data count mismatch.
+- The following fields are completely empty in the file but are not specified as expected empty fields in the requirements:
+  - `price_was`
+  - `promotion_price`
+- For some products, units such as `pranj` and `vr` are extracted as `kos` in the CSV.
+
+DataHut_SI_Mercator_FullDump_20260716.CSV
+-----------------------------------------
+- `promotion_price` is present but `promotion_description` is missing for 7 records.
+- `promotion_description` is present but `promotion_price` is missing for 2,474 records.
+- Website is inaccessible.
+- Some `breadcrumb` values are truncated with an ellipsis (`…`), indicating that the complete category hierarchy was not captured.
+  Examples:
+  - VSI IZDELKI > SADJE IN ZELENJAVA > SUHO SADJE IN OREŠČKI > MEŠANICE SUHO SADJE, OREŠČKI,…
+  - VSI IZDELKI > MLEKO, JAJCA IN MLEČNI IZDELKI > MLEČNI DESERTI > MLEČNI RIŽ, DESERTI ...
+
+DataHut_SI_Spar_FullDump_20260716.CSV
+-------------------------------------
+- Data count mismatch.
+- The following fields are marked as expected to be empty in the requirements but contain data in the file:
+  - `alchol_by_volume`
+  - `barcode`
+  - `netweight`
+  - `price_was`
+  - `promotion_description`
+  - `promotion_price`
+  - `promotion_valid_upto`
+- The following fields are not marked as expected empty in the requirements but are completely empty in the file:
+  - `age_recommendations`
+  - `color`
+  - `competitor_product_key`
+  - `country_of_origin`
+  - `dimensions`
+  - `features`
+  - `file_name_1`
+  - `file_name_2`
+  - `file_name_3`
+  - `file_name_4`
+  - `file_name_5`
+  - `file_name_6`
+  - `flavour`
+  - `label_information`
+  - `labelling`
+  - `material`
+  - `packaging`
+  - `preparationinstructions`
+  - `rating`
+  - `retail_limit`
+  - `review`
+  - `special_information`
+  - `tasting_note`
+  - `variants`
+
+DataHut_AT_Dm_FullDump_20260716.CSV
+-----------------------------------
+- Data count mismatch.
+- The following fields are marked as expected empty in the requirements but contain data in the file:
+  - `barcode`
+  - `retail_limit`
+- The following fields are expected to contain data (or are not specified as empty) but are completely empty in the file:
+  - `producthierarchy_level5`
+  - `file_name_1`
+  - `file_name_2`
+  - `file_name_3`
+  - `file_name_4`
+  - `file_name_5`
+  - `file_name_6`
+- Unexpected formatting characters (`\n`, `\r`, `\t`) are present in `product_description`.
+  Example:
+  `Weiche Wattepads aus Baumwolle\nZur Körperreinigung von Babys und Kleinkindern\nAuch`
+- A total of 941 rows contain the `|` character in extracted values.
+  Example:
+  `size`: `38/40 | S`, `40/44 | M`, `44/48 | L`
+- Major frontend rendering issue: the product content area is blank and the page title is displayed as `undefined` due to an API/localization error.
+  Example:
+  https://www.dm.at/p/d/3067461/rabenhorst-direktsaft-cranberry-plus
