@@ -1,0 +1,38 @@
+DataHut_SI_Spar_PriceExtractions_20260720.CSV
+---------------------------------------------
+- Data count mismatch.
+- `percentage_discount` is completely empty.
+- `promotion_valid_from` and `promotion_valid_upto` are available on the website but missing in the extracted file for the following products:
+  - https://online.spar.si/p/negazirana-naravna-mineralna-voda-radenska-naturelle-15l-343442 (Row 3309)
+  - https://online.spar.si/p/kajzerica-s-budget-65g-672678 (Row 5270)
+  - https://online.spar.si/p/sladka-cili-omaka-felix-240-ml-660116 (Row 8059)
+  - https://online.spar.si/p/omaka-bbq-original-felix-240ml-600706 (Row 8068)
+  - https://online.spar.si/p/omaka-cocktail-felix-250ml-471274 (Row 8079)
+  - https://online.spar.si/p/sladko-kisla-omaka-felix-240ml-471267 (Row 8080)
+  - https://online.spar.si/p/omaka-steakhouse-felix-240ml-600705 (Row 8091)
+
+DataHut_SI_Mercator_PriceExtractions_20260720.CSV
+-------------------------------------------------
+- Data count mismatch.
+- Website is inaccessible.
+
+DataHut_SI_Dm_PriceExtractions_20260720.CSV
+-------------------------------------------
+- Data count mismatch.
+- No other issues found.
+
+DataHut_AT_Spar_PriceExtractions_20260720.CSV
+---------------------------------------------
+- Data count mismatch.
+
+DataHut_AT_Billa_PriceExtractions_20260720.CSV
+----------------------------------------------
+- `site_shown_uom` is missing for 9 products.
+  Examples:
+  - https://shop.billa.at/produkte/ja-natuerlich-hendlruecken-00240470
+  - https://shop.billa.at/produkte/ja-natuerlich-hendlfilet-00424344
+  - https://shop.billa.at/produkte/ja-natuerlich-hendl-suppenfleisch-00567341
+
+- Products with `site_shown_uom` containing `Beutel Packung` have `grammage_unit` extracted as `stück` instead of the expected `btl`. For example, `40 Beutel Packung` has `grammage_quantity = 1` and `grammage_unit = stück`.
+  Example:
+  https://shop.billa.at/produkte/toppits-gefrierbeutel-1l-00101511, https://shop.billa.at/produkte/toppits-gefrierbeutel-6-liter-00101513

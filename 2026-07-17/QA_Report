@@ -1,0 +1,69 @@
+QA Report
+
+DataHut_CH_Migros_FullDump_20260716.csv
+---------------------------------------
+- In competitor_name "Mgiros" is present instead of "Migros" for PDP URL:
+  https://www.migros.ch/de/product/271708513200
+  (Row 17).
+
+- `file_name_1`–`file_name_6` are completely empty across the file. As per the requirement, these fields should be empty only when the corresponding values are not available on the website.
+
+DataHut_CH_Coop_FullDump_20260616.CSV
+-------------------------------------
+- The file name is incorrect. The `extraction_date` in the file is `2026-07-16`, but the file name contains `20260616` instead of the expected `20260716`.
+
+- The `grammage_unit` is incorrectly extracted as `p` instead of `g` for the product:
+  PDP URL: https://www.coop.ch/de/lebensmittel/fruechte-gemuese/fruechte/exotische-fruechte/weitere-exotische-fruechte/fairtrade-passionsfrucht-ca/p/4343881
+  (Row 13).
+
+- As per the requirement, for products under "fresh meat" (Fleisch & Fisch), `regular_price` and `selling_price` should be taken from `price_per_unit`. However, for this product, the values are extracted as `10.00` instead of the expected `1.33` (`price_per_unit`).
+  PDP URL: https://www.coop.ch/de/lebensmittel/tiefgekuehlt/fleisch-fisch/fleisch-gefluegel/fleischprodukte/prix-garantie-koettbullar-rind-schwein/p/6450895
+  (Row 1619).
+
+DataHut_CH_Lidl_FullDump_20260717.CSV
+-------------------------------------
+- The file name is incorrect. The `extraction_date` in the file is `2026-07-16`, but the file name contains `20260717` instead of the expected `20260716`.
+
+- "lidi" is present instead of "lidl" for PDP URL:
+  https://sortiment.lidl.ch/de/catalog/product/view/id/16787/s/branches-classic-5112010/category/54/
+  (Row 12).
+
+- `promotion_valid_from`/`promotion_valid_upto` values are extracted in `DD.M.YYYY` format (e.g., `16.7.2026`) instead of the expected `YYYY-MM-DD` (`16.07.2026`) date format.
+
+- `price_valid_from` values are extracted in `DD.M.YYYY` format (e.g., `16.7.2026`) instead of the expected `YYYY-MM-DD` (`16.07.2026`) date format.
+
+- For some products, `promotion_description` is present but `promotion_price` is empty.
+  Example:
+  https://www.lidl.ch/p/de-CH/durgol-badentkalker-duo-aktion-nur-in-der-deutsch-und-westschweiz-gueltig/p10055858
+
+- `promotion_valid_from` and/or `promotion_valid_upto` are missing for products with a promotion. As per the requirement, these fields should be populated using the price history database.
+  Example:
+  https://sortiment.lidl.ch/de/catalog/product/view/id/21787/s/milka-choco-snack-1801482/category/54/
+
+DataHut_AT_Billa_FullDump_20260716.CSV
+--------------------------------------
+- Data count mismatch.
+
+- Columns empty but not mentioned as empty in the requirement:
+  `file_name_1`, `file_name_2`, `file_name_3`, `file_name_4`, `file_name_5`, `file_name_6`, `retail_limit`.
+
+- Columns not empty but mentioned as empty in the requirement:
+  `age_of_the_product`, `packaging`.
+
+- `product_description` does not preserve the newline formatting and is extracted as a continuous line.
+
+- An unnecessary whitespace is present in the `site_shown_uom` value.
+  Example: `1 150 g Karton`.
+  URL: https://shop.billa.at/produkte/coppenrath-und-wiese-meistertorte-rotegruetzetorte-00750716
+  (Row 7831).
+
+- As per the requirement, when `site_shown_uom` contains "Beutel", `grammage_unit` should be `btl` and `grammage_quantity` should match the corresponding value shown on the site. However, products such as "20 Beutel Packung", "40 Beutel Packung", and "36 Beutel Packung" are extracted as `1 stück` instead of `20 btl`, `40 btl`, and `36 btl`, respectively.
+  https://shop.billa.at/produkte/toppits-gefrierbeutel-6-liter-00101513
+
+DataHut_AT_Spar_FullDump_20260716.CSV
+-------------------------------------
+- Data count mismatch.
+
+- `age_of_the_product` is not empty but is mentioned as empty in the requirement.
+
+- `site_shown_uom` is taken from the product name only when it is missing from the site, not always.
