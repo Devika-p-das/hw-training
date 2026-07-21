@@ -1,0 +1,29 @@
+dubizzle_qat_2026_07_03.json
+----------------------------
+- No issues found.
+
+nawy_egp_2026_07_03_sample.json
+-------------------------------
+- The dataset does not match the required schema.
+  - Missing required fields: `price`, `max_price`, `details`, `reference_number`, `bedrooms`, `bathrooms`, `delivery_in`, `compound`, `sale_type`, `finishing`, `ready_by`.
+  - Unexpected fields present: `developer_start_price`, `resale_start_price`, `developer_name`, `amenties`, `description`, `payment_plans`, `property_count`.
+- Data count mismatch (842 records).
+- `Resale Start Price` is available on the website but missing in the file for some URLs.
+  Examples:
+  - https://www.nawy.com/compound/456-6ixty-iconic-tower
+  - https://www.nawy.com/compound/469-chess-field
+  - https://www.nawy.com/compound/614-blanca
+  - https://www.nawy.com/compound/657-sofitel-oia-towers
+  - https://www.nawy.com/compound/755-moonreal-tower
+- The `description` field contains invisible/invalid Unicode whitespace characters (e.g., zero-width spaces) between words.
+  Example:
+  https://www.nawy.com/compound/811-arabella
+- The `type` field contains `Compound`, whereas the requirement specifies `property_count`.
+- No empty fields found.
+
+qatarliving_qat_2026_07_03
+--------------------------
+- Data count mismatch.
+- The property is no longer available on the website.
+  URL:
+  https://qlp.qatarliving.com/en/properties/sale/residential/apartment/buy_a_ready_to_move_in_fully_furnished_apartment/215702
