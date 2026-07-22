@@ -1,0 +1,59 @@
+QA Report
+
+DataHut_SI_Dm_PriceExtractions_20260722.CSV
+-------------------------------------------
+- Data count mismatch.
+- `site_shown_uom` contains `,` instead of `.` for 216 records.
+  Examples: `4,5 g`, `0,47 l`, `1,05 l`.
+
+DataHut_AT_Billa_PriceExtractions_20260722.CSV
+-----------------------------------------------
+- Products with `site_shown_uom` containing `Beutel Packung` have `grammage_unit` extracted as `stück` instead of the expected `btl`. For example, `40 Beutel Packung` has `grammage_quantity = 1` and `grammage_unit = stück`.
+  Examples:
+  - https://shop.billa.at/produkte/toppits-gefrierbeutel-1l-00101511
+  - https://shop.billa.at/produkte/toppits-gefrierbeutel-6-liter-00101513
+- Products with `site_shown_uom` containing `Waschgang Flasche` have `grammage_quantity` extracted as `1` and `grammage_unit` as `stück`, instead of the displayed wash count (e.g., `25`, `40`, `100`) with `grammage_unit = wg`, as per the client requirement.
+  Example:
+  https://shop.billa.at/produkte/clever-colorwaschmittel-fluessig-00352454 (Row 1627)
+- `regular_price` is empty for all records where `promotion_description` contains `AKTION`.
+
+DataHut_SI_Spar_PriceExtractions_20260722.CSV
+---------------------------------------------
+- Data count mismatch.
+- `percentage_discount` is completely empty but is not specified as an expected empty field in the requirement.
+- For some products, `grammage` is extracted as `1 kos` instead of the measurement shown in `site_shown_uom` (e.g., `6.3 M`, `3.6 M`), resulting in incorrect grammage extraction.
+  Examples:
+  - https://online.spar.si/p/obojestranski-lepilni-trak-scotch-12mm-x-63m-23854
+  - https://online.spar.si/p/barvna-girlanda-360cm-simpex-celebration-11-596156
+
+DataHut_SI_Mercator_PriceExtractions_20260722.CSV
+-------------------------------------------------
+- Data count mismatch.
+- Website is inaccessible.
+- Inconsistency between `promotion_description` and `promotion_price`: some records contain `promotion_description` without `promotion_price`,
+  Example:
+  https://mercatoronline.si/izdelek/876835/cvrsti-jogurt-3-2-m-m-mu-180-g
+
+  while others contain `promotion_price` without `promotion_description`.
+  Example:
+  https://mercatoronline.si/izdelek/975419/kanadski-whiskey-canadian-club-40-alkohola-0-7-l
+
+DataHut_SI_Spar_FullDump_20260723.CSV
+-------------------------------------
+- Data count mismatch.
+- Fields marked as empty in the requirement but contain data in the file:
+  `barcode`, `promotion_valid_upto`, `promotion_description`, `alchol_by_volume`, `netweight`, `price_was`, `promotion_price`.
+- Fields not marked as empty in the requirement but are completely empty in the file:
+  `variants`, `preparationinstructions`, `country_of_origin`, `age_recommendations`, `flavour`, `labelling`, `packaging`, `special_information`, `label_information`, `dimensions`, `color`, `material`, `tasting_note`, `rating`, `review`, `file_name_1`, `file_name_2`, `file_name_3`, `file_name_4`, `file_name_5`, `file_name_6`, `competitor_product_key`, `features`, `retail_limit`.
+- `promotion_valid_from` and `promotion_valid_upto` are available on the website but missing in the extracted file, despite `promotion_description` being present.
+  Examples:
+  - Row 5360: https://online.spar.si/p/bela-zemlja-spar-60g-678329
+  - Row 5391: https://online.spar.si/p/polnozrnata-strucka-z-otrobi-70g-672809
+  - Row 5513: https://online.spar.si/p/rustikalna-pogacica-don-don-50g-650464
+  - Row 7350: https://online.spar.si/p/tunina-v-oljcnem-olju-manj-olja-filod´olio-rio-mare-4x65g-620210
+
+DataHut_IT_Eurospin_PriceExtractions_20260722.CSV
+-------------------------------------------------
+- Data count mismatch.
+- The `extraction_date` is `2026-07-21`, but the file name contains `20260722`.
+- `pdp_url` and `unique_id` are not unique. Both contain only 4,783 unique values.
