@@ -1,0 +1,78 @@
+QA Report
+
+DataHut_IT_Esselunga_PriceExtractions_20260722.CSV
+---------------------------------------------------
+- Data count mismatch.
+
+- `pdp_url` contains malformed URLs with embedded tab (`\t`) characters. Two invalid URLs are repeated across 21 records.
+  Examples:
+  - https://spesaonline.esselunga.it/commerce/nav/drive/store/prodotto/653548/amico-veg-snack\tal-gusto-riso-100-vegetale-mini-48-g
+  - https://spesaonline.esselunga.it/commerce/nav/drive/store/prodotto/157442/elephant-baked-squeezed-pretzels-sea-salt-\t80-g
+
+- `pdp_url` and `unique_id` are not unique. Both contain only 20,760 unique values.
+
+- `brand` contains unexpected trailing tab (`\t`) characters in 9 records.
+  Example:
+  - `Soré\t\t`
+  URL:
+  - https://spesaonline.esselunga.it/commerce/nav/drive/store/prodotto/552165/sore-valtenesi-riviera-del-garda-classico-doc-75-cl
+
+- `promotion_price` is present but `promotion_description` is missing for 13 records.
+
+- `promotion_description` is present but `promotion_price` is missing for 8,346 records.
+
+- `selling_price` and `promotion_price` are greater than `regular_price` for 2 records.
+  The corresponding PDP URL is no longer available on the website:
+  - https://spesaonline.esselunga.it/commerce/nav/drive/store/prodotto/721042/formaggio-grana-padano-dop-oltre-16-mesi
+QA Report
+
+DataHut_CH_Coop_FullDump_20260723.CSV
+-------------------------------------
+- `percentage_discount` mismatch: the file contains `30`, whereas the product page displays `Online 10% ab 6`.
+  URL: https://www.coop.ch/de/weine/alle-weine/roseweine/naturae-syrah-rose-g-bertrand/p/1014906009 (Row 16307)
+
+- `promotion_description` mismatch: the file contains `Aktion`, but no promotion description is displayed on the product page.
+  URL: https://www.coop.ch/de/lebensmittel/milchprodukte-eier/butter-margarine/kochbutter-bratfett/die-butter-moedeli/p/3081185
+
+- Missing `promotion_description`: the product page displays a promotion description of `41%`, but the field is empty in the file.
+  URL: https://www.coop.ch/de/weine/alle-weine/weissweine/lavaux-aoc-epesses-le-pelerin-6x70cl/p/7490715
+
+- `promotion_description` mismatch: the file contains `30%`, whereas the product page displays `Online 10% ab 6`.
+  URL: https://www.coop.ch/de/weine/alle-weine/roseweine/naturae-syrah-rose-g-bertrand/p/1014906009 (Row 16307)
+
+- `image_url` is available on the website but missing in the extracted file.
+  Examples:
+  - https://www.coop.ch/de/lebensmittel/suesses-snacks/chips-snacks/gesalzene-nuesse/nussmischungen/ueltje-bar-mix/p/7529945
+  - https://www.coop.ch/de/baby-kind/windeln/windeln-pants-nach-marke/pampers/pampers-premium-protection-windeln-gr3-midi-6-10kg-48-stueck/p/7496422
+
+DataHut_CH_Denner_FullDump_20260723.CSV
+---------------------------------------
+- Data count mismatch.
+- `promotion_description` is present but `promotion_price` is missing for 21 records.
+
+DataHut_AT_Billa_FullDump_20260723.CSV
+--------------------------------------
+- Data count mismatch.
+- Fields marked as empty in the requirement but contain data in the file:
+  `age_of_the_product`, `packaging`.
+- Fields not marked as empty in the requirement but are completely empty in the file:
+  `file_name_1`, `file_name_2`, `file_name_3`, `file_name_4`, `file_name_5`, `file_name_6`, `retail_limit`.
+- `product_description` does not preserve newline formatting and is extracted as a continuous line.
+- Grammage mismatch (2 rows): Products with `Waschgang` in `site_shown_uom` have `grammage_quantity` as `1` and `grammage_unit` as `stück`, whereas the expected unit is `wg`.
+  Examples:
+  - https://shop.billa.at/produkte/bi-good-apfelbluete-colorwaschmittel-beutel-00451972 (Row 3484)
+  - https://shop.billa.at/produkte/bi-good-lavendel-vollwaschmittel-beutel-00451977 (Row 3491)
+- As per the requirement, when `site_shown_uom` contains `Beutel`, `grammage_unit` should be `btl` and `grammage_quantity` should match the value shown on the website. However, products such as `20 Beutel Packung`, `40 Beutel Packung`, and `36 Beutel Packung` are extracted as `1 stück` instead of `20 btl`, `40 btl`, and `36 btl`, respectively.
+  Example:
+  https://shop.billa.at/produkte/mentadent-zahnbuerste-tecnic-clean-medium-0011432
+
+DataHut_AT_Dm_FullDump_20260723.CSV
+-----------------------------------
+- Fields marked as empty in the requirement but contain data in the file:
+  `barcode`, `retail_limit`.
+- Fields not marked as empty in the requirement but are completely empty in the file:
+  `producthierarchy_level5`, `file_name_1`, `file_name_2`, `file_name_3`, `file_name_4`, `file_name_5`, `file_name_6`.
+- 10 rows in the `variant` column contain `|` instead of `\|`.
+  Example:
+  `size`: `38/40 | S`, `40/44 | M`, `44-48`, `44/48 | L`
+  (Rows: 14853, 14855, 14856, 14857, 14860, 14861, 14864, 14865, 14867, 14868)
