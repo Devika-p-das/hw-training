@@ -1,0 +1,65 @@
+DataHut_AT_Spar_PriceExtractions_20260727.CSV
+---------------------------------------------
+- Data count mismatch.
+- `regular_price` and `selling_price` are empty for 20 products (also empty on the website).
+
+DataHut_AT_Billa_PriceExtractions_20260727.CSV
+----------------------------------------------
+- Data count mismatch.
+- `site_shown_uom` is missing for 9 products.
+  Examples:
+  - https://shop.billa.at/produkte/ja-natuerlich-hendlfilet-00424344
+  - https://shop.billa.at/produkte/ja-natuerlich-hendl-suppenfleisch-00567341
+
+- For products with `site_shown_uom` containing `Waschgang`, `grammage_quantity` is extracted as `1` and `grammage_unit` as `stück`.
+  Examples:
+  - https://shop.billa.at/produkte/clever-colorwaschmittel-fluessig-00352454
+  - https://shop.billa.at/produkte/sagrotan-hygienespueler-00465128
+
+- For products with `site_shown_uom` containing `Beutel`, `grammage_quantity` is extracted as `1` and `grammage_unit` as `stück`.
+  Examples:
+  - https://shop.billa.at/produkte/toppits-gefrierbeutel-1l-00101511
+  - https://shop.billa.at/produkte/toppits-gefrierbeutel-6-liter-00101513
+
+DataHut_SI_Dm_PriceExtractions_20260727.CSV
+-------------------------------------------
+- Products whose unit on the website is represented as `pranj` or `vr` are extracted with `grammage_quantity = 1` and `grammage_unit = kos` in the file.
+  Examples:
+  - https://www.dm.si/p/d/1410877/denkmit-tekoci-detergent-za-pranje-obcutljivega-perila-black-sensation
+  - https://www.dm.si/p/d/3058547/frosch-baby-tekoci-detergent-za-pranje-perila
+  - https://www.dm.si/p/d/2247085/herba-medica-bio-caj-za-dojece-mamice
+
+DataHut_SI_Mercator_PriceExtractions_20260727.CSV
+-------------------------------------------------
+- Data count mismatch.
+- Website is inaccessible.
+- 8 products have `promotion_price` populated while `promotion_description` is empty.
+  Examples:
+  - https://mercatoronline.si/izdelek/975419/kanadski-whiskey-canadian-club-40-alkohola-0-7-l
+  - https://mercatoronline.si/izdelek/34755/sivi-pinot-vrhunsko-belo-vino-jeruzalem-ormoz-0-75-l
+  - https://mercatoronline.si/izdelek/20014827/odcejalnik-solate-delight-delimano-4-l
+  - https://mercatoronline.si/izdelek/19558450/gugalnik-siv-bologna
+  - https://mercatoronline.si/izdelek/19974789/gugalnik-mint-zelen-bologna
+  - https://mercatoronline.si/izdelek/20101820/gugalnik-jajcek-153-x-65-x-111-cm
+  - https://mercatoronline.si/izdelek/20108087/gugalnik-temno-moder-bologna
+  - https://mercatoronline.si/izdelek/19611809/okrogel-bazen-avenli-450-x-122-cm
+
+
+qatarliving_qat_2026-07-04.json
+-------------------------------
+- Data count mismatch.
+
+- `broker_display_name` contains `Camelia Homes`, but `broker` is empty. As per the requirement, `broker` should contain the capitalized form of `broker_display_name`.
+  URL: https://qlp.qatarliving.com/en/properties/rent/residential/villa/5br_compound_villa_pool_gym_play_area/262677 (Record 7072)
+
+- Duplicate `reference_number` (`244666`) is assigned to two different property listings with different PDP URLs, indicating that the `reference_number` is not unique.
+  Record IDs: 16278, 16279
+  URLs:
+  - https://qlp.qatarliving.com/en/properties/rent/residential/villa/large_4br_maid_for_rent_in_al_waab/244676
+  - https://qlp.qatarliving.com/en/properties/rent/residential/apartment/modern_living_in_al_wakra_furnished_1bhk_rent_now/244666
+
+- Hidden Unicode formatting character (`U+202A`) found in the extracted data.
+
+- Description formatting is not preserved during extraction. Contact details are concatenated due to missing spaces/line breaks, affecting readability.
+  Record: 25330
+  URL: https://qlp.qatarliving.com/en/properties/sale/commercial/office_space/investment_opportunity_at_a_prestigious_tower/266439
