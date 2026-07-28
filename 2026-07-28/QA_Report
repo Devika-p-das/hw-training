@@ -1,0 +1,136 @@
+QA Report
+
+dubizzle_egp_2025_07_04.json
+-----------------------------
+
+- File name is incorrect. Found: `dubizzle_egp_2025_07_04.json`; Expected: `dubizzle_egp_2026_07_04.json`.
+
+- `price_per` contains data in the file, but it is marked as an expected empty field in the requirement.
+
+- `scraped_ts` and `date` contain multiple values instead of a single extraction date:
+  - `2026-07-25`
+  - `2026-07-26`
+  - `2026-07-27`
+
+- `iteration_number` mismatch: The file contains `2026_07_03`, whereas the expected value is `2026_07_04`.
+
+- Property type extracted as View phone number instead of Apartment. URL: https://www.dubizzle.com.eg/en/ad/apartment-for-sale-in-al-obour-city-8th-neighborhood-al-obour-park-first-residence-ID503742797.html
+
+- Invalid URL found (missing `https`):
+  URL: `://www.dubizzle.com.eg/en/ad/%D8%B4%D9%82%D8%A9-%D8%AF%D9%88%D8%A8%D9%84%D9%8A%D9%83%D8%B3-%D8%A8%D8%A7%D9%84%D8%B4%D8%B1%D9%88%D9%82-%D9%A1-%D8%A7%D9%84%D9%85%D9%86%D8%B7%D9%82%D8%A9-%D8%A7%D9%84%D8%B1%D8%A7%D8%A8%D8%B9%D8%A9-ID208412726.html`
+  Record: `176267`
+
+- Hidden Unicode character (`U+200F` – Right-to-Left Mark) found in the `title` field.
+  Value:
+  `Prime location Standalone Villa for Sale in Mountain View Aliva Mostakbal City`
+
+- Unnecessary whitespace found in the `description` field.
+  Example:
+  URL: https://www.dubizzle.com.eg/en/ad/furnished-townhouse-with-pool-for-rent-in-bellagio-ID503815306.html
+  Record: `433`
+
+  dari_ae_2025_07_04.json
+-----------------------
+- Data count mismatch.
+
+- Filename mismatch: The file name is `dari_ae_2025_07_04.json`, but the iteration date is `2026_07_04`. The year in the file name is incorrect.
+
+- Trailing whitespace found in the `profession` field, resulting in duplicate categorical values (e.g., `Brokers` and `Brokers `).
+
+- `license_start_date` contains an invalid date format (e.g., `5660549`) instead of the expected `YYYY-MM-DD` format.
+  URL: https://www.dari.ae/en/app/directory/profession?id=30097
+  Record: 1074
+
+- 1 record has an empty `license_end_date` even though `license_start_date` is available.
+  URL: https://www.dari.ae/en/app/directory/profession?id=31486
+
+- Invalid email value found where a phone number is populated in the `email` field.
+  Example: `971506600279`
+  URL: https://www.dari.ae/en/app/directory/profession?id=30097
+  Record: 1074
+
+
+bahrainfinder_2026_07_04.json
+-----------------------------
+- Data count mismatch.
+
+- Filename format mismatch: Country suffix (`bah`) is missing from the filename.
+  Expected format: `bahrainfinder_bah_YYYY_MM_week_no.json`
+  Found: `bahrainfinder_2026_07_04.json`
+
+- Currency value mismatch: `AED` is present in the file.
+  URL: https://bahrainfinder.bh/ar/property/أرض-للبيع-في-كرانة-3519.html
+  Record: 4124
+
+- Category field contains only `sale`.
+
+- `fully furnished` value is missing in the file.
+
+  Values present:
+  - `furnished`: 3053
+  - `مفروشة بالكامل`: 948
+  - `غير مفروش`: 422
+  - `مفروشة جزئيًا`: 346
+  - `Furnished`: 49
+  - `Unfurnished`: 39
+  - `Semi Furnished`: 29
+
+- Invalid URL format found.
+  Record: 23
+  URL: `://bahrainfinder.bh/en/property/apartment-for-sale-in-saraya-2-5731.html`
+  (Missing `https://`)
+
+
+dubizzle_qat_2026_07_04.json
+-----------------------------
+- Filename format mismatch: Expected `dubizzle_qat_YYYY_MM_WW.json`, but found `Dubizle_qatar_2026_07_04.json`.
+  Issues:
+  - Incorrect source name (`Dubizle` instead of `dubizzle`)
+  - Incorrect country code (`qatar` instead of `qat`)
+
+- Multiple `iteration_number` values found:
+  - `2026_07_03`: 2607 records
+  - `2026_07_04`: 367 records
+
+- Inconsistent value found in the `bedrooms` field. Most records contain numeric values, while one record contains the text value `TWO`.
+  URL: https://www.dubizzle.qa/en/ad/family-2bhk-apartment-in-mansoura-ID120353096.html
+  Record: 2952
+
+- Multiple `scraped_ts` and `date` values found:
+  - `2026-07-20`: 2607 records
+  - `2026-07-27`: 367 records
+
+- Extra spaces found in the `description` field.
+  Record: 437
+  URL: https://www.dubizzle.qa/en/ad/fully-furnished-office-space-for-rent-ID120369164.html
+
+
+bayut_bah-2025_07_04.json
+--------------------------
+- Data count mismatch.
+
+- Filename format mismatch: Expected format is `bayut_bah_YYYY_MM_<iteration_number>.json`, but the file name is `bayut_bah-2025_07_04.json`.
+  Issues:
+  - Hyphen (`-`) used instead of underscore (`_`)
+  - Incorrect year (`2025` instead of `2026`)
+  - Iteration number format does not match the requirement
+
+- Category value inconsistency: The value `SALE` is present instead of the expected lowercase value `sale`.
+  URL:
+  https://www.bayut.bh/en/property/details-105600986.html
+
+- Empty string (`""`) present in the `package_type` field.
+  URL:
+  https://www.bayut.bh/en/property/details-500132301.html
+
+- Currency value mismatch: The file contains `bhd`, whereas the website shows `BHD`.
+  URL:
+  https://www.bayut.bh/en/property/details-105098591.html
+
+- Furnished value mismatch: The file contains `fully furnished`, whereas the website shows `furnished`.
+  URL:
+  https://www.bayut.bh/en/property/details-101658709.html
+
+- Hidden Unicode character (`U+200F` – Right-to-Left Mark) found in the `agent_name` field.
+  Value:
+  `AlShamayel Real Estate EST.`
