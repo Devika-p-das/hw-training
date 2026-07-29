@@ -1,0 +1,149 @@
+1)opensooq_bh_2026_07_04.json
+----------------------------
+
+- Field name spelling mismatch: `reference_number` is misspelled as `refarence_number`.
+
+- File name mismatch: The country suffix is `bh` instead of the expected `bah`.
+  Found: `opensooq_bh_2026_07_04.json`
+
+- `id` extraction mismatch: The file contains `false` instead of the expected property ID.
+  URL:
+  https://bh.opensooq.com/en/search/283456432
+
+- `iteration_number` mismatch: The file contains `2026_07_03`, whereas the expected value is `2026_07_04`.
+
+- Data count mismatch.
+
+- Currency value is missing for 4 records.
+
+- `published_at` values are in `yyyy-mm-dd` format instead of the required `dd-mm-yyyy` format.
+
+- 117 records have future `published_at` dates. For example:
+  URL: https://bh.opensooq.com/en/search/283983232
+  Website Published Date: 12-07-2026
+  File value: 2026-12-07
+
+  URL: https://bh.opensooq.com/en/search/283805780
+  Website Published Date: 10-07-2026
+  File value: 2026-10-07
+
+  This indicates that the day and month have been interchanged during extraction.
+
+- Invalid `furnished` value (`zzz`) extracted.
+  Website value: `Unfurnished`
+  URL: https://bh.opensooq.com/en/search/284008540
+  Record: 36
+
+- Invalid URL found in the `url` field:
+  Value: `https://`
+  Record: 477
+
+
+2)dubizzle_bah_2026_07_03.json
+-----------------------------
+
+- File name mismatch: The file is named `dubizzle_bah_2026_07_03.json`, whereas the expected file name is `dubizzle_bah_2026_07_04.json`.
+
+- ID is missing for URL:
+  https://www.dubizzle.com.bh/en/ad/august-1-room-available-for-sharing-ID105687338.html
+
+- Inconsistent value found in the `bathrooms` field. Most records contain numeric values, but one record contains the text value `Seven`.
+
+  URL:
+  https://www.dubizzle.com.bh/en/ad/%D9%84%D9%84%D8%A8%D9%8A%D8%B9-%D9%85%D9%86%D8%B2%D9%84-%D9%81%D9%8A-%D9%85%D8%AF%D9%8A%D9%86%D9%87-%D8%B9%D9%8A%D8%B3%D9%89-%D8%B4%D8%A7%D8%B1%D8%B9-%D8%AF%D9%85%D8%B4%D9%82-ID105401263.html
+
+- Extra white spaces found in the `description` field.
+
+
+3)bayot_egp_2026_08_04.json
+--------------------------
+
+- File contains two additional fields:
+  `completion_status`, `ownership`
+
+- File name mismatch: Found `bayot_egp_2026_08_04.json`; expected `bayut_egp_2026_07_04.json`.
+  Issues:
+  - Source name is misspelled (`bayot` instead of `bayut`).
+  - Iteration date is incorrect (`2026_08_04` instead of `2026_07_04`).
+
+- Two `scraped_ts` values found in the file instead of a single extraction date:
+  - `2026-07-27` (170,409 records)
+  - `2026-07-28` (61,257 records)
+
+- Furnished value mismatch:
+  Website value: `Unfurnished`
+  File value: `Not Furnished`
+
+  URL:
+  https://www.bayut.eg/en/property/details-503456009.html
+
+- Data count mismatch.
+
+- `price_per` contains the values:
+  `Daily`, `Weekly`, `Monthly`, `Yearly`, and empty values.
+
+- Currency value mismatch: `egp` is extracted instead of the expected uppercase value `EGP`.
+
+- Additional fields found:
+  `completion_status`, `ownership`
+
+- `id` contains only a 9-digit numeric value and does not have any relation with `reference_number`.
+
+
+4)bayut_uae_projects_2026_07_05.json
+===================================
+
+- Filename mismatch: Expected file name:
+  `bayut_uae_project_2026_07_05.json`
+
+  Found:
+  `bayut_uae_projects_2026_07_05.json`
+
+  Issue: Extra character `s` found in the file name.
+
+- Multiple `iteration_number` values found:
+  - `2026_07_04`
+  - `2026_07_05`
+
+- Data count mismatch.
+
+- Unit type count mismatch:
+  Website contains 10 unit types, whereas the file contains only 8 unit types.
+
+  Missing unit types:
+  - `Type C - Classic (with basement)`
+  - `Type C - Chamfer (with basement)`
+
+  URL:
+  https://www.bayut.com/for-sale/property/dubai/the-oasis-by-emaar/mareva-the-oasis/
+
+- Extra white spaces found in:
+  - `developer_name` (1 record)
+  - `unit_type` (39 records)
+
+  These spaces are not present on the website.
+
+  Example:
+  URL:
+  https://www.bayut.com/for-sale/off-plan/property/abu-dhabi/al-shamkha/al-reeman-1/nourwatan
+
+  Developer name contains extra spaces:
+  `Maskan MS Contracting and  RealL Estate Development`
+
+5)DataHut_IT_Eurospin_PriceExtractions_20260729.CSV
+-------------------------------------------------
+- Data count mismatch.
+- No other issues found.
+
+
+5)DataHut_IT_Esselunga_PriceExtractions_20260729.CSV
+--------------------------------------------------
+- Data count mismatch.
+
+- Invalid `pdp_url` values found due to embedded tab (`\t`) characters.
+
+  URLs:
+  - https://spesaonline.esselunga.it/commerce/nav/drive/store/prodotto/157442/elephant-baked-squeezed-pretzels-sea-salt-\t80-g
+  - https://spesaonline.esselunga.it/commerce/nav/drive/store/prodotto/653548/amico-veg-snack\tal-gusto-riso-100-vegetale-mini-48-g
+
+- No other issues found.
