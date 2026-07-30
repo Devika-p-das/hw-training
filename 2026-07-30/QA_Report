@@ -1,0 +1,129 @@
+QA Report
+---------
+
+DataHut_AT_Dm_FullDump_20260730.CSV
+-----------------------------------
+- Data count mismatch.
+
+- Unescaped `|` found in the `variants` field. As per the requirement, `|` should be escaped as `\|`. Affected records:
+
+  - Row 14826 – https://www.dm.at/p/d/1843705/nur-die-seidenfein-strumpfhose-teint-15-den-gr-40-44
+  - Row 14827 – https://www.dm.at/p/d/1843706/nur-die-seidenfein-strumpfhose-teint-15-den-gr-44-48
+  - Row 14828 – https://www.dm.at/p/d/1611233/nur-die-seidenfein-strumpfhose-amber-15-den-gr-38-40
+  - Row 14830 – https://www.dm.at/p/d/1843699/nur-die-seidenfein-strumpfhose-teint-15-den-gr-38-40
+  - Row 14831 – https://www.dm.at/p/d/1611242/nur-die-seidenfein-strumpfhose-schwarz-15-den-gr-44-48
+  - Row 14832 – https://www.dm.at/p/d/1611234/nur-die-seidenfein-strumpfhose-bronze-15-den-gr-38-40
+  - Row 14833 – https://www.dm.at/p/d/1611239/nur-die-seidenfein-strumpfhose-schwarz-15-den-gr-40-44
+  - Row 14835 – https://www.dm.at/p/d/1611237/nur-die-seidenfein-strumpfhose-amber-15-den-gr-40-44
+  - Row 14838 – https://www.dm.at/p/d/1611243/nur-die-seidenfein-strumpfhose-schwarz-15-den-gr-44-48
+  - Row 14844 – https://www.dm.at/p/d/1611241/nur-die-seidenfein-strumpfhose-amber-15-den-gr-44-48
+
+- Empty column mismatch:
+  - Fields marked as empty in the requirement but contain data in the file:
+    `barcode`, `retail_limit`
+  - Fields not marked as empty in the requirement but are completely empty in the file:
+    `producthierarchy_level5`, `file_name_1`, `file_name_2`, `file_name_3`, `file_name_4`, `file_name_5`, `file_name_6`
+
+- Multiple consecutive spaces found in the `product_name` field. Two consecutive spaces are present instead of a single space. Affected records: 49.
+
+  Example:
+  `Augenbrauenfarbe Dunkelbraun  4-1, 1 St`
+
+  Row: 1029
+  URL: https://www.dm.at/p/d/1556953/syoss-augenbrauenfarbe-dunkelbraun-4-1
+
+- Extra white spaces found in the `description` field.
+
+  Example: `...bestätigt. dm-Artikelnummer...`
+
+  Row: 874
+  URL: https://www.dm.at/p/d/3123738/balea-anti-wundreib-stick-tropical-dream
+
+
+DataHut_CH_Denner_FullDump_20260730.CSV
+---------------------------------------
+- Data count mismatch.
+
+- `regular_price` and `selling_price` are missing for 154 products, although the values are available on the website.
+
+  Examples:
+  - Row 5: https://www.denner.ch/de/aktionen/castelbarco-ripasso-della-valpolicella-doc-superiore~p1027255?variant=32804b70-5038-4685-b75f-057eb2482eff
+  - Row 81: https://www.denner.ch/de/aktionen/col-del-sol-brut-prosecco-superiore-di-valdobbiadene-docg~p1026975?variant=a5f45b59-f16d-4e7e-b434-3be5a7cb0d3f
+  - Row 90: https://www.denner.ch/de/aktionen/gratien-meyer-brut-cremant-de-loire-aoc~p1028255?variant=6a074f95-53a4-440b-970c-d5b0fad5e57a
+  - Row 206: https://www.denner.ch/de/aktionen/faustino-crianza-rioja-doca~p1026745?variant=87fc2d91-451e-44ae-9ac3-436328a9734e
+
+
+DataHut_SI_Spar_FullDump_20260730.CSV
+-------------------------------------
+- Data count mismatch.
+
+- Fields marked as empty in the requirement but contain data in the file:
+  `barcode`, `promotion_valid_upto`, `promotion_description`, `alchol_by_volume`, `netweight`, `price_was`, `promotion_price`.
+
+- Fields not marked as empty in the requirement but are completely empty in the file:
+  `variants`, `preparationinstructions`, `country_of_origin`, `age_recommendations`, `flavour`, `labelling`, `packaging`, `special_information`, `label_information`, `dimensions`, `color`, `material`, `tasting_note`, `rating`, `review`, `file_name_1`, `file_name_2`, `file_name_3`, `file_name_4`, `file_name_5`, `file_name_6`, `competitor_product_key`, `features`, `retail_limit`.
+
+- Multiple consecutive spaces found in the `breadcrumb` field. Only a single space should be present between words.
+
+  Example:
+  `Domov > SHRAMBA > KONZERVIRANE JEDI > KONZERVIRANE MORSKE JEDI`
+
+  Row: 7404
+  URL: https://online.spar.si/p/sardele-v-soncnicnem-olju-s-budget-125g-477694
+
+- Non-breaking space (`\xa0`) found in the `pdp_url` field. Although the URLs resolve correctly in the browser, they contain invalid whitespace characters.
+
+  Affected URLs:
+  - https://online.spar.si/p/belo-vino-chardonnay-vipolze-benedetic 075l-607528
+  - https://online.spar.si/p/krema-za-zascito-obraza zf50-nivea-sun-40ml-648710
+  - https://online.spar.si/p/losjon-po-britju-nivea-men-fresh-kicksteklenicka-100 ml-600847
+  - https://online.spar.si/p/penece-vino-prosecco-soligo 02l-611196
+  - https://online.spar.si/p/polnilo-za-elektricni-osvezilec-cherry-blossomraspberry-air-wick 19ml-669668
+  - https://online.spar.si/p/rdece-vino-carsus-stoka 075l-599851
+  - https://online.spar.si/p/rdece-vino-refosk-ekolosko-korenikamoskon 075l-604807
+  - https://online.spar.si/p/sir z-olivami-in-paradiznikom landana-200g-642803
+
+  Rows: 1410, 4564, 4710, 4722, 4948, 12979, 13393, 15624
+
+  DataHut_AT_Spar_FullDump_20260730.CSV
+------------------------------------
+- Data count mismatch.
+
+- `age_of_the_product` is populated, although it is expected to be empty as per the requirement.
+
+- Invalid image URLs found. The image URL fields contain incomplete URLs that do not load the corresponding images.
+
+  Examples:
+  - Row 2781: https://cdn1.interspar.at/cachableservlets/articleImage.dam/at/2020004064981/
+  - Row 4968: https://cdn1.interspar.at/cachableservlets/articleImage.dam/at/241274/
+
+  Affected records:
+  - `image_url_1`: 38
+  - `image_url_2`: 9
+  - `image_url_3`: 7
+  - `image_url_4`: 3
+  - `image_url_5`: 1
+  - `image_url_6`: 4
+
+  Total invalid image URLs: 62.
+
+- Promotion description mismatch:
+  - The website shows `Mit Gutschein je`, whereas the file contains `Mit Gutschein je Aktion!`.
+    - Row 3503: https://www.spar.at/produktwelt/tchibo-cafissimo-caffe-crema-vorratsbox-96-kapseln-p2020000593911
+    - Row 21887: https://www.spar.at/produktwelt/tchibo-cafissimo-espresso-vorratsbox-96-kapseln-p2020001894437
+
+  - The website shows `1 + 1 GRATIS - ab 2 Stk. je`, whereas the file contains `1 + 1 GRATIS - ab 2 Stk. je Aktion!`.
+    - Row 14360: https://www.spar.at/produktwelt/stiegl-goldbraeu-6-x-0-5l-p7945175
+    - Row 20466: https://www.spar.at/produktwelt/stiegl-hell-6x0-5lt-p2020003299049
+
+- Extra whitespace found in the extracted data. Double spaces are present in the `producthierarchy_level6`, `promotion_description`, and `breadcrumb` fields, resulting in inconsistent formatting.
+
+  Examples:
+  - Row 24078: https://www.spar.at/produktwelt/vorarlberg-milch-laendle-halbfettmilch-laenger-frisch-1-5-fett-p2020006312547
+    (`Frisch  & Haltbarmilch`)
+
+  - Row 3503: https://www.spar.at/produktwelt/tchibo-cafissimo-caffe-crema-vorratsbox-96-kapseln-p2020000593911
+    (`Mit Gutschein je  Aktion!`)
+
+  - Row 12793: https://www.spar.at/produktwelt/volkswagen-gutschein-50-eur-p2020005751408
+    (`SPAR Website > Produktwelt > Haushalt > Gutscheinwelt > Erlebnisse & Gutscheine  > Gutscheine`)
