@@ -1,0 +1,196 @@
+1)harrynorman_2026_08_05.json
+-----------------------------
+- Mismatch in field order
+- Data count mismatch
+- Listing page extracted instead of the individual profile page.
+  - Record: 5
+    URL: https://www.harrynorman.com/roster/agents/4 
+
+  - Record: 14
+    URL: https://www.harrynorman.com/roster/agents/15 
+
+  - Record: 170
+    URL: https://www.harrynorman.com/roster/agents/45 
+
+- field ""email"" is empty across data.
+
+- Invalid website URL found in the profile page.
+  - Record: 323
+    Profile URL: https://www.harrynorman.com/bio/SherryWren
+    Website: https://www.https://wrenatlanta.com/
+
+  - Record: 264
+    Profile URL: https://www.harrynorman.com/bio/MorganSaylor
+    Website: https://www.https://thebrookhavenagent.blog
+
+- contains empty string for 8 records
+    eg: Record 5  : https://www.harrynorman.com/roster/agents/4 
+    Record 14  : https://www.harrynorman.com/roster/agents/15
+    Record 85 : https://www.harrynorman.com/bio/StephanieMcAllister 
+    Record 168 : https://www.harrynorman.com/roster/agents/45 
+    Record 173 : https://www.harrynorman.com/bio/vickiemarler 
+    Record 229: https://www.harrynorman.com/bio/BryanJones 
+    Record 388: https://www.harrynorman.com/bio/AmyWorley 
+    Record 438: https://www.harrynorman.com/bio/ToddHenley 
+
+
+2)home_realestate_2026_08_05.json
+----------------------------------
+- Mismatch in field order
+- Data count mismatch.
+-  Listing page extracted instead of the individual profile page.
+  - Record: 7
+    URL: https://www.homerealestate.com/roster/agents/2 
+  - Record: 23
+    URL: https://www.homerealestate.com/roster/agents/8 
+  - Record: 38
+    URL: https://www.homerealestate.com/roster/agents/11 
+- Record: 52
+    URL: https://www.homerealestate.com/roster/agents/14 
+    
+- Field languages contains value, email is only empty field.
+
+- City only contains value Lincoln.
+
+3)evrealestate_2026_08_05.json
+------------------------------
+- Data count mismatch
+- * Invalid website URLs found. The extracted website values contain malformed URLs, email addresses incorrectly populated as website URLs, and invalid URL prefixes.
+
+  - Record: 1426
+- profile_url: https://www.evrealestate.com/en/our-advisors/dawn-wheldon/0f77d8cc-ba9b-448d-bb92-3abb65b85a6e?userId=4f4cdec1-3734-408d-9f8f-3a983bb51054 
+    Website: https://www.HTTPS://naples.evrealestate.com
+
+  - Record: 1981
+ profile_url: https://www.evrealestate.com/en/our-advisors/greg-cowell/55011ed5-38c5-4f0b-a721-ca20590481f6?userId=55011ed5-38c5-4f0b-a721-ca20590481f6  
+    Website: https://www.gregcowell@evrealestate.com
+
+  - Record: 3691
+ profile_url: https://www.evrealestate.com/en/our-advisors/may-cabusas/de1e5a4c-3138-40e1-958a-6c3fa0453fc3?userId=8ed33526-3139-4c37-a3dd-31272db72b99 
+    Website: https://www.https:/MayCabusas.evrealestate.com
+
+  - Record: 3695
+ profile_url: https://www.evrealestate.com/en/our-advisors/mccullough-roach/958fad54-eabd-47c5-aa99-b9f8d851f9e0?userId=4a47d8a6-2841-48b9-89a3-300cf5be1f03 
+    Website: https://www.mcculloughroach@evrealestate.com
+
+  - Record: 4364
+ profile_url: https://www.evrealestate.com/en/our-advisors/randy-keleher/dcb23da9-a864-4967-a29b-715d66298c37?userId=2c3cfd03-b970-4490-9be0-25a0a609217a 
+    Website: https://www.hebertkelehergroup@evrealestate.com
+
+* - Inconsistent extraction of advisor details across multiple profile URLs for the same advisor.
+
+  Issues observed:
+  - Multiple profile URLs were extracted for the same advisor, resulting in duplicate records with inconsistent data.
+  - Email extraction mismatch: The source website lists the email as `marcelian.dolak@evrealestate.com`, whereas different incorrect email addresses are extracted across the records.
+  - Social media extraction mismatch: One extracted record contains Facebook and Instagram URLs that do not match the source website.
+  - Title extraction mismatch: The extracted titles are inconsistent and do not match the source website. The advisor is listed on the website as `License Partner | Private Office Advisor | Brokerage Manager`.
+  - Overall, the extracted advisor details are inconsistent across the multiple profile URLs and do not accurately match the source website.
+"profile_url": https://www.evrealestate.com/en/our-advisors/marcel-dolak/ab71a72f-f01e-4039-b2fe-df59e4e8cdb9?userId=ab71a72f-f01e-4039-b2fe-df59e4e8cdb9 ,record: 3477
+"profile_url": https://www.evrealestate.com/en/our-advisors/marcel-dolak/ab71a72f-f01e-4039-b2fe-df59e4e8cdb9?userId=cc509345-6cee-4ab1-93e8-0d1acf08f0de , record: 3478
+ "profile_url": https://www.evrealestate.com/en/our-advisors/marcel-dolak/ab71a72f-f01e-4039-b2fe-df59e4e8cdb9?userId=8c5d93b7-eff5-4845-b80e-fed469357649 , record: 3479
+    
+4)alliebeth_2026_08_05.json
+----------------------------
+- Mismatch in field order
+
+- Data count mismatch.
+
+- Invalid website URLs extracted. The website URLs contain a duplicated protocol prefix (`https://www.https://`), resulting in malformed URLs.
+
+  Examples:
+  - Record: 44
+    Profile URL: https://www.alliebeth.com/bio/chaseduran 
+    Website: https://www.https://chaseduran.com/
+
+  - Record: 290
+    Profile URL: https://www.alliebeth.com/bio/Niemavarone 
+    Website: https://www.https://varoneluxurygroup.com/
+
+  - Record: 331
+    Profile URL: https://www.alliebeth.com/bio/scottgill 
+    Website: https://www.https://astorlongwood.com/
+
+  - Record: 407
+    Profile URL: https://www.alliebeth.com/bio/allisonspears 
+    Website: https://www.https://avondaleprivatelending.com/
+
+  - Record: 442
+    Profile URL: https://www.alliebeth.com/bio/billstegeman 
+    Website: https://www.https://stegemangill.com/
+
+- Listing page url present instead of profile url
+record 16: https://www.alliebeth.com/roster/agents/8"
+
+5)sutton_2026_08_05.json
+-----------------------
+- Field order mismatch
+- Data count mismatch
+*- Name parsing inconsistency: Multi-part surnames are extracted entirely into the `last_name` field, leaving the `middle_name` field empty. 
+  Examples:
+  - Record: 18
+    Profile URL: https://www.sutton.com/ca/agent/leanne-di-matteo-122713
+    Extracted: `first_name`: Leanne, `middle_name`: "", `last_name`: Di Matteo
+
+  - Record: 12
+    Profile URL: https://www.sutton.com/ca/agent/paola-de-carvalho-99550
+    Extracted: `first_name`: Paola, `middle_name`: "", `last_name`: De Carvalho
+
+  - Record: 49
+    Profile URL: https://www.sutton.com/ca/agent/tarik-el-bekri-92753
+    Extracted: `first_name`: Tarik, `middle_name`: "", `last_name`: El Bekri
+
+  - Record: 76
+    Profile URL: https://www.sutton.com/ca/agent/sabrina-chabot-fleury-122939
+    Extracted: `first_name`: Sabrina, `middle_name`: "", `last_name`: Chabot Fleury
+
+* - Extra whitespace found in the `last_name` field. Multiple consecutive spaces are present in the extracted value, resulting in inconsistent formatting.
+  - Record: 4934
+  - Profile URL: https://www.sutton.com/ca/agent/migin-kan-57320
+  - `last_name`: `Kan    簡太`
+
+* - Invalid website URLs extracted. 
+ 
+  - Record: 635
+    Profile URL: https://www.sutton.com/ca/agent/maged-shenouda-99655
+    Website: `http://www.http://magedshenoudapropertyrealtor.ca/`
+
+  - Record: 1083
+    Profile URL: https://www.sutton.com/ca/agent/sally-andreasen-93838
+    Website: `http://sandreasen@sutton.com`
+
+  - Record: 1347
+    Profile URL: https://www.sutton.com/ca/agent/pina-wittersheim-60327
+    Website: `http://www.pina4realestate.com, bloorcourtvillage.com`
+
+  - Record: 1679
+    Profile URL: https://www.sutton.com/ca/agent/graham-coade-122014
+    Website: `https://.www.grahamcoade.ca`
+
+  - Record: 2215
+    Profile URL: https://www.sutton.com/ca/agent/arne-anderson-54834
+    Website: `http://arne@arnehomes.com`
+
+  - Record: 3152
+    Profile URL: https://www.sutton.com/ca/agent/diana-amoroso-54829
+    Website: `http://lease email to amoroso1@telus.net`
+
+  - Record: 4642
+    Profile URL: https://www.sutton.com/ca/agent/ken-james-davenport-88872
+    Website: `http://oll free 1-866-871-1151`
+
+  - Record: 4940
+    Profile URL: https://www.sutton.com/ca/agent/daine-montgomery-98149
+    Website: `dainemontgomery.com`
+
+ 
+
+6)robertsbrothers_2026_08_05.json
+---------------------------------
+- Field order mismatch
+- Data count mismatch
+- Extra whitespace found in the `title` field. 
+
+  - Record: 128
+  - Profile URL: https://www.robertsbrothers.com/bio/tamaracosgrove 
+  - value: `Associate Broker  - REALTOR®`
+ 
