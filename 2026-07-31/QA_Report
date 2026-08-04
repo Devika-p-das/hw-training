@@ -1,0 +1,177 @@
+ajmanded_uae_2026_08.json
+---------------------------
+Filename mismatch: The extracted file name is ajmanded_uae_2026_08.json, whereas the expected file name is ajmanded_uae_2026_07.json.
+
+"* Extra whitespace found in the `name` and `building_number` fields. Multiple consecutive spaces are present in the extracted data, resulting in inconsistent formatting compared to the website.
+
+  Examples:
+  - EID SAEED   PROPERTIES(record 1068 : https://eservices.ajmanded.ae/en/TradeLicense/License/5ca2d00f-5f0c-4291-8b3a-d387e771f4d2 )
+  - FALCON  TOWER (record 990 : https://eservices.ajmanded.ae/en/TradeLicense/License/f6b7d591-2e88-42c6-bc31-5d23725c24b0)
+
+
+* -`license_expiry_date` is missing in the extracted file, although the value is available on the website.
+
+  Row: 112
+  URL: https://eservices.ajmanded.ae/en/TradeLicense/License/ac2635f3-cf27-4793-82c7-595f0334c793"
+"- Keyword validation mismatch: The business-type keyword `للعقارات` (Real Estate) is present in the website's Arabic name but is not covered by the current keyword validation.
+
+  - Record: 878
+  - URL: https://eservices.ajmanded.ae/en/TradeLicense/License/98bf3b22-e4dc-4048-8827-78312394cf8b
+  - Website name: `العرب للعقارات ذ.م.م - Branch 01`"
+  "- Duplicate `unique_id` found: `078706b2-e4ea-414b-ae2f-a05fd7944efe` appears in two records with different `pdp_url` values.
+
+  Examples:
+  - Row 4: https://eservices.ajmanded.ae/en/TradeLicense/License/078706b2-e4ea-414b-ae2f-a05fd7944efe
+  - Row 7: https://eservices.ajmanded.ae/en/TradeLicense/License/53b3f3b6-4841-4558-8ba1-dfddb08c6c78"
+
+"- `mobile_number` is contains value .
+
+  Example:
+  - Record: 157
+  - URL: https://eservices.ajmanded.ae/en/TradeLicense/License/c12d312d-9c51-45f7-b47f-135045af1517
+  - Value: `9098409509`"
+
+  "- A record with an expired license is present in the file, although it should have been excluded as per the requirement.
+  - Record: 448
+  - URL: https://eservices.ajmanded.ae/en/TradeLicense/License/09102247-1054-4fc6-87d4-554e06a77ae0
+  - `license_expiry_date`: `2026-05-31`
+  Iteration number mismatch: The iteration_number field contains 2026_08 for all 1,141 records, whereas the expected value is 2026_07
+"* Extra whitespace found in the `building_number` fields. Multiple consecutive spaces are present in the extracted data, resulting in inconsistent formatting compared to the website.
+
+  Examples:
+  - FALCON  TOWER (record 990 : https://eservices.ajmanded.ae/en/TradeLicense/License/f6b7d591-2e88-42c6-bc31-5d23725c24b0 )
+
+"
+  The license expiry date is more than two months before the iteration date (`2026-08`), but the record is still included in the extracted file."
+
+"Missing broker_license data: The broker_license field is missing in the extracted file, although broker license information is available on the website.
+Record: 156
+URL: https://eservices.ajmanded.ae/en/TradeLicense/License/c157d8a0-3bfb-4779-a68c-39c9c60f16b6 "
+
+haraj_kse_2026_07.json
+----------------------
+data count mismatch
+- File name mismatch: The file is named `haraj_kse_2026_07.json`, whereas the expected format is `haraj_ksa_YYYY_MM.json`. The country code is incorrect (`kse` instead of `ksa`).
+"- `iteration_number` mismatch: Two `iteration_number` values are present in the file, whereas only `202607` is expected.
+
+  Found:
+  - `202607` – 1 record (Expected)
+  - `202608` – 32,355 records (Incorrect)
+
+  The record with the correct `iteration_number` (`202607`) is:
+
+  - Record: 178
+  - URL: https://haraj.com.sa/11183901370/مطلوب_دور_ارضي_للايجار_في_الشفاء"
+  - Category value inconsistency: The file contains `WAIVER` instead of the expected lowercase value `waiver`. Example: - Record: 1802 - URL: https://haraj.com.sa/11184752798/ابحث_عن_محل_للتقبيل_بحي_طويق "
+  "* Duplicate `url` found: The same `pdp_url` appears in two records.
+
+  Example:
+  - Records: 19972 and 19973
+  - URL: https://haraj.com.sa/11183754057/شقة_مفروشه_فاخرة_للايجار_في_أبها
+
+* - `sub_category_1` is missing in the extracted file, although the value is available on the website.
+
+  Example:
+  - Record: 5354
+  - URL: https://haraj.com.sa/11184819715/شقه_للبيع_في_نمار_العوالي_-_تصميم_حديث
+
+* Whitespace issue: Double spaces are present in the fields user_id, description, title, broker, and broker_display_name. Examples:
+"
+
+bayut_sa_2026_08.json
+---------------------
+- File name mismatch: The file is named `bayut_sa_2026_08.json`, whereas the expected file name is `bayut_ksa_2026_07.json`. The country code is incorrect (`sa` instead of `ksa`), and the iteration is incorrect (`2026_08` instead of `2026_07`).
+
+" Duplicate unique_id found.
+
+  Rows: 44664 and 59318
+  URL: https://www.bayut.sa/en/property/details-88003872.html "
+  "- `scraped_ts` mismatch: One record contains an incorrect `scraped_ts` value from the previous year.
+
+
+  - Record: 49626
+  - URL: https://www.bayut.sa/en/property/details-87912301.html
+  - Extracted value: `2025-07-30`
+  - Expected year: `2026`"
+
+  - `iteration_number` mismatch: The file contains `2026_08`, whereas the expected iteration number is `2026_07`.
+
+  "The file contains `completed`
+
+  - Record: 39184
+  - URL: https://www.bayut.sa/en/property/details-87987462.html
+"
+"The field contains `Agent` for one record.
+  - Record: 7
+  - URL: https://www.bayut.sa/en/property/details-88022005.html
+"
+"The file contains `semi-furnished`
+
+  - Record: 59320
+  - URL: https://www.bayut.sa/en/property/details-87795331.html "
+
+"- Duplicate row found.
+
+  Rows: 44664 and 59318
+  URL: https://www.bayut.sa/en/property/details-88003872.html
+
+-price values separated by comma"
+
+"- `advertiser_designation` contains an unexpected value. The field contains `Agent` for one record, resulting in an inconsistent categorical value.
+
+  - Record: 7
+  - URL: https://www.bayut.sa/en/property/details-88022005.html
+  - Value: `Agent`"
+
+baity_bh_2026_08.json
+----------------------
+
+- File name mismatch: The file is named `baity_bh_2026_08`, whereas the expected file name is `baity_bah_2026_07`. The country code is incorrect (`bh` instead of `bah`), and the iteration month is incorrect (`2026_08` instead of `2026_07`).
+
+"The `id` field is empty, although the reference number is available from the URL.
+  - Record: 536
+  - URL: https://baity.bh/properties/apartment-in-manama-15989
+ "
+ - `iteration_number` mismatch: The file contains `2026_08`, whereas the expected `iteration_number` is `2026_07`.
+ "`broker_display_name` is missing.
+
+  Example:
+  - Record: 4
+  - URL: https://baity.bh/properties/apartment-in-sanabis-31054
+
+- - currency value missing.
+  - Record: 31
+  - URL: https://baity.bh/properties/apartment-in-al-juffair-43214 "
+
+  dubailand_uae_2026_07_30_05.xlsx
+  ----------------------------------
+
+- The `Website` column contains 9,424 missing values.
+- The `Phone Number` column contains 7,880 missing values.
+- The `Email` column contains 25 missing values.
+
+- The `Website` column contains 54 invalid values. Instead of valid website URLs, the field contains:
+
+  - Person names (e.g., `Mohammad Rafie`(row 7), `Louise Heatley`(row 1128))
+  - Company names (e.g., `NEXT REAL ESTATE`(row 738), `MODERN REAL ESTATE (L.L.C.)`(row 743))
+  - Email addresses (e.g., `zahidgee92@gmail.com`(row 469))
+  - Phone numbers (e.g. ` (row 3438)`)
+  - Location text (e.g., `دبي`(row 4220))
+  - Invalid placeholder value (`0`(row 5440))
+
+  This indicates that the `Website` field contains incorrectly mapped or invalid data instead of valid website URLs.
+
+  - The Phone Number field contains invalid values such as placeholder values (0)(row 7949), all-zero numbers (0000000000000000)(row 5209), incomplete numbers (971-4-, 04)(row 8835), and non-numeric placeholders (-)(row 6770). Additionally, some phone numbers use different formatting styles (e.g., hyphens and international prefixes)
+
+  blinkit_2026_07_31.csv
+  ----------------------
+  - data count: 1627680
+  - empty columns: 'store_name_location', 'product_type', 'product_description', 'package_type', 'net_quantity', 'unit_price', 'product_image_urls'
+
+  - Stores 30832, 34348, 34752, 34835, 46427, 31552, 33027, 33541, 37028, 42750, 42813, 33676, 44662, 45270, and 45923 have only 1–9 extracted products.
+
+  - Store IDs 34752, 44662, 37028, 34348, and 45923 have only 1–7 extracted products, resulting in 80–100% out-of-stock rates.
+  - 60 records show a logical conflict where out_of_stock_flag='Yes' but stock_count ranges from 1 to 50.
+  eg url: https://blinkit.com/prn/prolyte-nimbu-paani-ors/prid/506032 , stock count: 50
+
+  - item_selling_price and product_price are 0 for unique_id 1373229 in Store IDs 41219 and 45268. Product URLs: https://blinkit.com/prn/nexxus-promend-oil-resurrection-hair-serum/prid/1373229 (Store ID 41219) and https://blinkit.com/prn/nexxus-promend-oil-resurrection-hair-serum/prid/1373229 (Store ID 45268).
