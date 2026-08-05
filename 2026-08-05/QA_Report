@@ -1,0 +1,147 @@
+1)DataHut_AT_Billa_PriceExtractions_20260805.CSV
+------------------------------------------------
+- `site_shown_uom` is empty for the following records:
+
+  - Record: 365
+    URL: https://shop.billa.at/produkte/ja-natuerlich-hendlruecken-00240470
+
+  - Record: 2798
+    URL: https://shop.billa.at/produkte/ja-natuerlich-hendlfilet-00424344
+
+  - Record: 4545
+    URL: https://shop.billa.at/produkte/ja-natuerlich-hendl-suppenfleisch-00567341
+
+  - Record: 5967
+    URL: https://shop.billa.at/produkte/ja-natuerlich-huehnerschnitzel-00714378
+
+  - Record: 5973
+    URL: https://shop.billa.at/produkte/ja-natuerlich-huhninnenfilet-00714753
+
+  - Record: 11172
+    URL: https://shop.billa.at/produkte/ja-natuerlich-huehnerfluegerl-0095499
+
+  - Record: 11173
+    URL: https://shop.billa.at/produkte/ja-natuerlich-huehnerkeulen-0095497
+
+  - Record: 11191
+    URL: https://shop.billa.at/produkte/ja-natuerlich-hendl-oberkeulen-0095781
+
+  - Record: 11216
+    URL: https://shop.billa.at/produkte/ja-natuerlich-hendlunterkeulen-0095782
+
+2)DataHut_CH_Denner_FullDump_20260806.CSV
+------------------------------------------
+- File name mismatch found.
+ Expected file name:
+  DataHut_CH_Denner_FullDump_20260805.CSV
+ Actual file name:
+  DataHut_CH_Denner_FullDump_20260806.CSV
+  
+  - Data count mismatch found.
+
+  - Price is available on the source website but missing in the extracted data (`regular_price` and `selling_price` are empty).
+   - Record: 31
+    PDP URL: https://www.denner.ch/de/aktionen/castelbarco-ripasso-della-valpolicella-doc-superiore~p1027255?variant=32804b70-5038-4685-b75f-057eb2482eff
+
+   - Record: 230
+    PDP URL: https://www.denner.ch/de/aktionen/faustino-crianza-rioja-doca~p1026745?variant=87fc2d91-451e-44ae-9ac3-436328a9734e
+
+   - Record: 247
+    PDP URL: https://www.denner.ch/de/aktionen/col-del-sol-brut-prosecco-superiore-di-valdobbiadene-docg~p1026975?variant=a5f45b59-f16d-4e7e-b434-3be5a7cb0d3f
+
+   - Record: 259
+   PDP URL: https://www.denner.ch/de/aktionen/gratien-meyer-brut-cremant-de-loire-aoc~p1028255?variant=6a074f95-53a4-440b-970c-d5b0fad5e57a
+
+   3)bayut_properties_rent_commercial_2026_08_05.json
+   ---------------------------------------------------
+   - Total records: 29,818
+- Total columns: 99
+
+- Empty columns:
+  - projectNumber
+  - floorPlan
+
+- HTML content found in the `description` field. HTML tags should be removed, and only plain text should be extracted.
+  Total Issues Found: 14,239
+
+  Example:
+  - Record: 3
+    Listing URL: https://www.bayut.com/property/details-16007186.html
+
+  - Record: 4
+    Listing URL: https://www.bayut.com/property/details-16005899.html
+
+  - Record: 5
+    Listing URL: https://www.bayut.com/property/details-16005799.html
+
+  - Record: 6
+    Listing URL: https://www.bayut.com/property/details-15979286.html
+
+  - Record: 7
+    Listing URL: https://www.bayut.com/property/details-15871970.html
+
+- Listing is no longer available on the source website.
+  - Record: 14973
+    Listing URL: https://www.bayut.com/property/details-15944181.html
+    State: rejected
+
+- Observation: The `productLabel` field contains two values:
+  - `default` : 29,817 records
+  - `developer` : 1 record
+
+  The field is not visible on the source website for validation.
+
+- Observation: The fields `isHotelApartment`, `isShortTermRental`, and `isBusinessCenter` contain the value `1.0` in 9, 46, and 6,703 records respectively. The values appear to represent boolean indicators, but the decimal format may not match the expected data type.
+
+- Observation: The `sourceID` field contains only the value `1` across all 29,818 records. Please verify whether this is expected.
+
+- Escape characters (`\`) found in the `referenceNumber` field.
+
+  Examples:
+
+  - Record: 6055
+    Listing URL: https://www.bayut.com/property/details-14052451.html
+    Field: referenceNumber
+    Value: THR\20\aksat
+
+  - Record: 6099
+    Listing URL: https://www.bayut.com/property/details-14052328.html
+    Field: referenceNumber
+    Value: THR\bala20
+   
+   4)DataHut_CH_Lidl_PriceExtractions_20260805.CSV
+   -------------------------------------------------
+   - Promotion description is present, but promotion dates are missing despite the requirement to generate promotion dates from price history.
+Row No: 7
+PDP URL: https://sortiment.lidl.ch/de/catalog/product/view/id/13713/s/nusskernmischung-0028673/category/54/ 
+Promotion Description: -20%
+Promotion Valid From: 30.7.2026
+Promotion Valid Upto: NaN
+
+Row No: 38
+PDP URL: https://sortiment.lidl.ch/de/catalog/product/view/id/21891/s/dessert-spezialitaeten-0180385/category/54/ 
+Promotion Description: Aktion
+Promotion Valid From: NaN
+Promotion Valid Upto: NaN
+
+Row No: 40
+PDP URL: https://sortiment.lidl.ch/de/catalog/product/view/id/15362/s/rahmglace-schokolade-5110388/category/54/ 
+Promotion Description: -10%
+Promotion Valid From: 30.7.2026
+Promotion Valid Upto: NaN
+
+Row No: 3506
+PDP URL: https://www.lidl.ch/p/de-CH/italiamo-schweinsbraten/p10056922 
+Promotion Description: Aktion
+Promotion Valid From: 10.8.2026
+Promotion Valid Upto: NaN
+
+- Issue: Unwanted whitespace is present in the data.
+
+Row No: 429
+url: https://sortiment.lidl.ch/de/catalog/product/view/id/20869/s/mini-pizza-pancetta-provola-und-zwiebel-1015165/category/54/ 
+Product Name: Mini Pizza Pancetta, Provola und  Zwiebel
+breadcrumb: Sortiment > Sortiment > Mini Pizza Pancetta, Provola und  Zwiebel
+
+5)DataHut_IT_Eurospin_PriceExtractions_20260805.CSV
+----------------------------------------------------
