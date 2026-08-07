@@ -1,0 +1,153 @@
+1)DataHut_SI_Dm_FullDump_20260806.CSV
+-------------------------------------
+- Data count mismatch.
+- Empty column mismatch found.
+
+  Unexpected empty columns:
+  - price_was
+  - promotion_price
+- competitor_product_key is taken from dm product number
+
+- Tab characters (\t) are present in text fields.
+()1.\tZavrite 100 ml polnega mleka in 100 ml vode in ohladite na ca 50 °C.2.\tTe kočino prelijte v globok krožnik, dodajte 5)
+
+Row No: 2193
+PDP URL: https://www.dm.si/p/d/1461294/babylove-bio-zitna-kasica-iz-treh-vrst-polnozrnatih-mok
+Field: preparationinstructions
+
+Row No: 2964
+PDP URL: https://www.dm.si/p/d/3082378/babylove-bio-ovsena-kasa-s-kozjim-mlekom-jabolki-in-jagodami-po-dopolnjenem-6-mesecu-starosti
+Field: preparationinstructions
+
+Row No: 5617
+PDP URL: https://www.dm.si/p/d/3127159/pajs-brez-obresti-keto-potica-mesanica-za-pripravo-testa
+Field: preparationinstructions
+
+Row No: 5750
+PDP URL: https://www.dm.si/p/d/3108089/dmbio-bio-mesanica-za-pripravo-kruha-brez-glutena-z-41-semen
+Field: preparationinstructions
+
+Row No: 5921
+PDP URL: https://www.dm.si/p/d/2226766/herba-medica-bio-planinski-caj-25-1-2-g
+Field: preparationinstructions
+
+Row No: 1565
+PDP URL: https://www.dm.si/p/d/1586730/dmbio-bio-otroski-masleni-pirini-piskoti-z-datlji-od-3-leta
+Field: labelling
+
+Row No: 1597
+PDP URL: https://www.dm.si/p/d/1491605/dmbio-bio-kasa-s-polnozrnatimi-zitni-kosmici-orescki-in-semeni-indijskega-trpotca
+Field: labelling
+
+Row No: 5012
+PDP URL: https://www.dm.si/p/d/3063319/syoss-platinasti-posvetljevalec-las-13-5
+Field: warning
+
+* Columns contain unescaped '|'
+eg :  row_no:9659(instructionforuse)
+pdp_url  : https://www.dm.si/p/d/3103862/rimmel-london-tekoci-osvetljevalec-multi-tasker-turbocharged-glow-007-spilling-the-tea      
+(m lokom. |Za rdečilo za lica nanesite)                                                               
+2)DataHut_SI_Mercator_FullDump_20260806
+----------------------------------------
+- Data count mismatch.
+
+3)DataHut_SI_Spar_FullDump_20260806.CSV
+----------------------------------------
+- Data count mismatch.
+- Empty column mismatch found.
+
+  Expected empty but not empty:
+  - barcode
+  - promotion_valid_upto
+  - promotion_description
+  - alchol_by_volume
+  - netweight
+  - price_was
+  - promotion_price
+
+  Unexpected empty columns:
+  - variants
+  - preparationinstructions
+  - country_of_origin
+  - age_recommendations
+  - flavour
+  - labelling
+  - packaging
+  - special_information
+  - label_information
+  - dimensions
+  - color
+  - material
+  - tasting_note
+  - rating
+  - review
+  - file_name_1
+  - file_name_2
+  - file_name_3
+  - file_name_4
+  - file_name_5
+  - file_name_6
+  - competitor_product_key
+  - features
+  - retail_limit
+
+  - Whitespace found in the `pdp_url`. Although the URL is accessible. 
+
+  - Record: 1390
+    PDP URL: https://online.spar.si/p/sir z-olivami-in-paradiznikom landana-200g-642803 
+
+  - Record: 4418
+    PDP URL: https://online.spar.si/p/belo-vino-malvazija-stoka 075l-599850
+
+  - Record: 4533
+    PDP URL: https://online.spar.si/p/belo-vino-chardonnay-vipolze-benedetic 075l-607528
+
+  - Record: 4662
+    PDP URL: https://online.spar.si/p/rdece-vino-carsus-stoka 075l-599851
+
+  - Record: 4688
+    PDP URL: https://online.spar.si/p/rdece-vino-refosk-ekolosko-korenikamoskon 075l-604807
+
+  - Record: 4883
+    PDP URL: https://online.spar.si/p/penece-vino-prosecco-soligo 02l-611196
+
+  - Record: 12926
+    PDP URL: https://online.spar.si/p/losjon-po-britju-nivea-men-fresh-kicksteklenicka-100 ml-600847
+
+  - Record: 13388
+    PDP URL: https://online.spar.si/p/krema-za-zascito-obraza zf50-nivea-sun-40ml-648710
+
+  - Record: 15578
+    PDP URL: https://online.spar.si/p/polnilo-za-elektricni-osvezilec-cherry-blossomraspberry-air-wick 19ml-669668
+
+  - Record: 15987
+    PDP URL: https://online.spar.si/p/vrc-za-filtriranje-vode-24-l-sivomodra- termovka gratis-brita-style-11-664937
+
+- - Extra whitespace found in the `producthierarchy_level3` and 'breadcrumb' field.
+
+  Examples:
+  - Record: 7366
+    Value: `KONZERVIRANE  JEDI`,  Domov > SHRAMBA > KONZERVIRANE  JEDI > KONZERVIRANE MORSKE JEDI
+
+url: https://online.spar.si/p/sardele-v-soncnicnem-olju-s-budget-125g-477694 
+
+
+4)DataHut_CH_Lidl_FullDump_20260806.CSV
+----------------------------------------
+- Data count mismatch.
+- Empty column mismatch found.
+
+  Unexpected empty column:
+  - country_of_origin
+
+- promotion_valid_from and/or promotion_valid_upto are missing for products with a promotion. As per the requirement, these fields should be populated using the price history database.
+eg: row:43
+url: https://sortiment.lidl.ch/de/catalog/product/view/id/21904/s/pick-up-salted-caramel-1017624/category/54/ 
+
+- Unescaped `|` found in the `product_description` field. The separator should be escaped as `\|`.
+
+  - Record: 3383
+    PDP URL: https://www.lidl.ch/p/de-CH/livarno-led-badleuchte/p10057002
+
+  - Record: 3388
+    PDP URL: https://www.lidl.ch/p/de-CH/pattex-kleber-sortiment/p10056998
