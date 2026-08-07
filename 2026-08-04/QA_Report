@@ -1,0 +1,316 @@
+1) royallepage_2026_08_05.json
+-------------------------------
+- Field order mismatch.
+- Data count mismatch.
+- - Invalid website values found in the `website` field.
+Malformed URLs
+--------------
+- Record: 57
+  Profile URL: https://www.royallepage.ca/en/agent/saskatchewan/yorkton/mark-zawerucha/95831/
+  Website: http://httpL//www.sellingyorkton.com
+- Record: 1748
+  Profile URL: https://www.royallepage.ca/en/agent/british-columbia/parksville/marc-lacouvee/40404/
+  Website: http://https//:marclacouvee/royallepage.ca
+
+- Record: 11844
+  Profile URL: https://www.royallepage.ca/en/agent/ontario/mississauga/henry-timmins/93738/
+  Website: http://http/www.henryhomes.ca
+
+- Record: 13461
+  Profile URL: https://www.royallepage.ca/en/agent/ontario/mississauga/tom-lebour/5054/
+  Website: http://www/TomLebour.com
+
+- Record: 16761
+  Profile URL: https://www.royallepage.ca/en/agent/alberta/calgary/shelley-soles/1401/
+  Website: http://http:www.//shelleysoles.ca
+
+Protocol capitalization inconsistency
+-------------------------------------
+- Record: 230
+  Profile URL: https://www.royallepage.ca/en/agent/nova-scotia/halifax/ashley-wambolt/38660/
+  Website: Http://www.kathywambolt.com
+
+- Record: 460
+  Profile URL: https://www.royallepage.ca/en/agent/prince-edward-island/charlottetown/matthew-ellis/72989/
+  Website: Https://www.teamellis.ca
+
+- Record: 2136
+  Profile URL: https://www.royallepage.ca/en/agent/british-columbia/nanaimo/nicole-ta/47313/
+  Website: HTTPS://www.nicoleta.ca
+
+- Record: 6052
+  Profile URL: https://www.royallepage.ca/en/agent/alberta/calgary/chris-pitman/60290/
+  Website: Http://www.christopherpitman.royallepage.ca
+
+- Record: 6917
+  Profile URL: https://www.royallepage.ca/en/agent/ontario/amherstburg/jamie-hodgins/65247/
+  Website: Http://www.HodginsHomeTeam.com
+
+- Record: 11182
+  Profile URL: https://www.royallepage.ca/en/agent/ontario/oakville/andrea-bell-basen/52349/
+  Website: Https://www.TheBellSisters.ca
+
+- Record: 11519
+  Profile URL: https://www.royallepage.ca/en/agent/ontario/whitby/rich-weisz/91501/
+  Website: HTTPS://www.richrealestate.ca
+
+- Record: 12213
+  Profile URL: https://www.royallepage.ca/en/agent/ontario/sault-ste-marie/dale-rayner/85264/
+  Website: Https://dalerayner.royallepage.ca
+
+- Record: 16082
+  Profile URL: https://www.royallepage.ca/en/agent/alberta/calgary/steven-evelyn/92599/
+  Website: Https://www.stevenevelyn.royallepage.ca
+
+- Record: 16506
+  Profile URL: https://www.royallepage.ca/en/agent/british-columbia/ladysmith/andrew-harper/87935/
+  Website: Https://andrewharper.royallepage.ca
+
+- Record: 17059
+  Profile URL: https://www.royallepage.ca/en/agent/ontario/burlington/carol-corazzola/68908/
+  Website: HTTPS://www.carolcorazzola.com
+
+Multiple website URLs in a single field
+---------------------------------------
+- Record: 349
+  Profile URL: https://www.royallepage.ca/en/agent/nova-scotia/truro/andrew-thiesen/33905/
+  Website: http://www.trurorealestate.ca,www.sayyestotheaddress.ca
+
+- Record: 1081
+  Profile URL: https://www.royallepage.ca/en/agent/british-columbia/courtenay/janice-leffler/2934/
+  Website: http://www.janiceleffler.com,www.Comoxvalleyhomes.com
+
+- Record: 6420
+  Profile URL: https://www.royallepage.ca/en/agent/alberta/calgary/rod-vermunt/70645/
+  Website: https://www.rodvermunt.com,https://www.calgaryreferrals.com,https://www.calgaryluxuryhomesales.ca
+
+Concatenated URLs without separators
+------------------------------------
+- Record: 8409
+  Profile URL: https://www.royallepage.ca/en/agent/ontario/mississauga/elena-diaz/59373/
+  Website: https://elenadiaz.cahttps://elenadiaz.royallepage.ca.
+
+- Record: 9524
+  Profile URL: https://www.royallepage.ca/en/agent/ontario/london/shelby-pearce/81788/
+  Website: https://shelbypearce.royallepage.cahttps://homesforlife.ca/
+
+Email addresses extracted as website URLs
+-----------------------------------------
+- Record: 914
+  Profile URL: https://www.royallepage.ca/en/agent/british-columbia/chilliwack/john-simonsen/92053/
+  Website: http://john.simonsen@RoyalLePage.ca
+
+- Record: 1049
+  Profile URL: https://www.royallepage.ca/en/agent/british-columbia/victoria/pat-foster/3725/
+  Website: http://emailpb@telus.net
+
+- Record: 1309
+  Profile URL: https://www.royallepage.ca/en/agent/british-columbia/coquitlam/mohamed-sabry/20140/
+  Website: http://www.mohamedsabry@royallepage.ca
+
+- Record: 1502
+  Profile URL: https://www.royallepage.ca/en/agent/british-columbia/kelowna/jay-weeks/57568/
+  Website: http://jaythehairguy@gmail.com
+
+- Record: 2288
+  Profile URL: https://www.royallepage.ca/en/agent/british-columbia/penticton/jeff-kaminski/78794/
+  Website: https://www.jeffkaminski@royallepage.ca
+
+- Record: 2291
+  Profile URL: https://www.royallepage.ca/en/agent/british-columbia/penticton/anita-russell/38494/
+  Website: https://www.anitarussell@royallepage.ca
+
+- Record: 2320
+  Profile URL: https://www.royallepage.ca/en/agent/british-columbia/port-alberni/shawn-elder/90902/
+  Website: https://shawn@shawnelder.ca
+
+- Record: 2507
+  Profile URL: https://www.royallepage.ca/en/agent/british-columbia/sechelt/marilynn-ayres/57279/
+  Website: http://ayres2@telus.net
+
+- Record: 2533
+  Profile URL: https://www.royallepage.ca/en/agent/british-columbia/summerland/michael-dyson/2578/
+  Website: http://michealdyson_@hotmail.com
+
+- Record: 2736
+  Profile URL: https://www.royallepage.ca/en/agent/british-columbia/west-vancouver/don-bailey/39477/
+  Website: http://donbailey@royallepage.ca
+
+- Record: 2832
+  Profile URL: https://www.royallepage.ca/en/agent/british-columbia/west-vancouver/chantal-johnson/88784/
+  Website: https://www.chantaljohnson@gmail.com
+
+- Record: 4316
+  Profile URL: https://www.royallepage.ca/en/agent/quebec/montreal/matthew-larsen/18069/
+  Website: http://www.info@groupenewton.com
+
+- Record: 4341
+  Profile URL: https://www.royallepage.ca/en/agent/quebec/montreal/nancy-j-newton/14708/
+  Website: http://www.info@groupenewton.com
+
+- Record: 4374
+  Profile URL: https://www.royallepage.ca/en/agent/quebec/montreal-mount-royal/andrea-neeff/44542/
+  Website: http://andrea@maisons-montreal.ca
+
+- Record: 4506
+  Profile URL: https://www.royallepage.ca/en/agent/quebec/laval/anslot-pierrot/80161/
+  Website: https://www.anslotp@royallepage.ca
+
+- Record: 4756
+  Profile URL: https://www.royallepage.ca/en/agent/quebec/montreal-outremont/costas-manolias/38086/
+  Website: http://cmanolias@videotron.ca
+
+- Record: 5514
+  Profile URL: https://www.royallepage.ca/en/agent/new-brunswick/fredericton/audrey-avison/58201/
+  Website: http://audreyavison@royallepage.ca
+
+- Record: 5838
+  Profile URL: https://www.royallepage.ca/en/agent/alberta/red-deer/jason-sernecky/92507/
+  Website: http://www.jasonsernecky@royallepage.ca
+
+- Record: 6174
+  Profile URL: https://www.royallepage.ca/en/agent/alberta/calgary/alix-halpen/94973/
+  Website: http://alix.halpen@royallepage.ca
+
+- Record: 6509
+  Profile URL: https://www.royallepage.ca/en/agent/alberta/st-albert/leonard-lajoie/96145/
+  Website: http://LeonardLajoie@Royallepage.ca
+
+- Record: 7065
+  Profile URL: https://www.royallepage.ca/en/agent/ontario/schomberg/michael-mcgillion/12036/
+  Website: http://MichaelMcGillion@RoyalLepage.ca
+
+- Record: 7338
+  Profile URL: https://www.royallepage.ca/en/agent/ontario/brantford/debbie-halloran/45212/
+  Website: http://Debhalloran@royallepage.ca
+
+- Record: 7353
+  Profile URL: https://www.royallepage.ca/en/agent/ontario/orangeville/wendy-edwards/36634/
+  Website: http://www.wendyedwardsrealestate@gmail.com
+
+- Record: 9120
+  Profile URL: https://www.royallepage.ca/en/agent/ontario/hanover/bruce-sickel/59547/
+  Website: http://brucesickel@hotmail.com
+
+- Record: 9249
+  Profile URL: https://www.royallepage.ca/en/agent/ontario/port-hope/joanna-barrington/94921/
+  Website: https://joannabarrington@royallepage.ca
+
+- Record: 9379
+  Profile URL: https://www.royallepage.ca/en/agent/ontario/kingston/kate-smith/89530/
+  Website: http://katesmith@royallepage.ca
+
+- Record: 10072
+  Profile URL: https://www.royallepage.ca/en/agent/ontario/niagara-on-the-lake/stefan-regier/96730/
+  Website: http://stefan@royallepage.ca
+
+- Record: 12117
+  Profile URL: https://www.royallepage.ca/en/agent/ontario/mississauga/jack-michalowski/23343/
+  Website: http://jmichalowski@trebnet.com
+
+- Record: 12482
+  Profile URL: https://www.royallepage.ca/en/agent/ontario/thunder-bay/jeff-clara/9456/
+  Website: https://www.jeffclara@royallepage.ca
+
+- Record: 13105
+  Profile URL: https://www.royallepage.ca/en/agent/ontario/waterloo/mel-harris/74024/
+  Website: https://www.melharris@royallepage.ca
+
+- Record: 13552
+  Profile URL: https://www.royallepage.ca/en/agent/ontario/toronto/isha-duhan/93383/
+  Website: http://ishaduhan@royallepage.ca
+
+- Record: 13691
+  Profile URL: https://www.royallepage.ca/en/agent/ontario/toronto/kendall-christie/32313/
+  Website: http://kendall@kendallchristie.ca
+
+- Record: 14082
+  Profile URL: https://www.royallepage.ca/en/agent/newfoundland-and-labrador/mount-pearl-st-johns/rick-carrigan/96610/
+  Website: http://rcarrigan@nf.sympatico.ca
+
+- Record: 14759
+  Profile URL: https://www.royallepage.ca/en/agent/ontario/toronto/avery-levin-gold/98446/
+  Website: http://averylg@royallepage.ca
+
+- Record: 15689
+  Profile URL: https://www.royallepage.ca/en/agent/quebec/sept-iles/line-verreault/15460/
+  Website: http://lineverreault@royallepage.ca
+
+- Record: 16917
+  Profile URL: https://www.royallepage.ca/en/agent/ontario/timmins/bruno-gendron/10229/
+  Website: https://brunogendron@royallepage.ca
+
+- Record: 17183
+  Profile URL: https://www.royallepage.ca/en/agent/ontario/toronto/andrew-bottomley/77373/
+  Website: http://andrewbottomley@royallepage.ca
+
+Invalid placeholder values
+--------------------------
+- Record: 9155
+  Profile URL: https://www.royallepage.ca/en/agent/ontario/hamilton/mirella-agro/44604/
+  Website: http://na
+
+- Record: 12593
+  Profile URL: https://www.royallepage.ca/en/agent/ontario/thunder-bay/cosmo-larizza/9444/
+  Website: http://no
+
+Invalid non-website values
+--------------------------
+- Record: 8632
+  Profile URL: https://www.royallepage.ca/en/agent/ontario/collingwood/rob-dubien/40382/
+  Website: http://RoyalLePageDiamondAward(Top2%Nationally)
+
+- Record: 17240
+  Profile URL: https://www.royallepage.ca/en/agent/nova-scotia/halifax/yan-li/56098/
+  Website: http://wechat:a9022231869
+
+Other invalid website values
+----------------------------
+- Record: 4087
+  Profile URL: https://www.royallepage.ca/en/agent/quebec/trois-rivieres/genevieve-st-germain/30808/
+  Website: http://www.genevièvest-germain.ca
+
+- Record: 8937
+  Profile URL: https://www.royallepage.ca/en/agent/ontario/fonthill/vicki-armstrong/21341/
+  Website: http://www.vickiarmstrong.com,
+
+- Record: 9850
+  Profile URL: https://www.royallepage.ca/en/agent/ontario/mississauga/kevin-song/57854/
+  Website: http://babakevin@com
+
+2)qatarliving_qat_2026_08_01.json
+-----------------------------------
+- Data count mismatch
+- "- Extra whitespace found in the `description` field. Multiple consecutive spaces are present in the extracted value, resulting in inconsistent formatting.
+Example:
+  - Record: 908
+  - URL: https://qlp.qatarliving.com/en/properties/rent/residential/villa-apartment/4-bhk-brand-new-fully-furnished-villa-apartment-rent-al-thumama/2115815
+
+  - `... (Basement Floor)   2 Bedrooms (Which can be change to 4 BHK) ...`
+  - `... Brand New Split A/C     (1st Floor) ...`
+  - `... Split A/C   Ground Floor ...`
+  - `... Penthouse (Left Side)    2 Bedrooms ...`
+  - `... Split A/C   Penthouse (Right Side) ...`"
+
+3)dubizzle_egp_2026_08_01.json
+-------------------------------
+- No issues found
+
+4)bahrainfinder_bah_2026_08_01.json
+------------------------------------
+- Field furnished does not contain "fully furnished" value .
+
+5)kentwood_2026_08_05.json
+---------------------------
+- field order mismatch
+- - `city` value does not match the requirement.
+  Expected cities:
+  - Denver
+  - Ft Collins
+  - Boulder
+ Extracted values:
+  - Denver 
+  - Ft Collins 
+  - Boulder 
+  - Dillon 
+  - Colorado Springs 

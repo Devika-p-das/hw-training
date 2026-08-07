@@ -46,7 +46,8 @@ Field: warning
 * Columns contain unescaped '|'
 eg :  row_no:9659(instructionforuse)
 pdp_url  : https://www.dm.si/p/d/3103862/rimmel-london-tekoci-osvetljevalec-multi-tasker-turbocharged-glow-007-spilling-the-tea      
-(m lokom. |Za rdečilo za lica nanesite)                                                               
+(m lokom. |Za rdečilo za lica nanesite)  
+                                                             
 2)DataHut_SI_Mercator_FullDump_20260806
 ----------------------------------------
 - Data count mismatch.

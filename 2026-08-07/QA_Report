@@ -1,0 +1,24 @@
+1)DataHut_AT_Dm_PriceExtractions_20260807.CSV
+---------------------------------------------
+- Data count mismatch.
+- Extra white space found on product names.
+eg: row 1734: https://www.dm.at/p/d/1556953/syoss-augenbrauenfarbe-dunkelbraun-4-1 
+(Augenbrauenfarbe Dunkelbraun  4-1, 1 St)
+
+row 3628: https://www.dm.at/p/d/1712323/reell-e-toenungsshampoo-7-4-kupfergold 
+(Tönungsshampoo  7.4 Kupfergold, 14 ml)
+
+2)DataHut_SI_Dm_PriceExtractions_20260807.CSV
+-----------------------------------------------
+- Data count mismatch.
+- Extra white space found on breadcrumps and product name
+eg: row 44: https://www.dm.si/p/d/1715572/babylove-naravna-mineralna-voda-brez-ogljikovega-dioksida 
+(Domov > Dojenček in otrok > Otroška hrana in napitki  > Otroški napitki)
+row 131: https://www.dm.si/p/d/1577508/babylove-vlazni-robcki-z-99-vode-4-x-80-kos 
+(Domov > Dojenček in otrok > Pripomočki za previjanje  > Vlažilni robčki in ostalo)
+row 1694: https://www.dm.si/p/d/1321849/essence-maskara-i-love-extreme-volume 
+(Maskara  I love extreme volume, 12 ml)
+row 2911: https://www.dm.si/p/d/3044418/essence-crtalo-za-oci-v-gelu-stay-play-01-black 
+(Črtalo za oči v gelu  STAY & PLAY, 01 Black, 5 g)
+
+

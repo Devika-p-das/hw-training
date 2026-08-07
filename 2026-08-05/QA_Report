@@ -145,3 +145,12 @@ breadcrumb: Sortiment > Sortiment > Mini Pizza Pancetta, Provola und  Zwiebel
 
 5)DataHut_IT_Eurospin_PriceExtractions_20260805.CSV
 ----------------------------------------------------
+- Data count mismatch
+-`site_shown_uom` value mismatch.
+
+  - Record: 7506,7507,7508,7509,7510,7511,7512,7513,7514,7515
+    PDP URL: https://online.eurospin.com/product/orecchiette-fresche-500g2 
+    Source website: `500 ℮`
+    Extracted value: `500`
+
+
