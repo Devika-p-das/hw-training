@@ -1,0 +1,213 @@
+1)DataHut_AT_billa_PriceExtractions_20260807.CSV
+-------------------------------------------------
+
+- Data file name mismatch. The file name is `DataHut_AT_billa_PriceExtractions_20260807.CSV` instead of the expected `DataHut_AT_Billa_PriceExtractions_20260807.CSV`.
+
+- Selling price and regular price are missing for Record: 5425, although the price is present on the website.
+  PDP URL: https://shop.billa.at/produkte/bresso-lachs-und-kren-00632967
+
+- Currency values are inconsistent. Both `EUR` and `eur` values are present.
+  - Record: 36
+    PDP URL: https://shop.billa.at/produkte/cif-creme-scheuermilch-classic-00103484
+
+- Breadcrumb is missing for Record: 98, although it is present on the website.
+  PDP URL: https://shop.billa.at/produkte/kourtaki-retsina-0012486
+
+- Invalid breadcrumb found for Record: 8901.
+  PDP URL: https://shop.billa.at/produkte/organics-simply-cola-by-red-bull-00770918
+  Extracted breadcrumb: `Alle Kategorien > Getränke > Alkoholfreie Getränke > Energydrinks >`
+
+-  The `promotion_price`  is the same as both the `selling_price` and `regular_price`.
+
+  - Record: 7457
+    PDP URL: https://shop.billa.at/produkte/goesser-bio-stoff-00742269
+    
+  - Record: 8351
+    PDP URL: https://shop.billa.at/produkte/billa-instant-nudeln-rind-00764413
+    
+  - Record: 8352
+    PDP URL: https://shop.billa.at/produkte/billa-instant-nudeln-huhn-00764414
+    
+  - Record: 10789
+    PDP URL: https://shop.billa.at/produkte/vegavita-chili-cheezy-nuggets-00878829
+    * Currency values are inconsistent. Both `EUR` and `eur` values are present.
+  - Record: 36
+    PDP URL: https://shop.billa.at/produkte/cif-creme-scheuermilch-classic-00103484 
+
+- site_shown _uom missing for 10 rows
+ eg: row 6719: https://shop.billa.at/produkte/ja-natuerlich-huehnerfilet-00723642
+
+ 2)DataHut_SI_Mercator_PriceExtraction_20260807.CSV
+ ------------------------------------------------- 
+ - File name mismatch: The file name is `DataHut_SI_Mercator_PriceExtraction_20260807.CSV` instead of `DataHut_SI_Mercator_PriceExtractions_20260807.CSV`.
+ - Data count mismatch.
+ "- Duplicate unique ID found: `19612320`.
+
+  - Record: 16962
+    PDP URL: https://mercatoronline.si/izdelek/19612320/bio-jabolcno-korenckovi-piskoti-s-piro-demeter-mogli-125-g 
+
+  - Record: 16963
+    PDP URL: https://mercatoronline.si/izdelek/20046174/bio-otroski-piskoti-farm-brothers-102-g-6-x-17-g "
+ 
+ "- Competitor name is inconsistent. The `competitor_name` field contains `MERCATOR` instead of the expected `mercator`.
+
+  - Record: 14976
+    PDP URL: https://mercatoronline.si/izdelek/19780242/eko-mehcalec-za-perilo-ravnovesje-nana-735-ml 
+
+  - Record: 15027
+    PDP URL: https://mercatoronline.si/izdelek/493487/vrecke-za-smeti-z-vrvico-swirl-40-l-12-kosov "
+
+    """- Extraction date is inconsistent. The `extraction_date` is recorded as `2026/08/07` for the following records:
+
+  - Row: 14667
+    PDP URL: https://mercatoronline.si/izdelek/19380818/kremno-cistilo-citro-arf-400-ml 
+
+  - Row: 14680
+    PDP URL: https://mercatoronline.si/izdelek/20002560/univerzalno-cistilo-ultra-limona-ajax-1-l """
+ 
+
+ "- Invalid PDP URL found.
+  - Record: 14566
+    PDP URL: izdelek/19237956/detergent-za-rocno-pomivanje-posode-original-arf-900-ml 
+
+- Regular price and selling price are missing for Record: 9021.
+  PDP URL: https://mercatoronline.si/izdelek/5325074/flips-smoki-150-g "
+
+  3)DataHut_SI_Spar_PriceExtractions_20260810.CSV
+  ------------------------------------------------
+  - Data count mismatch.
+
+  -field percentage_discount is also empty.
+
+ - Invalid selling price found for Record: 754.
+  PDP URL: https://online.spar.si/p/skuta-banana-jagoda-in-marelica-fruchtzwerge-danone-300g-305600
+  Selling price: `2,,29`
+
+ "- Duplicate ID found: `652725`.
+  - Record: 1191
+    PDP URL: https://online.spar.si/p/proteinski-puding-vanilija-high-protein-spar-200g-652725 
+  - Record: 1192
+    PDP URL: https://online.spar.si/p/lesnikov-puding-high-protein-ehrmann-200g-606059 "  
+
+- Extraction date is `2026_08_10` instead of the expected format `2026-08-10`.
+
+- Breadcrumb is missing for Record: 471.
+  PDP URL: https://online.spar.si/p/soncnicna-semena-spar-vital-400g-664407 
+  Breadcrumb is present on the website.
+
+- currency value is EUP for all record instead of EUR
+
+*- Product name is missing for Row: 5863.
+  PDP URL: https://online.spar.si/p/bio-cimet-cejlonski-mleti-sonnentor-40g-555933 
+  Product name is present on the website.
+
+*- Invalid grammage unit found for Row: 5698.
+  PDP URL: https://online.spar.si/p/brezov-sladkor-spar-300g-535312 
+  Grammage unit: `kk` instead of `kg`.
+
+*- Invalid grammage quantity found for Row: 490.
+  PDP URL: https://online.spar.si/p/bio-korenckov-sok-spar-naturpur-075l-309569 
+  Grammage quantity: `xxx`
+
+*- Unwanted spaces are present in the PDP URLs, although the URLs are loading correctly.
+
+  - Record: 1332
+    PDP URL: https://online.spar.si/p/sir z-olivami-in-paradiznikom landana-200g-642803
+
+  - Record: 4341
+    PDP URL: https://online.spar.si/p/belo-vino-malvazija-stoka 075l-599850
+
+  - Record: 4404
+    PDP URL: https://online.spar.si/p/belo-vino-chardonnay-vipolze-benedetic 075l-607528
+
+  - Record: 4497
+    PDP URL: https://online.spar.si/p/rdece-vino-carsus-stoka 075l-599851
+
+  - Record: 4558
+    PDP URL: https://online.spar.si/p/rdece-vino-refosk-ekolosko-korenikamoskon 075l-604807
+
+  - Record: 4709
+    PDP URL: https://online.spar.si/p/penece-vino-prosecco-soligo 02l-611196
+
+  - Record: 12619
+    PDP URL: https://online.spar.si/p/losjon-po-britju-nivea-men-fresh-kicksteklenicka-100 ml-600847
+
+  - Record: 13073
+    PDP URL: https://online.spar.si/p/krema-za-zascito-obraza zf50-nivea-sun-40ml-648710
+
+  - Record: 15203
+    PDP URL: https://online.spar.si/p/polnilo-za-elektricni-osvezilec-cherry-blossomraspberry-air-wick 19ml-669668
+
+  - Record: 15590
+    PDP URL: https://online.spar.si/p/vrc-za-filtriranje-vode-24-l-sivomodra- termovka gratis-brita-style-11-664937
+
+ 4)dari_ae_2026_08_02.json
+-------------------------
+
+- Data count mismatch.
+
+- Multiple white spaces found in the `company_employees` field.
+Record: 283
+URL: https://www.dari.ae/en/app/directory/profession?id=35403
+Value: Mazen Rushdi   Abualhaija 
+
+5)rema1000_2026_08_10.csv
+---------------------------
+
+- Empty columns: store_name, store_addressline1, store_addressline2, store_suburb, store_state, store_postcode, store_addressid, brand_type, drained_weight, producthierarchy_level3, producthierarchy_level4, producthierarchy_level5, producthierarchy_level6, producthierarchy_level7, price_was, promotion_price, promotion_valid_from, promotion_valid_upto, promotion_type, percentage_discount, promotion_description
+package_sizeof_sellingprice, per_unit_sizedescription, price_valid_from, multi_buy_item_count, multi_buy_items_price_total, variants, storage_instructions, preparationinstructions, instructionforuse, country_of_origin, allergens, age_of_the_product, age_recommendations, flavour, nutritions, vitamins, labelling, grade, region, packaging
+receipies, processed_food, barcode, chilled, cooking_part, handmade, max_heating_temperature, special_information, label_information, dimensions, special_nutrition_purpose, feeding_recommendation, warranty, color, model_number, material, usp, dosage_recommendation, tasting_note, food_preservation, size, rating, review, file_name_1
+file_name_2, image_url_2, file_name_3, image_url_3, competitor_product_key, fit_guide, occasion, material_composition, style, care_instructions, heel_type, heel_height, upc, dietary_lifestyle, manufacturer_address, importer_address, distributor_address, vinification_details, recycling_information, return_address, alchol_by_volume, beer_deg, netcontent, netweight
+random_weight_flag, instock, promo_limit, multibuy_items_pricesingle, perfect_match, servings_per_pack, warning, suitable_for, standard_drinks, environmental, grape_variety, retail_limit
+
+- Image URL missing for Record: 171.
+PDP URL: https://shop.rema1000.dk/varer/43026 
+Image URL is present on the website but missing from the file.
+
+- price per unit is comma separated.
+
+- The URL returns a 404 (Not Found) error. Record: 66.
+PDP URL: https://shop.rema1000.dk/varer/260529 
+
+
+6)bayut_uae_project_2026_08_02.json
+------------------------------------
+- Data count mismatch.
+
+- Payment plan mismatch found for Record: 1507.
+PDP URL: https://www.bayut.com/for-sale/off-plan/property/dubai/dubai-south/residential-district/casa-aura-residence
+File value: 60.0/40
+Website value: 60/40
+
+- Suspicious unit area values found. unit_area_in_sqft, min_area_in_sqft, and max_area_in_sqft are all populated with 1687998.
+record 2653 : https://www.bayut.com/for-sale/off-plan/property/dubai/damac-hills/greenwoods 
+
+- Multiple space found on data
+eg ;record 2662: https://www.bayut.com/for-sale/off-plan/property/dubai/majan/deansgate-by-ade 
+(unit type:  Type  E")
+
+
+7)dubizle_qat_2026_08_02.json
+------------------------------
+- File name mismatch: File name is dubizle_qat_2026_08_02.json instead of dubizzle_qat_2026_08_02.json.
+
+- category also contains" buy "for 5 records.
+
+- currency is BHD for 2 records
+record 19: https://www.dubizzle.qa/en/ad/type-2-furnished-1-bed-apartment-ID120343530.html 
+record 43: https://www.dubizzle.qa/en/ad/luxury-modern-studio-flat-for-couple-and-single-including-bills-ID120368890.html 
+
+- Duplicate record found.
+record 1566, 1584 : https://www.dubizzle.qa/en/ad/bed-space-available-for-executive-bachelor-in-umm-ghuwailina-ID120330790.html
+
+- Two iteration_number found.
+20260802    2437
+20260801       4
+
+- -Invalid phone number found in the `phone_number` field. The field contains the value `"number"` instead of a valid phone number.
+ Record 47: https://www.dubizzle.qa/en/ad/municipality-approved-land-for-rent-ID120317386.html 
+
+
+- Multiple  white spaces found on data.
+eg record 100: https://www.dubizzle.qa/en/ad/bed-speace-3-single-bed-available-from-may-ID120306903.html 
+( ~cupboard free   Attached bathroom    Water Electricity & wifi  )
