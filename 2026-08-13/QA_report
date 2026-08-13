@@ -1,0 +1,568 @@
+1)DataHut_SI_Spar_FullDump_20260813.CSV
+----------------------------------------
+- Data count mismatch.
+- Empty columns found that are not mentioned in the requirement:
+variants, preparationinstructions, country_of_origin, age_recommendations, flavour, labelling, packaging, special_information, label_information, dimensions, color, material, tasting_note, rating, review
+file_name_1, file_name_2, file_name_3, file_name_4, file_name_5, file_name_6, competitor_product_key, features, retail_limit
+
+Columns expected to be empty in the requirement but contain data in the file:
+barcode, promotion_valid_upto,promotion_description,alchol_by_volume
+netweight
+price_was
+promotion_price
+
+- promotion valid from and promotion valid upto is given in the site but missing in file for 2 products.
+row 5412: https://online.spar.si/p/visoko-proteinsko-pecivo-zito-80g-671602   
+row 5544: https://online.spar.si/p/kajzerica-s-budget-60g-681401 
+
+-  Whitespace found in the `breadcrumb` field.
+
+Record: 7474
+PDP URL: https://online.spar.si/p/paradizniki-san-marzano-zop-v-paradiznikovem-soku-despar-premium-400g-602575 
+Value: 'Domov > SHRAMBA > KONZERVIRANE JEDI > KONZERVIRANA IN VLOŽENA ZELENJAVA'
+
+Record: 7475
+PDP URL: https://online.spar.si/p/grah-despar-3x150g-561825 
+Value: 'Domov > SHRAMBA > KONZERVIRANE JEDI > KONZERVIRANA IN VLOŽENA ZELENJAVA'
+
+- Values ending with a comma (,) were found in the file and are also displayed with the comma on the website.
+
+Example 1:
+Record: 9133
+PDP URL: https://online.spar.si/p/proteinska-ploscica-sveza-limona-summer-edition-protein-bar-proteinisi-55g-650181
+Field: product_name
+File/Website Value: PROTEINSKA PLOŠČICA SVEŽA LIMONA SUMMER EDITION, PROTEIN BAR, PROTEINI.SI, 55G,
+
+Example 2:
+Record: 9239
+PDP URL: https://online.spar.si/p/prehransko-dopolnilo-bcaa-power-drink-nature´s-finest-200g-630710
+Field: product_description
+File/Website Value: Prehransko dopolnilo s sladili, BCAA aminokislinami in vitaminom C - BCAA (L-levcin 50%, L-izolevcin 25%, L-valin 25%),
+
+Example 3:
+Record: 102
+PDP URL: https://online.spar.si/p/paradiznik-lust-350g-644361
+Field: storage_instructions
+File/Website Value: Hraniti pri sobni temperaturi,
+
+2)DataHut_CH_Lidl_FullDump_20260813.CSV
+----------------------------------------
+- Data count mismatch.
+- Unexpected empty column found: country_of_origin.
+- Regular price format issue found: 56 records contain values not in 2-decimal format.
+
+Examples:
+Record: 195
+PDP URL: https://sortiment.lidl.ch/de/catalog/product/view/id/21483/s/spezialwaschmittel-1012861/category/54/
+File value: 2.6
+
+Record: 429
+PDP URL: https://sortiment.lidl.ch/de/catalog/product/view/id/20849/s/schweizer-kartoffeln-0083292/category/54/
+File value: 3.3
+
+Record: 651
+PDP URL: https://sortiment.lidl.ch/de/catalog/product/view/id/20044/s/calanda-radler-mango-spritz-0-0--5113623/category/54/
+File value: 8.5
+
+
+Selling price format issue found: 59 records contain values not in 2-decimal format.
+
+Examples:
+Record: 195
+PDP URL: https://sortiment.lidl.ch/de/catalog/product/view/id/21483/s/spezialwaschmittel-1012861/category/54/
+File value: 2.6
+
+Record: 429
+PDP URL: https://sortiment.lidl.ch/de/catalog/product/view/id/20849/s/schweizer-kartoffeln-0083292/category/54/
+File value: 3.3
+
+Record: 1004
+PDP URL: https://sortiment.lidl.ch/de/catalog/product/view/id/18360/s/recybag-sammelsack-5113234/category/54/
+File value: 16.0
+- * Promotion is present in the file, but the promotion dates are missing.
+
+Record: 1801686
+PDP URL: https://sortiment.lidl.ch/de/catalog/product/view/id/21940/s/frisco-extreme-cornets-soft-core-1801686/category/54/ 
+File value: Aktion
+Promotion valid from: Missing
+Promotion valid upto: Missing
+
+Record: 5114255
+PDP URL: https://sortiment.lidl.ch/de/catalog/product/view/id/21941/s/chicken-wings-nature-5114255/category/54/ 
+File value: Aktion
+Promotion valid from: Missing
+Promotion valid upto: Missing
+
+Record: 1009870
+PDP URL: https://sortiment.lidl.ch/de/catalog/product/view/id/21939/s/glace-erdbeer-crisp-xxl-1009870/category/54/ 
+File value: Aktion
+Promotion valid from: Missing
+Promotion valid upto: Missing
+
+* Unescaped '|' character found in the product_description field.
+
+Record: 3358
+PDP URL: https://www.lidl.ch/p/de-CH/pattex-kleber-sortiment/p10056998 
+Value: Kleine Helfer, 3-tlg. (1x Sekundenkleber flüssig; 2 g | 1x Sekundenkleber Gel; 2 g | Reparaturkleber; 20 g) Pro Stück/Set
+
+Record: 3364
+PDP URL: https://www.lidl.ch/p/de-CH/livarno-led-badleuchte/p10057002 
+Value: Spritzwasser geschützt (IP44) 22 W | 2’400 lm | 4’000 K (neutralweisses Licht) Pro Stück Im Vergleich zum letzten Lidl Preis.
+
+* Promotion valid from date missinng in website but present in the file . 
+Record: 151217.
+ 
+PDP URL: https://sortiment.lidl.ch/de/catalog/product/view/id/14079/s/montepulciano-d-abruzzo-doc-0151217/category/54/ 
+
+File value: 13.8.2026
+ 
+
+3)DataHut-AT-Billa-PriceExtractions-20260812.CSV
+--------------------------------------------------
+-  file name mismatch: DataHut-AT-Billa-PriceExtractions-20260812.CSV instead of DataHut_AT_Billa_PriceExtractions-20260812.CSV
+- Selling price format issue found: values are not in 2-decimal format.
+
+Examples:
+Record: 68
+PDP URL: https://shop.billa.at/produkte/hennessy-very-special-0011379 
+File value: 47.9
+
+Record: 128
+PDP URL: https://shop.billa.at/produkte/oelz-mehrkorntoast-0014336 
+File value: 3.8
+
+Record: 151
+PDP URL: https://shop.billa.at/produkte/rauch-weizenmehl-extra-fuer-kuchen-0015865 
+File value: 1.8
+- Regular price format issue found: values are not in 2-decimal format.
+
+Examples:
+Record: 68
+PDP URL: https://shop.billa.at/produkte/hennessy-very-special-0011379 
+File value: 47.9
+
+Record: 128
+PDP URL: https://shop.billa.at/produkte/oelz-mehrkorntoast-0014336 
+File value: 3.8
+
+Record: 151
+PDP URL: https://shop.billa.at/produkte/rauch-weizenmehl-extra-fuer-kuchen-0015865 
+File value: 1.8
+
+- * Currency is eur, usually the valuue is EUR
+
+* Promotion price is greater than the regular and selling price.
+Record: 4
+PDP URL: https://shop.billa.at/produkte/glem-vital-shampoo-multivitamin-00100840 
+Regular price: 3.19
+Selling price: 2.49
+Promotion price: 3.79
+
+Record: 85
+PDP URL: https://shop.billa.at/produkte/clin-citrus-frische-pistole-streifenfrei-00117622 
+Regular price: 2.49
+Selling price: 1.99
+Promotion price: 3.79
+
+Record: 129
+PDP URL: https://shop.billa.at/produkte/oelz-topfengolatschen-0014387 
+Regular price: 3.69
+Selling price: 2.99
+Promotion price: 18.99
+
+* All price fields contain the same value.
+Record: 20
+PDP URL: https://shop.billa.at/produkte/felix-kleine-feine-gurken-0010219 
+Selling price: 3.79
+Regular price: 3.79
+Promotion price: 3.79
+
+4)Datahut_AT_Dm_PriceExtractions_20260812.CSV
+----------------------------------------------
+- Data count mismatch.
+- extracted_date format mismatch.
+2026/08/12
+ instead of 2026-08-12
+- pdp_url is missing for row 99, unique_id: 7500435245180
+- Selling price format issue found: values are not in 2-decimal format.
+
+Examples:
+Record: 2
+PDP URL: https://www.dm.at/p/d/3119014/dm-box-jubilaeumsbox-50-jahre-dm-gesundheit-und-wohlbefinden 
+File value: 5.0
+
+Record: 3
+PDP URL: https://www.dm.at/p/d/3118921/dm-box-jubilaeumsbox-50-jahre-dm-familie 
+File value: 5.0
+
+Record: 11
+PDP URL: https://www.dm.at/p/d/1575911/babylove-wickelunterlagen-monatspack 
+File value: 17.7
+- Regular price format issue found: values are not in 2-decimal format.
+
+Examples:
+Record: 2
+PDP URL: https://www.dm.at/p/d/3119014/dm-box-jubilaeumsbox-50-jahre-dm-gesundheit-und-wohlbefinden 
+File value: 5.0
+
+Record: 3
+PDP URL: https://www.dm.at/p/d/3118921/dm-box-jubilaeumsbox-50-jahre-dm-familie 
+File value: 5.0
+
+Record: 11
+PDP URL: https://www.dm.at/p/d/1575911/babylove-wickelunterlagen-monatspack 
+File value: 17.7 
+- * Price valid from is missing in the file, while promotion valid from is present.
+
+Record: 91
+PDP URL: https://www.dm.at/p/d/3060920/braun-foehn-hd2-2-fast-performance-and-shine 
+Promotion valid from: 26.02.2025
+Price valid from: Missing  
+
+- Invalid site_shown_uom found.
+
+The site_shown_uom field contains "inkl. 0% MwSt. zzgl. <linking>Versand</linking>", which represents VAT and shipping information rather than a unit of measurement.
+
+Row: 16032
+PDP URL: https://www.dm.at/p/d/1894207/biogourmet-kaffee-chai-mit-kakao 
+
+Row: 16038
+PDP URL: https://www.dm.at/p/d/2974597/wilkinson-sword-rasierseife-sensitive 
+- Wrong grammage unit found.
+Record: 1335
+Site Shown UOM: 60 wg
+Grammage Quantity and  Unit: 1 stück
+url: https://www.dm.at/p/d/3130473/somat-geschirrreiniger-gel-5-in-1 
+
+5) DataHut_IT_Esselunga_PriceExtractions_20260812.CSV
+-----------------------------------------------------
+- Data count mismatch.
+- pdp url is not reachable.
+
+PDP URL domain mismatch found.
+
+The URL uses "essalunga.it", but the correct domain is "esselunga.it". The product page loads successfully when "essalunga" is replaced with "esselunga".
+
+Incorrect PDP URL:
+https://spesaonline.essalunga.it/commerce/nav/drive/store/prodotto/114220/essalunga-filini-pasta-di-semola-di-grano-duro-n90-250-g 
+
+Correct PDP URL:
+https://spesaonline.esselunga.it/commerce/nav/drive/store/prodotto/114220/essalunga-filini-pasta-di-semola-di-grano-duro-n90-250-g 
+
+- competitor name mismatch
+essalunga is present in the file.
+
+-breadcrumb missing 
+row 189: https://spesaonline.essalunga.it/commerce/nav/drive/store/prodotto/676134/omino-bianco-detersivo-lavatrice-liquido-marsiglia-44-lavaggi-1760-ml 
+
+-* invalid gramage unit
+row 377: https://spesaonline.essalunga.it/commerce/nav/drive/store/prodotto/114220/essalunga-filini-pasta-di-semola-di-grano-duro-n90-250-g 
+value: gr
+
+* Escape character issues found in the PDP URL and brand fields.
+
+Examples:
+
+Record: 2752
+Field: pdp_url
+Issue: Escape character \t found in the URL.
+PDP URL: https://spesaonline.essalunga.it/commerce/nav/drive/store/prodotto/157442/elephant-baked-squeezed-pretzels-sea-salt-\t80-g 
+
+Record: 3862
+Field: pdp_url
+Issue: Escape character \t found in the URL.
+PDP URL: https://spesaonline.essalunga.it/commerce/nav/drive/store/prodotto/653548/amico-veg-snack\tal-gusto-riso-100-vegetale-mini-48-g 
+
+Record: 8986
+Field: brand
+Issue: Escape characters \t\t found in the value.
+PDP URL: https://spesaonline.essalunga.it/commerce/nav/drive/store/prodotto/552165/s/sore-valtenesi-riviera-del-garda-classico-doc-75-cl 
+File value: Soré\t\t
+
+- Special character issue found in the field value. The "|" character is present in the value, but it is not escaped.
+
+Examples:
+
+Record: 141
+PDP URL: https://spesaonline.essalunga.it/commerce/nav/drive/store/prodotto/672021/omino-bianco-sbianca-lana-cotone-e-seta-5-x-20-g 
+File value: 100g (5x20g ¿) | 5 Bustine per complessivi 100g
+
+Record: 665
+PDP URL: https://spesaonline.essalunga.it/commerce/nav/drive/store/prodotto/212065/splendid-classico-10-100-capsule-caffe-compatibili-con-macchine-nes0presso-original-520g 
+File value: 10 x 10 capsule | 10 confezioni da 52g ¿
+
+
+6) DataHut_CH_Lidl_PriceExtractions_20260812.json
+----------------------------------------------------
+- Data count mismatch.
+- Data is in json format, not in csv.
+DataHut_CH_Lidl_PriceExtractions_20260812.json
+
+- NO empty fields present.
+- -Selling price format issue found: 60 records contain values not in 2-decimal format.
+
+Examples:
+Record: 203
+PDP URL: https://sortiment.lidl.ch/de/catalog/product/view/id/21483/s/spezialwaschmittel-1012861/category/54/ 
+File value: 2.6
+
+Record: 439
+PDP URL: https://sortiment.lidl.ch/de/catalog/product/view/id/20849/s/schweizer-kartoffeln-0083292/category/54/ 
+File value: 3.3
+
+- Regular price format issue found: 69 records contain values not in 2-decimal format.
+
+Examples:
+Record: 203
+PDP URL: https://sortiment.lidl.ch/de/catalog/product/view/id/21483/s/spezialwaschmittel-1012861/category/54/ 
+File value: 2.6
+
+Record: 438
+PDP URL: https://sortiment.lidl.ch/de/catalog/product/view/id/20849/s/schweizer-kartoffeln-0083292/category/54/ 
+File value: 3.3
+
+- Promotion is present, but promotion valid from and promotion valid upto dates are missing.
+
+Examples:
+
+Record: 48
+PDP URL: https://sortiment.lidl.ch/de/catalog/product/view/id/21917/s/gran-pavesi-cracker-salati-1801331/category/54/ 
+
+Record: 49
+PDP URL: https://sortiment.lidl.ch/de/catalog/product/view/id/21919/s/getrocknete-steinpilze-spezial-6000964/category/54/ 
+
+Record: 51
+PDP URL: https://sortiment.lidl.ch/de/catalog/product/view/id/21918/s/gran-pavesi-cracker-non-salati-1801332/category/54/ 
+
+Total issues: 383
+
+- Extra space present on product name
+record 3644: https://sortiment.lidl.ch/de/catalog/product/view/id/20869/s/mini-pizza-pancetta-provola-und-zwiebel-1015165/category/54/ 
+( "Mini Pizza Pancetta, Provola und  Zwiebel")
+- 404 error found.
+record 119:  https://sortiment.lidl.ch/de/catalog/product/view/id/21695/s/tk-pizza-snackbox-1015777/category/54/    
+record 122:  https://sortiment.lidl.ch/de/catalog/product/view/id/21694/s/halloumi-fingerfood-mit-dip-1008133/category/54/ 
+
+7) DataHUT_AT_Spar_PriceExtractions_20260811.CSV
+--------------------------------------------------
+
+- File name mismatch: DataHUT_AT_Spar_PriceExtractions_20260811.CSV instead of DataHut_AT_Spar_PriceExtractions_20260812.CSV
+- Data count mismatch.
+- Regular price format issue found: 3944 records contain values not in 2-decimal format.
+
+Examples:
+Record: 407
+PDP URL: https://www.spar.at/produktwelt/selchspeck-1xca-400g-selchspeck-p2020004830289
+File value: 8.9
+
+Record: 40876
+PDP URL: https://www.spar.at/produktwelt/riso-scotti-venere-schwarzer-vollkornreis-venere-vollkorn-p2020004205728
+File value: 3.8
+
+Record: 40911
+PDP URL: https://www.spar.at/produktwelt/huber-pressle-p2679945
+File value: 4.0
+
+- Selling price format issue found: Values are not in 2-decimal format.
+
+Examples:
+Record: 77
+PDP URL: https://www.spar.at/produktwelt/spar-premium-mezze-maniche-p2020004938749
+File value: 1.7
+
+Record: 242
+PDP URL: https://www.spar.at/produktwelt/spar-premium-premium-nektarinen-p2020005871441
+File value: 3.8
+
+Record: 257
+PDP URL: https://www.spar.at/produktwelt/spar-premium-fusilli-p2020004938800 File value: 1.7
+- Breadcrumb missing.
+row 27270: https://www.spar.at/produktwelt/knorr-kaiser-teller-gulaschsuppe-p2020005648449
+- invalid gramge quantity.
+row 13160: https://www.spar.at/produktwelt/styx-p3858677
+ value 100 ml
+
+-Product name contains an unescaped "|" character.
+
+Examples:
+
+Record: 6858
+PDP URL: https://www.spar.at/produktwelt/isana-cleanser-aha-pha-peeling-125ml-p2020006024686
+Product Name: Isana AHA | PHA Cleanser 125 ml
+
+Record: 17231
+PDP URL: https://www.spar.at/produktwelt/mehrzweckschrauben-4x40-150stk-p2020005763197
+Product Name: BGS Mehrzweckschrauben | 4,0 x 40 mm | 150 Stück
+
+Record: 18248
+PDP URL: https://www.spar.at/produktwelt/bgs-mehrzweckschrauben-4-0-x-50-mm-120-stueck-p2020005763210
+Product Name: BGS Mehrzweckschrauben | 4,0 x 50 mm | 120 Stück
+
+- site_shown_uom cotain '|'.
+
+Examples:
+
+Record: 17231
+PDP URL: https://www.spar.at/produktwelt/mehrzweckschrauben-4x40-150stk-p2020005763197
+File value: BGS Mehrzweckschrauben | 4,0 x 40 mm | 150 Stück
+
+Record: 18248
+PDP URL: https://www.spar.at/produktwelt/bgs-mehrzweckschrauben-4-0-x-50-mm-120-stueck-p2020005763210
+File value: BGS Mehrzweckschrauben | 4,0 x 50 mm | 120 Stück
+
+Record: 18533
+PDP URL: https://www.spar.at/produktwelt/bgs-mehrzweckschrauben-t20-4-0-x-40-mm-150-stueck-p2020005762794
+File value: BGS Mehrzweckschrauben T20 | 4,0 x 40 mm | 150 Stück
+
+- Whitespace found in the following fields.
+
+Examples:
+
+Record: 3235
+Field: promotion_description
+Value: Mit Gutschein je  Aktion!
+
+Record: 20826
+Field: promotion_description
+Value: Mit Gutschein je  Aktion!
+
+Record: 25774
+Field: breadcrumb
+Value: SPAR Website > Produktwelt > Lebensmittel > Milchprodukte & Alternativen > Milch & Milchgetränke > Frisch  & Haltbarmilch
+
+Record: 35147
+Field: breadcrumb
+Value: SPAR Website > Produktwelt > Lebensmittel > Milchprodukte & Alternativen > Milch & Milchgetränke > Frisch  & Haltbarmilch
+
+8) DataHut_IT_Eurospin_PriceExtractions_2026812.CSV
+----------------------------------------------------
+- File name mismatch:DataHut_IT_Eurospin_PriceExtractions_2026812.CSV instead of DataHut_IT_Eurospin_PriceExtractions_20260812.CSV
+- Data count mismatch.
+- selling and regular price values are separated by , not .
+
+- Selling and regular price missing 
+row 25123: https://online.eurospin.com/product/prosecco-asolo-docg-spumante-750ml 
+-Competitor name  case mismatch
+Eurospin 
+- 2026-08-11 , expected 2026-08-12
+- -Promotion valid from date is missing, while promotion valid upto date is present.
+
+Record: 25168
+PDP URL: https://online.eurospin.com/product/vino-bianco-brik-1l2 
+Promotion valid from: Missing
+Promotion valid upto: 2026-08-23
+
+Mismatch in count
+- store_addressline1 -  10 
+store_postcode  - 11 
+
+- price valid from is present but promotion valid from missing in the file
+row 25170: https://online.eurospin.com/product/vino-bianco-brik-1l2 
+
+- site shown uom is 500 in file but 500 ℮
+eg:
+row 3492: https://online.eurospin.com/product/orecchiette-fresche-500g2 
+
+ 
+9) DataHut_AT_Billa_FullDump_20260813.CSV
+------------------------------------------
+- data count mismatch.
+-Expected empty but not empty:
+age_of_the_product, packaging
+
+Unexpected empty columns:
+file_name_1, file_name_2, file_name_3, file_name_4, file_name_5, file_name_6, retail_limit
+- product description not in line by line format.
+- 
+ - All price fields are identical, including regular_price, selling_price, and promotion_price, despite a promotion being present.
+
+Examples:
+
+Record: 4105
+PDP URL: https://shop.billa.at/produkte/almdudler-original-00490819
+Promotion: Bei 6 Flaschen je
+Regular Price: 1.32
+Selling Price: 1.32
+Promotion Price: 1.32
+
+Record: 4898
+PDP URL: https://shop.billa.at/produkte/almdudler-zuckerfrei-00575986
+Promotion: Bei 6 Flaschen je
+Regular Price: 1.32
+Selling Price: 1.32
+Promotion Price: 1.32
+
+Record: 6689
+PDP URL: https://shop.billa.at/produkte/spezi-orange-00721650
+Promotion: Bei 6 Flaschen je
+Regular Price: 1.32
+Selling Price: 1.32
+Promotion Price: 1.32
+
+Record: 7896
+PDP URL: https://shop.billa.at/produkte/ja-natuerlich-steirisches-fladenbrot-00748229
+Promotion: AKTION
+Regular Price: 3.32
+Selling Price: 3.32
+Promotion Price: 3.32
+
+- Issue: Values ending with a comma (,) found in the following fields.
+
+Examples:
+
+Record: 184
+Field: product_description
+PDP URL: https://shop.billa.at/produkte/hipp-reis-mit-karotten-und-biopute-0017104
+
+Record: 2338
+Field: product_description
+PDP URL: https://shop.billa.at/produkte/wolf-eigold-fleckerl-00403876
+
+Record: 3648
+Field: product_description
+PDP URL: https://shop.billa.at/produkte/pfaffl-wien-2-rot-00464688
+
+Record: 346
+Field: instructions
+PDP URL: https://shop.billa.at/produkte/finis-feinstes-weizenmehl-universal-0022230
+
+Record: 3470
+Field: instructions
+PDP URL: https://shop.billa.at/produkte/zantho-sankt-laurent-00446318
+
+Record: 9047
+Field: storage_instructions
+PDP URL: https://shop.billa.at/produkte/roemerquelle-emotion-birnemelisse-00770434
+
+-Regular price format issue found: Values are not in 2-decimal format.
+
+Examples:
+
+Record: 12175
+PDP URL: https://shop.billa.at/produkte/bi-good-ultra-long-plus-binden-00964099 
+File value: 2.9
+
+Record: 12176
+PDP URL: https://shop.billa.at/produkte/jura-12yo-single-malt-scotch-whisky-00962853 
+File value: 43.9
+
+Record: 12183
+PDP URL: https://shop.billa.at/produkte/clever-krustenbrot-00965492 
+File value: 1.8
+- 
+Selling price format issue found: Values are not in 2-decimal format.
+
+Examples:
+
+Record: 38
+PDP URL: https://shop.billa.at/produkte/hennessy-very-special-0011379 
+File value: 47.9
+
+Record: 134
+PDP URL: https://shop.billa.at/produkte/rauch-weizenmehl-extra-fuer-kuchen-0015865 
+File value: 1.8
+
+Record: 151
+PDP URL: https://shop.billa.at/produkte/oelz-mehrkorntoast-0014336 
+File value: 3.8
+

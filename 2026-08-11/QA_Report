@@ -1,0 +1,90 @@
+1)DataHut_SI_Spar_PriceExtractions_20260811.CSV
+------------------------------------------------
+- Data count mismatch.
+- field percentage_discount is also empty.
+- promotion_valid_from and promotion_valid_upto fields are missing in the file, although the corresponding values are present on the website.
+ Row: 10590. PDP URL: https://online.spar.si/p/slane-palcke-z-arasidi-prima-stark-100g-362549
+
+- Whitespace found in the PDP URL, although the URL is loading successfully.
+
+Row: 1367 | Unique ID: 642803 | PDP URL: https://online.spar.si/p/sir z-olivami-in-paradiznikom landana-200g-642803 
+Row: 4438 | Unique ID: 607528 | PDP URL: https://online.spar.si/p/belo-vino-chardonnay-vipolze-benedetic 075l-607528
+Row: 4546 | Unique ID: 599851 | PDP URL: https://online.spar.si/p/rdece-vino-carsus-stoka 075l-599851
+Row: 4593 | Unique ID: 604807 | PDP URL: https://online.spar.si/p/rdece-vino-refosk-ekolosko-korenikamoskon 075l-604807
+Row: 4777 | Unique ID: 611196 | PDP URL: https://online.spar.si/p/penece-vino-prosecco-soligo 02l-611196
+Row: 12661 | Unique ID: 600847 | PDP URL: https://online.spar.si/p/losjon-po-britju-nivea-men-fresh-kicksteklenicka-100 ml-600847
+Row: 13138 | Unique ID: 648710 | PDP URL: https://online.spar.si/p/krema-za-zascito-obraza zf50-nivea-sun-40ml-648710
+Row: 15347 | Unique ID: 669668 | PDP URL: https://online.spar.si/p/polnilo-za-elektricni-osvezilec-cherry-blossomraspberry-air-wick 19ml-669668
+
+
+2)rema1000_2026_08_11.csv
+--------------------------
+- Extraction date is 2026-08-10.
+- empty fields:
+store_name, store_addressline1, store_addressline2, store_suburb, store_state, store_postcode, store_addressid, brand, brand_type, drained_weight, producthierarchy_level3, producthierarchy_level4, producthierarchy_level5, producthierarchy_level6, producthierarchy_level7, price_was, promotion_price, promotion_valid_from, promotion_valid_upto, promotion_type, percentage_discount, promotion_description
+package_sizeof_sellingprice, per_unit_sizedescription, price_valid_from, multi_buy_item_count, multi_buy_items_price_total, variants, instructions, storage_instructions, preparationinstructions, instructionforuse, country_of_origin, allergens, age_of_the_product, age_recommendations, flavour, nutritions, vitamins, labelling, grade, region, packaging, receipies
+processed_food, barcode, chilled, cooking_part, handmade, max_heating_temperature, special_information, label_information, dimensions, special_nutrition_purpose, feeding_recommendation, warranty, color, model_number, material, usp, dosage_recommendation, tasting_note, food_preservation, size, rating, review, file_name_1, file_name_2, image_url_2, file_name_3, image_url_3
+competitor_product_key, fit_guide, occasion, material_composition, style, care_instructions, heel_type, heel_height, upc, dietary_lifestyle, manufacturer_address, importer_address, distributor_address, vinification_details, recycling_information, return_address, alchol_by_volume, beer_deg, netcontent, netweight, random_weight_flag, instock, promo_limit
+multibuy_items_pricesingle, perfect_match, servings_per_pack, warning, suitable_for, standard_drinks, environmental, grape_variety, retail_limit.
+
+3)DataHut_AT_Billa_PriceExtractions_20260811.CSV
+--------------------------------------------------
+- competitor name mismatch:" bila " instead of billa.
+
+- breadcrumb missing 
+row 11016: https://shop.billa.at/produkte/hofstaedter-die-grillerei-fair-zum-tier-hendl-grillteller-00886778 
+
+
+4)DataHut_CH_Lidl_PriceExtractions_20260812.CSV
+-------------------------------------------------
+
+- Data count mismatch.
+
+- file name mismatch : file name is DataHut_CH_Lidl_PriceExtractions_20260812.CSV instead of DataHut_CH_Lidl_PriceExtractions_20260811.CSV
+
+- breadcrumb empty 
+row 2968: https://sortiment.lidl.ch/de/catalog/product/view/id/11363/s/permanenttragetasche-0119607/category/54/ 
+
+-  Unwanted whitespace present in product_name and breadcrumb fields. Multiple consecutive spaces are present between words.
+Row 434: https://sortiment.lidl.ch/de/catalog/product/view/id/20869/s/mini-pizza-pancetta-provola-und-zwiebel-1015165/category/54/ 
+
+- for promotion description "AKTION" , promotion dates are missing.
+eg: row 640: https://sortiment.lidl.ch/de/catalog/product/view/id/20021/s/glace-mit-ricotta-honig-und-schoko-6015480/category/54/ 
+
+5)dubizzle_bah_2025_08_02.json
+-------------------------------
+- file name mismatch: dubizzle_bah_2025_08_02.json instead of  dubizzle_bah_2026_08_02
+
+- Data count mismatch.
+
+- id missing
+record 200: https://www.dubizzle.com.bh/en/ad/%D8%A7%D8%B1%D8%B6-%D9%84%D9%84%D8%A8%D9%8A%D8%B9-%D8%B4%D9%87%D8%B1%D9%83%D8%A7%D9%86-ID105733898.html 
+
+- price and currency is missing (missing on site also)
+record 49: https://www.dubizzle.com.bh/en/ad/for-rent-full-buiding-in-hidd-ID105723123.html 
+
+6) qatarliving_qar_2026_08_02.json
+------------------------------------
+- File name mismatch: qatarliving_qar_2026_08_02.json instead of qatarliving_qat_2026_08_02.json.
+-  Data count mismatch.
+- Invalid value "AAA"  in furnished field.
+record 25995: https://qlp.qatarliving.com/en/properties/sale/commercial/land/own_prime_villa_land_in_al_ijara_lusail_today/275349 
+
+- White space found on description.
+record 998: https://qlp.qatarliving.com/en/properties/rent/residential/apartment/luxury_fully_furnished_1_bedroom_apartment_for_rent_premium_lifestyle_exclus/261233 
+
+7)bayut_egp_2026_08_02.json
+-----------------------------
+- extra columns (completion_status, ownership) are present in the file.
+- Data count mismatch.
+- broker_display_name and broker not empty.
+- price_per field also contain
+Daily        5791 records
+Weekly         94 records
+Yearly         62 records
+
+
+
+
+
+ 
