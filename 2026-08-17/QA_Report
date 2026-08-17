@@ -1,0 +1,226 @@
+1)DataHut_SI_Mercator_PriceExtractions_20260817.CSV
+----------------------------------------------------
+- Data count mismatch.
+- regular_price has an invalid 2-decimal format.
+Examples:
+Row 15915 | https://mercatoronline.si/izdelek/19017008/darilni-bon-oddih-na-dezeli-zvezdar | 89.9
+Row 15946 | https://mercatoronline.si/izdelek/17041183/lepilo-v-stiku-uhu-40-g | 2.3
+Row 15957 | https://mercatoronline.si/izdelek/6644722/lepilo-v-stiku-uhu-2-x-21-g | 3.0
+- selling_price has an invalid 2-decimal format.
+Examples:
+Row 305 | https://mercatoronline.si/izdelek/17720502/maslo-mu-cuisine-20-g | 0.4
+Row 348 | https://mercatoronline.si/izdelek/19119393/maslo-meggle-20-g | 0.5
+Row 571 | https://mercatoronline.si/izdelek/11847424/trajno-polnomastno-alpsko-mleko-3-5-m-m-ljubljanske-mlekarne-10x1-l-2-l-gratis | 16.9
+Row 2626 | https://mercatoronline.si/izdelek/16879812/instant-polenta-mercator-500-g | 0.9
+
+- Promotion price is missing for 1,491 records where percentage_discount and promotion_description are present.
+
+Examples:
+
+Row 214 : https://mercatoronline.si/izdelek/19304194/grski-jogurt-0-m-m-fage-total-450-g 
+Row 247: https://mercatoronline.si/izdelek/19462529/proteinski-jogurt-cesnja-in-hibiskus-ego-330-g  
+Row 249: https://mercatoronline.si/izdelek/19462507/proteinski-jogurt-ego-330-g  
+
+2)DataHut_SI_Dm_PriceExtractions_20260817.CSV
+------------------------------------------------
+- Data count mismatch.
+- Regular price has an invalid 2-decimal format for 2,570 records.
+Examples:
+
+Row 10416 | regular_price | https://www.dm.si/p/d/2029477/maybelline-new-york-korektor-z-gobico-instant-anti-age-eraser-08-buff | 11.1
+Row 10417 | regular_price | https://www.dm.si/p/d/2117190/maybelline-new-york-korektor-z-gobico-instant-anti-age-eraser-06-neutralizer | 11.1
+Row 10444 | regular_price | https://www.dm.si/p/d/2001364/satin-care-gel-za-britje-sensitive-skin | 4.8
+
+- Selling price has an invalid 2-decimal format for 2,570 records.
+Examples:
+
+Row 10 | selling_price | https://www.dm.si/p/d/1916589/alpro-kokosov-napitek-s-sojo-barista-obogaten-s-kalcijem | 3.6
+Row 11 | selling_price | https://www.dm.si/p/d/1849953/alpro-rastlinski-napitek-mandelj-nesladkan | 3.6
+Row 15 | selling_price | https://www.dm.si/p/d/3080465/alpro-ovseni-in-sojin-napitek-barista-z-okusom-vanilije | 3.4
+
+- Extra white space found on bread crumb and product name 
+eg: row 6: https://www.dm.si/p/d/3159283/hipp-ekolosko-junior-mleko-pure-3-12m (Domov > Dojenček in otrok > Otroška hrana in napitki  > Mleko za dojenčke)
+row 378: https://www.dm.si/p/d/1321849/essence-maskara-i-love-extreme-volume 
+
+(Maskara  I love extreme volume, 12 ml)
+
+3) DataHut_SI_Spar_PriceExtractions_20260817.CSV
+-----------------------------------------------------
+- Data count mismatch.
+- percentage_discount is also empty
+- Regular price has an invalid 2-decimal format for 834 records.
+Examples:
+Row 16514 | regular_price | https://online.spar.si/p/solarna-sveca-vestina-aurora-1000-dni-11-623665 | 22.9
+Row 16515 | regular_price | https://online.spar.si/p/solarna-lanterna-vestina-levana-1000-dni-11-619195 | 38.9
+Row 16536 | regular_price | https://online.spar.si/p/zalni-set-4-oljnih-nagrobnih-svec-41-607834 | 22.9
+Row 16541 | regular_price | https://online.spar.si/p/stenj-za-vecno-luc-vecernico-pax-51-280116 | 1.0
+
+Selling price has an invalid 2-decimal format for 672 records.
+Examples:
+Row 395 | selling_price | https://online.spar.si/p/nastrgani-mandlji-spar-200g-274032 | 2.2
+Row 430 | selling_price | https://online.spar.si/p/fizol-pisani-s-budget-1kg-348544 | 2.5
+Row 523 | selling_price | https://online.spar.si/p/pomursko-mleko-35-mm-6x1l-666116 | 9.9
+Row 536 | selling_price | https://online.spar.si/p/alpsko-mleko-35-mm-12x1l-488330 | 16.9
+-  - product_name values end with a comma (,) for 5 records.
+
+Examples:
+
+Row 4150 | product_name | https://online.spar.si/p/pivo-zlatorog-lasko-4x05l-437039 | PIVO ZLATOROG, LAŠKO, 4X0,5L,
+Row 5705 | product_name | https://online.spar.si/p/instant-puding-butter-biscuit-cremriso-proteinisi-500g-677315 | INSTANT PUDING BUTTER BISCUIT CREMRISO, PROTEINI.SI, 500G,
+Row 5781 | product_name | https://online.spar.si/p/zelirno-sredstvo-za-vkuhavanje-sadja-21-gelfix-extra-droetker-3x25g-616246 | ŽELIRNO SREDSTVO ZA VKUHAVANJE SADJA 2:1 GELFIX EXTRA, DR.OETKER, 3X25G,
+Row 9011 | product_name | https://online.spar.si/p/proteinska-ploscica-sveza-limona-summer-edition-protein-bar-proteinisi-55g-650181 | PROTEINSKA PLOŠČICA SVEŽA LIMONA SUMMER EDITION, PROTEIN BAR, PROTEINI.SI, 55G,
+Row 9012 | product_name | https://online.spar.si/p/proteinska-ploscica-ananas-in-kokos-summer-edition-protein-bar-proteinisi-55g-650182 | PROTEINSKA PLOŠČICA ANANAS IN KOKOS SUMMER EDITION, PROTEIN BAR, PROTEINI.SI, 55G,
+
+- price_per_unit is empty for 2 records, although the website shows the value 0,00 €/KOS.
+
+Examples:
+
+Row 10991 | price_per_unit | https://online.spar.si/p/vatirane-palcke-papirnate-100-bombaz-brez-klora-beauty-kiss-3001-591908 | Website value: 0,00 €/KOS
+Row 10992 | price_per_unit | https://online.spar.si/p/vatirane-palcke-papirnate-100-bombaz-brez-klora-beauty-kiss-1601-591906 | Website value: 0,00 €/KOS
+
+4) dubizzle_egp_2026_08_03.json
+--------------------------------
+- scrapted_ts and date Contain 2 values
+2026-08-16    
+2026-08-15 
+- contain value Featured, Elite  instead of featured, elite.
+-  Contain unwanted white space on description
+eg: record 235792: https://www.dubizzle.com.eg/en/ad/own-a-townhouse-in-a-prime-location-inside-azzar-2-ID503940443.html 
+
+5) dubizzle_qat_2026_08_03.json
+---------------------------------
+- Unwanted long white space found on description 
+record 52: https://www.dubizzle.qa/en/ad/all-inclusive-studio-for-rent-in-ain-khalid-compound-ID120302833.html 
+- Website blocked, unable to access.
+
+6) bayut_uae_project_2026_08_03.json
+-------------------------------------
+- Data count mismatch.
+- count_of_unit_types mismatch found in 20 records. The value in count_of_unit_types is lower than the actual number of unit_type values found.
+
+Examples:
+
+Row 292 | unit_type / count_of_unit_types | https://www.bayut.com/for-sale/off-plan/property/dubai/dubai-islands/floarea-breeze | Expected: 52 | File: 28
+Row 926 | unit_type / count_of_unit_types | https://www.bayut.com/for-sale/off-plan/property/dubai/international-city/international-city-phase-2-warsan-4/chapter-01-by-newbury | Expected: 58 | File: 56
+Row 933 | unit_type / count_of_unit_types | https://www.bayut.com/for-sale/off-plan/property/dubai/dubai-harbour/emaar-beachfront/bayview-by-address-resort/address-bayview-tower-1 | Expected: 41 | File: 34
+Row 952 | unit_type / count_of_unit_types | https://www.bayut.com/for-sale/off-plan/property/dubai/dubai-harbour/emaar-beachfront/bayview-by-address-resort/address-bayview-tower-2 | Expected: 43 | File: 39
+
+7) bahrainfinder_bah_2026_08_03.json
+-------------------------------------
+- fully furnished is miising in the file .
+
+8) DataHut_AT_Billa_PriceExtractions_20260817.CSV
+--------------------------------------------------
+- Invalid breadcrumb found.
+row 1800: https://shop.billa.at/produkte/ja-natuerlich-fusilli-00368878 
+(gfdhs>ijfitjoirt>oijrtiorjtoi>utyyyss)
+
+- Selling price: Invalid 2-decimal format found in 321 records.
+Row 66 — https://shop.billa.at/produkte/hennessy-very-special-0011379  — 47.9
+Row 132 — https://shop.billa.at/produkte/oelz-mehrkorntoast-0014336  — 3.8
+Row 264 — https://shop.billa.at/produkte/stangl-fadennudeln-mit-ei-00196840  — 3.8
+
+- Regular price: Invalid 2-decimal format found in 305 records.
+Row 12252 — https://shop.billa.at/produkte/die-leichte-muh-fruehstuecksmilch-00641676    — 1.8
+Row 12253 — https://shop.billa.at/produkte/partybreze-dolce-vita-sesam-00651354  — 52.9
+Row 12256 — https://shop.billa.at/produkte/party-breze-raeucherlachssinfonie-sesam-00705136  — 62.9
+
+- unique id not unique
+row 859: https://shop.billa.at/produkte/dettol-reinigungstuecher-granatapfel-und-limette-00289415 
+
+row 860: https://shop.billa.at/produkte/kitkat-chunky-classic-schokoriegel-single-00289492 
+
+(unique_id: 00-289492)
+
+- Invalid grammage_unit : stük found instead of stück
+- Invalid grammage_quantity: 
+row 479: https://shop.billa.at/produkte/schaerdinger-amadeus-00253426 (7564849 instead of 1 000)
+ 
+- Promotion price is higher than both regular and selling price in 1 record.
+Row: 200
+PDP URL: https://shop.billa.at/produkte/nimm2-vitaminbonbons-0017772 
+Values: Regular price: 2.15 | Selling price: 1.89 | Promotion price: 3.49
+
+- Mehrweg product with a single displayed price does not follow the required Aktion pricing structure. promotion_description and promotion_price are missing, while regular_price is populated.
+row 5310: https://shop.billa.at/produkte/landliebe-joghurt-pfirsichmaracuja-00722984 
+
+9) DataHut_AT_Dn_PriceExtraction_20260816.CSV
+----------------------------------------------
+- File name mismatch: DataHut_AT_Dn_PriceExtraction_20260816.CSV instead of DataHut_AT_Dm_PriceExtractions_20260817.CSV
+- Data count mismatch.
+- DM instead of dm
+- Invalid breadcrumb found: 
+row 29: https://www.dm.at/p/d/1709822/loovara-intimate-lecktuecher-oral-dams 
+( Startseite > > > > Gesundheit > Liebesspiel & Verhütung > Sextoys)
+- - Duplicate url found
+row 4040, row 4041 : https://www.dm.at/p/d/1626741/balea-einwegrasierer-2-klingen 
+- Selling Price – Invalid 2 Decimal Format
+
+Examples:
+
+Row 2 | https://www.dm.at/p/d/3158521/alpine-gehoerschutz-muffy-baby  | 29.9
+Row 7 | https://www.dm.at/p/d/3118921/dm-box-jubilaeumsbox-50-jahre-dm-familie  | 5.0
+Row 10 | https://www.dm.at/p/d/1575911/babylove-wickelunterlagen-monatspack  | 17.7
+- Regular Price – Invalid 2 Decimal Format
+
+Total issues: 1879
+
+Examples:
+
+Row 16812 | https://www.dm.at/p/d/1844511/calvin-klein-eau-de-toilette-man  | 24.9
+Row 16825 | https://www.dm.at/p/d/1916805/babyliss-warmluftbuerste-smooth-shape-airstyler  | 34.9
+Row 16826 | https://www.dm.at/p/d/1573284/babyliss-haartrockner-hydro-fusion-2100  | 69.9
+- - Product name missing for 2 rows
+row 148444: https://www.dm.at/p/d/1459132/nestle-beba-anfangsmilch-pre-von-geburt-an 
+row 148445:  https://www.dm.at/p/d/1459140/nestle-beba-kindermilch-junior-2-ab-2-jahre 
+
+- Ivalid currency Value : HUF
+- Extra spaces found in product_name for 48 records.
+
+Examples:
+
+Row 1300 | product_name | https://www.dm.at/p/d/3137062/essence-nagelpuder-studio-nails-01-gelato-glaze 
+
+10) DataHut_AT_Spar_Pricextractions_20260817.CSV
+-------------------------------------------------
+- File name mismatch: DataHut_AT_Spar_Pricextractions_20260817.CSV instead of DataHut_AT_Spar_PriceExtractions_20260817.CSV
+- Data count mismatch.
+- Invalid breadcrumb found
+row 2803: https://www.spar.at/produktwelt/spar-free-from-dunkle-tafel-fair-bio-laktosefrei-glutenfrei-p7073588
+SPAR Website > Produktwelt > Lebensmittel > Süßes & Salziges > > > Süßes > Schokolade & Pralinen
+
+- - Duplicate data found
+Row 2924 — https://www.spar.at/produktwelt/spar-natur-pur-bio-topfenaufstrich-liptauer-art-scharf-p2020005277724 
+Row 2940 — https://www.spar.at/produktwelt/spar-natur-pur-bio-topfenaufstrich-liptauer-art-scharf-p2020005277724 
+
+- product name missing
+row 3135: https://www.spar.at/produktwelt/simpex-basic-celebration-geburtstagskerzen-blau-lang-12-stueck-p2020004287793 
+
+- Unescaped | characters found
+
+product_name — 10 records
+
+Row 8874 — https://www.spar.at/produktwelt/isana-cleanser-aha-pha-peeling-125ml-p2020006024686 
+Row 18541 — https://www.spar.at/produktwelt/mehrzweckschrauben-4x40-150stk-p2020005763197 
+site_shown_uom — 9 records
+Row 18541 — https://www.spar.at/produktwelt/mehrzweckschrauben-4x40-150stk-p2020005763197 
+Row 19504 — https://www.spar.at/produktwelt/bgs-mehrzweckschrauben-4-0-x-50-mm-120-stueck-p2020005763210 
+
+Extra whitespace found
+Row 3315 — promotion_description — Empty/whitespace value.( https://www.spar.at/produktwelt/kneipp-badekristalle-erkaeltungszeit-600g-p2020003555589 )
+Row 23857 — breadcrumb — Extra whitespace found.( https://www.spar.at/produktwelt/vorarlberg-milch-laendle-halbfettmilch-laenger-frisch-1-5-fett-p2020006312547 )
+Row 33016 — breadcrumb — Extra whitespace found.( https://www.spar.at/produktwelt/berglandmilch-schaerdinger-cremig-15-p2020006140843 )
+- Invalid url found
+row 2850:  hroduktwelt/simpex-spruehflasche-braun-p2020006112130
+- Regular price — Invalid 2 Decimal Format
+Row 41126 — https://www.spar.at/produktwelt/riso-scotti-venere-schwarzer-vollkornreis-venere-vollkorn-p2020004205728  — 3.8
+Row 41163 — https://www.spar.at/produktwelt/huber-pressle-p2679945  — 4.0
+Row 41182 — https://www.spar.at/produktwelt/fuerst-punsch-krapfen-150g-p2593784  — 2.2
+Row 41194 — https://www.spar.at/produktwelt/bischof-kicher-erbsennud-330g-p2020003182747  — 3.8
+Selling price — Invalid 2 Decimal Format
+Row 109 — https://www.spar.at/produktwelt/spar-premium-mezze-maniche-p2020004938749  — 1.7
+Row 273 — https://www.spar.at/produktwelt/spar-premium-premium-nektarinen-p2020005871441  — 3.8
+Row 295 — https://www.spar.at/produktwelt/spar-premium-fusilli-p2020004938800  — 1.7
+- extraction_date is 2026-08-18 instead of 2026-08-17
+- site shown uom missing for one row(None)
+row 3293: https://www.spar.at/produktwelt/simpex-basic-p2020005670242   
