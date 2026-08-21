@@ -1,0 +1,202 @@
+1) DataHut_CH_Lidl_FullDump_20260817.CSV
+------------------------------------------
+- Data count mismatch
+- Unexpected empty columns :country_of_origin
+- instock is False for 38 products
+eg: row 205: https://sortiment.lidl.ch/de/catalog/product/view/id/21482/s/bio-fruit-go-squeezer-5006930/category/54/ 
+
+- currency value is Swiss Franc instead of  Swiss franc
+- Percentage discount is missing while promotion description is present.
+Row 3207 | https://www.lidl.ch/p/de-CH/lupilu-premium-body/p10056955 
+- Regular price has invalid 2-decimal format for 60 records.
+Row 3684 | https://www.lidl.ch/p/de-CH/roblox/p10045176  | 10.0
+Row 3686 | https://www.lidl.ch/p/de-CH/lidl-geschenkkarte/p11051105  | 5.0
+Row 3696 | https://www.lidl.ch/p/de-CH/swisscom/p10000043  | 10.0
+- Selling price has invalid 2-decimal format for 62 records.
+Row 243 | https://sortiment.lidl.ch/de/catalog/product/view/id/21483/s/spezialwaschmittel-1012861/category/54/  | 2.6
+Row 466 | https://sortiment.lidl.ch/de/catalog/product/view/id/20849/s/schweizer-kartoffeln-0083292/category/54/  | 3.3
+Row 975 | https://sortiment.lidl.ch/de/catalog/product/view/id/18360/s/recybag-sammelsack-5113234/category/54/  | 16.0
+- Promotion dates are missing for 515 records where promotion_description is present.
+Row 18 | https://sortiment.lidl.ch/de/catalog/product/view/id/14079/s/montepulciano-d-abruzzo-doc-0151217/category/54/ 
+Row 24 | https://sortiment.lidl.ch/de/catalog/product/view/id/14499/s/prosecco-valdobbiadene-docg-0149516/category/54/ 
+Row 31 | https://sortiment.lidl.ch/de/catalog/product/view/id/13318/s/buendnerfleisch-5107879/category/54/ 
+Row 46 | https://sortiment.lidl.ch/de/catalog/product/view/id/21944/s/pinsa-teig-xxl-6018554/category/54/ 
+Row 48 | https://sortiment.lidl.ch/de/catalog/product/view/id/21940/s/frisco-extreme-cornets-soft-core-1801686/category/54/ 
+- Unescaped | characters found in product_description for 2 records.
+Row 3240 | https://www.lidl.ch/p/de-CH/pattex-kleber-sortiment/p10056998 
+Row 3243 | https://www.lidl.ch/p/de-CH/livarno-led-badleuchte/p10057002 
+- Percentage discount is missing while promotion description is present.
+Row 3207 | https://www.lidl.ch/p/de-CH/lupilu-premium-body/p10056955 
+- Invalid image URL found: image_url_1 contains a video (.mp4) URL instead of an image URL. 
+Row 106 | https://sortiment.lidl.ch/de/catalog/product/view/id/21736/s/dressing-5104259/category/54/ 
+( https://sortiment.lidl.ch/media/catalog/product/5/1/5104259_FrenchKraeuter_PSXX_2.mp4 )
+- Leading/trailing whitespace found in producthierarchy_level3.
+Row 12 | https://sortiment.lidl.ch/de/catalog/product/view/id/12888/s/bio-orangen-0081532/category/54/ 
+
+2) bayut_bah_2026_08_03.json
+-----------------------------
+- Data count mismatch.
+- furnished ,unfurnished instaed of Furnished,Unfurnished
+
+3) DataHut_SI_Spar_PriceExtractions_20260818.CSV
+--------------------------------------------------
+- 2 extra columns found: grammage_unit_norm, site_qty.
+- Data count mismatch.
+- percentage_discount is also empty.
+- Regular price has invalid 2-decimal format for 832 records.
+Row 16506 | https://online.spar.si/p/nagrobna-sveca-z-vlozkom-vaza-rdeca-ilkos-11-398694  | 2.0
+Row 16524 | https://online.spar.si/p/zalni-set-4-oljnih-nagrobnih-svec-41-607834  | 22.9
+Row 16529 | https://online.spar.si/p/stenj-za-vecno-luc-vecernico-pax-51-280116  | 1.0
+Selling price has invalid 2-decimal format.
+Row 402 | https://online.spar.si/p/nastrgani-mandlji-spar-200g-274032  | 2.2
+Row 423 | https://online.spar.si/p/fizol-pisani-s-budget-1kg-348544  | 2.5
+Row 511 | https://online.spar.si/p/pomursko-mleko-35-mm-6x1l-666116  | 9.9
+- - Promotion dates are missing for 2 records, although the dates are available on the website.
+
+Row 5314 | https://online.spar.si/p/visoko-proteinsko-pecivo-zito-80g-671602 
+Row 5441 | https://online.spar.si/p/kajzerica-s-budget-60g-681401 
+
+4) DataHut_SI_Dm_PriceExtractions_20260818.CSV
+------------------------------------------------
+- Data count mismatch.
+- Regular price has invalid 2-decimal format for 2,545 records.
+Row 10265 | https://www.dm.si/p/d/2029477/maybelline-new-york-korektor-z-gobico-instant-anti-age-eraser-08-buff | 11.1
+Row 10266 | https://www.dm.si/p/d/2117190/maybelline-new-york-korektor-z-gobico-instant-anti-age-eraser-06-neutralizer | 11.1
+Row 10287 | https://www.dm.si/p/d/2001364/satin-care-gel-za-britje-sensitive-skin | 4.8
+Selling price has invalid 2-decimal format for 2,545 records.
+Row 22 | https://www.dm.si/p/d/1916616/alpro-rastlinski-napitek-this-is-not-m-lk-s-3-5-mascobe | 3.2
+Row 24 | https://www.dm.si/p/d/3080465/alpro-ovseni-in-sojin-napitek-barista-z-okusom-vanilije | 3.4
+Row 26 | https://www.dm.si/p/d/1737974/alpro-ovsen-napitek-barista | 3.4
+- Extra whitespace found in product_name and breadcrumb fields.
+product name: Maskara  I love extreme volume, 12 ml
+Row 245 : https://www.dm.si/p/d/1321849/essence-maskara-i-love-extreme-volume 
+
+breadcrumb: Domov > Dojenček in otrok > Otroška hrana in napitki  > Mleko za dojenčke
+row 6 : https://www.dm.si/p/d/3159283/hipp-ekolosko-junior-mleko-pure-3-12m 
+
+
+5) DataHut_SI_Mercator_PriceExtractions_20260818.CSV
+----------------------------------------------------
+- Data count mismatch.
+- Regular price has invalid 2-decimal format for 70 records.
+Row 15894 | https://mercatoronline.si/izdelek/19016975/darilni-bon-vecerja-pri-mojstrih-okusov-zvezdar  | 39.9
+Row 15898 | https://mercatoronline.si/izdelek/19017008/darilni-bon-oddih-na-dezeli-zvezdar  | 89.9
+Row 16886 | https://mercatoronline.si/izdelek/19457068/namenska-psenicna-moka-tip-400-belje-1-kg  | 1.0
+Selling price has invalid 2-decimal format for 328 records.
+Row 362 | https://mercatoronline.si/izdelek/17720502/maslo-mu-cuisine-20-g  | 0.4
+Row 387 | https://mercatoronline.si/izdelek/19119393/maslo-meggle-20-g  | 0.5
+Row 570 | https://mercatoronline.si/izdelek/11847424/trajno-polnomastno-alpsko-mleko-3-5-m-m-ljubljanske-mlekarne-10x1-l-2-l-gratis  | 16.9
+- Promotion price is missing for 1,489 records where percentage_discount and promotion_description are present.
+
+Row 99 | https://mercatoronline.si/izdelek/17164308/tekoci-jogurt-1-3-m-m-ego-1-kg 
+Row 272 | https://mercatoronline.si/izdelek/19304194/grski-jogurt-0-m-m-fage-total-450-g 
+Row 281 | https://mercatoronline.si/izdelek/19462529/proteinski-jogurt-cesnja-in-hibiskus-ego-330-g 
+
+6) DataHut_AT_LIDL_PriceExtractions_20260819.CSV
+-------------------------------------------------
+- Data count mismatch.
+- currency is EUR instead of Swiss franc.
+- Invalid promotion_valid_from found; date differs from price_valid_from.
+
+Row 17 | https://sortiment.lidl.ch/de/catalog/product/view/id/14499/s/prosecco-valdobbiadene-docg-0149516/category/54/ 
+price_valid_from: 13.8.2026 | promotion_valid_from: 13.8.2025
+- Percentage discount is missing while promotion description is present.(-20% )
+
+Row 1672 | https://sortiment.lidl.ch/de/catalog/product/view/id/15673/s/pinotage-0034515/category/54/ 
+- Invalid breadcrumb found
+Sortiment > Sortiment > Bürlischild > >
+row 3601: https://sortiment.lidl.ch/de/catalog/product/view/id/21540/s/buerlischild-5114330/category/54/ 
+- Regular price has invalid 2-decimal format for 60 records.
+Row 3672 | https://www.lidl.ch/p/de-CH/paysafecard/p77772797  | 25.0
+Row 3692 | https://www.lidl.ch/p/de-CH/lidl-geschenkkarte/p11051105  | 5.0
+Row 3693 | https://www.lidl.ch/p/de-CH/lidl-connect/p10053079  | 10.0
+Selling price has invalid 2-decimal format for 62 records.
+Row 183 | https://sortiment.lidl.ch/de/catalog/product/view/id/21483/s/spezialwaschmittel-1012861/category/54/  | 2.6
+Row 405 | https://sortiment.lidl.ch/de/catalog/product/view/id/20849/s/schweizer-kartoffeln-0083292/category/54/  | 3.3
+Row 961 | https://sortiment.lidl.ch/de/catalog/product/view/id/18359/s/recybag-sammelsack-5113221/category/54/  | 10.0
+- Promotion dates are missing for records where promotion_description is present.
+
+Row 17 | https://sortiment.lidl.ch/de/catalog/product/view/id/14499/s/prosecco-valdobbiadene-docg-0149516/category/54/ 
+Row 25 | https://sortiment.lidl.ch/de/catalog/product/view/id/13318/s/buendnerfleisch-5107879/category/54/ 
+Row 36 | https://sortiment.lidl.ch/de/catalog/product/view/id/21944/s/pinsa-teig-xxl-6018554/category/54/ 
+- Extra white space found on breadcrumb and product name.
+Mini Pizza Pancetta, Provola und  Zwiebel
+Sortiment > Sortiment > Mini Pizza Pancetta, Provola und  Zwiebel
+row 3595: https://sortiment.lidl.ch/de/catalog/product/view/id/20869/s/mini-pizza-pancetta-provola-und-zwiebel-1015165/category/54/ 
+
+
+
+7) Datahut_At_billa_PriceExtraction_20260718.CSV
+-------------------------------------------------
+- File name mismatch: Datahut_At_billa_PriceExtraction_20260718.CSV instead of DataHut_AT_Billa_PriceExtractions_20260818.CSV
+12283
+"€ is replaced by $ in price_per_unit.
+eg:
+ 1 kg 10.86 $ instead of 1 kg 10,86 €"
+Billa instead of billa.
+"Selling price has invalid 2-decimal format for 321 records.
+Row 28 | https://shop.billa.at/produkte/hennessy-very-special-0011379   | 47.9
+Row 100 | https://shop.billa.at/produkte/oelz-mehrkorntoast-0014336   | 3.8
+Row 124 | https://shop.billa.at/produkte/rauch-weizenmehl-extra-fuer-kuchen-0015865   | 1.8"
+"Regular price has invalid 2-decimal format for 305 records.
+Row 12218 | https://shop.billa.at/produkte/jura-journey-00865098   | 44.9
+Row 12249 | https://shop.billa.at/produkte/coca-cola-glaskonturflaschen-6er-00857993    | 8.7
+Row 12263 | https://shop.billa.at/produkte/bi-good-ultra-plus-binden-normal-00964095   | 2.9
+"
+"Product name missing for 2 rows
+row 6488: https://shop.billa.at/produkte/coca-cola-00721877 
+row 6489: https://shop.billa.at/produkte/coca-cola-zero-00721878 
+- Promotion records where selling_price, regular_price, and promotion_price are all equal.
+Row 4116 | https://shop.billa.at/produkte/almdudler-original-00490819 
+Row 4791 | https://shop.billa.at/produkte/almdudler-zuckerfrei-00575986 
+Row 6465 | https://shop.billa.at/produkte/spezi-orange-00721650 
+Row 7659 | https://shop.billa.at/produkte/ja-natuerlich-steirisches-fladenbrot-00748229 
+- grammage unit is gg instead g
+row 12282: https://shop.billa.at/produkte/clever-rahmcamembert-00634069 
+- Invalid breadcrumb: Alle Kategorien > ? Kühlwaren > ? Käse > ? Weichkäse
+row 12282: https://shop.billa.at/produkte/clever-rahmcamembert-00634069  
+
+- Promotion price is missing for a product with a single displayed price and AKTION promotion.
+
+Row 6535 | https://shop.billa.at/produkte/fruchtbar-bio-herznudeln-00722516
+
+8) DataHut_AT_Dm_PriceExtractions_20260818.CSV
+--------------------------------------------------
+- Data count mismatch.
+- Site shown uom missing for 3 rows
+row 2750: https://www.dm.at/p/d/3123593/nivea-gesichtswasser-pflegend-arganoel-hyaluronsaeure 
+row 2921: https://www.dm.at/p/d/1703270/balea-augencreme-vital-straffend 
+row 3105: https://www.dm.at/p/d/1914190/nivea-nachtcreme-revitalisierend-anti-falten-55 
+- bread crumb missing
+row 37: https://www.dm.at/p/d/1575911/babylove-wickelunterlagen-monatspack 
+ivalid breadcrumb found( Startseite > Pflege & Parfum > > Gesichtsreinigung > Waschge )
+row 983: https://www.dm.at/p/d/1487984/neutrogena-reinigungsgel-hydro-boost-aqua 
+- price per unit is comma separated for 1 row
+row 1228: https://www.dm.at/p/d/3061283/ebelin-gesichtsmaske-silikon-wiederverwendbar-sortiert 
+( 3,45 € je 1 St )
+-  - price_valid_from is missing even though  promotion_valid_from found;
+Row 896 | https://www.dm.at/p/d/3114492/ebelin-scrunchei-smiley-mehrfarbig 
+promotion_valid_from: 14.01.2026 | price_valid_from: Missing
+
+- Regular price is lower than selling price.
+
+Row 1026 | https://www.dm.at/p/d/1353535/jessa-slipeinlagen-extra-lang-mit-frischeduft 
+Regular price: 1.25 | Selling price: 2.95
+
+-  White space found on product name
+Nagelpuder Studio Nails  01 Gelato Glaze, 0,5 g
+row 1567 : https://www.dm.at/p/d/3137062/essence-nagelpuder-studio-nails-01-gelato-glaze 
+
+- Difference found between site_shown_uom and grammage_unit.
+Row 626 | https://www.dm.at/p/d/3084459/dmbio-fruechtetee-hagebutte-hibiskus  | site_shown_uom: Früchtetee Hagebutte Hibiskus , 40 g  | grammage_unit: g
+Row 2670 | https://www.dm.at/p/d/3130473/somat-geschirrreiniger-gel-5-in-1  | site_shown_uom: 60 wg | grammage_unit: ml
+- Regular price has invalid 2-decimal format.
+Row 16843 | https://www.dm.at/p/d/1573284/babyliss-haartrockner-hydro-fusion-2100 | 69.9
+Row 16847 | https://www.dm.at/p/d/1866106/davidoff-eau-de-toilette-cool-water | 47.9
+Row 16850 | https://www.dm.at/p/d/3153942/sigg-trinkflasche-one-kids-dive-600-ml | 22.9
+Selling price has invalid 2-decimal format.
+Row 2 | https://www.dm.at/p/d/3158521/alpine-gehoerschutz-muffy-baby | 29.9
+Row 7 | https://www.dm.at/p/d/3148567/weleda-gesichtsoel-youth-power-granatapfel | 28.9
+Row 12 | https://www.dm.at/p/d/3144829/weleda-augenpflege-youth-power-granatapfel | 24.9
+
+

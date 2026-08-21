@@ -1,0 +1,225 @@
+1) DataHut_SI_Spar_FullDump_20260820.CSV
+-------------------------------------
+- Data count mismatch.
+- Expected empty but not empty:
+ barcode, promotion_valid_upto, promotion_description, alchol_by_volume, netweight, price_was, promotion_price
+
+Unexpected empty columns:
+variants, preparationinstructions, country_of_origin, age_recommendations, flavour, labelling, packaging, special_information,
+ label_information, dimensions, color, material, tasting_note, rating, review, file_name_1–file_name_6, competitor_product_key, features, retail_limit
+
+- - Grammage quantity/unit mismatch found in 2 records: grammage quantity is converted to kg, but grammage_unit remains g.
+
+Row 727 — https://online.spar.si/p/nadomestek-kave-z-okusom-po-kakavu-calmrooty-62g-681408
+Row 8778 — https://online.spar.si/p/testenine-fusilli-feelingok-220g-679091
+
+- Total unit mismatch: 16 records — grammage_unit is kos, while price_unit is M.
+
+Row 11470 — https://online.spar.si/p/obojestranski-lepilni-trak-scotch-12mm-x-63m-23854
+Row 12044 — https://online.spar.si/p/ovratnica-za-macke-proti-klopom-in-bolham-3-mesecna-vetocanis-35-cm-467779
+Row 14208 — https://online.spar.si/p/zobna-nitka-sensodyne-30m-280997
+Row 15594 — https://online.spar.si/p/vrv-za-perilo-plastificirana-krokodil-15m-222319
+Row 15655 — https://online.spar.si/p/vecnamenski-trak-srebrn-extra-power-25mx50mm-tesa-11-220257
+
+- Regular price: Invalid 2-decimal format found in 823 records.
+Examples: Row 16588 — https://online.spar.si/p/solarna-lanterna-vestina-levana-1000-dni-11-619195 — 38.9;
+ Row 16611 — https://online.spar.si/p/zalni-set-4-oljnih-nagrobnih-svec-41-607834 — 22.9;
+
+  Row 16615 — https://online.spar.si/p/stenj-za-vecno-luc-vecernico-pax-51-280116 — 1.0.
+Selling price: Invalid 2-decimal format found in 653 records.
+Examples: Row 319 — https://online.spar.si/p/bio-indijski-orescki-prazeni-in-soljeni-spar-naturpur-30g-672323 — 1.0;
+Row 416 — https://online.spar.si/p/nastrgani-mandlji-spar-200g-274032 — 2.2;
+Row 434 — https://online.spar.si/p/fizol-pisani-s-budget-1kg-348544 — 2.5.
+
+- Promotion dates are available on the website but missing on the file for one product.
+row 5430: https://online.spar.si/p/bela-zemlja-spar-60g-678329
+
+2) DataHut_SI_Mercator_FullDump_20260820.CSV
+---------------------------------------------
+- Data count mismatch.
+- Regular price: Invalid 2-decimal format found in 73 records.
+Examples: Row 15981 — https://mercatoronline.si/izdelek/5349397/pvc-ovitek-za-zvezke-a5-eurocom-10-1 — 0.9; Row 16004 — https://mercatoronline.si/izdelek/19181882/samoleplivi-ovitek-za-zvezek-a5-10-1 — 1.6; Row 16102 — https://mercatoronline.si/izdelek/17839168/vodene-barvice-aero-30-mm-12-1 — 5.1.
+Selling price: Invalid 2-decimal format found in 332 records.
+Examples: Row 360 — https://mercatoronline.si/izdelek/17720502/maslo-mu-cuisine-20-g — 0.4;
+Row 376 — https://mercatoronline.si/izdelek/19119393/maslo-meggle-20-g — 0.5; Row 600 — https://mercatoronline.si/izdelek/11847424/trajno-polnomastno-alpsko-mleko-3-5-m-m-ljubljanske-mlekarne-10x1-l-2-l-gratis — 16.9.
+- price was is missing even the website has 2 price
+eg
+row 646: https://mercatoronline.si/izdelek/18527701/margarina-za-peko-rama-250-g
+price was is taken only for promotion  Ugodno
+- Promotion price missing: Promotion price is missing even though a promotion description is present and the promotion price is available on the website. Total issues: 1,493.
+
+Row 139 — https://mercatoronline.si/izdelek/17164308/tekoci-jogurt-1-3-m-m-ego-1-kg — Znižano -20%
+Row 271 — https://mercatoronline.si/izdelek/19304194/grski-jogurt-0-m-m-fage-total-450-g — Znižano -15%
+Row 277 — https://mercatoronline.si/izdelek/19462507/proteinski-jogurt-ego-330-g — Znižano -11%
+
+3) DataHut_SI_Dm_FullDump_20260820.CSV
+---------------------------------------
+- Data count mismatch.
+- 'price_was', 'promotion_price'
+also empty
+- Regular price has an invalid 2-decimal format for 2,588 records.
+Row 10423 | https://www.dm.si/p/d/1909353/yves-saint-laurent-parfumska-voda-za-zenske-black-opium  | 79.9
+Row 10436 | https://www.dm.si/p/d/2189696/radenska-kraljevi-vrelec-gazirana-naravna-mineralna-voda-z-dodanim-lastnim-ogljikovim-dioksidom  | 0.7
+Row 10438 | https://www.dm.si/p/d/2126550/garnier-skin-naturals-serum-za-obraz-glow  | 9.8
+Selling price has an invalid 2-decimal format.
+Row 16 | https://www.dm.si/p/d/3156773/playgro-set-igrac-za-kopanje-plavajoci-zabavni-prijatelji  | 13.1
+Row 18 | https://www.dm.si/p/d/3155856/nivea-krema-za-roke-anti-age-q10  | 4.9
+Row 19 | https://www.dm.si/p/d/3137870/balea-gel-za-tusiranje-sensitive-polnilo  | 1.9
+- competitor_product_key is taken from dm product number
+- - Unescaped | characters found in:
+
+instructionforuse: 6 records
+ingredients: 100 records
+
+Examples:
+
+Row 10005 — https://www.dm.si/p/d/3102745/rimmel-london-tekoci-osvetljevalec-multi-tasker-turbocharged-glow-001-not-a-basic-b
+Row 10014 — https://www.dm.si/p/d/3101641/rimmel-london-tekoci-osvetljevalec-multi-tasker-turbocharged-glow-005-iconic-as-usual
+Row 10028 — https://www.dm.si/p/d/3103852/rimmel-london-tekoci-osvetljevalec-multi-tasker-turbocharged-glow-006-it-s-giving-glow
+Row 93 — https://www.dm.si/p/d/3123738/balea-zascita-pred-drgnjenjem-koze-v-stiku-tropical-dream
+Row 269 — https://www.dm.si/p/d/3126235/balea-balzam-za-lase-hydra-volume
+
+Total affected records: 106.
+
+- Escape character issues found in preparationinstructions: 3 records.
+
+Examples:
+
+Row 3435 — https://www.dm.si/p/d/1461294/babylove-bio-zitna-kasica-iz-treh-vrst-polnozrnatih-mok
+Row 3990 — https://www.dm.si/p/d/3082378/babylove-bio-ovsena-kasa-s-kozjim-mlekom-jabolki-in-jagodami-po-dopolnjenem-6-mesecu-starosti
+
+- Whitespace issues found in 722 records across multiple columns.
+
+Examples:
+
+Row 8 — Column: breadcrumb — Extra whitespace found
+PDP URL: https://www.dm.si/p/d/3159228/hipp-ekolosko-nadaljevalno-mleko-za-dojencke-pure-2-6m
+Row 12 — Column: breadcrumb — Extra whitespace found
+PDP URL: https://www.dm.si/p/d/3159283/hipp-ekolosko-junior-mleko-pure-3-12m
+Row 9811 — Column: storage_instructions — Double whitespace found (30 C)
+PDP URL: https://www.dm.si/p/d/1552761/dein-bestes-dopolnilna-hrana-za-pse-socne-klobasice-z-govedino-in-perutnino
+Row 114 — Column: preparationinstructions — Whitespace issue found
+PDP URL: https://www.dm.si/p/d/1462215/dmbio-bio-ovsena-zitna-kasica-po-dopolnjenem-5-mesecu
+Row 4648 — Column: country_of_origin — Extra whitespace found
+PDP URL: https://www.dm.si/p/d/1679873/dmbio-bio-ovsena-rezina-s-pomaranco-in-korenjem
+Row 2173 — Column: labelling — Extra whitespace found
+PDP URL: https://www.dm.si/p/d/1299311/denkmit-detergent-za-rocno-pomivanje-posode-ultra-pro-climate
+Row 9445 — Column: warning — Extra whitespace found
+PDP URL: https://www.dm.si/p/d/2027671/finish-tablete-za-strojno-pomivanje-posode-ultimate-plus-intensive-clean-shine-limona
+
+Total whitespace issues: 722
+
+4) DataHut_CH_Denner_FullDump_20260820.CSV
+----------------------------------------------
+- Data count mismatch.
+- Promotion price is missing in 4 records even though percentage_discount and promotion_description are populated.
+
+Examples:
+
+Row 4 — percentage_discount: 28.0, promotion_description: 28%, promotion_price: NaN
+PDP URL: https://www.denner.ch/de/weinshop/heldenrose-du-valais-aoc~p1026465
+Row 874 — percentage_discount: 20.0, promotion_description: 20%, promotion_price: NaN
+PDP URL:  https://www.denner.ch/de/aktionen-und-sortiment/ip-suisse-sonnenblumenoel~p030135?variant=b5e6159f-14b0-44b0-96e9-2f2e13a8095c
+Row 970 — percentage_discount: 20.0, promotion_description: 20%, promotion_price: NaN
+PDP URL: https://www.denner.ch/de/aktionen-und-sortiment/ip-suisse-rapsoel~p027841?variant=3b4e7bb1-4314-4e9c-a9f6-6ba3ca8d7a0a
+Row 1183 — percentage_discount: 20.0, promotion_description: 20%, promotion_price: NaN
+PDP URL: https://www.denner.ch/de/sortiment/ip-suisse-produkte/detail/article/ip-suisse-apfelessig/
+
+- Regular Price — Invalid 2 Decimal Format
+
+A total of 521 records have regular_price values that are not in the required 2-decimal format.
+
+Examples:
+
+Row 1626 — Regular Price: 2.7
+PDP URL: https://www.denner.ch/de/aktionen-und-sortiment/isana-q10-anti-falten-power-nachtcreme~p1025673?variant=a01a8213-461a-4b32-b99c-a6b6eef7eb4d
+Row 1630 — Regular Price: 19.9
+PDP URL: https://www.denner.ch/de/aktionen/denner-bbq-protein-steaks~p1101298?variant=74028175-de2b-4373-8493-f80d237fbc95
+Row 1632 — Regular Price: 56.5
+PDP URL: https://www.denner.ch/de/aktionen-und-sortiment/griffin-s-no.500-cello~p853713?variant=34a5eb0b-e324-4335-8352-70b72c047676
+Row 1633 — Regular Price: 2.5
+PDP URL: https://www.denner.ch/de/aktionen-und-sortiment/dr.oetker-warme-schokokuechlein~p1103670?variant=2e9584a2-cebb-4e3f-be24-4f158cd40dac
+Selling Price — Invalid 2 Decimal Format
+
+selling_price also contains values that are not in the required 2-decimal format.
+
+Examples:
+
+Row 2 — Selling Price: 8.2
+PDP URL: https://www.denner.ch/de/weinshop/carmelin-heida-du-valais-aoc~p1026554
+Row 3 — Selling Price: 7.5
+PDP URL: https://www.denner.ch/de/weinshop/le-voilier-morges-aoc-la-cote~p1026497
+Row 4 — Selling Price: 8.5
+PDP URL: https://www.denner.ch/de/weinshop/heldenrose-du-valais-aoc~p1026465
+
+5) DataHut_CH_Coop_FullDump_20260820.CSV
+-----------------------------------------
+- - Extra columns found:
+
+promotion_description_clean
+producthierarchy_level3_clean
+producthierarchy_level4_clean
+regular_price_num
+selling_price_num
+promotion_price_num
+price_was_num
+
+- data count mismatch
+- - Invalid breadcrumb values found: 2
+
+Row 22257: Startseite > > Wein & Tonic, https://www.coop.ch/de//wein-tonic/p/7400136
+Row 22333: Startseite > > Wein & Tonic, https://www.coop.ch/de//wein-tonic/p/7400134
+Issue: Extra empty breadcrumb level (> >) found in breadcrumb values.
+-
+Selling price - Invalid 2 Decimal Format
+
+Total issues: 15067
+
+Examples:
+
+Row 2 | https://www.coop.ch/de/lebensmittel/fruechte-gemuese/fruechte/aepfel-birnen/aepfel-gala-vv-suesslich-ip-suisse/p/7050654   | selling_price: 2.2
+Row 3 | https://www.coop.ch/de/lebensmittel/fruechte-gemuese/fruechte/aepfel-birnen/prix-garantie-birnen/p/7080249  | selling_price: 2.4
+Row 4 | https://www.coop.ch/de/lebensmittel/fruechte-gemuese/fruechte/aepfel-birnen/jamadu-kinderaepfel-vv-ip-suisse/p/7342461  | selling_price: 3.2
+
+- Regular price - Invalid 2 Decimal Format
+
+Total issues:15240
+
+Examples:
+
+Row 2 | https://www.coop.ch/de/lebensmittel/fruechte-gemuese/fruechte/aepfel-birnen/aepfel-gala-vv-suesslich-ip-suisse/p/7050654  | regular_price: 2.2
+Row 3 | https://www.coop.ch/de/lebensmittel/fruechte-gemuese/fruechte/aepfel-birnen/prix-garantie-birnen/p/7080249  | regular_price: 2.4
+Row 4 | https://www.coop.ch/de/lebensmittel/fruechte-gemuese/fruechte/aepfel-birnen/jamadu-kinderaepfel-vv-ip-suisse/p/7342461  | regular_price: 3.2
+- - Price missing in file although price is available on the website
+
+Row 1849
+URL: https://www.coop.ch/de/lebensmittel/fleisch-fisch/abgepacktes-frischfleisch/schwein/bell-schweins-brustspitz-texas-mariniert-ca/p/7231808
+6) DataHut_CH_Lidl_FullDump_20260820.CSV
+-----------------------------------------
+- - Extra columns: promotion_description_clean, producthierarchy_level3_clean, producthierarchy_level4_clean, regular_price_num, selling_price_num, promotion_price_num, price_was_num
+- Data count mismatch.
+- Unexpected empty columns :country_of_origin
+- Selling price – Invalid 2 Decimal Format
+
+Row 3528 | https://www.lidl.ch/p/de-CH/yallo/p10000051   | 10.0
+Row 3541 | https://www.lidl.ch/p/de-CH/sunrise/p10000044  | 10.0
+Row 3542 | https://www.lidl.ch/p/de-CH/paysafecard/p99992797  | 150.0
+Total issues: 75
+
+Regular price – Invalid 2 Decimal Format
+
+Row 3528 | https://www.lidl.ch/p/de-CH/yallo/p10000051  | 10.0
+Row 3541 | https://www.lidl.ch/p/de-CH/sunrise/p10000044   | 10.0
+Row 3542 | https://www.lidl.ch/p/de-CH/paysafecard/p99992797  | 150.0
+Total issues: 78
+- Promotion dates missing even though promotion is present
+
+Total issues: 101
+
+Row 49 | https://sortiment.lidl.ch/de/catalog/product/view/id/21932/s/skyr-natur-0-2-xxl-0215443/category/54/  | Promotion: Aktion |
+Row 103 | https://sortiment.lidl.ch/de/catalog/product/view/id/21929/s/kalbshamburger-5112315/category/54/    | Promotion: Aktion |
+
+- price_was is empty for 3307 records
+- - Unescaped | character found in product_description (1 record).
+
+Row 3251 | https://www.lidl.ch/p/de-CH/parkside-transportrollen/p10057672

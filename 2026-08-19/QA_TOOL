@@ -1,0 +1,158 @@
+QA TOOL
+
+  ============================================================
+       GEMINI FLASH – LLM-BASED QA VALIDATION
+============================================================
+
+1. WHAT IS GEMINI FLASH?
+========================
+
+Gemini Flash is Google's fast and cost-efficient AI model
+that can be integrated into a Python-based QA system through
+the Gemini API.
+
+It can understand QA requirements written in natural language,
+analyze suspicious records, classify issues, and generate
+clear QA remarks.
+
+
+2. HOW IT CAN BE USED FOR QA
+============================
+
+Recommended workflow:
+
+CSV / JSON
+    |
+    v
+Python / Pandas
+    |
+    +--> Schema & data validation
+    +--> Null / duplicate checks
+    +--> Price / URL / format checks
+    |
+    v
+Suspicious records
+    |
+    v
+Gemini Flash
+    |
+    +--> Issue classification
+    +--> Explanation
+    +--> QA remark generation
+    |
+    v
+Final QA Report
+
+
+3. EXAMPLE
+==========
+
+Requirement:
+"Promotion price should be present when promotion
+description is available."
+
+Data:
+promotion_description = "Znižano -20%"
+promotion_price = NULL
+
+Gemini output:
+
+"Promotion price is missing even though promotion
+information is present."
+
+
+4. WHAT PYTHON SHOULD HANDLE
+============================
+
+- Row and column count
+- Schema validation
+- Empty values
+- Duplicate IDs/URLs
+- Price format
+- URL validation
+- Date validation
+- Exact value comparisons
+- Regex/format checks
+
+
+5. WHAT GEMINI SHOULD HANDLE
+============================
+
+- Complex business rules
+- Natural-language requirements
+- Issue classification
+- Issue explanation
+- QA remark generation
+- Grouping similar issues
+- Changing requirements
+
+
+6. ADVANTAGES
+=============
+
++ Flexible for changing requirements
++ Rules can be written in natural language
++ Automatic issue explanations
++ Automatic QA remarks
++ Supports different dataset structures
++ Useful for complex business rules
++ Can return structured JSON for automation
++ Easy to integrate with Python
+
+
+7. LIMITATIONS
+==============
+
+- AI may occasionally make incorrect decisions
+- Not fully deterministic
+- API usage has a cost
+- Requires internet/API access
+- Large datasets should not be sent completely to Gemini
+- Gemini output should be validated by Python
+
+
+8. COST & MAINTENANCE
+=====================
+
+Cost:
+Usage-based API pricing; depends on tokens, files and
+number of API calls.
+
+Maintenance:
+- Update prompts when requirements change
+- Test new QA rules
+- Monitor incorrect results
+
+The actual cost should be calculated based on usage rather
+than assuming a fixed monthly amount.
+
+
+9. RECOMMENDED APPROACH
+=======================
+
+Do NOT use Gemini alone.
+
+Use:
+
+        PYTHON + GEMINI FLASH
+
+Python:
+    Exact and deterministic validation
+
+Gemini:
+    Intelligent analysis, explanation and reporting
+
+
+10. FINAL VERDICT
+=================
+
+For DataHut QA, Gemini Flash is a good option because
+requirements frequently change across different CSV/JSON
+datasets.
+
+Recommended:
+
+Python = Core QA Validation
+Gemini = Intelligent QA Layer
+
+Overall suitability for your QA: HIGH

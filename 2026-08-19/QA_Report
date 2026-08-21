@@ -1,0 +1,161 @@
+1) DataHut_AT_Spar_Price_Extractions_20260818.CSV
+--------------------------------------------------
+
+- Data count mismatch.
+- File name mismatch: DataHut_AT_Spar_Price_Extractions_20260818.CSV instaed of DataHut_AT_Spar_PriceExtractions_20260818.CSV
+- 
+- Regular price — Invalid 2 Decimal Format
+
+Row 41118 | https://www.spar.at/produktwelt/huber-pressle-p2679945  | 4.0
+Row 41143 | https://www.spar.at/produktwelt/fuerst-punsch-krapfen-150g-p2593784  | 2.2
+Row 41149 | https://www.spar.at/produktwelt/bischof-kicher-erbsennud-330g-p2020003182747  | 3.8
+
+Selling price — Invalid 2 Decimal Format
+
+Row 76 | https://www.spar.at/produktwelt/spar-premium-mezze-maniche-p2020004938749  | 1.7
+Row 102 | https://www.spar.at/produktwelt/spar-office-fineliner-10-farben-p2020006069779  | 120980.0
+Row 178 | https://www.spar.at/produktwelt/spar-premium-premium-nektarinen-p2020005871441  | 3.8
+- Regular and selling price mismatch found:
+Row 102 | https://www.spar.at/produktwelt/spar-office-fineliner-10-farben-p2020006069779  | File value: 120980.0 | Website value: 2.99
+- Invalid unique id found(contain letters)
+row 408: https://www.spar.at/produktwelt/spar-office-klarsichthuellen-a4-100-stueck-p7670626 
+
+767O626
+- - Invalid grammage_unit found:
+
+Row 324 | https://www.spar.at/produktwelt/spar-qualitaetsmarke-servietten-3-lagig-40x40-cm-rot-50-stueck-p2020002515669  | stuck instead of stück
+
+- Extra whitespace found in breadcrumb:
+
+Row 23845
+Row 34642
+
+Issue: Extra whitespace found in the breadcrumb value (Frisch & Haltbarmilch).
+row 23845: https://www.spar.at/produktwelt/vorarlberg-milch-laendle-halbfettmilch-laenger-frisch-1-5-fett-p2020006312547 
+
+- Unescaped | characters found in product_name — 10 records:
+eg:
+Row 9482 | https://www.spar.at/produktwelt/isana-cleanser-aha-pha-peeling-125ml-p2020006024686 
+Row 17117 | https://www.spar.at/produktwelt/mehrzweckschrauben-4x40-150stk-p2020005763197 
+Row 17783 | https://www.spar.at/produktwelt/bgs-mehrzweckschrauben-4-0-x-50-mm-120-stueck-p2020005763210 
+Row 17911 | https://www.spar.at/produktwelt/bgs-mehrzweckschrauben-t20-4-0-x-40-mm-150-stueck-p2020005762794 
+Unescaped | characters found in site_shown_uom — 9 records:
+eg
+Row 17117 | https://www.spar.at/produktwelt/mehrzweckschrauben-4x40-150stk-p2020005763197 
+Row 17783 | https://www.spar.at/produktwelt/bgs-mehrzweckschrauben-4-0-x-50-mm-120-stueck-p2020005763210 
+Row 17911 | https://www.spar.at/produktwelt/bgs-mehrzweckschrauben-t20-4-0-x-40-mm-150-stueck-p2020005762794 
+
+
+2) DataHut_SI_Dm_PriceExtractions_20260819.CSV
+-----------------------------------------------
+- Data count mismatch
+- Regular price — Invalid 2 Decimal Format
+
+Row 10188 | https://www.dm.si/p/d/2617940/maybelline-new-york-korektor-z-gobico-instant-anti-age-eraser-115-warm-light  | 11.1
+Row 10196 | https://www.dm.si/p/d/2117190/maybelline-new-york-korektor-z-gobico-instant-anti-age-eraser-06-neutralizer  | 11.1
+Row 10221 | https://www.dm.si/p/d/2001364/satin-care-gel-za-britje-sensitive-skin  | 4.8
+
+Selling price — Invalid 2 Decimal Format
+
+Row 16 | https://www.dm.si/p/d/3155856/nivea-krema-za-roke-anti-age-q10  | 4.9
+Row 20 | https://www.dm.si/p/d/3137870/balea-gel-za-tusiranje-sensitive-polnilo  | 1.9
+Row 57 | https://www.dm.si/p/d/1704999/balea-oblizi-s-salicilno-kislino-za-odstranjevanje-mozoljev-hautrein  | 2.2
+- Extra white space found on product name and breadcrumb
+eg: 
+Domov > Dojenček in otrok > Otroška hrana in napitki  > Mleko za dojenčke
+row 7: https://www.dm.si/p/d/3159227/hipp-ekolosko-zacetno-mleko-za-dojencke-pure-1-0m 
+Maskara  I love extreme volume, 12 ml
+row 182:  https://www.dm.si/p/d/1321849/essence-maskara-i-love-extreme-volume 
+
+- 
+
+3) DataHut_SI_Spar_PriceExtractions_20260819.CSV 
+-------------------------------------------------
+- data count mismatch.
+-percentage_discount is also empty
+- Promotion dates missing although available on the website:
+
+Row 5349 | https://online.spar.si/p/bela-zemlja-spar-60g-678329 
+
+- Unit mismatch found in 16 records: grammage_unit is kos, while price_unit is M.
+eg:
+Row 11409 | https://online.spar.si/p/obojestranski-lepilni-trak-scotch-12mm-x-63m-23854 
+Row 11982 | https://online.spar.si/p/ovratnica-za-macke-proti-klopom-in-bolham-3-mesecna-vetocanis-35-cm-467779 
+Row 14149 | https://online.spar.si/p/zobna-nitka-sensodyne-30m-280997 
+Row 15528 | https://online.spar.si/p/vrv-za-perilo-plastificirana-krokodil-15m-222319 
+- Grammage Conversion Issues – 2
+
+Row No: 709
+PDP URL: https://online.spar.si/p/nadomestek-kave-z-okusom-po-kakavu-calmrooty-62g-681408 
+Issue: Grammage quantity is 0.062 with unit g. PDP shows 62g. Quantity appears to be converted to 0.062 kg, but the unit remains g.
+Row No: 8620
+PDP URL: https://online.spar.si/p/testenine-fusilli-feelingok-220g-679091 
+Issue: Grammage quantity is 0.220 with unit g. PDP shows 220g. Quantity appears to be converted to 0.220 kg, but the unit remains g.
+price per unit is 0,00 €/KOS in website, missing in file for 2 products
+row 11065: https://online.spar.si/p/vatirane-palcke-papirnate-100-bombaz-brez-klora-beauty-kiss-3001-591908 
+row 11066 : https://online.spar.si/p/vatirane-palcke-papirnate-100-bombaz-brez-klora-beauty-kiss-1601-591906   
+- Regular price — Invalid 2 Decimal Format (834 records)
+
+Row 16521 | https://online.spar.si/p/solarna-lanterna-vestina-levana-1000-dni-11-619195 | 38.9
+Row 16555 | https://online.spar.si/p/zalni-set-4-oljnih-nagrobnih-svec-41-607834 | 22.9
+Row 16559 | https://online.spar.si/p/stenj-za-vecno-luc-vecernico-pax-51-280116 | 1.0
+
+Selling price — Invalid 2 Decimal Format (667 records)
+
+Row 314 | https://online.spar.si/p/bio-indijski-orescki-prazeni-in-soljeni-spar-naturpur-30g-672323 | 1.0
+Row 397 | https://online.spar.si/p/nastrgani-mandlji-spar-200g-274032 | 2.2
+Row 423 | https://online.spar.si/p/fizol-pisani-s-budget-1kg-348544 | 2.5
+
+4) DataHut_SI_Mercator_PriceExtractions_20260819.CSV
+-----------------------------------------------------
+- Data count mismatch.
+- Regular price — Invalid 2 Decimal Format (73 records)
+
+Row 15948 | https://mercatoronline.si/izdelek/5349397/pvc-ovitek-za-zvezke-a5-eurocom-10-1  | 0.9
+Row 15963 | https://mercatoronline.si/izdelek/19181882/samoleplivi-ovitek-za-zvezek-a5-10-1  | 1.6
+Row 16065 | https://mercatoronline.si/izdelek/17839168/vodene-barvice-aero-30-mm-12-1  | 5.1
+
+Selling price — Invalid 2 Decimal Format (331 records)
+
+Row 361 | https://mercatoronline.si/izdelek/17720502/maslo-mu-cuisine-20-g  | 0.4
+Row 377 | https://mercatoronline.si/izdelek/19119393/maslo-meggle-20-g  | 0.5
+Row 598 | https://mercatoronline.si/izdelek/11847424/trajno-polnomastno-alpsko-mleko-3-5-m-m-ljubljanske-mlekarne-10x1-l-2-l-gratis  | 16.9
+- Promotion price missing in 1,490 records, although the promotion price is available on the website.
+
+Examples:
+
+Row 123 | https://mercatoronline.si/izdelek/17164308/tekoci-jogurt-1-3-m-m-ego-1-kg  | Promotion: Znižano -20%
+Row 271 | https://mercatoronline.si/izdelek/19304194/grski-jogurt-0-m-m-fage-total-450-g  | Promotion: Znižano -15%
+Row 279 | https://mercatoronline.si/izdelek/19462507/proteinski-jogurt-ego-330-g  | Promotion: Znižano -11%
+5) DataHut_CH_Lidl_FullDump_20260819.CSV
+-----------------------------------------
+- Data count mismatch
+- Regular_price: 60 issues – Values are not in 2-decimal format. Examples:
+Row 3669 – https://www.lidl.ch/p/de-CH/paysafecard/p88882797  – 75.0
+Row 3674 – https://www.lidl.ch/p/de-CH/yallo/p10000051  – 10.0
+Row 3679 – https://www.lidl.ch/p/de-CH/paysafecard/p99992797  – 150.0
+
+Selling_price: 62 issues – Values are not in 2-decimal format. Examples:
+Row 191 – https://sortiment.lidl.ch/de/catalog/product/view/id/21483/s/spezialwaschmittel-1012861/category/54/  – 2.6
+Row 419 – https://sortiment.lidl.ch/de/catalog/product/view/id/20849/s/schweizer-kartoffeln-0083292/category/54/  – 3.3
+Row 971 – https://sortiment.lidl.ch/de/catalog/product/view/id/18360/s/recybag-sammelsack-5113234/category/54/  – 16.0
+-Extra whitespace issue found in product_name and breadcrumb fields.
+
+Row No: 3645
+PDP URL: https://sortiment.lidl.ch/de/catalog/product/view/id/20869/s/mini-pizza-pancetta-provola-und-zwiebel-1015165/category/54/
+( 'Mini Pizza Pancetta, Provola und Zwiebel' )
+6) DataHut_AU_Coles_FullDump_20260819.CSV
+-----------------------------------------
+- Data count mismatch.
+-- Regular price issues: 695,575 records have regular prices not in 2-decimal format.Selling price has 678692 values not in 2-decimal format.
+Rows 761162, 761163, and 761164 — PDP: https://www.coles.com.au/product/the-kraken-spiced-rum-and-cola-can-330ml-24-pack-7060747  — regular prices: 159.0, 159.0, and 160.0.
+- Same product has different regular prices across rows:
+Rows 761163 and 761164 have the same PDP URL, but the regular price changes from 159.0 to 160.0.
+- rating is in float data type instead of string
+review is in float data type instead of string
+- prices are missing even though price is present on hte website
+eg: row  74: https://www.coles.com.au/product/kellogg%27s-coco-pops-pillows-choc-brownie-flavour-310g-8127923
+- - Empty column mismatch found: 4 expected-empty columns contain data, and 4 unexpected columns are empty.
+
+Expected empty but not empty: regular_price, barcode, producthierarchy_level4, producthierarchy_level5
+Unexpected empty columns: file_name_1, features, suitable_for, environmental

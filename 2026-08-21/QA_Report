@@ -1,0 +1,100 @@
+1)bayut_properties_rent_commercial_2026_08_19.json
+---------------------------------------------------
+- HTML tag <strong> found in the description field, but not present on the website.
+- newline characters found.
+- unescaped | found.
+- extra white space found
+- Missing coverPhoto in the file, although the image is available on the website.
+Record No: 28558
+Listing URL: https://www.bayut.com/property/details-15299789.html 
+
+Record No: 28559
+Listing URL: https://www.bayut.com/property/details-15300057.html
+
+2)bayut_properties_buy_commercial_2026_08_19.json
+--------------------------------------------------
+- - HTML tag <strong> found in the description field, but not present on the website.
+- newline characters found.
+- unescaped | found.
+- extra white space found
+
+3) DataHut_AT_Spar_FullDump_20260820.CSV
+-----------------------------------------
+- Data count mismatch.
+- 'age_of_the_product' not empty.
+-  Price present on website but missing in file
+
+Total issues: 4 records
+
+Row 41193 — https://www.spar.at/produktwelt/casa-al-pruno-amarone-della-valpolicella-docg-2020-p2020004691040 
+Row 41194 — https://www.spar.at/produktwelt/domaene-wachau-gruener-veltliner-wachau-dac-smaragd-ried-achleiten-2022-p2020004758798 
+Row 41197 — https://www.spar.at/produktwelt/umathum-blaufraenkisch-kirschgarten-2018-p2020005043008 
+Row 41199 — https://www.spar.at/produktwelt/kracher-grande-cuvee-trockenbeerenauslese-no-5-2019-p2020004413970 
+
+- Regular Price – Invalid 2-Decimal Format
+Examples:
+
+Row 283 — Regular Price: 1.7
+URL: https://www.spar.at/produktwelt/spar-premium-mezze-maniche-p2020004938749 
+Row 357 — Regular Price: 3.8
+URL: https://www.spar.at/produktwelt/spar-premium-premium-nektarinen-p2020005871441 
+
+- Selling Price – Invalid 2-Decimal Format
+Examples:
+Row 41180 — Selling Price: 1.5
+URL: https://www.spar.at/produktwelt/eskimo-calippo-cola-p3294109 
+Row 41195 — Selling Price: 52.9
+URL: https://www.spar.at/produktwelt/planteray-rum-xo-p2020005821279 
+
+- Promotion description is populated even though only a single price is present. As per the requirement, the promotion description should be empty.
+
+Example:
+
+Row 188 — Promotion description: Aktion!
+Issue: Promotion description should be empty when only a single price is present.
+URL: https://www.spar.at/produktwelt/spar-natur-pur-bio-orange-mit-stillem-wasser-3x0-2l-p2020005052741 
+
+4) DataHut_AT_Billa_FullDump_20260820.CSV
+------------------------------------------
+- Data count mismatch.
+- - Expected empty but not empty: age_of_the_product, packaging
+Unexpected empty columns: file_name_1, file_name_2, file_name_3, file_name_4, file_name_5, file_name_6, retail_limit
+- product description not in line by line format
+- image url present on site but missing from file
+row 10854: https://shop.billa.at/produkte/billa-vollkornbroetchen-00877458 
+- 
+selling_price = promotion_price = regular_price for 4 records, despite having a promotion description:
+Row 4189 | https://shop.billa.at/produkte/almdudler-original-00490819  | Price: 1.32 | Promotion: Bei 6 Flaschen je
+Row 4877 | https://shop.billa.at/produkte/almdudler-zuckerfrei-00575986  | Price: 1.32 | Promotion: Bei 6 Flaschen je
+Row 6642 | https://shop.billa.at/produkte/spezi-orange-00721650  | Price: 1.32 | Promotion: Bei 6 Flaschen je
+Row 7570 | https://shop.billa.at/produkte/goesser-bio-stoff-00742269  | Price: 1.32  | Promotion: Bei 12 Flaschen je
+
+Product description issue: product_description ends with li>, which is not present on the website.
+Row 3739 | https://shop.billa.at/produkte/borotalco-deospray-men-marine-scent-00468087 
+- Regular price – Invalid 2 Decimal Format
+
+Row 28 | https://shop.billa.at/produkte/hennessy-very-special-0011379  | 47.9
+Row 103 | https://shop.billa.at/produkte/oelz-mehrkorntoast-0014336  | 3.8
+- Selling price – Invalid 2 Decimal Format
+
+Row 698 | https://shop.billa.at/produkte/party-breze-schinkenkaese-duo-lauge-00272497  | 44.9
+Row 699 | https://shop.billa.at/produkte/party-breze-schinkenkaese-duo-baby-00272501  | 22.9
+
+
+5) DataHut_AT_Dm_FullDump_20260820.CSV
+---------------------------------------
+- Data count mismatch
+- Expected empty but not empty: barcode, retail_limit
+Unexpected empty columns: producthierarchy_level5, file_name_1, file_name_2, file_name_3, file_name_4, file_name_5, file_name_6
+- -product description contain new line character
+\n
+- - White space found in the following fields:
+Row 16766 | https://www.dm.at/p/d/1735132/bic-einwegrasierer-action-maxi-pack  | product_description
+Row 91 | https://www.dm.at/p/d/1888537/dettol-allzwecktuecher-granatapfel-und-limette  | storage_instructions
+Row 6 | https://www.dm.at/p/d/1617230/hipp-anfangsmilch-bio-combiotik-pre-von-geburt-an  | preparationinstructions
+Row 557 | https://www.dm.at/p/d/3140068/babylove-fruchtriegel-pfirsich-maracuja  | country_of_origin
+Row 16456 | https://www.dm.at/p/d/1611243/nur-die-seidenfein-strumpfhose-schwarz-15-den-gr-44-48  | material
+Row 2265 | https://www.dm.at/p/d/3146717/no-cosmetics-gesichtsspray-all-in-barrier-sortiert  | ingredients
+Row 16473 | https://www.dm.at/p/d/1428346/vanish-teppichreiniger-schaum-gold  | warning
+- Grammage quantity is converted to L, but grammage unit is still shown as ml.
+Row 11122 | https://www.dm.at/p/d/3090443/pediakid-immunsaft-kraftkind 
