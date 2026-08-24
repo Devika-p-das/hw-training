@@ -1,0 +1,60 @@
+QA Report
+
+1) bayut_properties_rent_residential_metadata_2026_08_19.csv
+-------------------------------------------------------------
+- No issues found.
+
+2) bayut_properties_buy_residential_2026_08_19
+-----------------------------------------------
+- some numerical values are in innt form in API while it is in float type in the data
+In wesite these values ar in int type
+eg : "price": 899999.0 in file 
+"price": 899999 in API
+url: https://www.bayut.com/property/details-15985431.html   
+
+3) bayut_uae_project_2026_08_04.json
+--------------------------------------
+- Data count mismatch.json- Extra space found on Unit type
+record 129: https://www.bayut.com/for-sale/off-plan/property/dubai/dubai-islands/hado-by-beyond/hado-by-beyond-tower-b 
+unit_type": "Type 2 - 1  - Unit - B1601,
+
+- payment plan is 60.0/40 in file which is 60/40 in website
+record 1527 : https://www.bayut.com/for-sale/off-plan/property/dubai/dubai-south/residential-district/casa-aura-residence 
+
+- min_area_in_sqft and max_area_in_sqft have same values 
+record 2658: https://www.bayut.com/for-sale/off-plan/property/dubai/damac-hills/greenwoods 
+
+4) bayut_properties_rent_residential_2026_08_19.json
+-----------------------------------------------------
+ - some numerical values are in int form in API while it is in float type in the data
+In wesite these values ar in int type
+- cover photo present in website but missing from file
+record 55374: https://www.bayut.com/property/details-14774497.html 
+
+5) qatarliving_qat_2026_08_04.json
+--------------------------------------
+- Data count mismatch.json
+- 3512 Extra space found on description
+eg :
+record 8: https://qlp.qatarliving.com/en/properties/rent/residential/apartment/no_commision_and_bills_included_3_bedroom_flat_in_mansoura/78171 
+
+6) dubizzle_qat_2026_08_04.json
+--------------------------------
+- Currency and price missing for 7 records
+eg record 93: https://www.dubizzle.qa/en/ad/bed-space-for-executive-bachelor-muslim-only-ID120339905.html 
+- number of photos is missing for 2 records
+record 747: https://www.dubizzle.qa/en/ad/beautiful-2-bhk-town-house-villa-with-fecilities-ID120307377.html 
+- record 2117: https://www.dubizzle.qa/en/ad/room-for-rent-ID120307103.html 
+-  website is blocked, not able to access.
+- price is 2 for property
+row 1742: https://www.dubizzle.qa/en/ad/fully-furnished-big-studio-for-rent-near-alkhor-mal-ID120373187.html 
+
+- Extra space found on description .
+record 10: https://www.dubizzle.qa/en/ad/2bhk-1bhk-temporary-full-furnished-room-al-aziziya-2bhk-3300-ID120319379.html 
+
+7) dari_ae_2026_08_04.json
+----------------------------
+- Data count mismatch.json.
+- extra space found on feild company employees
+"name": "Mazen Rushdi   Abualhaija"
+roecord 279: https://www.dari.ae/en/app/directory/profession?id=35403 
