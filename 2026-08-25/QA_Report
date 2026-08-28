@@ -1,0 +1,143 @@
+1) DataHut_SI_Mercator_PriceExtractions_20260825.CSV
+----------------------------------------------------
+- Data count mismatch.
+- Regular price has an invalid 2-decimal format.
+Row 364 | https://mercatoronline.si/izdelek/17720502/maslo-mu-cuisine-20-g  | Regular price: 0.4
+Row 399 | https://mercatoronline.si/izdelek/19119393/maslo-meggle-20-g  | Regular price: 0.5
+
+- Selling price has an invalid 2-decimal format.
+Row 364 | https://mercatoronline.si/izdelek/17720502/maslo-mu-cuisine-20-g  | Selling price: 0.4
+Row 399 | https://mercatoronline.si/izdelek/19119393/maslo-meggle-20-g  | Selling price: 0.5
+- Promotion price is missing even though the discount and promotion description are present.
+Row 130 | https://mercatoronline.si/izdelek/17164308/tekoci-jogurt-1-3-m-m-ego-1-kg  | Promotion: Znižano -20% | Discount: 20%
+Row 232 | https://mercatoronline.si/izdelek/19304194/grski-jogurt-0-m-m-fage-total-450-g  | Promotion: Znižano -15% | Discount: 15%
+Row 295 | https://mercatoronline.si/izdelek/19462529/proteinski-jogurt-cesnja-in-hibiskus-ego-330-g  | Promotion: Znižano -11% | Discount: 11%
+
+Total issues: 1490
+
+2) DataHut_SI_Spar_PriceExtractions_20260825.CSV 
+--------------------------------------------------
+- Data count mismatch.
+- percentage_discount is also empty
+- Regular Price – Invalid 2 Decimal Format
+Row 374 | https://online.spar.si/p/nastrgani-mandlji-spar-200g-274032  | regular_price: 2.2
+Row 409 | https://online.spar.si/p/fizol-pisani-s-budget-1kg-348544  | regular_price: 2.5
+- Selling Price – Invalid 2 Decimal Format
+Row 347 | https://online.spar.si/p/bio-indijski-orescki-prazeni-in-soljeni-spar-naturpur-30g-672323  | selling_price: 1.0
+Row 374 | https://online.spar.si/p/nastrgani-mandlji-spar-200g-274032  | selling_price: 2.2
+- - Pomotion dates are missing on file
+row 5239: https://online.spar.si/p/bela-zemlja-spar-60g-678329 
+
+- Grammage quantity is converted to kg, but the grammage unit remains as g.
+Row 695 | https://online.spar.si/p/nadomestek-kave-z-okusom-po-kakavu-calmrooty-62g-681408  | Grammage quantity: 0.062 kg but unit: g
+Row 8569 | https://online.spar.si/p/testenine-fusilli-feelingok-220g-679091  | Grammage quantity: 0.22 kg but unit: g
+
+Total suspicious quantity/unit issues: 2
+
+- Unit mismatch found: grammage_unit is kos, while price_unit is M.
+Row 11138 | https://online.spar.si/p/obojestranski-lepilni-trak-scotch-12mm-x-63m-23854  | Price per unit: M. za 0.6 €
+Row 11651 | https://online.spar.si/p/ovratnica-za-macke-proti-klopom-in-bolham-3-mesecna-vetocanis-35-cm-467779  | Price per unit: M. za 0.17 €
+Row 13887 | https://online.spar.si/p/zobna-nitka-sensodyne-30m-280997  | Price per unit: M. za 0.11 €
+
+3) DataHut_SI_Dm_PriceExtractions_20260825.CSV
+-----------------------------------------------
+- Data count mismatch.
+- Selling Price – Invalid 2 Decimal Format
+Row 8 | https://www.dm.si/p/d/1681460/selfie-project-hidrokoloidni-oblizi-proti-mozoljem-v-obliki-srckov  | selling_price: 2.3
+Row 10 | https://www.dm.si/p/d/3079415/selfie-project-encimska-hidrogelna-maska-za-obraz  | selling_price: 2.3
+Regular Price – Invalid 2 Decimal Format
+Row 8 | https://www.dm.si/p/d/1681460/selfie-project-hidrokoloidni-oblizi-proti-mozoljem-v-obliki-srckov  | regular_price: 2.3
+Row 10 | https://www.dm.si/p/d/3079415/selfie-project-encimska-hidrogelna-maska-za-obraz  | regular_price: 2.3_
+- Extra space found on breadcrumb and product name
+Total whitespace issues: 525
+Row 233 | https://www.dm.si/p/d/1321849/essence-maskara-i-love-extreme-volume 
+Row 2617 | https://www.dm.si/p/d/3123816/denkmit-kapsule-za-pranje-obcutljivega-perila-3v1-pure-delight   
+
+
+4) aqarmap_egp_2026_08_04.json
+--------------------------------
+- seller_role is empty accross the dataset.
+- 'depth', 'seller_role', 'listing_type' is also empty.
+- Site unreachble
+https://aqarmap.com.eg/en/listing/7197192-for-sale-red-sea-hy-lkwthr/ 
+
+- Details is missing for 3 records 
+- phone number is missing for 1 record
+- Currency and price is missing for 1704 records.
+
+- bathroom contains values like 01,2.5 and arabis words ١.
+record 96331: https://aqarmap.com.eg/en/listing/6939476-for-rent-cairo-new-cairo-90th-street-northern-90th-street/ 
+record 87636: https://aqarmap.com.eg/en/listing/7155474-for-sale-cairo-dokki-mydn-lmsh-almosekar-ali-ismail-st/ 
+ record 46946: https://aqarmap.com.eg/en/listing/6989431-for-sale-cairo-faisal-el-talbeya/ 
+
+- bedroom contains arabic word
+ record 46947 : https://aqarmap.com.eg/en/listing/6989431-for-sale-cairo-faisal-el-talbeya/ 
+
+5) bayut_egp_2026_08_04.json
+-----------------------------
+- extra columns (completion_status, ownership) are present in the file.
+- Data count mismatch.
+- broker and broker_display_ name contains values.
+- price_per contains 
+  " "            173905
+Monthly         47887
+Daily          5742
+Weekly       96
+Yearly         59
+- reference number only contain bayut -ID
+eg: record 223012: https://www.bayut.eg/en/property/details-503983909.html 
+refno: Bayut - h-2898989898923123123123123214231423232111455        
+id: 503983909
+- 
+
+6) nawy_egp_2026_08_04.json
+----------------------------
+- Data count mismatch.
+- No other issues found.
+
+7) dubizzle_uae_2026_08_04.json
+---------------------------------
+- Data count mismatch.
+-  سنويا missing from price_per
+
+8) bayut_properties_buy_commercial_2026_08_26.json
+----------------------------------------------------
+- Data count mismatch.
+- image url are present in the file , but missing in the API.
+record 1: https://www.bayut.com/property/details-15691582.html 
+
+- price , createdAt, approvedAt, updatedAt, touchedAt, reactivatedAt     values are in int type in API, but in float data type in file.
+- cover photo missing in file but present in website
+Record 42968: Missing coverPhoto
+  ID: 12279660
+  URL: https://www.bayut.com/property/details-15756475.html 
+
+9) bayut_uae_2026_08_04.json
+-----------------------------
+- Data count mismatch
+- extra fields present in file.
+ded_number_2 
+ded_number_4 
+property_of_the_week
+quality_lister 
+no_of_reviews
+ adm_number
+orn_number
+3d_live
+rating
+3d_image
+trucheck_on
+trakheesi_url
+email
+ded_number_3
+trubroker
+2d_image
+bln_number
+- More completely empty fields found.
+ded_license_number
+ded_number_2
+ded_number_3
+ded_number_4
+no_of_reviews
+rating
+- " free" and empty string " " are not found on file on package type
