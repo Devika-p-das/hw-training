@@ -1,0 +1,93 @@
+1) aqar_ksa_2026_09.json
+--------------------------
+- Data count mismatch.
+- Whitespace / special-character issues: Multiple records contain unwanted whitespace characters such as multiple consecutive spaces, newline characters, and tab characters in various columns.
+Examples:
+Row 1102 | URL: https://sa.aqar.fm/أراضي-للبيع/المدينة-المنورة/حي-الجصة/حي-مخطط-وادي-الفرع-مدينة-وادي-الفرع-منطقة-المدينة-المنورة-6528306  | Column: title | Issue: Multiple consecutive spaces
+Row 1287 | URL: https://sa.aqar.fm/فلل-للبيع/الرياض/شرق-الرياض/حي-قرطبة/شارع-رآمة-حي-قرطبة-مدينة-الرياض-منطقة-الرياض-6701268 | Column: url | Issue: Newline character
+Row 1383 | URL: https://sa.aqar.fm/شقق-للإيجار/الرياض/شمال-الرياض/حي-العقيق/شارع-الانتصار-حي-العقيق-مدينة-الرياض-منطقة-الرياض-6785413 | Column: description | Issue: Multiple consecutive spaces
+Row 24093 | URL:  https://sa.aqar.fm/أراضي-للبيع/بقعاء/حي-بقعاء/شارع-أبرهة-بن-الصباح-حي-الشيحيّة-مدينة-الشيحيه-منطقة-حائل-6771969   | Column: url | Issue: Tab character
+- currency is  empty for 2086 records.
+
+
+2) dubizzle_qat_2026_09_01.json
+----------------------------------
+- Website is blocked,not able to access
+- Whitespace issue: Multiple consecutive spaces are present in the description field.
+Examples:
+Row 2 | URL: https://www.dubizzle.qa/en/ad/6500-factory-for-rent-ID120376548.html 
+Row 3 | URL: https://www.dubizzle.qa/en/ad/1100-store-with-10-room-for-rent-ID120346161.html
+
+
+ - long white space on description
+record 396: https://www.dubizzle.qa/en/ad/shop-for-rent-in-al-duhail-area-ID120350029.html 
+
+- currency is empty for 6 records
+
+3) bahrainfinder_bah_2026_09_01.json
+--------------------------------------
+- fully furnished is missing on file.
+
+4) nawy_egp_2026_09_01.json
+----------------------------
+- Data count mismatch.
+- max_price is missing for 1175 records.
+
+5) aqarmap_egp_2026_09_01.json
+--------------------------------
+- bathroom has value 2.5 for 2 records.
+record 84280 : https://aqarmap.com.eg/en/listing/7155474-for-sale-cairo-dokki-mydn-lmsh-almosekar-ali-ismail-st/ 
+record 118072: https://aqarmap.com.eg/en/listing/7207250-for-rent-cairo-old-cairo-el-fostat-lfstt-ljdyd-arabesque-compound-sed/ 
+
+- bedroom has value 01 for 3 records
+records 114298: https://aqarmap.com.eg/en/listing/7170273-for-rent-cairo-el-maadi-zahraa-el-maadi-zahraa-el-maadi-st/ 
+record 114544 : https://aqarmap.com.eg/en/listing/7185386-for-rent-cairo-el-maadi-zahraa-el-maadi-zahraa-el-maadi-st/ 
+record 114649: https://aqarmap.com.eg/en/listing/6725813-for-rent-cairo-new-cairo-el-lotus-lotus-south/ 
+
+- Whitespace issue: Multiple consecutive spaces are present in the description and title fields.
+Examples:
+Row 25 | URL: https://aqarmap.com.eg/en/listing/7018416-for-rent-port-said-kmbwnd-fy-bwr-s-yd-porto-said-compound-amer-group/  
+Row 27 | URL: https://aqarmap.com.eg/en/listing/6978830-for-rent-port-said-kmbwnd-fy-bwr-s-yd-porto-said-compound-amer-group/ 
+
+Invalid missing-value text found in the dataset, where values such as null, NaN, etc. are present instead of being left empty.
+Examples:
+Row 15376 | URL: https://aqarmap.com.eg/en/listing/7219915-for-sale-monufia-quweisna-quweisna-city/  | Column: broker_display_name  | Issue: Invalid missing-value text (null)
+Row 31984 | URL: https://aqarmap.com.eg/en/listing/7219894-for-sale-monufia-quweisna-quweisna-city/  | Column: broker_display_name | Issue: Invalid missing-value text (null)
+Row 118972 | URL: https://aqarmap.com.eg/en/listing/7076578-for-rent-cairo-heliopolis-el-higaz-square-el-hegaz-st/  | Column: broker_display_name | Issue: Invalid missing-value text (null)
+Row 139558 | URL: https://aqarmap.com.eg/en/listing/7100944-for-rent-cairo-elnozha-Streettt-27/  | Column: broker_display_name | Issue: Invalid missing-value text (NaN)
+
+Total issues: 56
+
+6) dubizzle_egp_2026_09_01.json
+----------------------------------
+- depth values are title cased is file.
+Featured     
+Elite  
+- Whitespace issue: Multiple consecutive spaces are present in the description field.
+Examples:
+Row 29 | URL: https://www.dubizzle.com.eg/en/ad/for-rent-premium-roof-ivilla-in-mountain-view-new-cairo-ID504007424.html  | Column: description | Issue: Multiple consecutive spaces
+Row 31 | URL: https://www.dubizzle.com.eg/en/ad/for-rent-in-a-prime-location-at-the-pyramids-gardens-a-320-meter-duplex-on-a-prominent-corner-ground-floor-and-first-upper-level-the-ground-floor-is-divided-into-4-reception-areas-an-american-kitchen-and-a-bathroom-the-upper-floor-ID504004413.html  | Column: description | Issue: Multiple consecutive spaces
+Total records: 232,470
+Total whitespace issues: 200,599 
+- Photo count mismatch: Only 9 photos are present in the file, whereas 12 photos are available on the website.
+Record 1 | URL: https://www.dubizzle.com.eg/en/ad/twin-house-with-attractive-price-for-rent-in-uptown-cairo-el-mokattam-by-emaar-misr-ID503961617.html
+
+7) qatarliving_qat_2026_09_01.json
+-----------------------------------
+- Data count mismatch.
+- Whitespace issue: Multiple consecutive spaces are present in the description field.
+Examples:
+Row 20608 | URL: https://qlp.qatarliving.com/en/properties/rent/commercial/warehouse/warehouse_for_rent_in_industrial_area_qatar/239545 
+Row 20661 | URL: https://qlp.qatarliving.com/en/properties/rent/commercial/retail/brand_new_spacious_shop_in_nuaija/200240 
+
+8) dubizzle_bah_2026_09_01.json
+----------------------------------
+- Data count mismatch.
+- Whitespace issue: Multiple consecutive spaces are present in the title, description, broker_display_name, and broker fields.
+
+Examples:
+
+Row 2810 | URL: https://www.dubizzle.com.bh/en/ad/5-bedroom-villa-with-privet-pool-for-rent-in-bu-ashira-mahooz-ID105735466.html  | Column: title
+Row 2820 | URL: https://www.dubizzle.com.bh/en/ad/luxury-flat-for-sale-in-juffair-ID105068305.html  | Column: description 
+Row 2840 | URL: https://www.dubizzle.com.bh/en/ad/elegant-apartment-in-busaiteen-near-rcsi-king-hamad-hospital-ID105737222.html  | Column: broker_display_name
+Row 2840 | URL: https://www.dubizzle.com.bh/en/ad/elegant-apartment-in-busaiteen-near-rcsi-king-hamad-hospital-ID105737222.html  | Column: broker 

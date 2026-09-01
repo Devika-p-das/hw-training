@@ -1,0 +1,136 @@
+1) DataHut_SI_Spar_PriceExtractions_20260828.CSV
+----------------------------------------------------
+- Data count mismatch.
+- - Grammage quantity is converted to kg, but the grammage unit is still shown as g instead of kg.
+Row 672 — https://online.spar.si/p/nadomestek-kave-z-okusom-po-kakavu-calmrooty-62g-681408 
+Row 8667 — https://online.spar.si/p/testenine-fusilli-feelingok-220g-679091 
+
+- Promotion valid dates are missing in the file, even though the promotion dates are available on the website.
+Row 2021 — https://online.spar.si/p/file-atlantskega-lososa-tehtano-430397 
+Row 3270 — https://online.spar.si/p/negazirana-mineralna-voda-zala-1l-164352 
+Row 5283 — https://online.spar.si/p/polnozrnata-strucka-z-otrobi-70g-672809 
+- Regular price – Invalid 2 Decimal Format:
+Row 354 — https://online.spar.si/p/nastrgani-mandlji-spar-200g-274032  — Price: 2.2
+Row 391 — https://online.spar.si/p/fizol-pisani-s-budget-1kg-348544  — Price: 2.5
+
+Selling price – Invalid 2 Decimal Format:
+Row 3245 — https://online.spar.si/p/gazirana-mineralna-voda-spellegrino-05l-567729  — Price: 1.1
+Row 3252 — https://online.spar.si/p/gazirana-mineralna-voda-spellegrino-025l-608343  — Price: 1.1
+- percentage_discount is also empty
+
+2) DataHut_SI_Dm_PriceExtractions_20260828.CSV
+--------------------------------------------------
+- Data count mismatch.
+- Selling price – Invalid 2 Decimal Format:
+Row 10 — https://www.dm.si/p/d/1681460/selfie-project-hidrokoloidni-oblizi-proti-mozoljem-v-obliki-srckov  — Price: 2.3
+
+Regular price – Invalid 2 Decimal Format:
+Row 30 — https://www.dm.si/p/d/1916603/alpro-mandljev-napitek-barista   — Price: 3.6
+- - Whitespace issues: 534 records.
+
+Row 252 — product_name — https://www.dm.si/p/d/1321849/essence-maskara-i-love-extreme-volume 
+Row 19 — breadcrumb — https://www.dm.si/p/d/3159227/hipp-ekolosko-zacetno-mleko-za-dojencke-pure-1-0m
+
+3) DataHut_SI_Mercator_PriceExtractions_20260828.CSV
+-----------------------------------------------------
+- Data count mismatch.
+- Regular price – Invalid 2 Decimal Format:
+Row 353 — https://mercatoronline.si/izdelek/17720502/maslo-mu-cuisine-20-g  — Price: 0.4
+
+Selling price – Invalid 2 Decimal Format:
+Row 1292 — https://mercatoronline.si/izdelek/8554376/narezek-pecen-prsut-kras-pakirano-100-g   — Price: 2.3
+
+- Promotion price missing: Promotion price is missing in the file even though a promotion/discount is present.
+Row 129 — https://mercatoronline.si/izdelek/17164308/tekoci-jogurt-1-3-m-m-ego-1-kg  — Promotion: Znižano -20%
+Row 259 — https://mercatoronline.si/izdelek/19304194/grski-jogurt-0-m-m-fage-total-450-g  — Promotion: Znižano -15%
+Row 292 — https://mercatoronline.si/izdelek/19462529/proteinski-jogurt-cesnja-in-hibiskus-ego-330-g  — Promotion: Znižano -11%
+
+4) haraj_ksa_2026_09.json
+--------------------------
+- file name mismatch:
+haraj_ksa_2026_09.json instead of haraj_ksa_2026_08.json
+- iteration number is 202608 instead of 202608
+- Whitespace Issues – Multiple Consecutive Spaces
+
+Row 34179 | URL: https://haraj.com.sa/11186562509/للتأجير_السنوي__فيلا_جديد_بحي_حاضرة_بريدة_\(شمال_شرق_بريدة)  | Column: title 
+Row 34179 | URL: https://haraj.com.sa/11186562509/للتأجير_السنوي__فيلا_جديد_بحي_حاضرة_بريدة_\(شمال_شرق_بريدة) | Column: description 
+Row 34181 | URL: https://haraj.com.sa/11179993730/للاستثمار_فيلا_مع_ارض_تجاريه_تفتح_على_الدايري_موقع_مميز | Column: description 
+
+5) wasalt_ksa_2026_09.json
+-----------------------------
+- file name mismatch
+wasalt_ksa_2026_09.json instead of wasalt_ksa_2026_08.json
+- Data count mismatch.
+- iteration number is 2026_09 instead of 2026_08
+- Bathroom Value Mismatch: The bathrooms value is captured as +9 in the file, whereas the website displays it as 9+ for 2 records.
+
+Row 12579 | URL: https://wasalt.com/en/property/sale/villa-1026-sqm-with-2-apartments-facing-3-5857581  | File value: +9 | Website value: 9+
+Row 24251 | URL: https://wasalt.com/en/property/sale/villa-480-sqm-with-2-apartments-facing-east-5861344   | File value: +9 | Website value: 9+
+
+- Whitespace Issues – Multiple Consecutive Spaces
+
+Row 44321 | URL: https://wasalt.com/en/property/sale/apartment-with-6-bedrooms-5803758   | Column: description | Issue: Multiple consecutive spaces
+Row 44322 | URL: https://wasalt.com/en/property/sale/apartment-195-sqm-with-4-bedrooms-5838439  | Column: description | Issue: Multiple consecutive spaces
+Row 44324 | URL: https://wasalt.com/en/property/sale/apartment-13207-sqm-with-5-bedrooms-5889274  | Column: description | Issue: Multiple consecutive spaces
+
+6) baity_bah_2026_09.json
+---------------------------
+- file name error: baity_bah_2026_09.jsoninstead of baity_bah_2026_08.json
+- iteration number 2026_09 instead of 2026_08.
+- Case Format Mismatch:
+furnished values are in uppercase in the dataset, whereas they are displayed in Camel Case on the website.
+property_type values are in uppercase in the dataset, whereas they are displayed in Camel Case on the website.
+
+7) sedd_uae_2026_09.json
+-------------------------
+- Data count mismatch.
+- Row 1010 | URL: https://eservices.sedd.ae/eservicesweb/license-transactions/search_license/main-inq-lic.xhtml?lang=en&filterTrdNameEn=  | Column: name 
+Row 1045 | URL: https://eservices.sedd.ae/eservicesweb/license-transactions/search_license/main-inq-lic.xhtml?lang=en&filterTrdNameEn=  | Column: name 
+Row 1052 | URL: https://eservices.sedd.ae/eservicesweb/license-transactions/search_license/main-inq-lic.xhtml?lang=en&filterTrdNameEn=  | Column: name
+- contains a single dictionary instead of a list of dictionaries.
+
+8) servicesbahrain_bah_2026_09.json
+-------------------------------------
+- Data count mismatch.
+- file name error: servicesbahrain_bah_2026_09.json instead of servicesbahrain_bah_2026_08.json
+- - URL: https://services.bahrain.bh/wps/portal/RERA_en#toggle-id-1 
+Total issues found: 28
+
+Row 13 | Column: name | Value: MALEEH HOUSE CONTIRACTING ETIATE
+Row 75 | Column: name | Value: Health Island W L L
+Row 87 | Column: name | Value: AL YAL REAL ESTATE COMPANY W.L.L
+- legal_type is Corporate CR     
+Individual CR .
+
+9) hepsiemlak_tur_2026_09.json
+-------------------------------
+- hepsiemlak_tur_2026_09.json instead of hepsiemlak_tur_2026_08.json
+- category is For Sale for 2697 records
+-  - Whitespace Issues – Multiple Consecutive Spaces
+
+Row 564 | URL: https://www.hepsiemlak.com/en/proje/bursa-nilufer/kaya-suites-projesi-6421   | Column: location | Issue: Multiple consecutive spaces
+Row 568 | URL: https://www.hepsiemlak.com/en/proje/bursa-nilufer/marine-evleri-zirve-2-etap-projesi-6418   | Column: title | Issue: Multiple consecutive spaces
+Row 568 | URL: https://www.hepsiemlak.com/en/proje/bursa-nilufer/marine-evleri-zirve-2-etap-projesi-6418   | Column: description | Issue: Multiple consecutive spaces
+
+Total records: 310,183
+Total whitespace issues: 20,086
+
+-bedrooms value is '9' on website but '9 ve üzeri' on dataset.
+record 2641: https://www.hepsiemlak.com/en/istanbul-fatih-aksaray-kiralik/butik-otel/44825-5425   
+
+10) sutton_2026_09_05.json
+------------------------------
+- Data count mismatch.
+- -extra space found on first name
+record 3907: https://www.sutton.com/ca/agent/rui-xia-liu-105182 
+ Extra space found on last_name
+record 2791 : https://www.sutton.com/ca/agent/migin-kan-57320 
+"Kan    簡太"
+
+11) ewm_2026_09_05.json
+------------------------
+- ewm_2026_09_05.json
+Incorrect month and date
+- Florida instead of FL
+record 421 :  https://www.ewm.com/agents/1776735/Ramon+Franco 
+
