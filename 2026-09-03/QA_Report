@@ -1,0 +1,270 @@
+1) DataHut_CH_Denner_FullDump_20260903.CSV
+--------------------------------------------
+- Data count mismatch
+- - Promotion price missing: promotion_price is empty even though percentage_discount and promotion_description indicate a promotion.
+
+Row 1117 | URL:  https://www.denner.ch/de/aktionen-und-sortiment/ip-suisse-sonnenblumenoel~p030135?variant=b5e6159f-14b0-44b0-96e9-2f2e13a8095c   | percentage_discount: 20.0 | promotion_description: 20% | promotion_price: NaN
+Row 1132 | URL: https://www.denner.ch/de/aktionen-und-sortiment/ip-suisse-rapsoel~p027841?variant=3b4e7bb1-4314-4e9c-a9f6-6ba3ca8d7a0a   | percentage_discount: 20.0 | promotion_description: 20% | promotion_price: NaN
+Row 1156 | URL: https://www.denner.ch/de/sortiment/ip-suisse-produkte/detail/article/ip-suisse-apfelessig/ | percentage_discount: 20.0 | promotion_description: 20% | promotion_price: NaN
+- Invalid 2-decimal price format: selling_price and regular_price values contain only one decimal place instead of two.
+
+selling_price:
+Row 5 | URL: https://www.denner.ch/de/weinshop/freixenet-carta-medium-dry~p1035169   | selling_price: 6.8
+Row 12 | URL: https://www.denner.ch/de/weinshop/luis-felipe-edwards-terraced-carmenere-gran-reserva~p1027341 | selling_price: 6.3
+regular_price:
+Row 7 | URL: https://www.denner.ch/de/weinshop/vina-mayor-reserva-ribera-del-duero-do~p1027073 | regular_price: 18.5
+Row 9 | URL: https://www.denner.ch/de/weinshop/porta-leone-extra-dry-prosecco-superiore-valdobbiadene-docg~p1027181 | regular_price: 8.
+-Description and site shown UOM mismatch: The description and site_shown_uom values differ due to a . at the end of one value. There are multiple records with this issue.
+description: Geschenkbox,
+site_shown_uom: Geschenkbox.
+https://www.denner.ch/de/aktionen-und-sortiment/minor-staengel~p1102344?variant=2d70bc3b-744b-4cf6-b8a3-8656ade475ef  
+
+
+2) DataHut_CH_Coop_FullDump_20260903.CSV
+-----------------------------------------
+-Data count mismatch
+- Invalid breadcrumb: The breadcrumb contains an extra > separator, resulting in > >.
+
+Row 22450 | URL: https://www.coop.ch/de//wein-tonic/p/7400136  | breadcrumb: Startseite > > Wein & Tonic
+Row 22520 | URL: https://www.coop.ch/de//wein-tonic/p/7400134  | breadcrumb: Startseite > > Wein & Tonic
+Row 22561 | URL: https://www.coop.ch/de//petite-arvine-noblereine-jg-75cl-2023/p/1016746004  | breadcrumb: Startseite > > Petite Arvine Noblereine Jg 75CL, 2023
+-Invalid 2-decimal price format: selling_price values contain only one decimal place instead of two.
+
+Row 2 | URL: https://www.coop.ch/de/lebensmittel/fruechte-gemuese/fruechte/aepfel-birnen/jamadu-kinderaepfel-vv-ip-suisse/p/7342461  | selling_price: 3.2
+Row 8 | URL: https://www.coop.ch/de/lebensmittel/fruechte-gemuese/fruechte/aepfel-birnen/aepfel-gala-vv-suesslich-ip-suisse/p/7050654  | selling_price: 2.2
+- Invalid 2-decimal price format: regular_price values contain only one decimal place instead of two.
+
+Row 2 | URL: https://www.coop.ch/de/lebensmittel/fruechte-gemuese/fruechte/aepfel-birnen/jamadu-kinderaepfel-vv-ip-suisse/p/7342461  | regular_price: 3.2
+Row 8 | URL: https://www.coop.ch/de/lebensmittel/fruechte-gemuese/fruechte/aepfel-birnen/aepfel-gala-vv-suesslich-ip-suisse/p/7050654  | regular_price: 2.2
+- Image URL missing: image_url is empty in the file, although the corresponding image is available on the website.
+Row 25871 | URL: https://www.coop.ch/de/baby-kind/spielwaren/audio/hoerspiele/tigerbox-touch-plus-gruen-swiss-edition/p/7376208  | image_url: NaN
+Row 35744 | URL: https://www.coop.ch/de/lebensmittel/fleisch-fisch/ihr-online-metzger/kalbs-kotelette/p/3060305  | image_url: NaN
+Row 15927 | URL: https://www.coop.ch/de/weine/alle-weine/weissweine/bio-veneto-doc-pinot-grigio-ophelia/p/1021723003  | image_url: NaN
+Row 16224 | URL: https://www.coop.ch/de/weine/alle-weine/roseweine/mendoza-new-age-valentin-bianchi/p/1017514005  | image_url: NaN
+
+3) DataHut_CH_Lidl_FullDump_20260903.CSV
+------------------------------------------
+- Data count mismatch
+-Invalid promotion validity dates: promotion_valid_from is greater than promotion_valid_upto.
+
+Row 692 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/19902/s/birra-moretti-sale-di-mare-5113619/category/54/  | promotion_valid_from: 4.9.2026 | promotion_valid_upto: 3.9.2026 | promotion_description: Aktion
+- Missing breadcrumbs: breadcrumb is missing for 3 records.
+
+Row 3566 | URL: https://www.lidl.ch/p/de-CH/cien-sonnenspray-sport-transparent-lsf-30/p10052386 
+Row 3573 | URL: https://www.lidl.ch/p/de-CH/paysafecard/p99992797 
+Row 3594 | URL: https://www.lidl.ch/p/de-CH/cien-sonnenspray-sport-transparent-lsf50/p10052388 
+- Invalid 2-decimal price format: regular_price and selling_price values are not in the required 2-decimal format.
+
+regular_price
+Row 59 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/22039/s/perrier-mineralwasser-mit-kohlensaeure-0003820/category/54/  | Value: 7.2
+Row 223 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/21483/s/spezialwaschmittel-1012861/category/54 / | Value: 2.6
+selling_price
+Row 59 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/22039/s/perrier-mineralwasser-mit-kohlensaeure-0003820/category/54/  | Value: 7.2
+Row 223 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/21483/s/spezialwaschmittel-1012861/category/54/  | Value: 2.6
+- Price was missing: price_was is missing for records where regular_price is present.
+
+Row 2 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/13713/s/nusskernmischung-0028673/category/54/  | regular_price: 2.99 | price_was: NaN
+Row 3 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/13737/s/schweizer-aepfel-rot-0080220/category/54/  | regular_price: 2.79 | price_was: NaN
+Row 4 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/11808/s/schweizer-zucchetti-0082345/category/54 / | regular_price: 2.49 | price_was: NaN
+
+Total issues: 3399
+- Promotion validity dates missing: promotion_valid_from and promotion_valid_upto are missing even though a promotion description is present.
+
+Row 59 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/22039/s/perrier-mineralwasser-mit-kohlensaeure-0003820/category/54/  | promotion_description: 6+0 gratis | promotion_valid_from: NaN | promotion_valid_upto: NaN
+Row 60 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/22024/s/knorr-asia-noodles-vegetable-1801655/category/54/  | promotion_description: Aktion | promotion_valid_from: NaN | promotion_valid_upto: NaN
+-Whitespace issues: Whitespace characters are present in multiple fields.
+
+Example 1: Row 3527 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/20869/s/mini-pizza-pancetta-provola-und-zwiebel-1015165/category/54/  | Columns: product_name, producthierarchy_level3, breadcrumb
+Example 2: Row 3024 | URL: https://www.lidl.ch/p/de-CH/parkside-performance-20-v-akku-winkelschleifer/p10057648  | Column: product_description
+
+4) DataHut_AT_Spar_FullDump_20260903.CSV
+----------------------------------------------
+- Data count mismatch
+- Expected empty but not empty: ['age_of_the_product']
+- "- Price missing: Prices are available on the website but are missing in the file.
+
+Row 42767 | URL: https://www.spar.at/produktwelt/teekanne-fruechtegarten-fruechteteemischung-kaminzauber-20-teebeutel-p2322216 
+Row 42768 | URL: https://www.spar.at/produktwelt/teekanne-fruechtegarten-fruechteteemischung-huettenzauber-20-teebeutel-p4536192 
+Row 42769 | URL: https://www.spar.at/produktwelt/teekanne-fruechtegarten-fruechteteemischung-omas-fruechtegeheimnis-20-teebeutel-p5510658 
+Row 42770 | URL: https://www.spar.at/produktwelt/teekanne-fruechtegarten-fruechteteemischung-winterzauber-20-teebeutel-p4142218 
+
+- Invalid 2-decimal price format: selling_price and regular_price values are not in the required 2-decimal format.
+
+selling_price
+Row 12 | URL: https://www.spar.at/produktwelt/spar-premium-mezze-maniche-p2020004938749  | Value: 1.7
+Row 205 | URL: https://www.spar.at/produktwelt/spar-premium-premium-nektarinen-p2020005871441  | Value: 3.8
+regular_price
+Row 1374 | URL: https://www.spar.at/produktwelt/spar-premium-edition-stekovics-bio-zwiebel-gelb-p2020003073403  | Value: 3.8
+Row 1431 | URL: https://www.spar.at/produktwelt/s-budget-mobile-wlan-router-unlimited-internet-p2020004541024  | Value: 79.9"
+-"- Invalid image URLs: The image URLs are incomplete and end with the product unique_id followed by /, without a valid image filename/resource.
+
+image_url_1: 32 invalid URLs
+Unique ID 2020004064981 | URL: https://cdn1.interspar.at/cachableservlets/articleImage.dam/at/2020004064981/ 
+image_url_2: 9 invalid URLs
+Unique ID 2020005886100 | URL: https://cdn1.interspar.at/cachableservlets/articleImage.dam/at/2020005886100/ 
+image_url_3: 7 invalid URLs
+Unique ID 2020003706042 | URL: https://cdn1.interspar.at/cachableservlets/articleImage.dam/at/2020003706042/ 
+image_url_4: 3 invalid URLs
+Unique ID 2020005793453 | URL: https://cdn1.interspar.at/cachableservlets/articleImage.dam/at/2020005793453/ 
+image_url_5: 1 invalid URL
+Unique ID 2020003525070 | URL: https://cdn1.interspar.at/cachableservlets/articleImage.dam/at/2020003525070/ 
+image_url_6: 3 invalid URLs
+Unique ID 2020005995420 | URL: https://cdn1.interspar.at/cachableservlets/articleImage.dam/at/2020005995420/ "
+"Whitespace issues: Whitespace characters are present in multiple fields.
+
+Row 23322 | URL: https://www.spar.at/produktwelt/vorarlberg-milch-laendle-halbfettmilch-laenger-frisch-1-5-fett-p2020006312547  | Column: producthierarchy_level6
+Row 11706 | URL: https://www.spar.at/produktwelt/finish-power-geschirrspuel-tabs-classic-fresh-56-stueck-p2020005738744  | Column: promotion_description
+Row 478 | URL: https://www.spar.at/produktwelt/s-budget-toiletten-papier-10-rollen-p2020006211093  | Column: breadcrumb
+
+-Unescaped | characters: The following columns contain unescaped pipe (|) characters.
+
+product_name
+Row 8321 | URL: https://www.spar.at/produktwelt/isana-cleanser-aha-pha-peeling-125ml-p2020006024686  | Value: Isana AHA | PHA Cleanser 125 ml
+nutritional_information
+Row 2 | URL: https://www.spar.at/produktwelt/despar-doppelgriffiges-hartweizenmehl-p2020006049054  | Value: {'Energie': 'ca. 1484,00 kJ | ca. 350,00 kcal', 'Fett': 'ca. 2,20 g', 'Fett, davon gesättigte Fettsäuren': 'ca. 0,50 g', 'Kohlenhydrate': 'ca. 69,00 g', 'Kohlenhydrate, davon Zucker': 'ca. 1,70 g', 'Ballaststoffe': 'ca. 3,50 g', 'Eiweiß': 'ca. 12,00 g', 'Salz': 'ca. 0 g'}
+site_shown_uom
+Row 17580 | URL: https://www.spar.at/produktwelt/mehrzweckschrauben-4x40-150stk-p2020005763197  | Value: BGS Mehrzweckschrauben | 4,0 x 40 mm | 150 Stück"
+- Invalid grammage quantity: A . is present after the numeric value in grammage_quantity.
+
+Row 16459 | URL: https://www.spar.at/produktwelt/fritz-fries-vampir-set-2-teilig-p2020006166256 | grammage_quantity: 2.
+
+5) DataHut_CH_Migros_FullDump_20260903.CSV
+-------------------------------------------
+- Data count mismatch.
+- "- Invalid breadcrumbs: breadcrumb is missing for 1611 records.
+
+Row 27996 | URL: https://www.migros.ch/de/product/766605600083 
+Row 28001 | URL: https://www.migros.ch/de/product/526227600000 
+Row 28003 | URL: https://www.migros.ch/de/product/766605800010 "
+- "Invalid 2-decimal price format: rselling_price values are not in the required 2-decimal format.
+selling_price
+Row 8 | URL: https://www.migros.ch/de/product/271500513200  | Value: 1.7
+Row 9 | URL: https://www.migros.ch/de/product/271708513200  | Value: 2.5"
+- "- Whitespace issues: Whitespace characters are present in the size and site_shown_uom fields.
+eg:
+size: 7 records
+Row 22560 | URL: https://www.migros.ch/de/product/720516100012 
+site_shown_uom: 1 record
+Row 9819 | URL: https://www.migros.ch/de/product/120912100000 
+
+- Promotion price missing: promotion_price is missing even though percentage_discount and promotion_description indicate a promotion.
+eg:
+Row 595 | URL: https://www.migros.ch/de/product/251114300000  | percentage_discount: 33.0 | promotion_description: 33%
+Row 647 | URL: https://www.migros.ch/de/product/227215011600  | percentage_discount: 33.0 | promotion_description: 33%
+Row 950 | URL: https://www.migros.ch/de/product/220256060010  | percentage_discount: 34.0 | promotion_description: 34%
+
+- Unescaped | characters: The following columns contain unescaped pipe (|) characters.
+eg:
+product_description: 1 record
+Row 22132 | URL: https://www.migros.ch/de/product/793410600000 
+preparationinstructions: 4 records
+Row 4551 | URL: https://www.migros.ch/de/product/102700900000 
+instructionforuse: 5 records
+Row 18240 | URL: https://www.migros.ch/de/product/511070400000 
+distributor_address: 24 records
+Row 835 | URL: https://www.migros.ch/de/product/130939000000 
+ingredients: 4 records
+Row 27176 | URL: https://www.migros.ch/de/product/mo/13721836 
+warning: 5 records
+Row 16589 | URL: https://www.migros.ch/de/product/512104900000 
+
+- Product name missing: product_name is missing for the following records.
+
+Row 29442 | URL: https://www.migros.ch/de/product/658710100022 
+Row 29492 | URL: https://www.migros.ch/de/product/658710100018 
+Row 35077 | URL: https://www.migros.ch/de/product/658710100030 
+
+- Promotion validity dates missing: promotion_valid_from and promotion_valid_upto are missing for 1886 records even though promotion_description is present.
+
+Row 17 | URL: https://www.migros.ch/de/product/274463402500  | promotion_description: 33%
+Row 19 | URL: https://www.migros.ch/de/product/264500313200  | promotion_description: 33% Ab 2 Stück"
+
+6) DataHut_AT_Billa_FullDump_20260905.CSV
+--------------------------------------------------
+- Data count mismatch.
+- "DataHut_AT_Billa_FullDump_20260905.CSV
+future date in file name"
+- "Expected empty but not empty: ['age_of_the_product', 'packaging']
+Unexpected empty columns     : ['file_name_1', 'file_name_2', 'file_name_3', 'file_name_4', 'file_name_5', 'file_name_6', 'retail_limit']"
+- "invalid extraction date
+2026-09-30"
+- organictype - Only organic is present
+- "- Invalid unique ID — unique_id does not match product_unique_key — 1 record.
+Example:
+Row 800 — PDP URL: https://shop.billa.at/produkte/clever-bourbon-vanille-maxi-00283145 
+unique_id: 00-xxxxx
+product_unique_key: 00-283145P
+
+- Price mismatch — price_was is missing while regular_price is present — 11,597 records.
+
+Examples:
+
+Row 2 — https://shop.billa.at/produkte/frosch-wc-essigreiniger-00100696  — Regular price: 3.39, Price was: Missing
+Row 3 — https://shop.billa.at/produkte/hutesa-oliven-gruen-ohne-kern-00100767  — Regular price: 1.49, Price was: Missing
+Row 4 — https://shop.billa.at/produkte/glem-vital-shampoo-multivitamin-00100840  — Regular price: 3.19, Price was: Missing
+
+- Invalid grammage_unit — value is extracted as stack instead of the expected Stück.
+
+- nvalid promotion pricing — 1 record.
+
+Row 11648 — URL: https://shop.billa.at/produkte/clever-kaisersemmel-00898633 
+selling_price: 1.32
+regular_price: 1.32
+promotion_description: AKTOIN
+promotion_price: 1.32"
+- "- Regular price not empty for AKTION promotion: Products with a single price and promotion description containing AKTOIN should have an empty regular_price, but regular_price is populated.
+
+Row 42 | URL: https://shop.billa.at/produkte/de-cecco-pappardelle-00105483  | promotion_description: AKTIION  | regular_price: 2.85"
+"- Invalid regular_price — 2 decimal format issue — 2 records.
+
+Row 301 — URL: https://shop.billa.at/produkte/courvoisier-vsop-cognac-00201384  — regular_price: 45.9
+Row 304 — URL: https://shop.billa.at/produkte/courvoisier-vs-cognac-00201376  — regular_price: 34.9"
+"- Invalid selling_price — 2 decimal format issue — 2 records.
+
+Row 77 — URL: https://shop.billa.at/produkte/hennessy-very-special-0011379  — selling_price: 47.9
+Row 96 — URL: https://shop.billa.at/produkte/rauch-weizenmehl-extra-fuer-kuchen-0015865  — selling_price: 1.8"
+- description not in new line
+
+7) DataHut_AT_Dm_FullDump_20260905.CSV
+----------------------------------------
+- Data count mismatch
+- "DataHut_AT_Dm_FullDump_20260905.CSV
+future date part"
+- "- Unique ID missing: The unique_id field is missing for the following record.
+
+Row 8910 | URL: https://www.dm.at/p/d/3059294/l-oreal-professionnel-conditioner-silver"
+- "Expected empty but not empty: ['barcode', 'retail_limit']
+Unexpected empty columns     : ['producthierarchy_level5', 'file_name_1', 'file_name_2', 'file_name_3', 'file_name_4', 'file_name_5', 'file_name_6']"
+- description not in new line format
+"- Invalid breadcrumbs: The breadcrumb field contains consecutive > separators, indicating missing breadcrumb levels.
+
+Row 13875 | URL: https://www.dm.at/p/d/1622057/caline-eau-de-toilette-homme-intense-gold  | Breadcrumb: Startseite > Männerpflege > Herrendüfte > > >"
+"- Escape character issues: Escape characters (\n) are present in the product_description field.
+
+Row 2 | URL: https://www.dm.at/p/d/3121484/s-oliver-eau-de-parfum-simply-us-men   | Column: product_description
+Row 3 | URL: https://www.dm.at/p/d/3160946/fayn-proteinriegel-salted-caramel-pretzel-brownie  | Column: product_description"
+"- Invalid unique ID: The unique_id is represented in scientific notation instead of the expected full numeric value.
+
+Row 16551 | URL: https://www.dm.at/p/d/2968748/giorgio-armani-eau-de-toilette-acqua-di-gio  | unique_id: 3.614274e+12 instead of 3614273955546
+
+- Whitespace issues: Whitespace characters are present in multiple fields.
+
+label_information: Row 14026 | URL: https://www.dm.at/p/d/3081216/juliana-nails-nagelreiniger-nail-prep-dehydrator 
+material: Row 387 | URL: https://www.dm.at/p/d/2477093/jessa-periodenunterwaesche-slip-spitze-nature-schwarz-gr-m 
+ingredients: Row 6241 | URL: https://www.dm.at/p/d/3133714/neonail-uv-nagellack-3in1-ready-in-one-10-one-pink-spark 
+warning: Row 11 | URL: https://www.dm.at/p/d/1617230/hipp-anfangsmilch-bio-combiotik-pre-von-geburt-an 
+country_of_origin: Row 13182 | URL: https://www.dm.at/p/d/1500481/babylove-quetschie-banane-und-ananas-in-apfel-mit-kokosmilch-ab-1-jahr 
+labelling: Row 3 | URL: https://www.dm.at/p/d/3160946/fayn-proteinriegel-salted-caramel-pretzel-brownie 
+product_description: Row 16591 | URL: https://www.dm.at/p/d/3120377/garnier-ambre-solaire-sonnenroller-kids-sensitive-expert-lsf-50 
+
+- Invalid grammage quantity: The grammage_quantity is incorrectly represented as 0.125 ml in the file, whereas the correct value is 125 ml.
+
+Row 11130 | URL: https://www.dm.at/p/d/3090443/pediakid-immunsaft-kraftkind  | File value: 0.125 ml | Expected: 125 ml"
+"Invalid 2-decimal format: regular_price values are not in the required 2-decimal format.
+
+Row 4 | URL: https://www.dm.at/p/d/3119014/dm-box-jubilaeumsbox-50-jahre-dm-gesundheit-und-wohlbefinden  | regular_price: 5.0
+Row 9 | URL: https://www.dm.at/p/d/3136584/dm-jubilaeumsbox-50-jahre-dm-neu-bei-dm  | regular_price: 5.0"
+"Invalid 2-decimal format: selling_price values are not in the required 2-decimal format.
+
+Row 4 | URL: https://www.dm.at/p/d/3119014/dm-box-jubilaeumsbox-50-jahre-dm-gesundheit-und-wohlbefinden  | selling_price: 5.0
+Row 9 | URL: https://www.dm.at/p/d/3136584/dm-jubilaeumsbox-50-jahre-dm-neu-bei-dm  | selling_price: 5.0"

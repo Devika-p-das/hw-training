@@ -1,0 +1,239 @@
+1) DataHut_SI_Mercator_PriceExtractions_20260901.CSV
+------------------------------------------------------
+- Data count mismatch.
+- - Invalid 2-decimal format: selling_price and regular_price values are not in the required 2-decimal format.
+Examples – selling_price:(total 3344 issues)
+Row 360 | URL: https://mercatoronline.si/izdelek/17720502/maslo-mu-cuisine-20-g  | Value: 0.4
+Row 373 | URL: https://mercatoronline.si/izdelek/19119393/maslo-meggle-20-g  | Value: 0.5
+Row 575 | URL: https://mercatoronline.si/izdelek/11847424/trajno-polnomastno-alpsko-mleko-3-5-m-m-ljubljanske-mlekarne-10x1-l-2-l-gratis  | Value: 16.9
+Examples – regular_price:(total 75 issues)
+Row 360 | URL: https://mercatoronline.si/izdelek/17720502/maslo-mu-cuisine-20-g  | Value: 0.4
+Row 373 | URL: https://mercatoronline.si/izdelek/19119393/maslo-meggle-20-g   | Value: 0.5
+Row 575 | URL: https://mercatoronline.si/izdelek/11847424/trajno-polnomastno-alpsko-mleko-3-5-m-m-ljubljanske-mlekarne-10x1-l-2-l-gratis    | Value: 16.9
+- - Promotion price missing: promotion_price is missing even though both percentage_discount and promotion_description are present.
+Examples:
+Row 141 | URL: https://mercatoronline.si/izdelek/17164308/tekoci-jogurt-1-3-m-m-ego-1-kg   | percentage_discount: 20.0 | promotion_description: Znižano -20%
+Row 217 | URL: https://mercatoronline.si/izdelek/19304194/grski-jogurt-0-m-m-fage-total-450-g  ` | percentage_discount: 15.0 | promotion_description: Znižano -15%
+Row 252 | URL: https://mercatoronline.si/izdelek/19462529/proteinski-jogurt-cesnja-in-hibiskus-ego-330-g    | percentage_discount: 11.0 | promotion_description: Znižano -11%
+Total issues: 1,485
+
+2) DataHut_AT_Spar_PriceExtractions_20260901.CSV
+-----------------------------------------------------
+- Data count mismatch.
+- -Invalid 2-decimal format: regular_price ,selling_price values are not in the required 2-decimal format.
+Examples:
+Row 48 | URL: https://www.spar.at/produktwelt/spar-premium-mezze-maniche-p2020004938749  | Value: 1.7
+Row 180 | URL: https://www.spar.at/produktwelt/spar-premium-premium-nektarinen-p2020005871441  | Value: 3.8
+Row 42591 | URL: https://www.spar.at/produktwelt/fuerst-punsch-krapfen-150g-p2593784  | Value: 2.2
+Row 42605 | URL: https://www.spar.at/produktwelt/bischof-kicher-erbsennud-330g-p2020003182747  | Value: 3.8
+- - Whitespace issue: Unwanted whitespace found in the breadcrumb field.
+Example:
+Row 24399 | URL: https://www.spar.at/produktwelt/vorarlberg-milch-laendle-halbfettmilch-laenger-frisch-1-5-fett-p2020006312547 
+
+- Unescaped | character issue: Unescaped pipe (|) characters are present in the product_name and site_shown_uom fields.
+Examples – product_name:
+Row 23012 | URL: https://www.spar.at/produktwelt/bgs-mehrzweckschrauben-5-0-x-80-mm-50-stueck-p2020005763302  | Value: BGS Mehrzweckschrauben | 5,0 x 80 mm | 50 Stück
+Row 32493 | URL: https://www.spar.at/produktwelt/bgs-mehrzweckschrauben-t20-4-0-x-60-mm-110-stueck-p2020005762909  | Value: BGS Mehrzweckschrauben T20 | 4,0 x 60 mm | 110 Stück
+Row 33231 | URL: https://www.spar.at/produktwelt/bgs-mehrzweckschrauben-3-5-x-30-mm-200-stueck-p2020005763128  | Value: BGS Mehrzweckschrauben | 3,5 x 30 mm | 200 Stück
+Examples – site_shown_uom:
+Row 17455 | URL: https://www.spar.at/produktwelt/mehrzweckschrauben-4x40-150stk-p2020005763197  | Value: BGS Mehrzweckschrauben | 4,0 x 40 mm | 150 Stück
+Row 18446 | URL: https://www.spar.at/produktwelt/bgs-mehrzweckschrauben-4-0-x-50-mm-120-stueck-p2020005763210  | Value: BGS Mehrzweckschrauben | 4,0 x 50 mm | 120 Stück
+Row 18635 | URL: https://www.spar.at/produktwelt/bgs-mehrzweckschrauben-t20-4-0-x-40-mm-150-stueck-p2020005762794  | Value: BGS Mehrzweckschrauben T20 | 4,0 x 40 mm | 150 Stück
+
+- Price missing: regular_price and selling_price are missing in the file even though the corresponding prices are available on the website.
+Examples:
+Row 42627 | URL: https://www.spar.at/produktwelt/spar-natur-pur-physalis-bio-100g-p2020004883704 
+Row 42628 | URL: https://www.spar.at/produktwelt/riess-emaille-kuechenmass-weiss-9-cm-p2020005365834 
+Row 42630 | URL: https://www.spar.at/produktwelt/spar-qualitaetsmarke-pflaumen-gelb-per-kg-p6643942 
+Row 42631 | URL: https://www.spar.at/produktwelt/victorinox-wood-kochmesser-22cm-p2020005732599 
+Row 42632 | URL: https://www.spar.at/produktwelt/riess-emaille-stielkasserolle-weiss-mit-ausguss-14-cm-p2020005365650 
+Row 42633 | URL: https://www.spar.at/produktwelt/riess-emaille-schnabeltopf-weiss-12-cm-p2020005365698 
+Row 42634 | URL: https://www.spar.at/produktwelt/riess-emaille-schoepfloeffel-weiss-8-cm-p2020005366220 
+Row 42635 | URL: https://www.spar.at/produktwelt/riess-emaille-backschaufel-weiss-12-cm-p2020005366152 
+Row 42637 | URL: https://www.spar.at/produktwelt/enders-wetterschutzhuelle-san-diego-next-3-p2020004102430 
+Row 42638 | URL: https://www.spar.at/produktwelt/riess-emaille-passiersieb-weiss-18-cm-p2020005365957 
+
+3) DataHut_SI_Dm_PriceExtractions_20260901.CSV
+---------------------------------------------------
+- Data count mismatch.
+- Invalid 2-decimal format: selling_price and regular_price values are not in the required 2-decimal format.
+Examples:
+Row 4 | URL: https://www.dm.si/p/d/3090088/adidas-parfumska-voda-za-moske-vibes-wonder-force 
+Row 5 | URL: https://www.dm.si/p/d/3161799/adidas-parfumska-voda-za-zenske-vibes-smooth-pace 
+Row 6 | URL: https://www.dm.si/p/d/3112782/celimax-retinol-shot-serum-za-obraz 
+- - Whitespace issue: Unwanted whitespace found in the product_name and breadcrumb fields.
+Examples:
+Row 9430 | URL: https://www.dm.si/p/d/1341689/balea-med-gel-za-tusiranje-in-sampon-za-lase-2-v-1-ultra-sensitive  | Column: product_name
+Row 9437 | URL: https://www.dm.si/p/d/2097345/philips-avent-loncek-z-gibljivo-slamico-9-m-200-ml-vijolicen  | Column: product_name
+Row 24 | URL: https://www.dm.si/p/d/1715572/babylove-naravna-mineralna-voda-brez-ogljikovega-dioksida  | Column: breadcrumb
+Row 41 | URL: https://www.dm.si/p/d/1575910/babylove-previjalna-podloga-60-x-60-cm  | Column: breadcrumb
+
+4) DataHut_SI_Spar_PriceExtractions_20260902.CSV
+--------------------------------------------------
+- Data count mismatch.
+- File name error: 
+DataHut_SI_Spar_PriceExtractions_20260902.CSV instead of the expected DataHut_SI_Spar_PriceExtractions_20260901.CSV.
+- - Invalid selling_price 1'99
+row 117: https://online.spar.si/p/jabolka-gala-tehtano-296981 
+
+- Invalid 2-decimal format: regular_price and selling_price values are not in the required 2-decimal format.
+Examples:
+Row 358 | URL: https://online.spar.si/p/nastrgani-mandlji-spar-200g-274032  
+Row 384 | URL: https://online.spar.si/p/fizol-pisani-s-budget-1kg-348544  
+
+- Invalid data type for selling price
+object instead of float
+- promotion decription is 0.9 € Trajno znižano but promotion price not empty
+row 71: https://online.spar.si/p/omaka-tartufata-black-s-sampinjoni-olivami-in-crnimi-poletnimi-tartufi-zigante-tartufi-80g-656931 
+- Whitespace issue: Unwanted whitespace found in the price_per_unit field.
+Example:
+Row 6650 | URL: https://online.spar.si/p/nastrgana-limonina-lupinica-finesse-dr-oetker-3x6g-600647 
+
+- Grammage quantity/unit mismatch: grammage_quantity has been converted to kg, but grammage_unit is still g.
+Examples:
+Row 668 | URL: https://online.spar.si/p/nadomestek-kave-z-okusom-po-kakavu-calmrooty-62g-681408  | grammage_quantity: 0.062 | grammage_unit: g
+Row 8548 | URL: https://online.spar.si/p/testenine-fusilli-feelingok-220g-679091  | grammage_quantity: 0.22 | grammage_unit: g
+
+- Promotion date missing: Promotion details are present, but the corresponding promotion_valid_from and promotion_valid_upto dates are missing in the file.
+Examples:
+Row 3221 | URL: https://online.spar.si/p/negazirana-mineralna-voda-zala-1l-164352  | promotion_description: 6 za 2.36 €
+Row 5196 | URL: https://online.spar.si/p/polnozrnata-strucka-z-otrobi-70g-672809  | promotion_description: 3 za 0.58 €
+
+- Product name missing found
+row 15884: https://online.spar.si/p/zalni-set-v-pastelnih-barvah-venus-61-537351 
+ 
+-Invalid grammge quantity (0.05 kg) 
+row 9630: https://online.spar.si/p/trdi-zeliscni-bonboni-bezgovo-cvetje-brez-sladkorja-ricola-50g-271572 
+ 
+ 5) DataHut_AT_Dm_PriceExtractions_20260901.CSV
+---------------------------------------------------
+- Data count mismatch.
+breadcrumb empty for one row
+row 13958: https://www.dm.at/p/d/1867793/rosenfellner-muehle-buchweizenmehl-bio 
+ breadcrumb empty for one row
+row 13958: https://www.dm.at/p/d/1867793/rosenfellner-muehle-buchweizenmehl-bio 
+ -Invalid 2-decimal format: selling_price values are not in the required 2-decimal format.
+Examples:
+Row 12 | URL: https://www.dm.at/p/d/3119014/dm-box-jubilaeumsbox-50-jahre-dm-gesundheit-und-wohlbefinden 
+Row 18 | URL: https://www.dm.at/p/d/1575911/babylove-wickelunterlagen-monatspack 
+Row 24 | URL: https://www.dm.at/p/d/3158521/alpine-gehoerschutz-muffy-baby 
+-Invalid 2-decimal format: regular_price values are not in the required 2-decimal format.
+Examples:
+Row 12 | URL: https://www.dm.at/p/d/3119014/dm-box-jubilaeumsbox-50-jahre-dm-gesundheit-und-wohlbefinden  | regular_price: 5.0
+Row 18 | URL: https://www.dm.at/p/d/1575911/babylove-wickelunterlagen-monatspack  | regular_price: 17.7
+Row 24 | URL: https://www.dm.at/p/d/3158521/alpine-gehoerschutz-muffy-baby  | regular_price: 29.9
+
+- -product name missing for one row
+row 109: https://www.dm.at/p/d/3150610/artdeco-lidschatten-high-performance-stylo-80-bottle-green 
+
+- Whitespace issue: Unwanted whitespace found in the product_name field.
+Examples:
+Row 10347 | URL: https://www.dm.at/p/d/2486730/palette-intensive-color-creme-intensiv-creme-coloration-permanenter-aufheller-nr-8-11-kuehles-naturblond   | Name: Intensiv Creme Coloration Permanenter Aufheller - Nr. 8-11 Kühles Naturblond, 1 St
+Row 10586 | URL: https://www.dm.at/p/d/1629060/garnier-skin-active-mizellenwasser-all-in-1-rosenwasser  | Name: Mizellenwasser All-in-1 Rosenwasser, 400 ml
+
+6) DataHut_SI_Dm_PriceExtraction_20260802.CSV
+-----------------------------------------------
+- File name error:
+DataHut_SI_Dm_PriceExtraction_20260802.CSV instead of DataHut_SI_Dm_PriceExtractions_20260901.CSV
+-Data count mismatch.
+- promotion price contains value for one row
+row 10614: https://www.dm.si/p/d/3136924/keine-marke-zenski-dm-tek-pulover-s-kapuco-velikost-s 
+- Invalid 2-decimal format: selling_price and regular_price values are not in the required 2-decimal format.
+Examples:
+Row 4 | URL: https://www.dm.si/p/d/3090088/adidas-parfumska-voda-za-moske-vibes-wonder-force 
+Row 5 | URL: https://www.dm.si/p/d/3161799/adidas-parfumska-voda-za-zenske-vibes-smooth-pace 
+Row 6 | URL: https://www.dm.si/p/d/3112782/celimax-retinol-shot-serum-za-obraz 
+-Invalid site_shown_uom
+row 10513: https://www.dm.si/p/d/1452733/alverde-naturkosmetik-korektor-02-beige-sensitive 
+(Korektor 02 BEIGE Sensitive, 8,5 ml)
+row 547: https://www.dm.si/p/d/1391257/balea-olje-za-telo-5v1-za-nego-suhe-in-zahtevne-koze-ter-brazgotin-in-strij   
+(<linking>stroškov dostave</linking>)
+- grammage quatity contains  comma instead of .
+ row 159
+https://www.dm.si/p/d/3149632/bref-cistilo-za-wc-auto-active-blooming-fresh 
+row 160
+https://www.dm.si/p/d/3156724/bref-cistilo-za-wc-self-active-aqua-fresh 
+row 161
+https://www.dm.si/p/d/3156733/bref-cistilo-za-wc-power-active-pine 
+- Date format mismatch: promotion_valid_from date format differs between the fields.
+Row 7 | URL: https://www.dm.si/p/d/3110459/apinature-ekoloski-sok-aloe-vera-preciscen  | price_valid_from: 24.10.2025 | promotion_valid_from: 2025.24.10
+- Whitespace issue: Unwanted whitespace found in the product_name and breadcrumb fields.
+Examples:
+Row 9437 | URL: https://www.dm.si/p/d/2097345/philips-avent-loncek-z-gibljivo-slamico-9-m-200-ml-vijolicen 
+Row 24 | URL: https://www.dm.si/p/d/1715572/babylove-naravna-mineralna-voda-brez-ogljikovega-dioksida 
+-regular_price and selling_price are different.
+Row 10614 | URL: https://www.dm.si/p/d/3136924/keine-marke-zenski-dm-tek-pulover-s-kapuco-velikost-s | regular_price: 34.95 | selling_price: 27.95
+
+7) DataHut_SI_Mercator_PriceExtractions_20260902.CSV
+--------------------------------------------------------
+- File name error:
+DataHut_SI_Mercator_PriceExtractions_20260902.CSV instead of DataHut_SI_Mercator_PriceExtractions_20260901.CSV
+-Data count mismatch.
+- Invalid unique_id found :
+Row 78 | URL: https://mercatoronline.si/izdelek/17533039/tekoci-jogurt-1-3-m-m-lca-500-g  | unique_id: 5
+-extration date is 2026_09_02 instead of 2026-09-01
+"Invalid breadcrumb(VSI IZDELKI > xxxxx, JAJCA IN MLEČNI IZDELKI > vvvv > 5555555)
+row 599: https://mercatoronline.si/izdelek/16857209/trajno-polnomastno-alpsko-mleko-3-5-m-m-ljubljanske-mlekarne-6-x-1-l 
+  -"-Invalid 2-decimal format: selling_price and regular_price values are not in the required 2-decimal format.
+Examples:
+Row 360 | URL: https://mercatoronline.si/izdelek/17720502/maslo-mu-cuisine-20-g  | selling_price: 0.4
+Row 373 | URL: https://mercatoronline.si/izdelek/19119393/maslo-meggle-20-g  | selling_price: 0.5
+Row 575 | URL: https://mercatoronline.si/izdelek/11847424/trajno-polnomastno-alpsko-mleko-3-5-m-m-ljubljanske-mlekarne-10x1-l-2-l-gratis  | regular_price: 16.9
+Row 2681 | URL: https://mercatoronline.si/izdelek/16879812/instant-polenta-mercator-500-g  | regular_price: 0.9"
+"Whitespace issue: Unwanted whitespace found in the breadcrumb field.
+Example:
+Row 559 | URL: https://mercatoronline.si/izdelek/16857209/trajno-polnomastno-alpsko-mleko-3-5-m-m-ljubljanske-mlekarne-6-x-1-l 
+
+- Invalid price per unit,contains 2 decimal points(2.19.4444€ / 1l)
+row 568: https://mercatoronline.si/izdelek/16483282/alpsko-mleko-s-cokolado-ljubljanske-mlekarne-1-l "
+
+8) DataHut_CH_LIDL_PriceExtractions_20260901.CSV
+--------------------------------------------------
+- Data count mismatch.
+-File name error:
+DataHut_CH_LIDL_PriceExtractions_20260901.CSV instead of DataHut_CH_Lidl_PriceExtractions_20260901.CSV
+- "Date format mismatch: price_valid_from and promotion_valid_from have different date formats.
+Row 327 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/21206/s/rustico-gipfeli-1017991/category/54/  | price_valid_from: 28.8.2026 | promotion_valid_from: 28.08.2026"
+"Percentage discount missing: 
+Row 354 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/21104/s/volvic-tee-1800720/category/54/  | promotion_description: -20% 
+-breadcrumb empty for 2 rows:
+row 3794: https://www.lidl.ch/p/de-CH/cien-sonnenspray-sport-transparent-lsf-30/p10052386 
+row 3819: https://www.lidl.ch/p/de-CH/cien-sonnenspray-sport-transparent-lsf50/p10052388 
+
+-Invalid 2-decimal format: regular_price and selling_price values are not in the required 2-decimal format.
+Examples:
+Row 216 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/21483/s/spezialwaschmittel-1012861/category/54/  | regular_price: 2.6
+Row 457 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/20849/s/schweizer-kartoffeln-0083292/category/54/  | regular_price: 3.3
+Row 1033 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/18360/s/recybag-sammelsack-5113234/category/54/  | selling_price: 16.0
+Row 1720 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/15496/s/sushi-staebchen-0174609/category/54/  | selling_price: 0.1"
+"Selling price mismatch: selling_price is not equal to the promotion_price.
+Row 186 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/21607/s/mandel-glace-1009858/category/54/  | promotion_description: -20% | promotion_price: 2.35 | selling_price: 2.95 | regular_price: 2.95
+- Promotion validity dates missing: Both promotion_valid_from and promotion_valid_upto are missing for products with promotion_description as Aktion.
+Examples:
+Row 36 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/22028/s/puerto-mate-bio-mate-puro-5114186/category/54/ 
+Row 38 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/22027/s/knorr-asia-noodles-1801656/category/54/ "
+-Whitespace issue: Unwanted whitespace found in the product_name and breadcrumb fields( Mini Pizza Pancetta, Provola und  Zwiebel)
+Row 3746 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/20869/s/mini-pizza-pancetta-provola-und-zwiebel-1015165/category/54/  
+ 
+ 9) bayut_properties_buy_commercial_2026_09_02.json
+ --------------------------------------------------
+- Data count mismatch. 
+- image url are present in the file , but missing in the API.
+record 1: https://www.bayut.com/property/details-15751379.html
+
+- price , createdAt, approvedAt, updatedAt, touchedAt, reactivatedAt     values are in int type in API, but in float data type in file.
+file values: 
+     "createdAt": 1783496906.0,
+    "approvedAt": 1783496906.0,
+    "updatedAt": 1788074704.0,
+    "touchedAt": 1788075115.0895,
+    "reactivatedAt": 1783496906.0,
+
+ 10) bayut_properties_rent_commercial_2026_09_02.json
+ ------------------------------------------------------
+ - Data count mismatch.
+ - image url are prsent in the file but missing from API under coverphoto
+record 1: https://www.bayut.com/property/details-6624832.html 
+
+price is in int format in API , while it is in float type in file
+"price": 30000.0

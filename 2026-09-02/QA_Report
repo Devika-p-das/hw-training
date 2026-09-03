@@ -1,0 +1,268 @@
+1) bayut_properties_rent_residential_2026_09_02.json
+------------------------------------------------------------
+- Data count mismatch.
+- image url is present in the file , missing in the API under CoverPhoto
+eg: 
+"listing_url": "https://www.bayut.com/property/details-16229579.html "
+
+- difference in data type of numerical values between API and File
+int in API but float in file
+eg: createdAt": 1787147240.0,
+    "approvedAt": 1787147240.0,
+    "updatedAt": 1788110995.0,
+    "touchedAt": 1788116432.650505,
+    "reactivatedAt": 1787147240.0
+
+- Value mismatch between API and file: The indyScore values differ between the API response and the file.
+
+Example:
+
+Listing URL: https://www.bayut.com/property/details-16229579.html 
+indyScore: File 552 | API 524
+indyScore_l1: File 552 | API 524
+indyScore_l2: File 458 | API 435
+indyScore_l3: File 458 | API 435
+
+2) DataHut_SI_Spar_PriceExtractions_20260902.CSV
+-------------------------------------------------
+- Data count mismatch.
+- Invalid 2-decimal format in selling_price:
+Row 358 | URL: https://online.spar.si/p/nastrgani-mandlji-spar-200g-274032  | selling_price: 2.2
+Row 383 | URL: https://online.spar.si/p/fizol-pisani-s-budget-1kg-348544  | selling_price: 2.5
+Invalid 2-decimal format in regular_price:
+Row 15728 | URL: https://online.spar.si/p/set-kosar-uniqubo-simpex-31-675224   | regular_price: 10.0
+Row 15729 | URL: https://online.spar.si/p/stol-atlanta-simpex-11-645122  | regular_price: 5.0_
+- Grammage quantity/unit mismatch: Grammage quantity is converted to kg, but the unit is still shown as g.
+
+Row 663 | URL: https://online.spar.si/p/nadomestek-kave-z-okusom-po-kakavu-calmrooty-62g-681408  | grammage_quantity: 0.062 | grammage_unit: g
+Row 8497 | URL: https://online.spar.si/p/testenine-fusilli-feelingok-220g-679091  | grammage_quantity: 0.220 | grammage_unit: g
+
+- Promotion validity dates missing: Promotion details are present in the file, but the promotion validity dates available on the website are missing from the file.
+
+Row 10270 | URL: https://online.spar.si/p/krompirjev-flips-pom-bar-original-100g-578786 
+Row 10933 | URL: https://online.spar.si/p/barvice-grip-faber-castell-121-409873 
+Row 10951 | URL: https://online.spar.si/p/lepilo-v-stiku-za-papir-uhu-40g-11-73473 
+Row 10966 | URL: https://online.spar.si/p/kemicni-svincnik-super-grip-medium-crn-577316 
+Row 10967 | URL: https://online.spar.si/p/pisalo-roler-gel-mrc-pentel-31-490829 
+Row 10993 | URL: https://online.spar.si/p/sestilo-kovinsko-srebrno-staedtler-11-312222 
+Row 11021 | URL: https://online.spar.si/p/voscenke-grip-faber-castell121-448822 
+
+3) DataHut_SI_Dm_PriceExtractions_20260902.CSV
+-----------------------------------------------
+- Data count mismatch.
+- Invalid 2-decimal format in regular_price:
+Row 3 | URL: https://www.dm.si/p/d/3090088/adidas-parfumska-voda-za-moske-vibes-wonder-force  | regular_price: 15.9
+Row 5 | URL: https://www.dm.si/p/d/3161799/adidas-parfumska-voda-za-zenske-vibes-smooth-pace  | regular_price: 11.0
+Invalid 2-decimal format in selling_price:
+Row 52 | URL: https://www.dm.si/p/d/1916603/alpro-mandljev-napitek-barista  | selling_price: 3.6
+Row 53 | URL: https://www.dm.si/p/d/1704999/balea-oblizi-s-salicilno-kislino-za-odstranjevanje-mozoljev-hautrein  | selling_price: 2.2
+- White space found:
+
+Row 9405 | URL: https://www.dm.si/p/d/2097345/philips-avent-loncek-z-gibljivo-slamico-9-m-200-ml-vijolicen  | Column: product_name
+Row 23 | URL: https://www.dm.si/p/d/1715572/babylove-naravna-mineralna-voda-brez-ogljikovega-dioksida  | Column: breadcrumb
+
+4) DataHut_SI_Mercator_PriceExtractions_20260902.CSV
+--------------------------------------------------------
+-Data count mismatch.
+- Invalid 2-decimal format in selling_price:
+Row 361 | URL: https://mercatoronline.si/izdelek/17720502/maslo-mu-cuisine-20-g  | selling_price: 0.4
+Row 376 | URL: https://mercatoronline.si/izdelek/19119393/maslo-meggle-20-g  | selling_price: 0.5
+Invalid 2-decimal format in regular_price:
+Row 572 | URL: https://mercatoronline.si/izdelek/11847424/trajno-polnomastno-alpsko-mleko-3-5-m-m-ljubljanske-mlekarne-10x1-l-2-l-gratis  | regular_price: 16.9
+Row 2608 | URL: https://mercatoronline.si/izdelek/16879812/instant-polenta-mercator-500-g  | regular_price: 0.9
+- Promotion price missing / selling price not matching promotion price:
+Row 64 | URL: https://mercatoronline.si/izdelek/17294851/sadni-jogurt-panna-cotta-vec-okusov-3-5-m-m-zott-jogobella-150-g  | promotion_description: Za imetnike Pika kartice 20% ceneje | promotion_price: NaN | selling_price: 0.79
+Row 80 | URL: https://mercatoronline.si/izdelek/17164308/tekoci-jogurt-1-3-m-m-ego-1-kg  | promotion_description: Znižano -20% | promotion_price: NaN | selling_price: 1.99"
+
+5) DataHut_CH_Lidl_PriceExtractions_20260902.CSV 
+--------------------------------------------------
+- Data count mismatch.
+"breadcrumbs missing for 2 rows
+row 3707: https://www.lidl.ch/p/de-CH/cien-sonnenspray-sport-transparent-lsf-30/p10052386 
+row 3804: https://www.lidl.ch/p/de-CH/cien-sonnenspray-sport-transparent-lsf50/p10052388 
+ 
+"
+"-Invalid 2-decimal format in regular_price:
+Row 215 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/21483/s/spezialwaschmittel-1012861/category/54/  | regular_price: 2.6
+Row 455 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/20849/s/schweizer-kartoffeln-0083292/category/54/  | regular_price: 3.3
+Invalid 2-decimal format in selling_price:
+Row 215 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/21483/s/spezialwaschmittel-1012861/category/54/  | selling_price: 2.6
+Row 455 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/20849/s/schweizer-kartoffeln-0083292/category/54/  | selling_price: 3.3"
+"- Promotion validity dates missing: Promotion validity dates are missing for products with promotion_description as Aktion.
+
+Row 38 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/22025/s/knorr-asia-noodles-1801654/category/54/  | promotion_description: Aktion
+Row 39 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/22027/s/knorr-asia-noodles-1801656/category/54/  | promotion_description: Aktion_"
+"White space found:
+Row 3731 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/20869/s/mini-pizza-pancetta-provola-und-zwiebel-1015165/category/54/  | Column: product_name
+Row 3731 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/20869/s/mini-pizza-pancetta-provola-und-zwiebel-1015165/category/54/  | Column: breadcrumb"
+
+6) DataHut_AU_Coles_FullDump_20260902.CSV
+--------------------------------------------
+- Data count mismatch.
+-Invalid 2-decimal format in selling_price:
+Row 762465 | URL: https://www.coles.com.au/product/lemon-and-lime-rectangle-bamboo-serving-platter-with-cover-1-each-1881456  | selling_price: 20.0
+Row 762466 | URL: https://www.coles.com.au/product/the-deli-skinless-franks-375g-3566176  | selling_price: 6.0
+- rating is in float data type instead of string
+review is in float data type instead of string
+- Expected empty but not empty: regular_price, barcode, producthierarchy_level4, producthierarchy_level5
+Unexpected empty columns: file_name_1, features, suitable_for, environmental
+7) DataHut_IT_Eurospin_PriceExtractions_20260902.CSV
+-----------------------------------------------------
+- Data count mismatch.
+- Invalid 2-decimal format in selling_price:
+Row 231 | URL: https://online.eurospin.com/product/fontina-dop  | selling_price: 6.0
+Row 1329 | URL: https://online.eurospin.com/product/cuore-bovino-adulto1  | selling_price: 3.0
+Invalid 2-decimal format in regular_price:
+Row 39851 | URL: https://online.eurospin.com/product/susine-allungate-sfuse  | regular_price: 0.6
+Row 39864 | URL: https://online.eurospin.com/product/finissime-filetto-di-pollo-cf12  | regular_price: 3.0
+
+8) DataHut_IT_Esselunga_PriceExtractions_20260902.CSV
+---------------------------------------------------------
+- Data count mismatch.
+- Unescaped | found in site_shown_uom (886 rows):
+
+Row 502 | URL: https://spesaonline.esselunga.it/commerce/nav/drive/store/prodotto/672021/omino-bianco-sbianca-lana-cotone-e-seta-5-x-20-g   | site_shown_uom: 100g (5x20g ¿)  | 5 Bustine per complessivi 100g
+Row 827 | URL: https://spesaonline.esselunga.it/commerce/nav/drive/store/prodotto/212540/splendid-classico-10-30-capsule-caffe-compatibili-con-macchine-nespresso-original-156g   | site_shown_uom: Capsule | x30 156g ¿
+Row 831 | URL: https://spesaonline.esselunga.it/commerce/nav/drive/store/prodotto/212065/splendid-classico-10-100-capsule-caffe-compatibili-con-macchine-nespresso-original-520g   | site_shown_uom: 10 x 10 capsule | 10 confezioni da 52g ¿
+
+- Grammage quantity/unit mismatch: The unit is kg, but the file shows grammage_unit as g.
+
+Row 225677 | URL: https://spesaonline.esselunga.it/commerce/nav/drive/store/prodotto/721554/cooperativa-produttori-latte-e-fontina-fontina-dop-valle-daosta-alpeggio-0250-kg  | grammage_quantity: 0.250 | grammage_unit: g
+
+- Escape character found in brand:
+Row 227478 | URL: https://spesaonline.esselunga.it/commerce/nav/drive/store/prodotto/552165/sore-valtenesi-riviera-del-garda-classico-doc-75-cl   | brand: Soré\t\t
+The escape characters (\t\t) are present in the data, although they are not visibly displayed in the file.
+
+- price_valid_from missing: promotion_valid_from is available, but price_valid_from is missing.
+eg
+Row 6 | URL: https://spesaonline.esselunga.it/commerce/nav/drive/store/prodotto/676370/dixan-liquido-classico-3x1957-lavaggi-3-x-855-ml  | promotion_valid_from: 26/08/2026
+Row 7 | URL: https://spesaonline.esselunga.it/commerce/nav/drive/store/prodotto/676371/dixan-liquido-color-3x1957-lavaggi-3-x-855-ml  | promotion_valid_from: 26/08/2026
+
+- Tab character found in pdp_url: Invalid URLs contain tab (\t) characters within the URL.
+
+Row 2782 | URL: https://spesaonline.esselunga.it/commerce/nav/drive/store/prodotto/157442/elephant-baked-squeezed-pretzels-sea-salt-\t80-g
+Row 3862 | URL: https://spesaonline.esselunga.it/commerce/nav/drive/store/prodotto/653548/amico-veg-snack\tal-gusto-riso-100-vegetale-mini-48-g
+- Invalid 2-decimal format in regular_price:
+Row 33 | URL: https://spesaonline.esselunga.it/commerce/nav/drive/store/prodotto/852150/domopak-living-reti-proteggi-reggiseni-16-x-10-cm-2-pz  | regular_price: 5.9
+Row 39 | URL: https://spesaonline.esselunga.it/commerce/nav/drive/store/prodotto/852022/vileda-premium-2in1-copriasse-universal  | regular_price: 15.9
+Invalid 2-decimal format in selling_price:
+Row 137 | URL: https://spesaonline.esselunga.it/commerce/nav/drive/store/prodotto/734244/pecorino-alta-quota-prodotto-di-montagna  | selling_price: 8.0
+Row 138 | URL: https://spesaonline.esselunga.it/commerce/nav/drive/store/prodotto/677054/coccolatevi-casa-e-tessuti-profumatore-per-biancheria-e-casa-loriginale-300-ml  | selling_price: 3.6
+
+9) DataHut_SI_Dm_FullDump_20260903.CSV
+------------------------------------------
+- Data count mismatch.
+- DataHut_SI_Dm_FullDump_20260903.CSV istead of DataHut_SI_Dm_FullDump_20260902.CSV
+- Unexpected empty columns     : ['price_was', 'promotion_price']
+-Invalid 2-decimal format in regular_price:
+Row 2 | URL: https://www.dm.si/p/d/3114702/celimax-retinal-shot-booster-nega-za-obraz  | regular_price: 22.9
+Row 5 | URL: https://www.dm.si/p/d/3161799/adidas-parfumska-voda-za-zenske-vibes-smooth-pace  | regular_price: 11.0
+Invalid 2-decimal format in selling_price:
+Row 60 | URL: https://www.dm.si/p/d/3103615/balea-maska-za-stopala-z-10-uree-v-obliki-nogavic-1-par   | selling_price: 3.4
+Row 63 | URL: https://www.dm.si/p/d/1704999/balea-oblizi-s-salicilno-kislino-za-odstranjevanje-mozoljev-hautrein  | selling_price: 2.2
+- - White space found:
+
+Row 10465 | URL: https://www.dm.si/p/d/1640794/balea-men-vlazilna-maska-za-obraz-hydro-v-obliki-krpice  | Column: breadcrumb
+Row 1345 | URL: https://www.dm.si/p/d/3149875/lekobeba-vetrovne-kapljice-prehransko-dopolnilo  | Column: storage_instructions
+Row 9331 | URL: https://www.dm.si/p/d/2169216/l-angelica-sproscujoci-vecerni-zeliscni-caj-18-x-1-55-g  | Column: preparationinstructions
+Row 2567 | URL: https://www.dm.si/p/d/3103371/mivolis-zeliscni-caj-s-kolagenom-biotinom-in-vitaminom-c  | Column: country_of_origin
+Row 1378 | URL: https://www.dm.si/p/d/1299311/denkmit-detergent-za-rocno-pomivanje-posode-ultra-pro-climate  | Column: labelling
+Row 20 | URL: https://www.dm.si/p/d/3123931/apinature-prehransko-dopolnilo-junior-iron-mix  | Column: warning
+
+- Unescaped | found in instructionforuse (6 rows):
+Row 10172 | URL: https://www.dm.si/p/d/3101641/rimmel-london-tekoci-osvetljevalec-multi-tasker-turbocharged-glow-005-iconic-as-usual   
+- Unescaped | found in ingredients (98 rows):
+Row 75 | URL: https://www.dm.si/p/d/3123738/balea-zascita-pred-drgnjenjem-koze-v-stiku-tropical-dream   
+
+- Escape character (\t) found:
+
+Row 9321 | URL: https://www.dm.si/p/d/2226766/herba-medica-bio-planinski-caj-25-1-2-g  | Column: preparationinstructions | Issue value: 1.\tPripravite vrelo vodo (100° C)
+Row 2975 | URL: https://www.dm.si/p/d/1586730/dmbio-bio-otroski-masleni-pirini-piskoti-z-datlji-od-3-leta  | Column: labelling | Issue value: Ekološki logotip EU; BIOLAND – oznaka za ekološka živila\t; Nemška EKO oznaka
+
+10) DataHut_AT_Spar_FullDump_20260903.CSV
+------------------------------------------
+- Data count mismatch.
+- DataHut_AT_Spar_FullDump_20260903.CSV instead of DataHut_AT_Spar_FullDump_20260902.CSV
+- Expected empty but not empty: ['age_of_the_product']
+- Invalid 2-decimal price format: selling_price and regular_price values contain only one decimal place instead of two.
+
+selling_price:
+Row 130 | URL: https://www.spar.at/produktwelt/spar-premium-mezze-maniche-p2020004938749  | selling_price: 1.7
+Row 217 | URL: https://www.spar.at/produktwelt/spar-premium-premium-nektarinen-p2020005871441  | selling_price: 3.8
+regular_price:
+Row 1084 | URL: https://www.spar.at/produktwelt/doppelherz-vital-tonikum-p6604325  | regular_price: 11.9
+Row 1113 | URL: https://www.spar.at/produktwelt/spar-qualitaetsmarke-burger-salat-eisbergsalat-p2020003410741  | regular_price: 1.7
+- "
+- Invalid image URLs: The image_url_1 to image_url_6 fields contain incomplete image URLs that end with the product ID and / without an actual image filename/resource.
+image_url_1: 32 invalid URLs
+Unique ID 241274 | URL: https://cdn1.interspar.at/cachableservlets/articleImage.dam/at/241274/  
+image_url_2: 9 invalid URLs
+Unique ID 2020005886100 | URL: https://cdn1.interspar.at/cachableservlets/articleImage.dam/at/2020005886100/  
+image_url_3: 7 invalid URLs
+Unique ID 2020003706042 | URL: https://cdn1.interspar.at/cachableservlets/articleImage.dam/at/2020003706042/   
+image_url_4: 3 invalid URLs
+Unique ID 2020005793453 | URL: https://cdn1.interspar.at/cachableservlets/articleImage.dam/at/2020005793453/  
+image_url_5: 1 invalid URL
+Unique ID 2020003525070 | URL: https://cdn1.interspar.at/cachableservlets/articleImage.dam/at/2020003525070/  
+image_url_6: 3 invalid URLs
+Unique ID 2020005995420 | URL: https://cdn1.interspar.at/cachableservlets/articleImage.dam/at/2020005995420/  "
+- - Invalid grammage quantity: Grammage quantity contains a . after the numeric value.
+Row 42060 | URL: https://www.spar.at/produktwelt/fritz-fries-vampir-set-2-teilig-p2020006166256  | Grammage quantity: 2.
+
+- White space found (22 issues):
+
+Row 38288 | URL: https://www.spar.at/produktwelt/finish-quantum-geschirrspuel-caps-citrus-44-stueck-p2020005738850  | Column: promotion_description
+Row 329 | URL: https://www.spar.at/produktwelt/s-budget-toiletten-papier-10-rollen-p2020006211093  | Column: breadcrumb
+
+- Unescaped | found in product_name (10 rows):
+Row 6805 | URL: https://www.spar.at/produktwelt/isana-cleanser-aha-pha-peeling-125ml-p2020006024686  | product_name: Isana AHA | PHA Cleanser 125 ml
+Unescaped | found in nutritional_information (14,933 rows):
+Row 24 | URL: https://www.spar.at/produktwelt/despar-premium-bio-apfel-limette-und-ingwer-p2020005534049  | nutritional_information
+Unescaped | found in site_shown_uom (9 rows):
+Row 18254 | URL: https://www.spar.at/produktwelt/mehrzweckschrauben-4x40-150stk-p2020005763197  | site_shown_uom: BGS Mehrzweckschrauben | 4,0 x 40 mm | 150 Stück
+
+11) bayut_egp_2026_09_01.json
+----------------------------------
+- Extra columns: ['completion_status', 'ownership']
+- Data count mismatch
+- scraped_ts and date are 2026-08-31(past date)
+- Whitespace in broker_display_name and broker: The broker_display_name and broker values contain unwanted whitespace.
+
+Row 7926 | URL: https://www.bayut.eg/en/property/details-205305714.html  | broker_display_name: Mohaned El Amir | broker: MOHANED EL AMIR
+- price_per contains
+empty           173179
+Monthly     48317
+Daily        5511
+Weekly         91
+Yearly         61
+reference number is like
+Bayut - 1234 
+id is like 503985944 
+-published at : "DD-MM-YYYY format
+2026-08-12"
+"
+12) DataHut_AT_Billa_FullDump_20260903.CSV
+-------------------------------------------
+-"DataHut_AT_Billa_FullDump_20260903.CSV
+extracted date : 2026-09-03
+future dates"
+-data count mismatch
+-"Expected empty but not empty: ['age_of_the_product', 'packaging']
+Unexpected empty columns     : ['file_name_1', 'file_name_2', 'file_name_3', 'file_name_4', 'file_name_5', 'file_name_6', 'retail_limit']"
+- "Regular price not empty for products with AKTION promotion description: Products with AKTION as the promotion description and a single price have the regular_price field populated, although it is expected to be empty.
+
+Row 2907 | URL: https://shop.billa.at/produkte/clever-knoblauchbaguette-00422074  | selling_price: 0.99 | regular_price: 0.99 | promotion_description: AKTION | promotion_price: 0.99
+Row 3017 | URL: https://shop.billa.at/produkte/clever-kraeuterbaguette-00427222  | selling_price: 0.99 | regular_price: 0.99 | promotion_description: AKTION | promotion_price: 0.99
+Row 8068 | URL: https://shop.billa.at/produkte/billa-beef-burger-00754845  | selling_price: 3.79 | regular_price: 3.79 | promotion_description: AKTION | promotion_price: 3.79
+Row 8273 | URL: https://shop.billa.at/produkte/billa-cheeseburger-00757969  | selling_price: 2.59 | regular_price: 2.59 | promotion_description: AKTION | promotion_price: 2.59
+Row 10749 | URL: https://shop.billa.at/produkte/omis-schmankerl-alt-wiener-suppentopf-00870669  | selling_price: 3.99 | regular_price: 3.99 | promotion_description: AKTION | promotion_price: 3.99
+Row 11179 | URL: https://shop.billa.at/produkte/billa-pork-cheeseburger-00880799  | selling_price: 2.29 | regular_price: 2.29 | promotion_description: AKTION | promotion_price: 2.29
+Row 11438 | URL: https://shop.billa.at/produkte/billa-schnitzel-burger-huhn-00891821  | selling_price: 3.59 | regular_price: 3.59 | promotion_description: AKTION | promotion_price: 3.59
+Row 11661 | URL: https://shop.billa.at/produkte/clever-kaisersemmel-00898633   | selling_price: 1.32 | regular_price: 1.32 | promotion_description: AKTION | promotion_price: 1.32"
+- "Invalid 2-decimal price format: regular_price values contain only one decimal place instead of two.
+Row 77 | URL: https://shop.billa.at/produkte/hennessy-very-special-0011379  | regular_price: 47.9
+Row 96 | URL: https://shop.billa.at/produkte/rauch-weizenmehl-extra-fuer-kuchen-0015865  | regular_price: 1.8"
+-"Invalid 2-decimal price format: selling_price values contain only one decimal place instead of two.
+
+Row 77 | URL: https://shop.billa.at/produkte/hennessy-very-special-0011379  | selling_price: 47.9
+Row 96 | URL: https://shop.billa.at/produkte/rauch-weizenmehl-extra-fuer-kuchen-0015865  | selling_price: 1.8"
