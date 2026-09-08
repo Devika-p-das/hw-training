@@ -1,0 +1,220 @@
+1) DataHut_SI_Spar_PriceExtractions_20260908.CSV
+-------------------------------------------------
+-Data count mismatch.
+- promotion_description is populated, but promotion_valid_from and promotion_valid_upto are missing in the file. The promotion validity dates are available on the website.
+
+Row 7506 | URL: https://online.spar.si/p/bio-sadna-kasica-z-borovnico-banano-in-jabolkom-mogli100g-664048 | Promotion: 3 za 3.38 €
+Row 7507 | URL: https://online.spar.si/p/bio-sadna-kasica-z-jagodo-jabolkom-in-banano-mogli-100g-664052 | Promotion: 3 za 3.38 €
+Row 7508 | URL: https://online.spar.si/p/bio-sadna-kasica-z-malino-jabolkom-in-banano-mogli-100g-664050 | Promotion: 3 za 3.38 €
+Row 7536 | URL: https://online.spar.si/p/bio-sadna-kasica-z-mangom-guavo-in-banano-mogli-100g-664051 | Promotion: 3 za 3.38 €
+Row 7537 | URL: https://online.spar.si/p/bio-sadna-kasica-s-kakavom-banano-in-jabolkom-mogli-100g-664049 | Promotion: 3 za 3.38 €
+
+- Selling price not equal to regular price: The selling_price is different from the regular_price for the following record.
+
+Row 14582 | URL: https://online.spar.si/p/posteljnina-rubin-renforce-140x200-60x80-cm-657590   | regular_price: 11.00 | selling_price: 12.45 | promotion_price: 12.45 | Promotion: Prihranek -1.45 €
+
+- Invalid 2 Decimal Format:
+
+selling_price:
+
+Row 264 | URL: https://online.spar.si/p/suhe-slive-izkoscicene-seeberger-200g-305593  | selling_price: 5.1
+Row 383 | URL: https://online.spar.si/p/nastrgani-mandlji-spar-200g-274032  | selling_price: 2.2
+
+regular_price:
+
+Row 264 | URL: https://online.spar.si/p/suhe-slive-izkoscicene-seeberger-200g-305593  | regular_price: 5.1
+Row 383 | URL: https://online.spar.si/p/nastrgani-mandlji-spar-200g-274032  | regular_price: 2.2
+
+2) DataHut_SI_Dm_PriceExtractions_20260908.CSV
+-----------------------------------------------
+- Data count mismatch
+- Invalid 2 Decimal Format:
+
+regular_price:
+
+Row 2 | URL: https://www.dm.si/p/d/3160643/nivea-negovalna-krema-za-telo-rich-nourishing | regular_price: 7.2
+Row 8 | URL: https://www.dm.si/p/d/1916589/alpro-kokosov-napitek-s-sojo-barista-obogaten-s-kalcijem | regular_price: 3.6
+
+selling_price:
+
+Row 2 | URL: https://www.dm.si/p/d/3160643/nivea-negovalna-krema-za-telo-rich-nourishing | selling_price: 7.2
+Row 8 | URL: https://www.dm.si/p/d/1916589/alpro-kokosov-napitek-s-sojo-barista-obogaten-s-kalcijem | selling_price: 3.6
+- Whitespace issues found:
+
+Row 9170 | URL: https://www.dm.si/p/d/1341689/balea-med-gel-za-tusiranje-in-sampon-za-lase-2-v-1-ultra-sensitive  | Column: product_name | Issue: Whitespace present
+Row 20 | URL: https://www.dm.si/p/d/1715572/babylove-naravna-mineralna-voda-brez-ogljikovega-dioksida  | Column: breadcrumb | Issue: Whitespace present
+
+3) DataHut_SI_Mercator_PriceExtractions_20260908.CSV
+-----------------------------------------------------
+- Data count mismatch.
+- Promotion price missing: promotion_description is populated, but the promotion_price is missing.
+
+Row 26 | URL: https://mercatoronline.si/izdelek/19148905/skyr-active-zone-500-g | Promotion: Za imetnike Pika kartice 23% ceneje
+Row 62 | URL: https://mercatoronline.si/izdelek/876871/tekoci-jogurt-3-2-m-m-mu-1-l | Promotion: Ob nakupu 2 izdelkov ali več je vsak 20% ceneje
+"- Invalid 2 Decimal Format:
+
+selling_price:
+
+Row 360 | URL: https://mercatoronline.si/izdelek/17720502/maslo-mu-cuisine-20-g  | selling_price: 0.4
+Row 377 | URL: https://mercatoronline.si/izdelek/19119393/maslo-meggle-20-g  | selling_price: 0.5
+
+regular_price:
+
+Row 360 | URL: https://mercatoronline.si/izdelek/17720502/maslo-mu-cuisine-20-g  | regular_price: 0.4
+Row 377 | URL: https://mercatoronline.si/izdelek/19119393/maslo-meggle-20-g  | regular_price: 0.5"
+
+4) DataHut_AT_Billa_PriceExtractions_20260908.CSV
+----------------------------------------------------
+- Data count mismatch.
+"Invalid 2 Decimal Format:
+
+selling_price:
+
+Row 82 | URL: https://shop.billa.at/produkte/hennessy-very-special-0011379  | selling_price: 47.9
+Row 87 | URL: https://shop.billa.at/produkte/oelz-mehrkorntoast-0014336  | selling_price: 3.8"
+"- Invalid 2 Decimal Format:
+
+regular_price:
+
+Row 82 | URL: https://shop.billa.at/produkte/hennessy-very-special-0011379  | regular_price: 47.9
+Row 87 | URL: https://shop.billa.at/produkte/oelz-mehrkorntoast-0014336  | regular_price: 3.8"
+"- Regular price not empty for AKTION promotion: According to the requirement, products with AKTION as the promotion description and a single price on the website should have an empty regular_price. However, these records have regular_price populated. The AKPION row is neglected as requested.
+
+Row 39 | URL: https://shop.billa.at/produkte/de-cecco-pappardelle-00105483  | Promotion: AKTION | regular_price: 2.85
+Row 241 | URL: https://shop.billa.at/produkte/kotanyi-basilikum-gerebelt-00179952  | Promotion: AKTION | regular_price: 3.49"
+"-  Regular price not empty for AKTION promotion: Products with AKTION as the promotion description have all three price fields populated with the same value.
+
+Row 11414 | URL: https://shop.billa.at/produkte/clever-kaisersemmel-00898633  | selling_price: 1.32 | regular_price: 1.32 | promotion_description: AKTION | promotion_price: 1.32"
+
+5) DataHut_AT_Spar_PriceExtractions_20260908.CSV
+--------------------------------------------------
+- Data count mismatch.
+"- Price missing: Prices are available on the website but are missing in the file.
+
+Row 42788 | URL: https://www.spar.at/produktwelt/oelz-fruechtebrot-p2020002051594  | Product: Ölz Früchtebrot
+Row 42789 | URL: https://www.spar.at/produktwelt/mautner-markhof-wintersirup-orangenpunsch-p3479797  | Product: Mautner Markhof Wintersirup Orangenpunsch
+Row 42790 | URL: https://www.spar.at/produktwelt/oelz-winterkuchen-orange-p7526619  | Product: Ölz Winterkuchen Orange
+
+- Invalid 2 Decimal Format:
+
+selling_price:
+
+Row 29 | URL: https://www.spar.at/produktwelt/spar-premium-mezze-maniche-p2020004938749  | selling_price: 1.7
+Row 53 | URL: https://www.spar.at/produktwelt/spar-premium-premium-nektarinen-p2020005871441  | selling_price: 3.8
+
+regular_price:
+
+Row 29 | URL: https://www.spar.at/produktwelt/spar-premium-mezze-maniche-p2020004938749  | regular_price: 1.7
+Row 53 | URL: https://www.spar.at/produktwelt/spar-premium-premium-nektarinen-p202000587144  | regular_price: 3.8"
+"- Whitespace issues: Whitespace was found in the following fields:
+
+Row 40016 | URL: https://www.spar.at/produktwelt/finish-quantum-geschirrspuel-caps-citrus-44-stueck-p2020005738850  | Field: promotion_description
+Row 23389 | URL: https://www.spar.at/produktwelt/vorarlberg-milch-laendle-halbfettmilch-laenger-frisch-1-5-fett-p2020006312547  | Field: breadcrumb
+
+- Unescaped | characters: The following columns contain unescaped pipe (|) characters, which can cause issues when parsing the CSV data.
+
+product_name:
+
+Row 9571 | URL: https://www.spar.at/produktwelt/isana-cleanser-aha-pha-peeling-125ml-p2020006024686  | Field: product_name | Value: Isana AHA | PHA Cleanser 125 ml
+
+site_shown_uom:
+
+Row 19033 | URL: https://www.spar.at/produktwelt/mehrzweckschrauben-4x40-150stk-p2020005763197  | Field: site_shown_uom | Value: BGS Mehrzweckschrauben | 4,0 x 40 mm | 150 Stück
+
+- Invalid grammage quantity: A . is present after the numeric value in grammage_quantity.
+
+Row 18160 | URL: https://www.spar.at/produktwelt/fritz-fries-vampir-set-2-teilig-p2020006166256  | grammage_quantity: 2."
+
+6) DataHut_CH_Lidl_PriceExtractions_20260908.CSV
+-----------------------------------------------------
+- Data count mismatch
+- Missing/Invalid breadcrumbs: A total of 2 records have missing breadcrumb values.
+
+Row 3753 | URL: https://www.lidl.ch/p/de-CH/cien-sonnenspray-sport-transparent-lsf-30/p10052386 
+Row 3767 | URL: https://www.lidl.ch/p/de-CH/cien-sonnenspray-sport-transparent-lsf50/p10052388 
+- Invalid 2 Decimal Format:
+
+regular_price:
+
+Row 80 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/22039/s/perrier-mineralwasser-mit-kohlensaeure-0003820/category/54/  | regular_price: 7.2
+Row 239 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/21483/s/spezialwaschmittel-1012861/category/54/  | regular_price: 2.6
+
+selling_price:
+
+Row 80 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/22039/s/perrier-mineralwasser-mit-kohlensaeure-0003820/category/54/  | selling_price: 7.2
+Row 239 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/21483/s/spezialwaschmittel-1012861/category/54/  | selling_price: 2.6"
+"Missing promotion validity dates: promotion_description is populated, but promotion_valid_from and promotion_valid_upto are missing in the file.
+
+Row 49 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/22071/s/cockta-1801210/category/54/  | Promotion: 12+0 gratis
+Row 52 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/22068/s/mini-cabanossi-0163897/category/54/  | Promotion: Aktion
+- Whitespace issues: A total of 2 records contain whitespace issues.
+
+Row 3789 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/20869/s/mini-pizza-pancetta-provola-und-zwiebel-1015165/category/54/  | Field: product_name
+Row 3789 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/20869/s/mini-pizza-pancetta-provola-und-zwiebel-1015165/category/54/  | Field: breadcrumb"
+
+7) bayut_egp_2026_09_02.json
+------------------------------
+- Extra fields
+: ['completion_status', 'ownership']
+- Whitespace issues found in 4 fields — title, description, broker_display_name, and broker — with 1,858 occurrences across 2,870 records.
+
+Examples:
+
+Row 26 — URL: https://www.dubizzle.com.bh/en/ad/commercial-address-offices-for-rent-ID105694722.html  — Field: title — Issue: Multiple consecutive spaces — Value: COMMERCIAL ADDRESS OFFICES FOR RENT
+Row 26 — URL: https://www.dubizzle.com.bh/en/ad/commercial-address-offices-for-rent-ID105694722.html  — Field: description — Issue: Multiple consecutive spaces
+Row 379 — URL: https://www.dubizzle.com.bh/en/ad/larg-apartment-for-rent-in-bani-jamra-ID104302027.html  — Field: broker_display_name — Issue: Multiple consecutive spaces
+Row 379 — URL: https://www.dubizzle.com.bh/en/ad/larg-apartment-for-rent-in-bani-jamra-ID104302027.html  — Field: broker — Issue: Multiple consecutive spaces"
+-Data count moismatch.
+"price_per values
+empty     177108
+Monthly     49580
+Daily        5371
+Weekly         95
+Yearly         65
+
+8) DataHut_AU_Coles_FullDump_20260909.CSV
+-------------------------------------------
+- DataHut_AU_Coles_FullDump_20260909.CSV
+Future date present (instead of 20260908)
+- Data count mismatch.
+-extraction date 2026-09-09  future date
+- Invalid price format — selling_price is not in the required 2-decimal format — 2 records.
+Examples:
+Row 2 — URL: https://www.coles.com.au/product/coles-simply-unsalted-butter-250g-3169879  — selling_price: 4.5
+Row 4 — URL: https://www.coles.com.au/product/coles-simply-salted-butter-250g-3169835  — selling_price: 4.5
+rating is in float data type instead of string
+review is in float data type instead of string
+- Invalid price format — regular_price is not in the required 2-decimal format — 2 records.
+
+Examples:
+
+Row 5 — URL: https://www.coles.com.au/product/coles-pretzel-salted-200g-2062290  — regular_price: 2.0
+Row 6 — URL: https://www.coles.com.au/product/mccain-beer-batter-potato-chips-frozen-steak-cut-750g-5070637  — regular_price: 5.8
+- Expected empty but not empty: ['regular_price', 'barcode']
+Unexpected empty columns     : ['store_name', 'store_state', 'store_postcode', 'producthierarchy_level1', 'producthierarchy_level2', 'producthierarchy_level3', 'promotion_price', 'promotion_type', 'promotion_description', 'multi_buy_item_count', 'multi_buy_items_price_total', 'breadcrumb', 'labelling', 'file_name_1', 'features', 'promo_limit', 'multibuy_items_pricesingle', 'suitable_for', 'environmental', 'retail_limit']
+
+9) bayut_uae_2026_09_02.json
+ ------------------------------
+ - Data count mismatch.
+ - Whitespace issues found in 11 fields 
+Examples:
+* Row 18 — URL: https://www.bayut.com/property/details-16330501.html  — Field: `description` — Issue: Multiple consecutive spaces
+* Row 271 — URL: https://www.bayut.com/property/details-16380415.html  — Field: `amenities` — Issue: Multiple consecutive spaces
+* Row 494 — URL: https://www.bayut.com/property/details-14404904.html  — Field: `floorplan_type_identifier` — Issue: Multiple consecutive spaces — Value: `1C   Version 2`
+* Row 8,338 — URL: https://www.bayut.com/property/details-15648741.html  — Field: `agent_name` — Issue: Multiple consecutive spaces — Value: `Ibrahim  Amin Tawfik  Awad`
+* Row 8,699 — URL: https://www.bayut.com/property/details-15196871.html  — Field: `broker_display_name` — Issue: Multiple consecutive spaces
+* Row 8,699 — URL: https://www.bayut.com/property/details-15196871.html  — Field: `broker` — Issue: Multiple consecutive spaces
+* Row 12,174 — URL: https://www.bayut.com/property/details-11864657.html  — Field: `location` — Issue: Multiple consecutive spaces
+* Row 23,353 — URL: https://www.bayut.com/property/details-16258576.html  — Field: `amenities` — Issue: Tab character
+* Row 143,448 — URL: https://www.bayut.com/property/details-12370408.html  — Field: `reference_number` — Issue: Multiple consecutive spaces
+* Row 213,445 — URL: https://www.bayut.com/property/details-7528558.html  — Field: `title` — Issue: Tab character
+* Row 392,651 — URL: https://www.bayut.com/property/details-11375096.html  — Field: `title` — Issue: Multiple consecutive spaces
+- - Extra columns found 
+
+adm_number, 3d_live, 3d_image, 2d_image, ded_number_2, ded_number_3, ded_number_4, trucheck_on, trubroker, property_of_the_week, bln_number, quality_lister, email, rating, no_of_reviews, trakheesi_url, floorplan_id, floorplan_type_identifier, floorplan_raw, floorplans_total.
+-ded_license_number
+ded_number_2
+ded_number_3
+ded_number_4
+no_of_reviews
+rating are also empty
