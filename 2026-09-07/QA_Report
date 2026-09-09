@@ -1,0 +1,145 @@
+1) DataHut_SI_Mercator_PriceExtractions_20260907.CSV
+-----------------------------------------------------
+- Data count mismatch.
+- Invalid 2 Decimal Format: The regular_price and selling_price fields contain values that are not in the required 2-decimal format.
+
+regular_price:
+
+Row 328 | URL: https://mercatoronline.si/izdelek/17720502/maslo-mu-cuisine-20-g  | Value: 0.4
+Row 342 | URL: https://mercatoronline.si/izdelek/19119393/maslo-meggle-20-g  | Value: 0.5
+
+selling_price:
+
+Row 616 | URL: https://mercatoronline.si/izdelek/11847424/trajno-polnomastno-alpsko-mleko-3-5-m-m-ljubljanske-mlekarne-10x1-l-2-l-gratis  | Value: 16.9
+Row 2606 | URL: https://mercatoronline.si/izdelek/16879812/instant-polenta-mercator-500-g  | Value: 0.9
+
+2) DataHut_SI_Dm_PriceExtractions_20260907.CSV
+------------------------------------------------
+- Data count mismatch.
+- Invalid 2 Decimal Format: The regular_price and selling_price fields contain values that are not in the required 2-decimal format.
+
+regular_price:
+
+Row 2 | URL: https://www.dm.si/p/d/3160643/nivea-negovalna-krema-za-telo-rich-nourishing  | Value: 7.2
+Row 14 | URL: https://www.dm.si/p/d/3149451/essence-glos-za-ustnice-cat-lovers-01-little-paw  | Value: 3.5
+
+selling_price:
+
+Row 2 | URL: https://www.dm.si/p/d/3160643/nivea-negovalna-krema-za-telo-rich-nourishing  | Value: 7.2
+Row 14 | URL: https://www.dm.si/p/d/3149451/essence-glos-za-ustnice-cat-lovers-01-little-paw  | Value: 3.5
+- Whitespace issues: The following records contain unwanted whitespace in the affected fields.
+eg:
+Row 9265 | URL: https://www.dm.si/p/d/1341689/balea-med-gel-za-tusiranje-in-sampon-za-lase-2-v-1-ultra-sensitive  | Column: product_name
+Row 48 | URL: https://www.dm.si/p/d/1715572/babylove-naravna-mineralna-voda-brez-ogljikovega-dioksida  | Column: breadcrumb
+
+3) DataHut_CH_Lidl_FullDump_20260907.CSV
+------------------------------------------
+- Data count mismatch.
+- Unexpected empty columns:['country_of_origin']
+- Whitespace issues: A total of 131 records contain unwanted whitespace in the affected fields.
+Row 3717 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/20869/s/mini-pizza-pancetta-provola-und-zwiebel-1015165/category/54/ | Column: product_name
+Row 3717 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/20869/s/mini-pizza-pancetta-provola-und-zwiebel-1015165/category/54/ | Column: producthierarchy_level3
+Row 3717 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/20869/s/mini-pizza-pancetta-provola-und-zwiebel-1015165/category/54/ | Column: breadcrumb
+Row 3011 | URL: https://www.lidl.ch/p/de-CH/parisienne-blonde-box-jaune-box/p10058134 | Column: product_description
+- Missing/Invalid breadcrumbs: A total of 2 records have missing breadcrumb values.
+
+Row 3702 | URL: https://www.lidl.ch/p/de-CH/cien-sonnenspray-sport-transparent-lsf50/p10052388
+Row 3800 | URL: https://www.lidl.ch/p/de-CH/cien-sonnenspray-sport-transparent-lsf-30/p10052386
+- Invalid promotion validity dates: promotion_valid_from is greater than promotion_valid_upto, which indicates an invalid promotion date range.
+
+Row 613 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/20287/s/dona-ajvar-scharf-5113751/category/54/ | From: 12.9.2026 | Upto: 7.9.2026
+Row 614 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/20286/s/dona-ajvar-mild-5113749/category/54/ | From: 12.9.2026 | Upto: 7.9.2026
+- - Promotion description is present, but `promotion_valid_from` and `promotion_valid_upto` dates are missing 
+EG
+* Row 42 — URL: https://sortiment.lidl.ch/de/catalog/product/view/id/22071/s/cockta-1801210/category/54/ 
+* Row 45 — URL: https://sortiment.lidl.ch/de/catalog/product/view/id/22068/s/mini-cabanossi-0163897/category/54/ 
+- Invalid price format — selling_price is not in the required 2-decimal format — 2 records.
+
+Examples:
+
+Row 72 — URL: https://sortiment.lidl.ch/de/catalog/product/view/id/22039/s/perrier-mineralwasser-mit-kohlensaeure-0003820/category/54/ — selling_price: 7.2
+Row 224 — URL: https://sortiment.lidl.ch/de/catalog/product/view/id/21483/s/spezialwaschmittel-1012861/category/54/ — selling_price: 2.6
+
+Invalid price format — regular_price is not in the required 2-decimal format — 2 records.
+
+Examples:
+
+Row 456 — URL: https://sortiment.lidl.ch/de/catalog/product/view/id/20849/s/schweizer-kartoffeln-0083292/category/54/ — regular_price: 3.3
+Row 665 — URL: https://sortiment.lidl.ch/de/catalog/product/view/id/20165/s/wc-frisch-kraft-aktiv-1801200/category/54/ — regular_price: 13.9
+
+4) DataHut_AT_Spar_PriceExtractions_20260907.CSV
+---------------------------------------------------
+- Data count mismatch.
+- Invalid 2 Decimal Format: The regular_price and selling_price fields contain values that are not in the required 2-decimal format.
+
+regular_price:
+
+Row 11 | URL: https://www.spar.at/produktwelt/spar-premium-mezze-maniche-p2020004938749  | Value: 1.7
+Row 143 | URL: https://www.spar.at/produktwelt/spar-premium-premium-nektarinen-p2020005871441  | Value: 3.8
+
+selling_price:
+
+Row 11 | URL: https://www.spar.at/produktwelt/spar-premium-mezze-maniche-p2020004938749  | Value: 1.7
+Row 143 | URL: https://www.spar.at/produktwelt/spar-premium-premium-nektarinen-p2020005871441  | Value: 3.8 
+- Whitespace issues: The following records contain unwanted whitespace in the affected fields.
+
+Row 41940 | URL: https://www.spar.at/produktwelt/finish-quantum-geschirrspuel-caps-citrus-44-stueck-p2020005738850  | Column: promotion_description
+Row 23350 | URL: https://www.spar.at/produktwelt/vorarlberg-milch-laendle-halbfettmilch-laenger-frisch-1-5-fett-p2020006312547  | Column: breadcrumb
+
+- Unescaped | characters: The product_name and site_shown_uom columns contain unescaped pipe (|) characters, which can cause issues when parsing the CSV data.
+Row 9023 | URL: https://www.spar.at/produktwelt/isana-cleanser-aha-pha-peeling-125ml-p2020006024686  | Column: product_name
+Row 19352 | URL: https://www.spar.at/produktwelt/mehrzweckschrauben-4x40-150stk-p2020005763197  | Column: site_shown_uom
+
+- Invalid grammage quantity: A . is present after the numeric value in grammage_quantity.
+
+Row 17588 | URL: https://www.spar.at/produktwelt/fritz-fries-vampir-set-2-teilig-p2020006166256  | Value: 2.
+
+5) dubizzle_egp_2026_09_02.json
+--------------------------------
+- Photos missing in file: Photos are present on the website, but the corresponding number_of_photos value is missing in the file.
+eg:
+Row 45717 | URL: https://www.dubizzle.com.eg/en/ad/ready-to-move-ultra-super-lux-finishing-bargain-price-including-maintenance-club-membership-and-parking-townhouse-in-sodic-east-new-heliopolis-ID504008388.html 
+Row 41887 | URL: https://www.dubizzle.com.eg/en/ad/receive-the-key-to-your-villa-immediately-in-the-city-valley-compound-and-enjoy-a-charming-and-direct-view-of-the-lakes-in-the-most-prestigious-ne-ID503485394.html 
+
+6) dubizzle_qat_2026_09_02.json
+---------------------------------
+- Multiple consecutive spaces: The description and title fields contain multiple consecutive spaces.
+
+Row 12 | URL: https://www.dubizzle.qa/en/ad/rent-a-office-space-ID120364706.html  | Column: description
+Row 1954 | URL: https://www.dubizzle.qa/en/ad/1bhk-furnished-al-wukair-qr2700-ID120309164.html  | Column: title
+Row 1226 | URL: https://www.dubizzle.qa/en/ad/7500-sqm-cold-storage-facility-with-accommodation-offices-for-rent-ID120317983.html  | Field: broker_display_name | Issue: Multiple consecutive spaces | Value: 'Happier  propertyies'
+Row 1226 | URL: https://www.dubizzle.qa/en/ad/7500-sqm-cold-storage-facility-with-accommodation-offices-for-rent-ID120317983.html  | Field: broker | Issue: Multiple consecutive spaces | Value: 'HAPPIER  PROPERTYIES'
+
+
+7) dubizzle_bah_2026_09_02.json
+----------------------------------
+- Data count mismatch
+- - Multiple consecutive spaces: The title and description fields contain multiple consecutive spaces.
+eg: 
+Row 26 | URL: https://www.dubizzle.com.bh/en/ad/commercial-address-offices-for-rent-ID105694722.html    | Column: title
+Row 26 | URL: https://www.dubizzle.com.bh/en/ad/commercial-address-offices-for-rent-ID105694722.html   | Column: description
+
+8) dari_ae_2026_09_02.json
+----------------------------
+- Data count mismatch.
+- Extra space found  on company employee: 
+record 275: https://www.dari.ae/en/app/directory/profession?id=35403 
+
+9) aqarmap_egp_2026_09_02.json
+---------------------------------
+"depth', 'verified', 'seller_role', 'listing_type'
+also empty"
+"- Whitespace issues: A total of 138,940 records contain whitespace issues.
+
+Row 1 | URL: https://aqarmap.com.eg/en/listing/6954480-for-sale-cairo-new-cairo-compounds-cairo-festival-city-cairo-festival-city-mall-cfc-mall/  | Field: description | Issue: Multiple consecutive spaces
+Row 27 | URL: https://aqarmap.com.eg/en/listing/7061258-for-sale-marsa-matruh-marsa-matrouh-resorts-bahya-resort-sea-gate/  | Field: title | Issue: Multiple consecutive spaces
+Row 118 | URL: https://aqarmap.com.eg/en/listing/7163022-for-sale-cairo-ljyz-shareaa-morad%20%20charel%20degol/  | Field: location | Issue: Multiple consecutive spaces
+Row 2094 | URL: https://aqarmap.com.eg/en/listing/7032864-for-sale-alexandria-al-agamy-shataa-el-nakheel/   | Field: broker_display_name | Issue: Multiple consecutive spaces
+Row 2094 | URL: https://aqarmap.com.eg/en/listing/7032864-for-sale-alexandria-al-agamy-shataa-el-nakheel/  | Field: broker | Issue: Multiple consecutive spaces
+Row 7417 | URL: https://aqarmap.com.eg/en/listing/7232815-projects-stella-di-mare2/  | Field: description | Issue: Tab character
+
+- Invalid bathroom values: The bathrooms field contains values that do not match the expected integer format.
+
+Record 112176 | URL: https://aqarmap.com.eg/en/listing/6939476-for-rent-cairo-new-cairo-90th-street-northern-90th-street/  | bathrooms: 01
+Record 71419 | URL: https://aqarmap.com.eg/en/listing/7155474-for-sale-cairo-dokki-mydn-lmsh-almosekar-ali-ismail-st/  | bathrooms: 2.5
+Record 117468 | URL: https://aqarmap.com.eg/en/listing/7207250-for-rent-cairo-old-cairo-el-fostat-lfstt-ljdyd-arabesque-compound-sed/  | bathrooms: 2.5"

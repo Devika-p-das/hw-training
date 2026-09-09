@@ -1,0 +1,206 @@
+1) DataHut_SI_Spar_PriceExtractions_20260909.CSV
+-------------------------------------------------
+- Data count mismatch.
+- - Unexpected empty columns : 'percentage_discount'
+"- Invalid 2 Decimal Format:
+
+selling_price:
+
+Row 267 | URL: https://online.spar.si/p/suhe-slive-izkoscicene-seeberger-200g-305593  | selling_price: 5.1
+Row 388 | URL: https://online.spar.si/p/nastrgani-mandlji-spar-200g-274032  | selling_price: 2.2
+
+regular_price:
+
+Row 267 | URL: https://online.spar.si/p/suhe-slive-izkoscicene-seeberger-200g-305593  | regular_price: 5.1
+Row 388 | URL: https://online.spar.si/p/nastrgani-mandlji-spar-200g-274032  | regular_price: 2.2"
+- "- Invalid price relationship: The regular_price is lower than both the promotion_price and selling_price.
+
+Row 14776 | URL: https://online.spar.si/p/posteljnina-rubin-renforce-140x200-60x80-cm-657590  | regular_price: 11.00 | selling_price: 12.45 | promotion_price: 12.45 | Promotion: Prihranek -1.45 €
+
+- Suspicious quantity/unit issues: The grammage_unit is incorrectly represented as g and should be kg for these records.
+
+Row 625 | URL: https://online.spar.si/p/nadomestek-kave-z-okusom-po-kakavu-calmrooty-62g-681408  | grammage_quantity: 0.062 | grammage_unit: g | Expected unit: kg
+Row 8572 | URL: https://online.spar.si/p/testenine-fusilli-feelingok-220g-679091  | grammage_quantity: 0.22 | grammage_unit: g | Expected unit: kg"
+
+2) DataHut_SI_Mercator_PriceExtractions_20260909.CSV
+------------------------------------------------------
+- Data count mismatch.
+- "Invalid 2 Decimal Format:
+
+regular_price:
+
+Row 340 | URL: https://mercatoronline.si/izdelek/17720502/maslo-mu-cuisine-20-g  | regular_price: 0.4
+Row 363 | URL: https://mercatoronline.si/izdelek/19119393/maslo-meggle-20-g  | regular_price: 0.5
+
+selling_price:
+
+Row 340 | URL: https://mercatoronline.si/izdelek/17720502/maslo-mu-cuisine-20-g  | selling_price: 0.4
+Row 363 | URL: https://mercatoronline.si/izdelek/19119393/maslo-meggle-20-g  | selling_price: 0.5"
+"Promotion price missing: promotion_description is populated, but promotion_price is missing.
+
+Row 29 | URL: https://mercatoronline.si/izdelek/19148905/skyr-active-zone-500-g  | Promotion: Za imetnike Pika kartice 23% ceneje
+Row 70 | URL: https://mercatoronline.si/izdelek/876871/tekoci-jogurt-3-2-m-m-mu-1-l  | Promotion: Ob nakupu 2 izdelkov ali več je vsak 20% ceneje"
+
+3) DataHut_SI_Dm_PriceExtractions_20260909.CSV
+-----------------------------------------------
+- Data count mismatch.
+-Invalid 2 Decimal Format:
+
+selling_price:
+
+Row 3 | URL: https://www.dm.si/p/d/3160643/nivea-negovalna-krema-za-telo-rich-nourishing  | Value: 7.2
+Row 7 | URL: https://www.dm.si/p/d/2970545/alpro-ovseni-napitek-this-is-not-m-lk-barista  | Value: 3.2
+
+regular_price:
+
+Row 3 | URL: https://www.dm.si/p/d/3160643/nivea-negovalna-krema-za-telo-rich-nourishing  | Value: 7.2
+Row 7 | URL: https://www.dm.si/p/d/2970545/alpro-ovseni-napitek-this-is-not-m-lk-barista  | Value: 3.2
+- Whitespace issues: Whitespace was found in the following fields:
+
+Row 9890 | URL: https://www.dm.si/p/d/2140432/max-factor-puder-v-stiku-pan-stick-13-nouveau-beige  | Column: product_name
+Row 32 | URL: https://www.dm.si/p/d/1715572/babylove-naravna-mineralna-voda-brez-ogljikovega-dioksida  | Column: breadcrumb
+
+4) DataHut_IT_Esselunga_PriceExtractions_20260909.CSV
+-------------------------------------------------------
+- Data count mismatch.- Whitespace issues: A total of 68 records contain whitespace issues.
+
+Row 232490 | URL: https://spesaonline.esselunga.it/commerce/nav/drive/store/prodotto/201068/misura-stevia-50-bustine-50-x-15-g | Column: site_shown_uom
+Row 9093 | URL: https://spesaonline.esselunga.it/commerce/nav/drive/store/prodotto/552165/sore-valtenesi-riviera-del-garda-classico-doc-75-cl | Column: brand
+Row 258 | URL: https://spesaonline.esselunga.it/commerce/nav/drive/store/prodotto/672102/grey-lacchiappa-smacchia-azione-totale-buste-12-x-30-g | Column: grammage_quantity_
+- Invalid 2 Decimal Format:
+ 
+regular_price:
+
+Row 11 | URL: https://spesaonline.esselunga.it/commerce/nav/drive/store/prodotto/681623/winnis-sgrassatore-universale-500-ml  | Value: 2.0
+Row 17 | URL: https://spesaonline.esselunga.it/commerce/nav/drive/store/prodotto/681115/ace-sgrassatore-cucina-limone-e-bergamotto-senza-candeggina-600-ml  | Value: 2.2
+ 
+selling_price:
+
+Row 11 | URL: https://spesaonline.esselunga.it/commerce/nav/drive/store/prodotto/681623/winnis-sgrassatore-universale-500-ml  | Value: 1.6
+Row 17 | URL: https://spesaonline.esselunga.it/commerce/nav/drive/store/prodotto/681115/ace-sgrassatore-cucina-limone-e-bergamotto-senza-candeggina-600-ml  | Value: 2.2"
+- Invalid URL: Spaces are present in the pdp_url field, making the URLs invalid.
+
+Row [row number not provided] | URL:https://spesaonline.esselunga.it/commerce/nav/drive/store/prodotto/157442/elephant-baked-squeezed-pretzels-sea-salt-	80-g| Issue: Space before 80-g
+Row [row number not provided] | URL: https://spesaonline.esselunga.it/commerce/nav/drive/store/prodotto/653548/amico-veg-snack	al-gusto-riso-100-vegetale-mini-48-g | Issue: Space before al-gusto-riso-100-vegetale-mini-48-g
+-  Unescaped | characters: The site_shown_uom column contains unescaped pipe (|) characters, which can cause issues when parsing the CSV data.
+
+site_shown_uom (875 rows):
+
+Row 500 | URL: https://spesaonline.esselunga.it/commerce/nav/drive/store/prodotto/212540/splendid-classico-10-30-capsule-caffe-compatibili-con-macchine-nespresso-original-156g  | Value: Capsule | x30 156g ¿
+Row 503 | URL: https://spesaonline.esselunga.it/commerce/nav/drive/store/prodotto/212539/splendid-barista-13-30-capsule-caffe-compatibili-con-macchine-nespresso-original-156g  | Value: Capsule | x30 156g ¿
+
+- Escape character issues: Escape characters (\t) are present in the following fields:
+
+Row 221744 | URL: https://spesaonline.esselunga.it/commerce/nav/drive/store/prodotto/653548/amico-veg-snack\tal-gusto-riso-100-vegetale-mini-48-g  | Column: pdp_url
+Row 9093 | URL: https://spesaonline.esselunga.it/commerce/nav/drive/store/prodotto/552165/sore-valtenesi-riviera-del-garda-classico-doc-75-cl  | Column: brand | Value: Soré\t\t
+
+5) DataHut_CH_Lidl_PriceExtractions_20260909.CSV
+--------------------------------------------------
+- Data count mismatch.
+- Whitespace issues: A total of 2 records contain whitespace issues.
+
+Row 3853 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/20869/s/mini-pizza-pancetta-provola-und-zwiebel-1015165/category/54/ | Column: product_name
+Row 3853 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/20869/s/mini-pizza-pancetta-provola-und-zwiebel-1015165/category/54/ | Column: breadcrumb
+- Missing/Invalid breadcrumbs: A total of 2 records have missing breadcrumb values.
+
+Row 3720 | URL: https://www.lidl.ch/p/de-CH/cien-sonnenspray-sport-transparent-lsf-30/p10052386
+Row 3859 | URL: https://www.lidl.ch/p/de-CH/cien-sonnenspray-sport-transparent-lsf50/p10052388
+- Invalid 2 Decimal Format:
+
+selling_price:
+
+Row 77 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/22039/s/perrier-mineralwasser-mit-kohlensaeure-0003820/category/54/ | Value: 7.2
+Row 234 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/21483/s/spezialwaschmittel-1012861/category/54/ | Value: 2.6
+
+regular_price:
+
+Row 77 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/22039/s/perrier-mineralwasser-mit-kohlensaeure-0003820/category/54/ | Value: 7.2
+Row 234 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/21483/s/spezialwaschmittel-1012861/category/54/ | Value: 2.6
+
+6) DataHut_IT_Eurospin_PriceExtractions_20260909.CSV
+------------------------------------------------------
+- data count mismatch.
+- Invalid 2 Decimal Format:
+
+regular_price:
+
+Row 1085 | URL: https://online.eurospin.com/product/cuore-bovino-adulto1  | Value: 3.0
+Row 1097 | URL: https://online.eurospin.com/product/fettine-scamone-vitello  | Value: 4.2
+
+selling_price:
+
+Row 39818 | URL: https://online.eurospin.com/product/salsiccia-suino-mericco  | Value: 3.6
+Row 39855 | URL: https://online.eurospin.com/product/noci-us-ca-cal32-cati1  | Value: 0.5
+
+7) DataHut_AU_Coles_FullDump_20260909.CSV
+-----------------------------------------
+- Data count mismatch.
+- Expected empty but not empty: ['regular_price', 'barcode', 'producthierarchy_level4', 'producthierarchy_level5']
+Unexpected empty columns     : ['file_name_1', 'features', 'suitable_for', 'environmental']
+- Invalid 2 Decimal Format:
+
+selling_price:
+
+Row 2 | URL: https://www.coles.com.au/product/coles-simply-unsalted-butter-250g-3169879   | Value: 4.5
+Row 3 | URL: https://www.coles.com.au/product/coles-simply-unsalted-butter-250g-3169879  | Value: 4.5
+- rating is in float data type instead of string
+review is in float data type instead of string
+- Invalid 2 Decimal Format:
+
+
+regular_price:
+
+Row 759544 | URL: https://www.coles.com.au/product/coles-easter-mini-biscuits-15-pack-150g-7212357  | Value: 7.0
+Row 759568 | URL: https://www.coles.com.au/product/st-dalfour-thick-apricot-spread-284g-5704394  | Value: 6.8
+
+8) DataHut_AT_Spar_FullDump_20260910.CSV
+----------------------------------------------
+- Data count mismatch.
+- Expected empty but not empty: ['age_of_the_product']
+- Invalid price format — selling_price is not in the required 2-decimal format — 2 records.
+
+Examples:
+
+Row 103 — URL: https://www.spar.at/produktwelt/spar-premium-mezze-maniche-p2020004938749  — selling_price: 1.7
+Row 219 — URL: https://www.spar.at/produktwelt/spar-premium-premium-nektarinen-p2020005871441  — selling_price: 3.8
+
+Invalid price format — regular_price is not in the required 2-decimal format — 2 records.
+
+Examples:
+
+Row 103 — URL: https://www.spar.at/produktwelt/spar-premium-mezze-maniche-p2020004938749  — regular_price: 1.7
+Row 219 — URL: https://www.spar.at/produktwelt/spar-premium-premium-nektarinen-p2020005871441  — regular_price: 3.8
+
+-Invalid image URLs found — 29 records in total.
+
+image_url_1 — 14 invalid URLs
+Unique ID: 241274
+Image URL: https://cdn1.interspar.at/cachableservlets/articleImage.dam/at/241274/ 
+image_url_2 — 8 invalid URLs
+Unique ID: 2020001864379
+Image URL: https://cdn1.interspar.at/cachableservlets/articleImage.dam/at/2020001864379/ 
+image_url_3 — 4 invalid URLs
+Unique ID: 2020005222625
+Image URL: https://cdn1.interspar.at/cachableservlets/articleImage.dam/at/2020005222625/ 
+image_url_4 — 2 invalid URLs
+Unique ID: 2020005793453
+Image URL: https://cdn1.interspar.at/cachableservlets/articleImage.dam/at/2020005793453/ 
+image_url_5 — 0 invalid URLs
+image_url_6 — 1 invalid URL
+Unique ID: 2020005885219
+Image URL: https://cdn1.interspar.at/cachableservlets/articleImage.dam/at/2020005885219/ 
+
+- Unescaped | characters: The following columns contain unescaped pipe (|) characters.
+
+product_name (10 rows):
+
+Row 7763 | URL: https://www.spar.at/produktwelt/isana-cleanser-aha-pha-peeling-125ml-p2020006024686 | Value: Isana AHA | PHA Cleanser 125 ml
+
+nutritional_information (14,949 rows):
+
+Row 2 | URL: https://www.spar.at/produktwelt/despar-bitter-rosso-6er-packung-p7125546 | Value: {'Energie': 'ca. 260,00 kJ | ca. 61,00 kcal', ...}
+
+site_shown_uom (9 rows):
+
+Row 17940 | URL: https://www.spar.at/produktwelt/mehrzweckschrauben-4x40-150stk-p2020005763197 | Value: BGS Mehrzweckschrauben | 4,0 x 40 mm | 150 Stück
+

@@ -1,0 +1,176 @@
+1) DataHut_AT_Dm_PriceExtractions_20260904.CSV
+-----------------------------------------------
+- Data count mismatch.
+- Invalid 2-decimal format:  selling_price values are not in the required 2-decimal format.
+
+selling_price:
+
+Row 58 | URL: https://www.dm.at/p/d/1487638/braun-thermoscan-3-1-sekunden-ohrthermometer  | selling_price: 37.9
+Row 65 | URL: https://www.dm.at/p/d/1557001/braun-nasensauger-nasal-aspirator-1  | selling_price: 39.9
+Invalid 2-decimal format: regular_price  values are not in the required 2-decimal format.
+
+regular_price:
+
+Row 17 | URL: https://www.dm.at/p/d/3157633/glow25-balance-kapseln  | regular_price: 34.9
+Row 35 | URL: https://www.dm.at/p/d/3120738/dmbio-hafer-und-saatenbroetchen  | regular_price: 2.1
+
+- Whitespace issues: Whitespace characters are present in the product_name field.
+eg:
+Row 1678 | URL: https://www.dm.at/p/d/3104287/mivolis-tabletten-vitamin-b12-350  | Column: product_name
+Row 1870 | URL: https://www.dm.at/p/d/1712323/reell-e-toenungsshampoo-7-4-kupfergold  | Column: product_name
+- Invalid grammage quantity: The grammage_quantity is incorrectly represented as 0.125 ml in the file, whereas the website shows 125 ml.
+
+Row 11087 | URL: https://www.dm.at/p/d/3090443/pediakid-immunsaft-kraftkind | File value: 0.125 ml | Website value: 125 ml
+
+2) DataHut_SI_Mercator_PriceExtractions_20260904.CSV
+----------------------------------------------------
+- Data count mismatch.
+- Invalid 2-decimal format: selling_price and regular_price values are not in the required 2-decimal format.
+
+selling_price:
+
+Row 360 | URL: https://mercatoronline.si/izdelek/17720502/maslo-mu-cuisine-20-g  | selling_price: 0.4
+Row 374 | URL: https://mercatoronline.si/izdelek/19119393/maslo-meggle-20-g  | selling_price: 0.5
+
+regular_price:
+
+Row 360 | URL: https://mercatoronline.si/izdelek/17720502/maslo-mu-cuisine-20-g  | regular_price: 0.4
+Row 374 | URL: https://mercatoronline.si/izdelek/19119393/maslo-meggle-20-g  | regular_price: 0.5
+
+3) DataHut_SI_Dm_PriceExtractions_20260904.CSV
+----------------------------------------------------
+- Data count mismatch.
+- Invalid 2-decimal format: regular_price and selling_price values are not in the required 2-decimal format.
+
+regular_price:
+
+Row 5 | URL: https://www.dm.si/p/d/1916589/alpro-kokosov-napitek-s-sojo-barista-obogaten-s-kalcijem  | regular_price: 3.6
+Row 7 | URL: https://www.dm.si/p/d/1916616/alpro-rastlinski-napitek-this-is-not-m-lk-s-3-5-mascobe  | regular_price: 3.2
+
+selling_price:
+
+Row 5 | URL: https://www.dm.si/p/d/1916589/alpro-kokosov-napitek-s-sojo-barista-obogaten-s-kalcijem  | selling_price: 3.6
+Row 7 | URL: https://www.dm.si/p/d/1916616/alpro-rastlinski-napitek-this-is-not-m-lk-s-3-5-mascobe  | selling_price: 3.2
+- Invalid promotion date: promotion_valid_from is populated, but promotion_description and promotion_valid_upto are missing.
+eg:
+Row 5 | URL: https://www.dm.si/p/d/1916589/alpro-kokosov-napitek-s-sojo-barista-obogaten-s-kalcijem   | promotion_valid_from: 05.07.2025
+Row 7 | URL: https://www.dm.si/p/d/1916616/alpro-rastlinski-napitek-this-is-not-m-lk-s-3-5-mascobe   | promotion_valid_from: 18.08.2026
+- Whitespace issues: Whitespace characters are present in the following fields.
+eg:
+Row 9417 | URL: https://www.dm.si/p/d/2097345/philips-avent-loncek-z-gibljivo-slamico-9-m-200-ml-vijolicen  | Column: product_name
+Row 20 | URL: https://www.dm.si/p/d/1715572/babylove-naravna-mineralna-voda-brez-ogljikovega-dioksida  | Column: breadcrumb
+
+4) DataHut_AT_Spar_PriceExtractions_20260904.CSV
+-----------------------------------------------------
+- Data count mismatch.
+- Price missing: regular_price and selling_price are missing for the following records.
+
+Row 42805 | URL: https://www.spar.at/produktwelt/shanky-s-whip-whiskeylik-0-7l-p2020005612426  | Product: Shanky’s Whip Irish Whiskey Likör
+Row 42807 | URL: https://www.spar.at/produktwelt/hine-rare-the-original-cognac-vsop-p2020004193728  | Product: Hine Rare The Original Cognac VSOP
+Row 42809 | URL: https://www.spar.at/produktwelt/come-hell-or-high-water-rum-p2020005200746  | Product: Come Hell or High Water Rum
+Row 42810 | URL: https://www.spar.at/produktwelt/highland-park-viking-honour-12-yo-p7102837  | Product: Highland Park Single Malt Whisky 12 YO
+Row 42811 | URL: https://www.spar.at/produktwelt/bunnahabhain-islay-single-malt-whisky-12-yo-12-yo-p2020006333344  | Product: Bunnahabhain Islay Single Malt Whisky 12 YO 12 YO
+Row 42812 | URL: https://www.spar.at/produktwelt/glengoyne-12-yo-p2439136  | Product: Glengoyne Single Malt Whisky 12 YO
+
+- Invalid 2-decimal format: selling_price and regular_price values are not in the required 2-decimal format.
+
+selling_price:
+
+Row 10 | URL: https://www.spar.at/produktwelt/spar-premium-mezze-maniche-p2020004938749  | selling_price: 1.7
+Row 80 | URL: https://www.spar.at/produktwelt/spar-premium-premium-nektarinen-p2020005871441  | selling_price: 3.8
+
+regular_price:
+
+Row 10 | URL: https://www.spar.at/produktwelt/spar-premium-mezze-maniche-p2020004938749  | regular_price: 1.7
+Row 80 | URL: https://www.spar.at/produktwelt/spar-premium-premium-nektarinen-p2020005871441  | regular_price: 3.8
+- Whitespace issues: Whitespace characters are present in the following fields.
+
+Row 41933 | URL: https://www.spar.at/produktwelt/finish-quantum-geschirrspuel-caps-citrus-44-stueck-p2020005738850  | Column: promotion_description
+Row 22903 | URL: https://www.spar.at/produktwelt/vorarlberg-milch-laendle-halbfettmilch-laenger-frisch-1-5-fett-p2020006312547  | Column: breadcrumb
+
+- Unescaped | characters: The following columns contain unescaped pipe (|) characters.
+eg
+product_name: Row 9087 | URL: https://www.spar.at/produktwelt/isana-cleanser-aha-pha-peeling-125ml-p2020006024686  | Value: Isana AHA | PHA Cleanser 125 ml
+site_shown_uom: Row 18296 | URL: https://www.spar.at/produktwelt/mehrzweckschrauben-4x40-150stk-p2020005763197  | Value: BGS Mehrzweckschrauben | 4,0 x 40 mm | 150 Stück
+
+5) DataHut_SI_Spar_PriceExtractions_20260904.CSV
+-----------------------------------------------------
+- Data count mismatch.
+- - Unexpected empty columns : 'percentage_discount'
+- Invalid 2-decimal format: regular_price and selling_price values are not in the required 2-decimal format.
+
+regular_price:
+
+Row 258 | URL: https://online.spar.si/p/suhe-slive-izkoscicene-seeberger-200g-305593  | regular_price: 5.1
+
+selling_price:
+
+Row 258 | URL: https://online.spar.si/p/suhe-slive-izkoscicene-seeberger-200g-305593  | selling_price: 5.1
+- Promotion validity dates missing: promotion_valid_from and promotion_valid_upto are missing even though promotion_description is present.
+
+Row 5225 | URL: https://online.spar.si/p/velika-zemlja-mlinotest-100g-672702  | promotion_description: 3 za 0.98 €
+Row 7580 | URL: https://online.spar.si/p/bio-sadna-kasica-z-jagodo-jabolkom-in-banano-mogli-100g-664052  | promotion_description: 3 za 3.38 €
+Row 7581 | URL: https://online.spar.si/p/bio-sadna-kasica-z-borovnico-banano-in-jabolkom-mogli100g-664048  | promotion_description: 3 za 3.38 €
+Row 7582 | URL: https://online.spar.si/p/bio-sadna-kasica-s-kakavom-banano-in-jabolkom-mogli-100g-664049  | promotion_description: 3 za 3.38 €
+Row 7583 | URL: https://online.spar.si/p/bio-sadna-kasica-z-malino-jabolkom-in-banano-mogli-100g-664050  | promotion_description: 3 za 3.38 €
+Row 7604 | URL: https://online.spar.si/p/bio-sadna-kasica-z-mangom-guavo-in-banano-mogli-100g-664051  | promotion_description: 3 za 3.38 €
+
+- The grammage_quantity and grammage_unit values do not match the expected representation.
+
+Row 681 | URL: https://online.spar.si/p/nadomestek-kave-z-okusom-po-kakavu-calmrooty-62g-681408  | File: 0.062 g | Expected: 62 g
+Row 8584 | URL: https://online.spar.si/p/testenine-fusilli-feelingok-220g-679091  | File: 0.22 g | Expected: 220 g
+
+6) DataHut_AT_Billa_PriceExtractions_20260904.CSV
+-----------------------------------------------------
+- Data count mismatch.
+- Invalid 2-decimal format: selling_price values are not in the required 2-decimal format.
+
+selling_price:
+
+Row 51 | URL: https://shop.billa.at/produkte/hennessy-very-special-0011379  | selling_price: 47.9
+Row 130 | URL: https://shop.billa.at/produkte/oelz-mehrkorntoast-0014336  | selling_price: 3.8
+
+-Invalid 2-decimal format: regular_price values are not in the required 2-decimal format.
+
+regular_price:
+
+Row 51 | URL: https://shop.billa.at/produkte/hennessy-very-special-0011379  | regular_price: 47.9
+Row 130 | URL: https://shop.billa.at/produkte/oelz-mehrkorntoast-0014336  | regular_price: 3.8
+- Regular price not empty for AKTION promotion: Products with AKTION as the promotion description and a single price have the regular_price field populated, although it is expected to be empty.
+
+Row 11363 | URL: https://shop.billa.at/produkte/clever-kaisersemmel-00898633   | selling_price: 1.32 | regular_price: 1.32 | promotion_description: AKTION | promotion_price: 1.32
+
+- Regular price not empty for AKTION promotion: According to the requirement, products with AKTION as the promotion description and a single price should have an empty regular_price. However, some records have regular_price populated.
+
+Row 47 | URL: https://shop.billa.at/produkte/de-cecco-pappardelle-00105483    | promotion_description: AKTION | regular_price: 2.85
+Row 215 | URL: https://shop.billa.at/produkte/kotanyi-basilikum-gerebelt-00179952   | promotion_description: AKTION | regular_price: 3.49
+Row 217 | URL: https://shop.billa.at/produkte/kotanyi-bohnenkraut-gerebelt-00179978   | promotion_description: AKTION | regular_price: 3.49
+
+7) app_invest_dubai_ded_2026_09_01.xlsx
+----------------------------------------
+- Data count
+columns: 17
+rows: 134295
+- Complete address missing: The address field does not contain the complete address available on the website.
+
+Row 1 | URL: https://app.invest.dubai.ae/dul/dul-EB3367?bk=1
+File address: DSO-IFZA, DSO-IFZA-55581
+Website address: DSO-IFZA, DSO-IFZA-55581, Dubai Silicon Oasis
+- Unescaped | character found in the address field — 6 records.
+
+Examples:
+
+Row 571 — URL: https://app.invest.dubai.ae/dul/dul-DR4166?bk=1 — address: مكتب رقم 9|720 - ملك مدينه دبى الصناعيه - سيح شعيب 2, Office 720, Saih Shuaib
+Row 4458 — URL: https://app.invest.dubai.ae/dul/dul-AP2093?bk=1 — address: مكتب رقم 801 ملك الانصاري العقارية |ملك خاص | - البرشاء الأولى - بردبي, Office 801, Al Barshaa 1
+
+- listing_business_name_english is missing for 14 records. The corresponding DUL licenses are not available on the website for these URLs, displaying “This DUL license is not available.” 
+
+Examples:
+
+Row 112370 — URL: https://app.invest.dubai.ae/dul/dul-AC5643?bk=1
+Row 112393 — URL: https://app.invest.dubai.ae/dul/dul-AG8318?bk=1
+Row 113644 — URL: https://app.invest.dubai.ae/dul/dul-EF3541?bk=1
+
+- listing_business_name_arabic is missing for 1 record.
+
+Row 105048 — URL: https://app.invest.dubai.ae/dul/dul-DP8065?bk=1

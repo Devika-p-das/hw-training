@@ -1,0 +1,15 @@
+,Week1,Week2,Diff (W2-W1)
+Total rows,10648,10647,-1
+Duplicate unique_id,0,0,0
+Missing product_name,0,0,0
+Missing brand,0,0,0
+Missing category (L1),0,0,0
+Missing selling_price,0,0,0
+selling_price <= 0,0,0,0
+selling_price > regular_price,0,0,0
+Missing pdp_url,0,0,0
+Malformed pdp_url,0,0,0
+Rating out of 0-5 range,0,0,0
+Has rating but no review count,0,0,0
+Has review count but no rating,0,0,0
+Missing barcode,0,0,0
