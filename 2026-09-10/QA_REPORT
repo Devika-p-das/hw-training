@@ -1,0 +1,269 @@
+1) DataHut_SI_Mercator_FullDump_20260910.CSV
+---------------------------------------------
+"Invalid 2 Decimal Format:
+
+regular_price:
+
+Row 347 | URL: https://mercatoronline.si/izdelek/17720502/maslo-mu-cuisine-20-g  | Value: 0.4
+Row 358 | URL: https://mercatoronline.si/izdelek/19119393/maslo-meggle-20-g  | Value: 0.5
+
+selling_price:
+
+Row 585 | URL: https://mercatoronline.si/izdelek/11847424/trajno-polnomastno-alpsko-mleko-3-5-m-m-ljubljanske-mlekarne-10x1-l-2-l-gratis  | Value: 16.9
+Row 2585 | URL: https://mercatoronline.si/izdelek/16879812/instant-polenta-mercator-500-g  | Value: 0.9"
+
+"Whitespace issues: A total of 18 records contain whitespace issues.
+
+Row 258 | URL: https://mercatoronline.si/izdelek/18134252/bio-kefir-krepki-suhec-1-5-m-m-krepko-250-g  | Column: brand
+Row 260 | URL: https://mercatoronline.si/izdelek/18712103/bio-kefir-3-2-m-m-krepko-250-g  | Column: brand"
+
+2) DataHut_SI_Dm_FullDump_20260910.CSV
+----------------------------------------
+"Invalid 2 Decimal Format:
+
+selling_price:
+
+Row 4 | URL: https://www.dm.si/p/d/1916589/alpro-kokosov-napitek-s-sojo-barista-obogaten-s-kalcijem  | Value: 3.6
+Row 7 | URL: https://www.dm.si/p/d/1737974/alpro-ovsen-napitek-barista  | Value: 3.4
+
+regular_price:
+
+Row 4 | URL: https://www.dm.si/p/d/1916589/alpro-kokosov-napitek-s-sojo-barista-obogaten-s-kalcijem  | Value: 3.6
+Row 7 | URL: https://www.dm.si/p/d/1737974/alpro-ovsen-napitek-barista  | Value: 3.4"
+"Whitespace issues: A total of 680 records contain whitespace issues.
+
+Row 8416 | URL: https://www.dm.si/p/d/1488265/dmbio-bio-polnomlecna-cokolada-s-polnilom-iz-jogurta-in-malin  | Column: country_of_origin
+Row 9 | URL: https://www.dm.si/p/d/3123931/apinature-prehransko-dopolnilo-junior-iron-mix  | Column: warning
+Row 9221 | URL: https://www.dm.si/p/d/1552761/dein-bestes-dopolnilna-hrana-za-pse-socne-klobasice-z-govedino-in-perutnino  | Column: storage_instructions
+Row 85 | URL: https://www.dm.si/p/d/1462215/dmbio-bio-ovsena-zitna-kasica-po-dopolnjenem-5-mesecu  | Column: preparationinstructions
+Row 26 | URL: https://www.dm.si/p/d/1715572/babylove-naravna-mineralna-voda-brez-ogljikovega-dioksida  | Column: breadcrumb
+
+Escape character issues: Escape characters (\t) are present in the following fields:
+
+Row 8651 | URL: https://www.dm.si/p/d/2226766/herba-medica-bio-planinski-caj-25-1-2-g  | Column: preparationinstructions
+Row 1785 | URL: https://www.dm.si/p/d/1586730/dmbio-bio-otroski-masleni-pirini-piskoti-z-datlji-od-3-leta  | Column: labelling
+Row 4000 | URL: https://www.dm.si/p/d/3063319/syoss-platinasti-posvetljevalec-las-13-5  | Column: warning
+
+Unescaped | characters: The following columns contain unescaped pipe (|) characters, which can cause issues when parsing the CSV data.
+
+instructionforuse (6 rows):
+
+Row 9524 | URL: https://www.dm.si/p/d/3102745/rimmel-london-tekoci-osvetljevalec-multi-tasker-turbocharged-glow-001-not-a-basic-b  | Value contains an unescaped | character.
+
+ingredients (92 rows):
+
+Row 66 | URL: https://www.dm.si/p/d/3123738/balea-zascita-pred-drgnjenjem-koze-v-stiku-tropical-dream  | Value contains multiple unescaped | characters."
+
+3) DataHut_SI_Spar_FullDump_20260910.CSV
+-----------------------------------------
+"Expected empty but not empty: ['barcode', 'promotion_valid_upto', 'promotion_description', 'alchol_by_volume', 'netweight', 'price_was', 'promotion_price']
+Unexpected empty columns     : ['variants', 'preparationinstructions', 'country_of_origin', 'age_recommendations', 'flavour', 'labelling', 'packaging', 'special_information', 'label_information', 'dimensions', 'color', 'material', 'tasting_note', 'rating', 'review', 'file_name_1', 'file_name_2', 'file_name_3', 'file_name_4', 'file_name_5', 'file_name_6', 'competitor_product_key', 'features', 'retail_limit']"
+"Missing promotion validity dates: promotion_description is populated, but promotion_valid_from and promotion_valid_upto are missing.
+
+Row 5,450 | URL: https://online.spar.si/p/kajzerica-s-budget-60g-681401  | Promotion: 3 za 0.42 €
+Row 5,481 | URL: https://online.spar.si/p/rustikalna-pogacica-don-don-50g-650464  | Promotion: 3 za 0.48 €
+Row 14,549 | URL: https://online.spar.si/p/cistilo-za-steklo-diplo-700ml-661471  | Promotion: Prihranek 0.6 €"
+"Invalid 2 Decimal Format:
+
+regular_price:
+
+Row 270 | URL: https://online.spar.si/p/suhe-slive-izkoscicene-seeberger-200g-305593  | Value: 5.1
+Row 374 | URL: https://online.spar.si/p/nastrgani-mandlji-spar-200g-274032  | Value: 2.2
+
+selling_price:
+
+Row 226 | URL: https://online.spar.si/p/jabolcne-blazinice-applekrisp-z-okusom-jagod-in-manga-krispper-25g-670857  | Value: 1.6
+Row 227 | URL: https://online.spar.si/p/jabolcne-blazinice-applekrisp-z-okusom-borovnice-in-pomarance-krispper-25g-670852  | Value: 1.6"
+"Whitespace issues: A total of 1,178 records contain whitespace issues.
+
+Row 13,898 | URL: https://online.spar.si/p/vlazilni-robcki-classic-freshclean-121-294471  | Column: breadcrumb
+Row 2,974 | URL: https://online.spar.si/p/mleta-prazena-kava-moka-100-arabica-hausbrandt-250g-665396  | Column: warning
+Row 7,205 | URL: https://online.spar.si/p/sardele-v-soncnicnem-olju-s-budget-125g-477694  | Column: producthierarchy_level3
+
+Invalid price relationship: The regular_price is lower than both the selling_price and promotion_price.
+
+Row 14,841 | URL: https://online.spar.si/p/posteljnina-rubin-renforce-140x200-60x80-cm-657590  | Regular: 11.0 | Selling: 12.45 | Promotion: 12.45
+Row 15,722 | URL: https://online.spar.si/p/ledomat-ewb3798-clatronic-8-12-kg-11-662701  | Regular: 60.0 | Selling: 99.59 | Promotion: 99.59
+Row 15,790 | URL: https://online.spar.si/p/sesalnik-z-vrecko-xd311009-philips-616775  | Regular: 119.0 | Selling: 132.30 | Promotion: 132.30
+Row 15,817 | URL: https://online.spar.si/p/keramicni-grelnik-za-prostore-cx212001-philips-670012  | Regular: 50.0 | Selling: 59.40 | Promotion: 59.40
+Row 15,871 | URL: https://online.spar.si/p/fitnes-zapestnica-band10-roza-huawei-11-671629  | Regular: 15.0 | Selling: 36.00 | Promotion: 36.00
+Row 15,952 | URL: https://online.spar.si/p/vrtljiva-kamera-ip-220w-gosmart-11-672924  | Regular: 20.0 | Selling: 32.13 | Promotion: 32.13
+
+Suspicious quantity/unit issues: The grammage_unit is incorrectly represented as g and should be kg for these records.
+
+Row 628 | URL: https://online.spar.si/p/nadomestek-kave-z-okusom-po-kakavu-calmrooty-62g-681408  | grammage_quantity: 0.062 | grammage_unit: g | Expected unit: kg
+Row 8,680 | URL: https://online.spar.si/p/testenine-fusilli-feelingok-220g-679091  | grammage_quantity: 0.22 | grammage_unit: g | Expected unit: kg"
+
+4) DataHut_CH_Lidl_FullDump_20260910.CSV
+-----------------------------------------
+Unexpected empty columns : ['country_of_origin']
+"Missing/Invalid breadcrumbs: A total of 2 records have missing breadcrumb values.
+
+Row 3,596 | URL: https://www.lidl.ch/p/de-CH/cien-sonnenspray-sport-transparent-lsf-30/p10052386 
+Row 3,644 | URL: https://www.lidl.ch/p/de-CH/cien-sonnenspray-sport-transparent-lsf50/p10052388 "
+"Invalid 2 Decimal Format:
+
+Selling_price:
+
+Row 264 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/21483/s/spezialwaschmittel-1012861/category/54/  | Value: 2.6
+Row 483 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/20849/s/schweizer-kartoffeln-0083292/category/54/  | Value: 3.3
+
+Regular_price:
+
+Row 1,051 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/18359/s/recybag-sammelsack-5113221/category/54/  | Value: 10.0
+Row 1,052 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/18358/s/recybag-sammelsack-5113220/category/54/  | Value: 24.0"
+"Price was missing: regular_price and selling_price are populated, but promotion_price is missing.
+
+Row 41 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/22103/s/cailler-creme-dessert-1801762/category/54/  | Regular: 2.65 | Selling: 2.65 | Promotion: NaN
+Row 43 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/22102/s/wiener-topfenstrudel-5010153/category/54/   | Regular: 3.99 | Selling: 3.99 | Promotion: NaN"
+"Missing promotion validity dates: promotion_description is populated, but promotion_valid_from and promotion_valid_upto are missing.
+
+Row 41 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/22103/s/cailler-creme-dessert-1801762/category/54/  | Promotion: Aktion
+Row 43 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/22102/s/wiener-topfenstrudel-5010153/category/54/  | Promotion: Aktion"
+"Whitespace issues: A total of 121 records contain whitespace issues.
+
+Row 3,664 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/20869/s/mini-pizza-pancetta-provola-und-zwiebel-1015165/category/54/  | Column: product_name
+Row 3,664 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/20869/s/mini-pizza-pancetta-provola-und-zwiebel-1015165/category/54/  | Column: producthierarchy_level3
+Row 3,664 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/20869/s/mini-pizza-pancetta-provola-und-zwiebel-1015165/category/54/  | Column: breadcrumb
+Row 3,063 | URL: https://www.lidl.ch/p/de-CH/chesterfield-original-box/p10058504  | Column: product_description
+
+Product hierarchy missing: The producthierarchy_level1 to producthierarchy_level7 fields are completely empty for the following records.
+
+Row 3,596 | URL: https://www.lidl.ch/p/de-CH/cien-sonnenspray-sport-transparent-lsf-30/p10052386 
+Row 3,644 | URL: https://www.lidl.ch/p/de-CH/cien-sonnenspray-sport-transparent-lsf50/p10052388 "
+5) DataHut_CH_Coop_FullDump_20260910.CSV
+-------------------------------------------
+- "Invalid price_was values: The price_was field should be empty, but a value is present for the following records.
+eg:
+Row 1,566 | URL: https://www.coop.ch/de/lebensmittel/fleisch-fisch/abgepacktes-frischfleisch/hackfleisch/naturafarm-rindschwein-hackfleisch-gemischt-ca/p/7438622 
+Row 1,596 | URL: https://www.coop.ch/de/lebensmittel/fleisch-fisch/abgepacktes-frischfleisch/gefluegel/naturaplan-bio-pouletfluegeli-5-stueck-ca/p/3064251 "
+"Invalid 2 Decimal Format:
+
+Selling_price:
+
+Row 347 | URL: https://mercatoronline.si/izdelek/17720502/maslo-mu-cuisine-20-g | Value: 0.4
+Row 358 | URL: https://mercatoronline.si/izdelek/19119393/maslo-meggle-20-g | Value: 0.5"
+"Invalid 2 Decimal Format:
+
+Regular_price:
+
+Row 3 | URL: https://www.coop.ch/de/lebensmittel/fruechte-gemuese/fruechte/melonen/prix-garantie-wassermelone-1-stueck/p/7421933  | Value: 4.5
+Row 5 | URL: https://www.coop.ch/de/lebensmittel/fruechte-gemuese/fruechte/melonen/melone-charentais-1-stueck/p/3090782  | Value: 2.4"
+"Promotion price missing: promotion_description is populated, but promotion_price is missing.
+
+Row 275 | URL: https://www.coop.ch/de/lebensmittel/fruechte-gemuese/weiteres-gemuese/zucchetti-kuerbis-aubergine/zucchetti-ca/p/3844219  | Percentage discount: 42.0% | Promotion price: NaN
+Row 1,669 | URL: https://www.coop.ch/de/lebensmittel/fleisch-fisch/abgepacktes-frischfleisch/gefluegel/poulet-spiessli-telly-cherry-5-stueck/p/4005034  | Percentage discount: 25.0% | Promotion price: NaN"
+"Price missing: Prices are available on the website but are missing in the file.
+
+Row 2,030 | URL: https://www.coop.ch/de/lebensmittel/fleisch-fisch/abgepacktes-frischfleisch/schwein/prix-garantie-schweinssteak-nierstueck-4-5-stueck-ca/p/3466031  | Regular price: NaN | Selling price: NaN"
+
+6) DataHut_CH_Denner_FullDump_20260910.CSV
+-------------------------------------------
+- "Price missing: Prices are available on the website but are missing in the file.
+
+Row 25 | URL: https://www.denner.ch/de/aktionen/mandorla-chardonnay/fiano-puglia-igt~p1028320?variant=eb3f7aff-7e79-46a0-a1f9-c1fbf27a93d8  | Regular price: NaN | Selling price: NaN"
+- "Invalid 2 Decimal Format:
+
+Selling_price:
+
+Row 3 | URL: https://www.denner.ch/de/aktionen/bio-bananen~p1006255?variant=cf395f8e-5b4d-474c-8abe-3d5cb4d944ea   | Value: 1.9
+Row 5 | URL: https://www.denner.ch/de/aktionen/blumenkohl~p1006107?variant=341f10f9-22b9-45c1-9757-1731b91c9996 | Value: 3.6
+
+Regular_price:
+
+Row 7 | URL: https://www.denner.ch/de/aktionen/mmmh-nuesslisalat~p1101109?variant=033731e0-7dd1-4368-b953-50798d3533f0 | Value: 3.0
+Row 8 | URL: https://www.denner.ch/de/aktionen/fenchel~p1006187?variant=f9212b85-9a9e-4532-864d-e5d7a8dd75b9 | Value: 3.5"
+
+7) DataHut_AT_Spar_FullDump_2026_09_10 (1).CSV
+------------------------------------------------
+-  File name error:
+DataHut_AT_Spar_FullDump_2026_09_10 (1).CSV instead of DataHut_AT_Spar_FullDump_20260910.CSV
+- Data count mismatch.
+- Expected empty but not empty: ['age_of_the_product']
+- Invalid 2 Decimal Format:
+
+Regular_price:
+
+Row 25 | URL: https://www.spar.at/produktwelt/mediashop-harry-blackstone-airblade-messerset-p2020005859890  | Value: 19.9
+Row 33 | URL: https://www.spar.at/produktwelt/mediashop-hydro-blast-druckreiniger-p2020004902801  | Value: 49.9
+
+Selling_price:
+
+Row 25 | URL: https://www.spar.at/produktwelt/mediashop-harry-blackstone-airblade-messerset-p2020005859890  | Value: 19.9
+Row 33 | URL: https://www.spar.at/produktwelt/mediashop-hydro-blast-druckreiniger-p2020004902801  | Value: 49.9
+- - Selling price not equal to regular price: The selling_price is different from the regular_price for the following record.
+
+Row 355 | URL: https://www.spar.at/produktwelt/spar-natur-pur-bio-studentenfutter-p1549478  | Selling price: 5.99 | Regular price: 6.99 | Price was: 6.99 | Promotion price: 5.99
+
+- Missing-value text: The product_description field contain Null value for the following record.
+
+Row 41,614 | URL: https://www.spar.at/produktwelt/stadtkueche-vegane-bauernknoedel-p2020006352260  | Column: product_description
+- Invalid breadcrumb: The breadcrumb field contains an incomplete hierarchy with a trailing > separator, indicating a missing breadcrumb level.
+
+Row 14,717 | URL: https://www.spar.at/produktwelt/ppd-servietten-33x33cm-happy-tulips-20-stueck-p2020006058940  | Breadcrumb: SPAR Website > Produktwelt > Haushalt > Küche > Tischkultur > Servietten & Co >
+- Invalid Unique ID: The unique_id contains an invalid character (O) and does not match the expected numeric format.
+
+Row 32,889 | URL: https://www.spar.at/produktwelt/4-diamanten-thunfisch-in-tomatensauce-p2020006317139  | unique_id: 2020006317O139
+- Invalid Image URLs: Invalid URLs are present in the image URL fields.
+
+image_url_1 (14 invalid URLs):
+
+Row 1,441 | unique_id: 241274 | URL: https://cdn1.interspar.at/cachableservlets/articleImage.dam/at/241274/
+Row 18,608 | unique_id: 2020006102711 | URL: https://cdn1.interspar.at/cachableservlets/articleImage.dam/at/2020006102711/
+Row 21,455 | unique_id: 2020005822139 | URL: https://cdn1.interspar.at/cachableservlets/articleImage.dam/at/2020005822139/
+Row 22,715 | unique_id: 2020006178518 | URL: https://cdn1.interspar.at/cachableservlets/articleImage.dam/at/2020006178518/
+Row 23,739 | unique_id: 2020006165105 | URL: https://cdn1.interspar.at/cachableservlets/articleImage.dam/at/2020006165105/
+
+image_url_2 (8 invalid URLs):
+
+Row 6,789 | unique_id: 2020001864379 | URL: https://cdn1.interspar.at/cachableservlets/articleImage.dam/at/2020001864379/
+Row 8,148 | unique_id: 2020005886100 | URL: https://cdn1.interspar.at/cachableservlets/articleImage.dam/at/2020005886100/
+Row 23,050 | unique_id: 2020005995437 | URL: https://cdn1.interspar.at/cachableservlets/articleImage.dam/at/2020005995437/
+Row 26,632 | unique_id: 2020005886094 | URL: https://cdn1.interspar.at/cachableservlets/articleImage.dam/at/2020005886094/
+Row 26,745 | unique_id: 2020005890862 | URL: https://cdn1.interspar.at/cachableservlets/articleImage.dam/at/2020005890862/
+
+image_url_3 (4 invalid URLs):
+
+Row 27,728 | unique_id: 2020005222625 | URL: https://cdn1.interspar.at/cachableservlets/articleImage.dam/at/2020005222625/
+Row 27,858 | unique_id: 2020005681064 | URL: https://cdn1.interspar.at/cachableservlets/articleImage.dam/at/2020005681064/
+Row 33,804 | unique_id: 2020006079570 | URL: https://cdn1.interspar.at/cachableservlets/articleImage.dam/at/2020006079570/
+Row 35,656 | unique_id: 2020005680906 | URL: https://cdn1.interspar.at/cachableservlets/articleImage.dam/at/2020005680906/
+
+image_url_4 (2 invalid URLs):
+
+Row 841 | unique_id: 2020005793453 | URL: https://cdn1.interspar.at/cachableservlets/articleImage.dam/at/2020005793453/
+Row 37,660 | unique_id: 2020005978805 | URL: https://cdn1.interspar.at/cachableservlets/articleImage.dam/at/2020005978805/
+
+image_url_5: No invalid URLs found.
+
+image_url_6 (1 invalid URL):
+
+Row 38,250 | unique_id: 2020005885219 | URL: https://cdn1.interspar.at/cachableservlets/articleImage.dam/at/2020005885219/
+- - Whitespace issues: A total of 26 records contain whitespace issues.
+
+Row 24,249 | URL: https://www.spar.at/produktwelt/vorarlberg-milch-laendle-halbfettmilch-laenger-frisch-1-5-fett-p2020006312547  | Column: producthierarchy_level6
+Row 116 | URL: https://www.spar.at/produktwelt/finish-power-geschirrspuel-tabs-classic-fresh-56-stueck-p2020005738744  | Column: promotion_description
+Row 1,916 | URL: https://www.spar.at/produktwelt/s-budget-toiletten-papier-10-rollen-p2020006211093  | Column: breadcrumb
+
+- Invalid product unique key: The unique_id and product_unique_key values are not matching as expected.
+
+Row 32,887 | URL: https://www.spar.at/produktwelt/4-diamanten-thunfisch-in-tomatensauce-p2020006317139  | unique_id: 2020006317O139 | product_unique_key: 2020006317139P
+
+- Unescaped | characters: The following columns contain unescaped pipe (|) characters, which can cause issues when parsing the CSV data.
+
+product_name (10 rows):
+
+Row 9,665 | URL: https://www.spar.at/produktwelt/isana-cleanser-aha-pha-peeling-125ml-p2020006024686  | Value: Isana AHA | PHA Cleanser 125 ml
+
+nutritional_information (14,968 rows):
+
+Row 29 | URL: https://www.spar.at/produktwelt/landliebe-fruchtjoghurt-aprikose-p4234579  | Value contains an unescaped | character.
+
+site_shown_uom (9 rows):
+
+Row 19,196 | URL: https://www.spar.at/produktwelt/mehrzweckschrauben-4x40-150stk-p2020005763197  | Value: BGS Mehrzweckschrauben | 4,0 x 40 mm | 150 Stück
+
+- Missing promotion validity dates: promotion_description is populated, but promotion_valid_from and promotion_valid_upto are missing.
+
+Row 2 | URL: https://www.spar.at/produktwelt/barbecue-raeucherbretter-p2020001986743  | Promotion: Rabatt
+Row 3 | URL: https://www.spar.at/produktwelt/barbecue-gemuesekorb-p2020001650002  | Promotion: Rabatt
