@@ -1,0 +1,218 @@
+1) bahrainfinder_bah_2026_09_03.json
+---------------------------------------
+- Data count mismatch
+- Furnished contain no value "fully furnished"
+
+2) dari_ae_2026_09_03.json
+---------------------------
+- Data count mismatch
+no other issues found.
+
+3) DataHut_AT_Billa_PriceExtractions_20260915.CSV
+----------------------------------------------------
+- Invalid 2 Decimal Format:
+selling_price:
+
+Row 14 | URL: https://shop.billa.at/produkte/hennessy-very-special-0011379  | Value: 47.9
+Row 128 | URL: https://shop.billa.at/produkte/oelz-mehrkorntoast-0014336  | Value: 3.8
+
+regular_price:
+
+Row 152 | URL: https://shop.billa.at/produkte/rauch-weizenmehl-extra-fuer-kuchen-0015865  | Value: 1.8
+Row 240 | URL: https://shop.billa.at/produkte/stangl-fadennudeln-mit-ei-00196840  | Value: 3.8
+- Invalid price relationship: The selling_price, regular_price, and promotion_price are all equal for the following records.
+
+Row 2,836 | URL: https://shop.billa.at/produkte/ja-natuerlich-hendlfilet-00424344  | Selling: 31.99 | Regular: 31.99 | Promotion: 31.99 | Description: AKTION
+Row 6,628 | URL: https://shop.billa.at/produkte/sprite-00721893  | Selling: 1.39 | Regular: 1.39 | Promotion: 1.39 | Description: Bei 3 Flaschen je
+Row 6,629 | URL: https://shop.billa.at/produkte/fanta-00721895  | Selling: 1.39 | Regular: 1.39 | Promotion: 1.39 | Description: Bei 3 Flaschen je
+Row 6,868 | URL: https://shop.billa.at/produkte/coca-cola-00726805  | Selling: 1.39 | Regular: 1.39 | Promotion: 1.39 | Description: Bei 3 Flaschen je
+Row 6,870 | URL: https://shop.billa.at/produkte/coca-cola-zero-00726806  | Selling: 1.39 | Regular: 1.39 | Promotion: 1.39 | Description: Bei 3 Flaschen je
+Row 10,938 | URL: https://shop.billa.at/produkte/billa-bio-kuerbiskokossuppe-00879554  | Selling: 3.99 | Regular: 3.99 | Promotion: 3.99 | Description: AKTION
+Row 10,939 | URL: https://shop.billa.at/produkte/billa-bio-tomatensuppe-00879559  | Selling: 3.99 | Regular: 3.99 | Promotion: 3.99 | Description: AKTION
+
+4) DataHut_AT_Spar_PriceExtractions_20260915.CSV
+-------------------------------------------------
+- Data count mismatch
+- Invalid 2-decimal price format — regular_price and selling_price are not in the required 2-decimal format — 2 records.
+
+Row 11 — regular_price: 1.7 | selling_price: 1.7
+URL: https://www.spar.at/produktwelt/spar-premium-mezze-maniche-p2020004938749
+Row 79 — regular_price: 3.8 | selling_price: 3.8
+URL: https://www.spar.at/produktwelt/spar-premium-premium-nektarinen-p2020005871441
+- Whitespace issues found in 2 fields — promotion_description and breadcrumb — 2 records.
+
+Row 41930 — promotion_description: Whitespace issue
+URL: https://www.spar.at/produktwelt/finish-quantum-geschirrspuel-caps-citrus-44-stueck-p2020005738850
+Row 22847 — breadcrumb: Whitespace issue
+URL: https://www.spar.at/produktwelt/vorarlberg-milch-laendle-halbfettmilch-laenger-frisch-1-5-fett-p2020006312547
+- Unescaped | character found in 2 fields — product_name and site_shown_uom — 19 records.
+
+Examples:
+
+Row 8768 — product_name
+Value: Isana AHA | PHA Cleanser 125 ml
+URL: https://www.spar.at/produktwelt/isana-cleanser-aha-pha-peeling-125ml-p2020006024686
+Row 20307 — site_shown_uom
+Value: BGS Mehrzweckschrauben | 4,0 x 40 mm | 150 Stück
+URL: https://www.spar.at/produktwelt/mehrzweckschrauben-4x40-150stk-p2020005763197
+- Invalid grammage_quantity — 1 record.
+
+Row 19363 — grammage_quantity: 2.
+Issue: Value has an invalid trailing decimal point.
+URL: https://www.spar.at/produktwelt/fritz-fries-vampir-set-2-teilig-p2020006166256
+
+5) DataHut_AT_Dm_PriceExtractions_20260915.CSV
+-----------------------------------------------
+- data count mismatch.
+- Invalid 2-decimal price format — regular_price and selling_price are not in the required 2-decimal format — 2 records.
+
+Row 4 — regular_price: 16.6 | selling_price: 16.6
+URL: https://www.dm.at/p/d/1811550/blausiegel-kondome-romance
+Row 5 — regular_price: 1.6 | selling_price: 1.6
+URL: https://www.dm.at/p/d/1879697/huober-knabbergebaeck-bio-salzstangen-sticks
+- Whitespace issues found in product_name — 45 occurrences.
+
+Examples:
+
+Row 48 — product_name: Whitespace issue
+URL: https://www.dm.at/p/d/1556953/syoss-augenbrauenfarbe-dunkelbraun-4-1
+Row 94 — product_name: Whitespace issue
+URL: https://www.dm.at/p/d/1536732/real-techniques-make-up-schwamm-miracle-complexion-mit-case
+
+6) DataHut_SI_Mercator_PriceExtractions_20260915.CSV
+-----------------------------------------------------
+- Data count mismatch.
+- Invalid 2-decimal price format — regular_price and selling_price are not in the required 2-decimal format — 4 records.
+
+Row 368 — regular_price: 0.4
+URL: https://mercatoronline.si/izdelek/17720502/maslo-mu-cuisine-20-g
+Row 382 — regular_price: 0.5
+URL: https://mercatoronline.si/izdelek/19119393/maslo-meggle-20-g
+Row 604 — selling_price: 16.9
+URL: https://mercatoronline.si/izdelek/11847424/trajno-polnomastno-alpsko-mleko-3-5-m-m-ljubljanske-mlekarne-10x1-l-2-l-gratis
+Row 2594 — selling_price: 0.9
+URL: https://mercatoronline.si/izdelek/16879812/instant-polenta-mercator-500-g
+- Missing promotion_price — 3 records.
+
+The promotion_description is present (Ugodno -30%), but promotion_price is missing.
+
+Row 16214 — regular_price: 30.0 | promotion_description: Ugodno -30%
+URL: https://mercatoronline.si/izdelek/20165229/roza-okrogla-peresnica-kpop
+Row 16215 — regular_price: 30.0 | promotion_description: Ugodno -30%
+URL: https://mercatoronline.si/izdelek/20165218/vijolicna-okrogla-peresnica-kpop
+Row 16268 — regular_price: 30.0 | promotion_description: Ugodno -30%
+URL: https://mercatoronline.si/izdelek/20165295/roza-nahrbtnik-kpop
+
+7) DataHut_SI_Dm_PriceExtractions_20260915.CSV
+--------------------------------------------------
+- Data count mismatch.
+- Invalid 2-decimal price format — regular_price and selling_price are not in the required 2-decimal format — 2 records.
+
+Row 3 — regular_price: 7.2 | selling_price: 7.2
+URL: https://www.dm.si/p/d/3160643/nivea-negovalna-krema-za-telo-rich-nourishing
+Row 10 — regular_price: 5.8 | selling_price: 5.8
+URL: https://www.dm.si/p/d/3123066/dove-men-care-dezodorant-v-spreju-za-celo-telo-marine-blue-cypress
+- Whitespace issues found 
+
+Row 9321 — product_name:
+URL: https://www.dm.si/p/d/3123816/denkmit-kapsule-za-pranje-obcutljivega-perila-3v1-pure-delight 
+Row 2 — breadcrumb
+URL: https://www.dm.si/p/d/3164723/snails-zelena-kreda-za-lase 
+
+8) DataHut_SI_Spar_PriceExtractions_20260915.CSV
+-----------------------------------------------------
+- Data count mismatch.
+- Invalid 2-decimal price format — regular_price and selling_price are not in the required 2-decimal format — 4 records.
+
+Row 262 — regular_price: 5.1
+URL: https://online.spar.si/p/suhe-slive-izkoscicene-seeberger-200g-305593
+Row 364 — regular_price: 2.2
+URL: https://online.spar.si/p/nastrgani-mandlji-spar-200g-274032
+Row 191 — selling_price: 1.6
+URL: https://online.spar.si/p/jabolcne-blazinice-applekrisp-z-okusom-borovnice-in-pomarance-krispper-25g-670852
+Row 192 — selling_price: 1.6
+URL: https://online.spar.si/p/jabolcne-blazinice-applekrisp-z-okusom-jagod-in-manga-krispper-25g-670857
+- Missing promotion validity dates — 3 records.
+
+promotion_valid_from and promotion_valid_upto are missing in the file, while the promotion validity dates are available on the website.
+
+Row 5347 — promotion_description: 3 za 0.42 €
+URL: https://online.spar.si/p/kajzerica-s-budget-60g-681401
+Row 5367 — promotion_description: 3 za 0.48 €
+URL: https://online.spar.si/p/rustikalna-pogacica-don-don-50g-650464
+Row 5396 — promotion_description: 3 za 0.78 €
+URL: https://online.spar.si/p/krof-mini-lino-lada-zito-25g-673372
+- regular_price is lower than both selling_price and promotion_price, which is incorrect.
+
+Row 14516 — regular_price: 11.0 | selling_price: 12.45 | promotion_price: 12.45
+URL: https://online.spar.si/p/posteljnina-rubin-renforce-140x200-60x80-cm-657590
+Row 15514 — regular_price: 20.0 | selling_price: 36.00 | promotion_price: 36.00
+URL: https://online.spar.si/p/fitnes-zapestnica-band10-huawei-11-671628
+- Invalid grammage_unit — 2 records.
+
+The grammage_unit is extracted as g instead of the expected kg.
+
+Row 676 — grammage_quantity: 0.062 | grammage_unit: g
+URL: https://online.spar.si/p/nadomestek-kave-z-okusom-po-kakavu-calmrooty-62g-681408
+Row 8463 — grammage_quantity: 0.22 | grammage_unit: g
+URL: https://online.spar.si/p/testenine-fusilli-feelingok-220g-679091
+
+9) DataHut_AU_Coles_FullDump_20260916.CSV
+------------------------------------------
+- Data count mismatch
+- breadcrumb completely empty
+- Invalid 2 Decimal Format:
+
+selling_price:
+
+Row 2 | URL: https://www.coles.com.au/product/coles-simply-salted-butter-500g-3169880 | Value: 7.0
+Row 3 | URL: https://www.coles.com.au/product/coles-simply-unsalted-butter-250g-3169879 | Value: 4.5
+
+regular_price:
+
+Row 5 | URL: https://www.coles.com.au/product/coles-simply-salted-butter-250g-3169835 | Value: 4.5
+Row 6 | URL: https://www.coles.com.au/product/nature-valley-crunchy-oats-and-honey-6-twin-bars-252g-3585024 | Value: 6.9
+- Expected empty but not empty: 2
+regular_price
+barcode
+
+- Unexpected empty columns: 20
+store_name
+store_state
+store_postcode
+producthierarchy_level1
+producthierarchy_level2
+producthierarchy_level3
+promotion_price
+promotion_type
+promotion_description
+multi_buy_item_count
+multi_buy_items_price_total
+breadcrumb
+labelling
+file_name_1
+features
+promo_limit
+multibuy_items_pricesingle
+suitable_for
+environmental
+retail_limit
+
+10) autodoc_2026_10_15.csv
+----------------------------
+- Extra field: ['Unnamed: 11']
+- Data count mismatch.
+- file name error:
+autodoc_2026_10_15.csv instead of autodoc_2026_09_15.csv
+- Unnamed: 11 contain only two values
+Aandrijving: Dit kenmerk hangt af van het automodel. Conditie: Geheel nieuw                                                                                                                        1
+Gebruiksnummers: VALEO 835058. productnummer: 835058. onze prijs: € 634.99. Merk: VALEO. EAN nummer: 3276428350585. Aandrijving: Dit kenmerk hangt af van het automodel. Conditie: Geheel nieuw    1
+Name: count, dtype: int64
+
+11) autonderdelan24_2026_09_16.csv
+-------------------------------------
+- File name error : autonderdelan24_2026_09_16.csv instead of autoonderdelan24_2026_09_16.csv
+- Data count mismatch
+- The website value in the file is incorrectly captured as autoonderdelen.be instead of the expected autoonderdelen24.be.
+- Url is missing for one row: 20531 
+- Net price is object in data type.

@@ -1,0 +1,228 @@
+1) DataHut_SI_Spar_PriceExtractions_20260916.CSV
+--------------------------------------------------
+- Data count mismatch.
+- Invalid 2 Decimal Format:
+
+regular_price:
+
+Row 233 | URL: https://online.spar.si/p/suhe-slive-izkoscicene-seeberger-200g-305593 | Value: 5.1
+Row 373 | URL: https://online.spar.si/p/nastrgani-mandlji-spar-200g-274032 | Value: 2.2
+
+selling_price:
+
+Row 233 | URL: https://online.spar.si/p/suhe-slive-izkoscicene-seeberger-200g-305593 | Value: 5.1
+Row 373 | URL: https://online.spar.si/p/nastrgani-mandlji-spar-200g-274032 | Value: 2.2
+- Suspicious quantity/unit issues: The grammage_unit is incorrectly represented as g and should be kg for the following records.
+
+Row 679 | URL: https://online.spar.si/p/nadomestek-kave-z-okusom-po-kakavu-calmrooty-62g-681408 | grammage_quantity: 0.062 | grammage_unit: g | Expected unit: kg
+Row 6,533 | URL: https://online.spar.si/p/instant-ocvrti-riz-vegetarijanski-mama-80g-683913 | grammage_quantity: 0.080 | grammage_unit: g | Expected unit: kg
+Row 8,407 | URL: https://online.spar.si/p/testenine-fusilli-feelingok-220g-679091 | grammage_quantity: 0.220 | grammage_unit: g | Expected unit: kg
+- Invalid price relationship: The regular_price is lower than both the selling_price and promotion_price.
+
+Row 14,495 | URL: https://online.spar.si/p/posteljnina-rubin-renforce-140x200-60x80-cm-657590 | promotion_description: Prihranek -1.45 € | regular_price: 11.0 | selling_price: 12.45 | promotion_price: 12.45
+- Unexpected empty columns : 'percentage_discount'
+
+2) DataHut_SI_Mercator_PriceExtractions_20260916.CSV
+-----------------------------------------------------
+- Data count mismatch.
+- Invalid 2 Decimal Format:
+
+selling_price:
+
+Row 366 | URL: https://mercatoronline.si/izdelek/17720502/maslo-mu-cuisine-20-g | Value: 0.4
+Row 381 | URL: https://mercatoronline.si/izdelek/19119393/maslo-meggle-20-g | Value: 0.5
+
+regular_price:
+
+Row 366 | URL: https://mercatoronline.si/izdelek/17720502/maslo-mu-cuisine-20-g | Value: 0.4
+Row 381 | URL: https://mercatoronline.si/izdelek/19119393/maslo-meggle-20-g | Value: 0.5
+
+3) DataHut_SI_Dm_PriceExtractions_20260916.CSV
+-----------------------------------------------
+- Data count mismatch.
+- Whitespace issues: The following records contain whitespace issues.
+
+Row 8,533 | URL: https://www.dm.si/p/d/3135399/olaplex-gel-za-definiranje-kodrov-olaplex-no-10-bond-shaper | Field: product_name | Multiple consecutive spaces present.
+Row 4 | URL: https://www.dm.si/p/d/3164723/snails-zelena-kreda-za-lase | Field: breadcrumb | Multiple consecutive spaces present.
+- Invalid 2 Decimal Format:
+
+regular_price:
+
+Row 3 | URL: https://www.dm.si/p/d/3123066/dove-men-care-dezodorant-v-spreju-za-celo-telo-marine-blue-cypress | Value: 5.8
+Row 6 | URL: https://www.dm.si/p/d/3160643/nivea-negovalna-krema-za-telo-rich-nourishing | Value: 7.2
+
+selling_price:
+
+Row 3 | URL: https://www.dm.si/p/d/3123066/dove-men-care-dezodorant-v-spreju-za-celo-telo-marine-blue-cypress | Value: 5.8
+Row 6 | URL: https://www.dm.si/p/d/3160643/nivea-negovalna-krema-za-telo-rich-nourishing | Value: 7.2
+
+4) DataHut_AT_Dm_PriceExtractions_20260916.CSV
+-----------------------------------------------
+- Data count mismatch.
+- Invalid 2 Decimal Format – selling_price:
+
+Row 2 | URL: https://www.dm.at/p/d/3119014/dm-box-jubilaeumsbox-50-jahre-dm-gesundheit-und-wohlbefinden | Value: 5.0
+Row 3 | URL: https://www.dm.at/p/d/3119013/dm-box-jubilaeumsbox-50-jahre-dm-styling-und-pflege | Value: 5.0
+- Invalid 2 Decimal Format – regular_price:
+
+Row 2 | URL: https://www.dm.at/p/d/3119014/dm-box-jubilaeumsbox-50-jahre-dm-gesundheit-und-wohlbefinden  | Value: 5.0
+Row 3 | URL: https://www.dm.at/p/d/3119013/dm-box-jubilaeumsbox-50-jahre-dm-styling-und-pflege  | Value: 5.0
+-Whitespace issues: A total of 46 records contain whitespace issues.
+
+Row 1,383 | URL: https://www.dm.at/p/d/3104287/mivolis-tabletten-vitamin-b12-350 | Field: product_name
+Row 1,534 | URL: https://www.dm.at/p/d/1712323/reell-e-toenungsshampoo-7-4-kupfergold | Field: product_name
+
+5) DataHut_AT_Billa_PriceExtractions_20260916.CSV
+--------------------------------------------------
+- Invalid 2 Decimal Format – regular_price:
+
+Row 76 | URL: https://shop.billa.at/produkte/hennessy-very-special-0011379 | Value: 47.9
+Row 136 | URL: https://shop.billa.at/produkte/oelz-mehrkorntoast-0014336 | Value: 3.8
+
+Invalid 2 Decimal Format – selling_price:
+
+Row 76 | URL: https://shop.billa.at/produkte/hennessy-very-special-0011379 | Value: 47.9
+Row 136 | URL: https://shop.billa.at/produkte/oelz-mehrkorntoast-0014336 | Value: 3.8
+- Invalid price relationship: The selling_price, regular_price, and promotion_price are all equal for the following records.
+
+Row 2,946 | URL: https://shop.billa.at/produkte/ja-natuerlich-hendlfilet-00424344 | Selling: 31.99 | Regular: 31.99 | Promotion: 31.99 | Promotion: AKTION
+Row 6,701 | URL: https://shop.billa.at/produkte/fanta-00721895 | Selling: 1.39 | Regular: 1.39 | Promotion: 1.39 | Promotion: Bei 3 Flaschen je
+Row 6,709 | URL: https://shop.billa.at/produkte/sprite-00721893 | Selling: 1.39 | Regular: 1.39 | Promotion: 1.39 | Promotion: Bei 3 Flaschen je
+Row 7,397 | URL: https://shop.billa.at/produkte/coca-cola-zero-00726806 | Selling: 1.39 | Regular: 1.39 | Promotion: 1.39 | Promotion: Bei 3 Flaschen je
+Row 7,398 | URL: https://shop.billa.at/produkte/coca-cola-00726805 | Selling: 1.39 | Regular: 1.39 | Promotion: 1.39 | Promotion: Bei 3 Flaschen je
+Row 10,956 | URL: https://shop.billa.at/produkte/billa-bio-tomatensuppe-00879559 | Selling: 3.99 | Regular: 3.99 | Promotion: 3.99 | Promotion: AKTION
+Row 10,960 | URL: https://shop.billa.at/produkte/billa-bio-kuerbiskokossuppe-00879554 | Selling: 3.99 | Regular: 3.99 | Promotion: 3.99 | Promotion: AKTION
+
+6) DataHut_CH_Lidl_PriceExtractions_20260916.CSV
+-------------------------------------------------
+- Data count mismatch.
+- Missing promotion validity dates: A total of 132 records have missing promotion validity dates.
+
+Row 45 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/22111/s/glacekeks-mit-fuellung-1012699/category/54/ | Promotion: Aktion | promotion_valid_from: Missing | promotion_valid_upto: Missing
+Row 46 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/22110/s/glace-0187389/category/54/ | Promotion: Aktion | promotion_valid_from: Missing | promotion_valid_upto: Missing
+- Invalid 2 Decimal Format – selling_price:
+
+Row 465 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/20849/s/schweizer-kartoffeln-0083292/category/54/  | Value: 3.3
+Row 991 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/18360/s/recybag-sammelsack-5113234/category/54/ | Value: 16.0
+
+Invalid 2 Decimal Format – regular_price:
+
+Row 465 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/20849/s/schweizer-kartoffeln-0083292/category/54/ | Value: 3.3
+Row 991 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/18360/s/recybag-sammelsack-5113234/category/54/  | Value: 16.0
+- Whitespace issues: A total of 2 records contain whitespace issues.
+
+Row 3,686 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/20869/s/mini-pizza-pancetta-provola-und-zwiebel-1015165/category/54/   | Field: product_name
+Row 3,686 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/20869/s/mini-pizza-pancetta-provola-und-zwiebel-1015165/category/54/   | Field: breadcrumb
+
+7) DataHut_AT_Spar_PriceExtractions_20260916.CSV
+----------------------------------------------------
+- Data count mismatch
+- Whitespace issues: The following records contain whitespace issues.
+
+Row 41,860 | URL: https://www.spar.at/produktwelt/finish-quantum-geschirrspuel-caps-citrus-44-stueck-p2020005738850 | Field: promotion_description
+Row 24,018 | URL: https://www.spar.at/produktwelt/vorarlberg-milch-laendle-halbfettmilch-laenger-frisch-1-5-fett-p2020006312547 | Field: breadcrumb
+-Unescaped | characters: The following columns contain unescaped pipe (|) characters, which can cause issues when parsing the CSV data.
+
+product_name (10 rows):
+
+Row 9,573 | URL: https://www.spar.at/produktwelt/isana-cleanser-aha-pha-peeling-125ml-p2020006024686 | Value: Isana AHA | PHA Cleanser 125 ml
+
+site_shown_uom (9 rows):
+
+Row 19,755 | URL: https://www.spar.at/produktwelt/mehrzweckschrauben-4x40-150stk-p2020005763197 | Value: BGS Mehrzweckschrauben | 4,0 x 40 mm | 150 Stück
+- Invalid 2 Decimal Format – regular_price:
+
+Row 107 | URL: https://www.spar.at/produktwelt/spar-premium-mezze-maniche-p2020004938749 | Value: 1.7
+Row 272 | URL: https://www.spar.at/produktwelt/spar-premium-premium-nektarinen-p2020005871441 | Value: 3.8
+
+Invalid 2 Decimal Format – selling_price:
+
+Row 107 | URL: https://www.spar.at/produktwelt/spar-premium-mezze-maniche-p2020004938749 | Value: 1.7
+Row 272 | URL: https://www.spar.at/produktwelt/spar-premium-premium-nektarinen-p2020005871441 | Value: 3.8
+-Invalid 2 Decimal Format – regular_price:
+
+Row 107 | URL: https://www.spar.at/produktwelt/spar-premium-mezze-maniche-p2020004938749 | Value: 1.7
+Row 272 | URL: https://www.spar.at/produktwelt/spar-premium-premium-nektarinen-p2020005871441 | Value: 3.8
+
+Invalid 2 Decimal Format – selling_price:
+
+Row 107 | URL: https://www.spar.at/produktwelt/spar-premium-mezze-maniche-p2020004938749 | Value: 1.7
+Row 272 | URL: https://www.spar.at/produktwelt/spar-premium-premium-nektarinen-p2020005871441 | Value: 3.8
+- Invalid grammage quantity: The grammage_quantity field contains an invalid value with a trailing ..
+
+Row 18,707 | URL: https://www.spar.at/produktwelt/fritz-fries-vampir-set-2-teilig-p2020006166256 | grammage_quantity: 2. | grammage_unit: stück
+
+8) DataHut_AT_Spar_FullDump_20260917.CSV
+------------------------------------------
+- Data count mismatch.
+- Invalid 2 Decimal Format – selling_price:
+
+Row 4 | URL: https://www.spar.at/produktwelt/spar-premium-mezze-maniche-p2020004938749 | Value: 1.7
+Row 132 | URL: https://www.spar.at/produktwelt/spar-premium-premium-nektarinen-p2020005871441 | Value: 3.8
+
+Invalid 2 Decimal Format – regular_price:
+
+Row 4 | URL: https://www.spar.at/produktwelt/spar-premium-mezze-maniche-p2020004938749 | Value: 1.7
+Row 132 | URL: https://www.spar.at/produktwelt/spar-premium-premium-nektarinen-p2020005871441 | Value: 3.8
+- Whitespace issues: The following records contain whitespace issues.
+
+Row 40,794 | URL: https://www.spar.at/produktwelt/barilla-integrale-vollkornpasta-spaghetti-p5716500 | Field: promotion_description
+Row 391 | URL: https://www.spar.at/produktwelt/s-budget-toiletten-papier-10-rollen-p2020006211093 | Field: breadcrumb
+- Invalid Image URLs: Invalid URLs are present in the image URL fields.
+
+image_url_1 (8 invalid URLs):
+
+Row 4,250 | Unique ID: 2020001864379 | URL: https://cdn1.interspar.at/cachableservlets/articleImage.dam/at/2020001864379/
+Row 5,952 | Unique ID: 241274 | URL: https://cdn1.interspar.at/cachableservlets/articleImage.dam/at/241274/
+Row 19,759 | Unique ID: 2020005822139 | URL: https://cdn1.interspar.at/cachableservlets/articleImage.dam/at/2020005822139/
+Row 28,705 | Unique ID: 2020005822177 | URL: https://cdn1.interspar.at/cachableservlets/articleImage.dam/at/2020005822177/
+Row 31,036 | Unique ID: 2020005822122 | URL: https://cdn1.interspar.at/cachableservlets/articleImage.dam/at/2020005822122/
+
+image_url_2 (1 invalid URL):
+
+Row 20,754 | Unique ID: 2020005995437 | URL: https://cdn1.interspar.at/cachableservlets/articleImage.dam/at/2020005995437/
+- Unescaped | characters: The following columns contain unescaped pipe (|) characters, which can cause issues when parsing the CSV data.
+
+product_name (10 rows):
+
+Row 8,275 | URL: https://www.spar.at/produktwelt/isana-cleanser-aha-pha-peeling-125ml-p2020006024686 | Value: Isana AHA | PHA Cleanser 125 ml
+
+nutritional_information (14,998 rows):
+
+Row 2 | URL: https://www.spar.at/produktwelt/spar-vital-maccheroni-rigati-high-protein-lower-carb-p2020005533011 | Value: {'Energie': 'ca. 1425,00 kJ | ca. 337,00 kcal', 'Fett': 'ca. 2,30 g', 'Fett, davon gesättigte Fettsäuren': 'ca. 0,40 g', 'Kohlenhydrate': 'ca. 50,00 g', 'Kohlenhydrate, davon Zucker': 'ca. 0,60 g', 'Ballaststoffe': 'ca. 8,30 g', 'Eiweiß': 'ca. 25,00 g', 'Salz': 'ca. 0,02 g', 'Broteinheiten': 'ca. 4,20 BE'}
+
+site_shown_uom (9 rows):
+
+Row 18,236 | URL: https://www.spar.at/produktwelt/mehrzweckschrauben-4x40-150stk-p2020005763197 | Value: BGS Mehrzweckschrauben | 4,0 x 40 mm | 150 Stück
+- - Whitespace issues: The following records contain whitespace issues.
+
+Row 40,794 | URL: https://www.spar.at/produktwelt/barilla-integrale-vollkornpasta-spaghetti-p5716500 | Field: promotion_description
+Row 391 | URL: https://www.spar.at/produktwelt/s-budget-toiletten-papier-10-rollen-p2020006211093 | Field: breadcrumb
+
+
+9) DataHut_SI_Spar_FullDump_20260917.CSV
+------------------------------------------  
+- Data count mismatch.
+- Invalid 2 Decimal Format – regular_price:
+
+Row 234 | URL: https://online.spar.si/p/suhe-slive-izkoscicene-seeberger-200g-305593 | Value: 5.1
+Row 373 | URL: https://online.spar.si/p/nastrgani-mandlji-spar-200g-274032 | Value: 2.2
+
+Invalid 2 Decimal Format – selling_price:
+
+Row 234 | URL: https://online.spar.si/p/suhe-slive-izkoscicene-seeberger-200g-305593 | Value: 5.1
+Row 373 | URL: https://online.spar.si/p/nastrgani-mandlji-spar-200g-274032 | Value: 2.2
+- Expected empty but not empty: ['barcode', 'promotion_valid_upto', 'promotion_description', 'alchol_by_volume', 'netweight', 'price_was', 'promotion_price']
+
+Unexpected empty columns : ['variants', 'preparationinstructions', 'country_of_origin', 'age_recommendations', 'flavour', 'labelling', 'packaging', 'special_information', 'label_information', 'dimensions', 'color', 'material', 'tasting_note', 'rating', 'review', 'file_name_1', 'file_name_2', 'file_name_3', 'file_name_4', 'file_name_5', 'file_name_6', 'competitor_product_key', 'features', 'retail_limit']
+- Suspicious quantity/unit issues: The grammage_unit is incorrectly represented as g and should be kg for the following records.
+
+Row 679 | URL: https://online.spar.si/p/nadomestek-kave-z-okusom-po-kakavu-calmrooty-62g-681408 | grammage_quantity: 0.062 | grammage_unit: g | Expected unit: kg
+Row 6,533 | URL: https://online.spar.si/p/instant-ocvrti-riz-vegetarijanski-mama-80g-683913 | grammage_quantity: 0.080 | grammage_unit: g | Expected unit: kg
+Row 8,431 | URL: https://online.spar.si/p/testenine-fusilli-feelingok-220g-679091 | grammage_quantity: 0.220 | grammage_unit: g | Expected unit: kg
+- Whitespace issues: A total of 1,171 records contain whitespace issues.
+
+Row 7,111 | URL: https://online.spar.si/p/sardele-v-oljcnem-olju-s-budget-125g-616317 | Field: producthierarchy_level3 | Value: KONZERVIRANE JEDI
+Row 13,680 | URL: https://online.spar.si/p/cistilni-robcki-soft-skin-fresh-151-566844 | Field: breadcrumb | Value: Domov > OSEBNA NEGA > HIGIENSKI DODATKI IN TOALETNI PAPIR > PAPIRNATI IN VLAŽILNI ROBČKI
+Row 2,906 | URL: https://online.spar.si/p/mleta-prazena-kava-moka-100-arabica-hausbrandt-250g-665396 | Field: warning | Value: KAVA JE PAKIRANA V PLOČEVINKI Z ZAŠČITNO ATMOSFERO, ZATO BODITE PAZLJIVI PRI ODPIRANJU NOTRANJEGA POKROVA. ODPIRAJTE GA POČASI IN PAZLJIVO, DA SE NE POŠKODUJETE.
+
