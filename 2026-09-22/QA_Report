@@ -1,0 +1,176 @@
+1) DataHut_AT_Dm_PriceExtractions_20260922.CSV
+-----------------------------------------------
+- Data count mismatch.
+- Invalid 2 Decimal Format – selling_price:
+
+Row 7 | URL: https://www.dm.at/p/d/3118901/dm-box-jubilaeumsbox-50-jahre-dm-haushalt  | Value: 5.0
+Row 11 | URL: https://www.dm.at/p/d/3109599/tempo-feuchtes-toilettenpapier-sanft-und-pflegend-kamille-16x42-st  | Value: 23.9
+Invalid 2 Decimal Format – regular_price:
+
+Row 7 | URL: https://www.dm.at/p/d/3118901/dm-box-jubilaeumsbox-50-jahre-dm-haushalt  | Value: 5.0
+Row 11 | URL: https://www.dm.at/p/d/3109599/tempo-feuchtes-toilettenpapier-sanft-und-pflegend-kamille-16x42-st  | Value: 23.9
+
+- Whitespace issues: A total of 46 records contain whitespace issues.
+
+Row 1,692 | URL: https://www.dm.at/p/d/1712323/reell-e-toenungsshampoo-7-4-kupfergold  | Field: product_name
+Row 1,876 | URL: https://www.dm.at/p/d/3137062/essence-nagelpuder-studio-nails-01-gelato-glaze  | Field: product_name"
+
+2) DataHut_AT_Spar_PriceExtractions_20260922.CSV
+--------------------------------------------------
+- Data count mismatch.
+- Whitespace issues: The following records contain whitespace issues.
+
+Row 41,720 | URL: https://www.spar.at/produktwelt/barilla-integrale-vollkornpasta-spaghetti-p5716500 | Field: promotion_description
+Row 25,118 | URL: https://www.spar.at/produktwelt/vorarlberg-milch-laendle-halbfettmilch-laenger-frisch-1-5-fett-p2020006312547 | Field: breadcrumb
+- Unescaped | characters: The following columns contain unescaped pipe (|) characters, which can cause issues when parsing the CSV data.
+
+product_name (10 rows):
+
+Row 8,780 | URL: https://www.spar.at/produktwelt/isana-cleanser-aha-pha-peeling-125ml-p2020006024686 | Value: Isana AHA | PHA Cleanser 125 ml
+
+site_shown_uom (9 rows):
+
+Row 17,592 | URL: https://www.spar.at/produktwelt/mehrzweckschrauben-4x40-150stk-p2020005763197 | Value: BGS Mehrzweckschrauben | 4,0 x 40 mm | 150 Stück
+
+3) DataHut_SI_Spar_PriceExtractions_20260922.CSV
+-------------------------------------------------
+- Data count mismatch.
+- Invalid 2 Decimal Format – regular_price:
+
+Row 243 | URL: https://online.spar.si/p/suhe-slive-izkoscicene-seeberger-200g-305593 | Value: 5.1
+Row 399 | URL: https://online.spar.si/p/fizol-pisani-s-budget-1kg-348544 | Value: 2.5
+
+Invalid 2 Decimal Format – selling_price:
+
+Row 484 | URL: https://online.spar.si/p/pomursko-mleko-35-mm-6x1l-666116 | Value: 9.9
+Row 490 | URL: https://online.spar.si/p/alpsko-mleko-35-mm-12x1l-488330 | Value: 16.9
+- Suspicious quantity/unit issues: The grammage_unit is incorrectly represented as g and should be kg for the following records.
+
+Row 691 | URL: https://online.spar.si/p/nadomestek-kave-z-okusom-po-kakavu-calmrooty-62g-681408 | Quantity: 0.062 | Unit: g | Expected unit: kg
+Row 6583 | URL: https://online.spar.si/p/instant-ocvrti-riz-vegetarijanski-mama-80g-683913 | Quantity: 0.08 | Unit: g | Expected unit: kg
+Row 8638 | URL: https://online.spar.si/p/testenine-fusilli-feelingok-220g-679091 | Quantity: 0.22 | Unit: g | Expected unit: kg
+
+4) DataHut_SI_Dm_PriceExtractions_20260922.CSV
+-----------------------------------------------
+- Data count mismatch
+- Whitespace issues: The following records contain whitespace issues.
+
+Row 9000 | URL: https://www.dm.si/p/d/1341689/balea-med-gel-za-tusiranje-in-sampon-za-lase-2-v-1-ultra-sensitive | Field: product_name
+Row 7 | URL: https://www.dm.si/p/d/3164723/snails-zelena-kreda-za-lase | Field: breadcrumb
+- Invalid 2 Decimal Format – selling_price:
+
+Row 6 | URL: https://www.dm.si/p/d/3123066/dove-men-care-dezodorant-v-spreju-za-celo-telo-marine-blue-cypress | Value: 5.8
+Row 10 | URL: https://www.dm.si/p/d/3160643/nivea-negovalna-krema-za-telo-rich-nourishing | Value: 7.2
+
+Invalid 2 Decimal Format – regular_price:
+
+Row 6 | URL: https://www.dm.si/p/d/3123066/dove-men-care-dezodorant-v-spreju-za-celo-telo-marine-blue-cypress | Value: 5.8
+Row 10 | URL: https://www.dm.si/p/d/3160643/nivea-negovalna-krema-za-telo-rich-nourishing | Value: 7.2
+
+5) DataHut_SI_Mercator_PriceExtractions_20260922.CSV
+------------------------------------------------------
+- Data count mismatch
+- Invalid 2 Decimal Format – regular_price:
+
+Row 355 | URL: https://mercatoronline.si/izdelek/17720502/maslo-mu-cuisine-20-g  | Value: 0.4
+Row 378 | URL: https://mercatoronline.si/izdelek/19119393/maslo-meggle-20-g  | Value: 0.5
+
+Invalid 2 Decimal Format – selling_price:
+
+Row 355 | URL: https://mercatoronline.si/izdelek/17720502/maslo-mu-cuisine-20-g  | Value: 0.4
+Row 378 | URL: https://mercatoronline.si/izdelek/19119393/maslo-meggle-20-g  | Value: 0.5
+
+6) DataHut_AU_Coles_FullDump_20260923.CSV
+-------------------------------------------
+- Data count mismatch
+- Breadcrumbs completely empty
+- Invalid 2 Decimal Format – regular_price:
+
+Row 2 | URL: https://www.coles.com.au/product/coles-simply-unsalted-butter-250g-3169879 | Value: 4.5
+Row 3 | URL: https://www.coles.com.au/product/coles-simply-salted-butter-500g-3169880 | Value: 7.0
+- Invalid 2 Decimal Format – selling_price:
+
+Row 2 | URL: https://www.coles.com.au/product/coles-simply-unsalted-butter-250g-3169879 | Value: 4.5
+Row 3 | URL: https://www.coles.com.au/product/coles-simply-salted-butter-500g-3169880 | Value: 7.0
+- Expected empty but not empty: 2 — regular_price, barcode
+Unexpected empty columns: 20:
+store_name
+store_state
+store_postcode
+producthierarchy_level1
+producthierarchy_level2
+producthierarchy_level3
+promotion_price
+promotion_type
+promotion_description
+multi_buy_item_count
+multi_buy_items_price_total
+breadcrumb
+labelling
+file_name_1
+features
+promo_limit
+multibuy_items_pricesingle
+suitable_for
+environmental
+retail_limit
+
+7) DataHut_AT_Billa_PriceExtractions_20260922.CSV
+----------------------------------------------------
+- Invalid 2 Decimal Format – regular_price:
+
+Row 58 | URL: https://shop.billa.at/produkte/hennessy-very-special-0011379 | Value: 47.9
+Row 134 | URL: https://shop.billa.at/produkte/oelz-mehrkorntoast-0014336 | Value: 3.8
+
+Invalid 2 Decimal Format – selling_price:
+
+Row 58 | URL: https://shop.billa.at/produkte/hennessy-very-special-0011379 | Value: 47.9
+Row 134 | URL: https://shop.billa.at/produkte/oelz-mehrkorntoast-0014336 | Value: 3.8
+- Invalid price relationship: The regular_price, selling_price, and promotion_price are all equal for the following records.
+
+Row 6793 | URL: https://shop.billa.at/produkte/coca-cola-00726805 | Regular: 1.39 | Selling: 1.39 | Promotion: 1.39
+Row 6795 | URL: https://shop.billa.at/produkte/coca-cola-zero-00726806 | Regular: 1.39 | Selling: 1.39 | Promotion: 1.39
+Row 7181 | URL: https://shop.billa.at/produkte/fanta-00721895 | Regular: 1.39 | Selling: 1.39 | Promotion: 1.39
+Row 7182 | URL: https://shop.billa.at/produkte/sprite-00721893 | Regular: 1.39 | Selling: 1.39 | Promotion: 1.39
+
+8) bayut_egp_2026_09_04.json
+-------------------------------
+- Data count mismatch
+- Extra columns found: ['completion_status', 'ownership']
+- price per also include Daily ,Yearly , Weekly
+- published_at is DD-MM-YYYY format
+- Whitespace issues: A total of 62 records contain whitespace issues.
+
+Row 22438 | URL: https://www.bayut.eg/en/property/details-503982346.html | Field: broker_display_name | Value: Ahmed Elhany
+Row 22438 | URL: https://www.bayut.eg/en/property/details-503982346.html | Field: broker | Value: AHMED ELHANY
+
+9) nawy_egp_2026_09_04.json
+----------------------------
+- Data count mismatch.
+- Price missing: Price is available on the website but is missing in the file.
+
+Row 10738 | URL: https://www.nawy.com/compound/658-golden-gate/property/75451-retail-for-sale-in-golden-gate-in-el-lotus-by-redcon-for-offices-and-commercial-centers
+
+10) DataHut_AT_Dm_FullDump_20260924.CSV
+----------------------------------------
+- Data count mismatch.
+- Invalid 2 Decimal Format – selling_price:
+
+Row 2 | URL: https://www.dm.at/p/d/3118901/dm-box-jubilaeumsbox-50-jahre-dm-haushalt | Value: 5.0
+Row 5 | URL: https://www.dm.at/p/d/3119013/dm-box-jubilaeumsbox-50-jahre-dm-styling-und-pflege | Value: 5.0
+- Invalid 2 Decimal Format – regular_price:
+
+Row 10 | URL: https://www.dm.at/p/d/1575911/babylove-wickelunterlagen-monatspack | Value: 17.7
+Row 12 | URL: https://www.dm.at/p/d/3119014/dm-box-jubilaeumsbox-50-jahre-dm-gesundheit-und-wohlbefinden | Value: 5.0
+- Whitespace issues: The following records contain whitespace issues.
+
+Row 13960 | URL: https://www.dm.at/p/d/1711285/nature-love-probiona-kulturen-komplex | Field: ingredients
+Row 22 | URL: https://www.dm.at/p/d/1617230/hipp-anfangsmilch-bio-combiotik-pre-von-geburt-an | Field: warning
+Row 16518 | URL: https://www.dm.at/p/d/1460421/dein-bestes-nassfutter-katze-reich-an-lachs-klassisch | Field: label_information
+Row 508 | URL: https://www.dm.at/p/d/2477093/jessa-periodenunterwaesche-slip-spitze-nature-schwarz-gr-m | Field: material
+Row 5592 | URL: https://www.dm.at/p/d/1608368/babylove-mama-dattelriegel-kakao-himbeere | Field: country_of_origin
+Row 309 | URL: https://www.dm.at/p/d/3134117/dmbio-babysnack-mehrkornsterne-pastinake-und-rote-bete-ab-dem-10-monat | Field: labelling
+Row 16634 | URL: https://www.dm.at/p/d/1711668/mam-schnuller-supreme-blau-beige-16-monate | Field: storage_instructions
+Row 22 | URL: https://www.dm.at/p/d/1617230/hipp-anfangsmilch-bio-combiotik-pre-von-geburt-an | Field: preparationinstructions
+Row 13110 | URL: https://www.dm.at/p/d/3108258/alverde-naturkosmetik-shampoo-nutri-care | Field: product_description
+
