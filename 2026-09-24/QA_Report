@@ -1,0 +1,292 @@
+1) DataHut_AT_Dm_FullDump_20260924.CSV
+----------------------------------------
+- Data count mismatch.
+- Invalid 2 Decimal Format – selling_price:
+
+Row 2 | URL: https://www.dm.at/p/d/3118901/dm-box-jubilaeumsbox-50-jahre-dm-haushalt | Value: 5.0
+Row 4 | URL: https://www.dm.at/p/d/3119013/dm-box-jubilaeumsbox-50-jahre-dm-styling-und-pflege | Value: 5.0
+
+Invalid 2 Decimal Format – regular_price:
+
+Row 2 | URL: https://www.dm.at/p/d/3118901/dm-box-jubilaeumsbox-50-jahre-dm-haushalt | Value: 5.0
+Row 4 | URL: https://www.dm.at/p/d/3119013/dm-box-jubilaeumsbox-50-jahre-dm-styling-und-pflege | Value: 5.0
+- Expected empty but not empty: 2
+barcode
+retail_limit
+Unexpected empty columns: 7
+producthierarchy_level5
+file_name_1
+file_name_2
+file_name_3
+file_name_4
+file_name_5
+file_name_6
+
+- Whitespace issues: A total of 11 records contain whitespace issues.
+
+Row 1384 | URL: https://www.dm.at/p/d/3104287/mivolis-tabletten-vitamin-b12-350  | Field: product_name
+Row 1762 | URL: https://www.dm.at/p/d/1712325/reell-e-toenungsshampoo-10-11-silbergrau  | Field: variants
+Row 2 | URL: https://www.dm.at/p/d/3118901/dm-box-jubilaeumsbox-50-jahre-dm-haushalt  | Field: product_description
+Row 60 | URL: https://www.dm.at/p/d/1888537/dettol-allzwecktuecher-granatapfel-und-limette  | Field: storage_instructions
+Row 20 | URL: https://www.dm.at/p/d/1617230/hipp-anfangsmilch-bio-combiotik-pre-von-geburt-an  | Field: preparationinstructions
+Row 1116 | URL: https://www.dm.at/p/d/3115277/mivolis-tabletten-haut-haare-naegel  | Field: country_of_origin
+Row 293 | URL: https://www.dm.at/p/d/3134117/dmbio-babysnack-mehrkornsterne-pastinake-und-rote-bete-ab-dem-10-monat  | Field: labelling
+Row 923 | URL: https://www.dm.at/p/d/1690477/balea-fuss-und-nagelbalsam  | Field: label_information
+Row 490 | URL: https://www.dm.at/p/d/2477093/jessa-periodenunterwaesche-slip-spitze-nature-schwarz-gr-m  | Field: material
+Row 4168 | URL: https://www.dm.at/p/d/1709020/manhattan-cosmetics-the-multi-tasker-concealer-25-rose-ivory  | Field: ingredients
+Row 20 | URL: https://www.dm.at/p/d/1617230/hipp-anfangsmilch-bio-combiotik-pre-von-geburt-an  | Field: warning
+
+2) DataHut_SI_Spar_FullDump_20260924.CSV
+-----------------------------------------
+- Data count mismatch.
+- Invalid 2 Decimal Format – regular_price:
+
+Row 276 | URL: https://online.spar.si/p/suhe-slive-izkoscicene-seeberger-200g-305593 | Value: 5.1
+Row 413 | URL: https://online.spar.si/p/fizol-pisani-s-budget-1kg-348544 | Value: 2.5
+
+Invalid 2 Decimal Format – selling_price:
+
+Row 276 | URL: https://online.spar.si/p/suhe-slive-izkoscicene-seeberger-200g-305593 | Value: 5.1
+- Expected empty but not empty: 7
+barcode
+promotion_valid_upto
+promotion_description
+alchol_by_volume
+netweight
+price_was
+promotion_price
+Unexpected empty columns: 24
+variants
+preparationinstructions
+country_of_origin
+age_recommendations
+flavour
+labelling
+packaging
+special_information
+label_information
+dimensions
+color
+material
+tasting_note
+rating
+review
+file_name_1
+file_name_2
+file_name_3
+file_name_4
+file_name_5
+file_name_6
+competitor_product_key
+features
+retail_limit
+
+- Suspicious quantity/unit issues: The grammage_unit is incorrectly represented as g and should be kg for the following records.
+
+Row 701 | URL: https://online.spar.si/p/nadomestek-kave-z-okusom-po-kakavu-calmrooty-62g-681408 | Quantity: 0.062 | Unit: g | Expected Unit: kg
+Row 6646 | URL: https://online.spar.si/p/instant-ocvrti-riz-vegetarijanski-mama-80g-683913 | Quantity: 0.08 | Unit: g | Expected Unit: kg
+Row 8528 | URL: https://online.spar.si/p/testenine-fusilli-feelingok-220g-679091 | Quantity: 0.22 | Unit: g | Expected Unit: kg
+- - Whitespace issues: A total of 4 records contain whitespace issues.
+
+Row 7216 | URL: https://online.spar.si/p/sardele-v-soncnicnem-olju-s-budget-125g-477694  | Field: producthierarchy_level3
+Row 13870 | URL: https://online.spar.si/p/univerzalni-robcki-s-budget-801-666299  | Field: producthierarchy_level4
+Row 7216 | URL: https://online.spar.si/p/sardele-v-soncnicnem-olju-s-budget-125g-477694  | Field: breadcrumb
+Row 3033 | URL: https://online.spar.si/p/mleta-prazena-kava-moka-100-arabica-hausbrandt-250g-665396  | Field: warning
+
+- Missing promotion validity dates: promotion_description is populated, but promotion_valid_from and promotion_valid_upto are missing.
+
+Row 3981 | URL: https://online.spar.si/p/energijski-napitek-s-budget-250ml-354165  | Promotion: 24 za 3.48 €
+Row 5325 | URL: https://online.spar.si/p/bela-zemlja-spar-60g-678329  | Promotion: 3 za 0.44 €
+
+3) DataHut_CH_Coop_FullDump_20260924.CSV
+------------------------------------------
+- Data count mismatch.
+- Invalid 2 Decimal Format – selling_price:
+
+Row 2 | URL: https://www.coop.ch/de/lebensmittel/fruechte-gemuese/kohlgemuese/broccoli-blumenkohl/broccoli-ca/p/6675160 | selling_price: 2.7
+Row 3 | URL: https://www.coop.ch/de/lebensmittel/fruechte-gemuese/fruechte/beeren/primagusto-erdbeeren/p/4323527 | selling_price: 5.6
+
+Invalid 2 Decimal Format – regular_price:
+
+Row 2 | URL: https://www.coop.ch/de/lebensmittel/fruechte-gemuese/kohlgemuese/broccoli-blumenkohl/broccoli-ca/p/6675160 | regular_price: 2.7
+Row 3 | URL: https://www.coop.ch/de/lebensmittel/fruechte-gemuese/fruechte/beeren/primagusto-erdbeeren/p/4323527 | regular_price: 5.6
+- Missing price: The regular_price and selling_price fields are missing in the file, even though the price is available on the website.
+
+Row 2002 | URL: https://www.coop.ch/de/lebensmittel/fleisch-fisch/abgepacktes-frischfleisch/schwein/prix-garantie-schweinssteak-nierstueck-4-5-stueck-ca/p/3466031 | instock: True | regular_price: Missing | selling_price: Missing
+- Invalid breadcrumbs: A total of 4 records have invalid breadcrumb values with consecutive > separators, indicating missing breadcrumb levels.
+
+Row 26297 | URL: https://www.coop.ch/de/weine/spezialitaeten/online-specials/chateauneuf-sinards-beaucastel-2022-75cl/p/5852094007 | Breadcrumb: Startseite > > Châteauneuf Sinards Beaucastel 2022 75CL 6x 75cl
+Row 30013 | URL: https://www.coop.ch/de/weine/alle-weine/weissweine/aargau-aoc-birmenstorfer-riesling-sylvaner/p/1014011008 | Breadcrumb: Startseite > > Aargau AOC Birmenstorfer Riesling-Sylvaner
+- Missing price_was: promotion_price and regular_price are populated, but price_was is missing.
+
+Row 159 | URL: https://www.coop.ch/de/lebensmittel/fruechte-gemuese/kohlgemuese/broccoli-blumenkohl/spargel-broccoli-bimi/p/7003348  | Promotion: Superpreis | Regular Price: 3.00 | Promotion Price: NaN
+Row 212 | URL: https://www.coop.ch/de/lebensmittel/fruechte-gemuese/wurzelgemuese/kartoffeln/primagusto-kartoffeln-celtiane-ip-suisse/p/7085455  | Promotion: 1+1 | Regular Price: 4.95 | Promotion Price: NaN
+- Missing images: Images are available on the website but missing in the file.
+
+Row 737 | URL: https://www.coop.ch/de/lebensmittel/milchprodukte-eier/milch/uht-milch/qualite-prix-vollmilch-uht-ip-suisse-6x15l/p/6828686
+Row 14080 | URL: https://www.coop.ch/de/lebensmittel/getraenke/frucht-gemuesesaefte/fruchtsaefte/uebrige-fruchtsaefte/capri-sun-multivitamin-10x20cl/p/3475861
+Row 18047 | URL: https://www.coop.ch/de/weine/alle-weine/weissweine/suedtirol-doc-sauvignon-greel-riserva-kellerei-bozen/p/1022833001
+
+4) DataHut_AT_Billa_FullDump_20260924.CSV
+--------------------------------------------
+- Empty column comparison:
+
+Requirement empty columns: 79
+File empty columns: 84
+Matching empty columns: 77
+Expected empty but not empty: 2
+age_of_the_product
+packaging
+Unexpected empty columns: 7
+file_name_1
+file_name_2
+file_name_3
+file_name_4
+file_name_5
+file_name_6
+retail_limit
+- Invalid 2 Decimal Format – selling_price:
+
+Row 140 | URL: https://shop.billa.at/produkte/oelz-mehrkorntoast-0014336 | selling_price: 3.8
+Row 154 | URL: https://shop.billa.at/produkte/rauch-weizenmehl-extra-fuer-kuchen-0015865 | selling_price: 1.8
+- Invalid 2 Decimal Format – regular_price:
+
+Row 140 | URL: https://shop.billa.at/produkte/oelz-mehrkorntoast-0014336 | regular_price: 3.8
+Row 154 | URL: https://shop.billa.at/produkte/rauch-weizenmehl-extra-fuer-kuchen-0015865 | regular_price: 1.8
+
+5) DataHut_CH_Denner_FullDump_20260924.CSV
+-------------------------------------------
+- Data count mismatch.
+- Invalid 2 Decimal Format – regular_price:
+
+Row 2 | URL: https://www.denner.ch/de/aktionen/frischer-spinat~p1006296?variant=ec540b4a-81f5-40a8-be5b-ed90f5ce35f4 | regular_price: 3.5
+Row 3 | URL: https://www.denner.ch/de/aktionen/red-bull-energy-drink-sugarfree~p1028514?variant=370c39b7-ab3e-43cc-8e35-771780b50467 | regular_price: 35.6
+
+Invalid 2 Decimal Format – selling_price:
+
+Row 2 | URL: https://www.denner.ch/de/aktionen/frischer-spinat~p1006296?variant=ec540b4a-81f5-40a8-be5b-ed90f5ce35f4 | selling_price: 2.4
+Row 4 | URL: https://www.denner.ch/de/aktionen/suttero-salami-camembert~p1101635?variant=dcad5a21-d772-4624-bed8-813c711cd620 | selling_price: 5.5
+- Missing promotion price: A total of 4 records have a populated percentage_discount and promotion_description, but promotion_price is missing.
+
+Row 620 | URL: https://www.denner.ch/de/aktionen/treize-Etoiles-fendant-du-valais-aoc~p1026475?variant=5e4f78f0-8ba7-41a4-a9fc-a693eaa25676 | Discount: 26.0% | Promotion: 26% | promotion_price: Missing
+Row 1252 | URL: https://www.denner.ch/de/sortiment/ip-suisse-produkte/detail/article/ip-suisse-apfelessig/ | Discount: 20.0% | Promotion: 20% | promotion_price: Missing
+Row 1254 | URL: https://www.denner.ch/de/aktionen/ip-suisse-sonnenblumenoel~p1004229?variant=b5e6159f-14b0-44b0-96e9-2f2e13a8095c | Discount: 20.0% | Promotion: 20% | promotion_price: Missing
+Row 1568 | URL: https://www.denner.ch/de/aktionen-und-sortiment/ip-suisse-rapsoel~p027841?variant=3b4e7bb1-4314-4e9c-a9f6-6ba3ca8d7a0a | Discount: 20.0% | Promotion: 20% | promotion_price: Missing
+- Invalid grammage_unit: The grammage_unit is incorrectly represented as stück instead of btl.
+
+Row 1354 | Unique ID: 1023869 | Product: KingSC Bio Kräutertee Matcha | grammage_quantity: 1 | grammage_unit: stück | Expected unit: btl
+Row 1565 | Unique ID: 1023868 | Product: KingSC Bio Gewürztee Chai Classic | grammage_quantity: 1 | grammage_unit: stück | Expected unit: btl
+
+6) DataHut_AT_Spar_FullDump_20260924.CSV
+-----------------------------------------
+- data count mismatch.
+- Invalid 2 Decimal Format – selling_price:
+
+Row 128 | URL: https://www.spar.at/produktwelt/spar-premium-mezze-maniche-p2020004938749 | selling_price: 1.7
+Row 242 | URL: https://www.spar.at/produktwelt/spar-premium-premium-nektarinen-p2020005871441 | selling_price: 3.8
+
+Invalid 2 Decimal Format – regular_price:
+
+Row 128 | URL: https://www.spar.at/produktwelt/spar-premium-mezze-maniche-p2020004938749 | regular_price: 1.7
+Row 242 | URL: https://www.spar.at/produktwelt/spar-premium-premium-nektarinen-p2020005871441 | regular_price: 3.8
+- Whitespace issues: A total of 22 records contain whitespace issues.
+
+Row 24545 | URL: https://www.spar.at/produktwelt/vorarlberg-milch-laendle-halbfettmilch-laenger-frisch-1-5-fett-p2020006312547 | Column: producthierarchy_level6
+Row 317 | URL: https://www.spar.at/produktwelt/s-budget-toiletten-papier-10-rollen-p2020006211093 | Column: breadcrumb
+- Unescaped | issues – site_shown_uom:
+
+Row 17105 | URL: https://www.spar.at/produktwelt/mehrzweckschrauben-4x40-150stk-p2020005763197 | Value: BGS Mehrzweckschrauben | 4,0 x 40 mm | 150 Stück
+Row 41985 | URL: https://www.spar.at/produktwelt/stelzh-korn-spitz-sesam-70g-kornspitz-sesam-p2969732 | Value contains unescaped | characters within the nutritional information.
+- Invalid image URLs:
+
+image_url_1 – 7 invalid URLs
+
+Row 6030 | URL: https://www.spar.at/produktwelt/nescafe-classic-loeskaffee-kraeftig-p241274 | image_url_1: https://cdn1.interspar.at/cachableservlets/articleImage.dam/at/241274/
+Row 18617 | URL: https://www.spar.at/produktwelt/leifheit-staubwedel-superduster-flex-p2020005822139 | image_url_1: https://cdn1.interspar.at/cachableservlets/articleImage.dam/at/2020005822139/
+Row 28230 | URL: https://www.spar.at/produktwelt/leifheit-staubwischer-superduster-floor-p2020005822177 | image_url_1: https://cdn1.interspar.at/cachableservlets/articleImage.dam/at/2020005822177/
+Row 30449 | URL: https://www.spar.at/produktwelt/leifheit-staubwedel-superduster-xl-p2020005822122 | image_url_1: https://cdn1.interspar.at/cachableservlets/articleImage.dam/at/2020005822122/
+Row 33769 | URL: https://www.spar.at/produktwelt/leifheit-staubwedel-ersatzbezug-superduster-xl-p2020005822146 | image_url_1: https://cdn1.interspar.at/cachableservlets/articleImage.dam/at/2020005822146/
+
+image_url_2 – 2 invalid URLs
+
+Row 4576 | URL: https://www.spar.at/produktwelt/spar-qualitaetsmarke-knuspermuesli-nuss-p2020001864379 | image_url_2: https://cdn1.interspar.at/cachableservlets/articleImage.dam/at/2020001864379/
+Row 19671 | URL: https://www.spar.at/produktwelt/siemens-waschmaschine-wm14n127-8kg-p2020005995437 | image_url_2: https://cdn1.interspar.at/cachableservlets/articleImage.dam/at/2020005995437/
+
+7) DataHut_CH_Migros_FullDump_20260924.CSV
+--------------------------------------------
+- Data count mismatch.
+- Whitespace issues: A total of 2 columns contain whitespace issues.
+
+Row 22458 | URL: https://www.migros.ch/de/product/720516100012  | Column: size
+Row 9644 | URL: https://www.migros.ch/de/product/120912100000  | Column: site_shown_uom
+
+- Unescaped | issues:
+
+product_description – 1 row
+Row 22124 | URL: https://www.migros.ch/de/product/793410600000  | Value contains unescaped | characters.
+preparationinstructions – 4 rows
+Row 4512 | URL: https://www.migros.ch/de/product/102700900000  | Value contains unescaped | characters.
+instructionforuse – 4 rows
+Row 17916 | URL: https://www.migros.ch/de/product/511070500000  | Value contains unescaped | characters.
+distributor_address – 24 rows
+Row 840 | URL: https://www.migros.ch/de/product/130939000000  | Value: Planted Foods AG Kemptpark 32/34 | 8310 Kemptthal
+- Invalid breadcrumbs: A total of 496 records have invalid/missing breadcrumb values.
+eg:
+Row 28163 | URL: https://www.migros.ch/de/product/111722905200  | breadcrumb: Missing
+Row 28165 | URL: https://www.migros.ch/de/product/893295140038  | breadcrumb: Missing
+
+Invalid 2 Decimal Format – selling_price:
+
+Row 2 | URL: https://www.migros.ch/de/product/130600900000  | selling_price: 5.9
+Row 3 | URL: https://www.migros.ch/de/product/271500513200  | selling_price: 1.5"
+Invalid 2 Decimal Format – regular_price:
+
+Row 2 | URL: https://www.migros.ch/de/product/130600900000  | regular_price: 5.9
+Row 3 | URL: https://www.migros.ch/de/product/271500513200  | regular_price: 1.5
+
+8) mango_2026_09_21.csv
+------------------------
+- Unescaped | issues – product_name:
+
+Row 372 | URL: https://shop.mango.com/gb/en/p/37042959/38/00 | product_name: 300-thread-count percale cotton fitted sheet for 160 cm bed | 30 cm
+Row 373 | URL: https://shop.mango.com/gb/en/p/37032962/38/00 | product_name: 300-thread-count percale cotton fitted sheet for 90 cm bed | 30 cm
+- Missing category:
+
+Row 1267 | URL: https://shop.mango.com/gb/en/p/27027897/56/00 | category: Missing
+- - regular price and selling price are in float format instead of str
+
+- Invalid 2 Decimal Format – regular_price:
+
+Row 198 | URL: https://shop.mango.com/gb/en/p/27045992/99/00  | regular_price: 140.0
+Row 306 | URL: https://shop.mango.com/gb/en/p/37094113/05/00  | regular_price: 210.0
+
+Invalid 2 Decimal Format – selling_price:
+
+Row 198 | URL: https://shop.mango.com/gb/en/p/27045992/99/00  | selling_price: 140.0
+Row 306 | URL: https://shop.mango.com/gb/en/p/37094113/05/00  | selling_price: 210.0
+- Missing breadcrumb:
+
+Row 1267 | URL: https://shop.mango.com/gb/en/p/27027897/56/00  | breadcrumb: Missing
+- Missing category:
+
+Row 1267 | URL: https://shop.mango.com/gb/en/p/27027897/56/00  | category: Missing
+
+9) hm_2026_09_18.csv
+------------------------
+- Invalid 2 Decimal Format – selling_price:
+
+Row 2 | URL: https://www2.hm.com/en_gb/productpage.1341239002.html | selling_price: 97.0
+Row 3 | URL: https://www2.hm.com/en_gb/productpage.1336265004.html | selling_price: 97.0
+
+Invalid 2 Decimal Format – regular_price:
+
+Row 2 | URL: https://www2.hm.com/en_gb/productpage.1341239002.html | regular_price: 97.0
+Row 3 | URL: https://www2.hm.com/en_gb/productpage.1336265004.html | regular_price: 97.0
+- Unescaped | issues – breadcrumb:
+
+Row 222 | URL: https://www2.hm.com/en_gb/productpage.1307896003.html | breadcrumb: HM.COM > WOMEN > BASICS > TOPS > WOMEN'S BASIC LONG SLEEVE TOPS | CROPPED & T-SHIRT > HOODIE
+Row 229 | URL: https://www2.hm.com/en_gb/productpage.1307896001.html | breadcrumb: HM.COM > WOMEN > BASICS > TOPS > WOMEN'S BASIC LONG SLEEVE TOPS | CROPPED & T-SHIRT > HOODIE
+- Missing category: A total of 12 products have missing category values.
+
+Row 407 | URL: https://www2.hm.com/en_gb/productpage.1244684001.html
+Row 408 | URL: https://www2.hm.com/en_gb/productpage.1167354007.html

@@ -1,0 +1,187 @@
+1) DataHut_SI_Spar_PriceExtractions_20260923.CSV
+-------------------------------------------------
+- Data count mismatch.
+- Suspicious quantity/unit issues: The grammage_unit is incorrectly represented as g and should be kg for the following records.
+
+Row 680 | URL: https://online.spar.si/p/nadomestek-kave-z-okusom-po-kakavu-calmrooty-62g-681408 | Quantity: 0.062 | Unit: g | Expected unit: kg
+Row 6580 | URL: https://online.spar.si/p/instant-ocvrti-riz-vegetarijanski-mama-80g-683913 | Quantity: 0.08 | Unit: g | Expected unit: kg
+Row 8665 | URL: https://online.spar.si/p/testenine-fusilli-feelingok-220g-679091 | Quantity: 0.22 | Unit: g | Expected unit: kg
+- Invalid 2 Decimal Format – regular_price:
+
+Row 266 | URL: https://online.spar.si/p/suhe-slive-izkoscicene-seeberger-200g-305593 | Value: 5.1
+Row 406 | URL: https://online.spar.si/p/fizol-pisani-s-budget-1kg-348544 | Value: 2.5
+
+Invalid 2 Decimal Format – selling_price:
+
+Row 266 | URL: https://online.spar.si/p/suhe-slive-izkoscicene-seeberger-200g-305593 | Value: 5.1
+Row 406 | URL: https://online.spar.si/p/fizol-pisani-s-budget-1kg-348544 | Value: 2.5
+
+2) DataHut_SI_Dm_PriceExtractions_20260923.CSV
+--------------------------------------------
+- Data count mismatch.
+- Invalid 2 Decimal Format – selling_price:
+
+Row 3 | URL: https://www.dm.si/p/d/3103615/balea-maska-za-stopala-z-10-uree-v-obliki-nogavic-1-par | Value: 3.4
+Row 6 | URL: https://www.dm.si/p/d/1916616/alpro-rastlinski-napitek-this-is-not-m-lk-s-3-5-mascobe | Value: 3.2
+
+Invalid 2 Decimal Format – regular_price:
+
+Row 3 | URL: https://www.dm.si/p/d/3103615/balea-maska-za-stopala-z-10-uree-v-obliki-nogavic-1-par | Value: 3.4
+Row 6 | URL: https://www.dm.si/p/d/1916616/alpro-rastlinski-napitek-this-is-not-m-lk-s-3-5-mascobe | Value: 3.2
+- Whitespace issues: The following records contain whitespace issues.
+
+Row 9010 | URL: https://www.dm.si/p/d/1341689/balea-med-gel-za-tusiranje-in-sampon-za-lase-2-v-1-ultra-sensitive | Field: product_name
+Row 7 | URL: https://www.dm.si/p/d/1715572/babylove-naravna-mineralna-voda-brez-ogljikovega-dioksida | Field: breadcrumb
+
+3) DataHut_AT_Spar_PriceExtractions_20260923.CSV
+---------------------------------------------------
+- Data count mismatch.
+- Invalid 2 Decimal Format – regular_price:
+
+Row 11 | URL: https://www.spar.at/produktwelt/spar-premium-mezze-maniche-p2020004938749 | Value: 1.7
+Row 78 | URL: https://www.spar.at/produktwelt/spar-premium-premium-nektarinen-p2020005871441 | Value: 3.8
+
+Invalid 2 Decimal Format – selling_price:
+
+Row 11 | URL: https://www.spar.at/produktwelt/spar-premium-mezze-maniche-p2020004938749 | Value: 1.7
+Row 78 | URL: https://www.spar.at/produktwelt/spar-premium-premium-nektarinen-p2020005871441 | Value: 3.8
+- Unescaped | issues:
+
+product_name – 10 rows
+
+Row 8300 | URL: https://www.spar.at/produktwelt/isana-cleanser-aha-pha-peeling-125ml-p2020006024686 | Value: Isana AHA | PHA Cleanser 125 ml
+
+site_shown_uom – 9 rows
+
+Row 17669 | URL: https://www.spar.at/produktwelt/mehrzweckschrauben-4x40-150stk-p2020005763197 | Value: BGS Mehrzweckschrauben | 4,0 x 40 mm | 150 Stück
+
+4) DataHut_SI_Mercator_PriceExtractions_20260923.CSV
+----------------------------------------------------------
+- Data count mismatch.
+- Invalid 2 Decimal Format – selling_price:
+
+Row 372 | URL: https://mercatoronline.si/izdelek/17720502/maslo-mu-cuisine-20-g | Value: 0.4
+Row 388 | URL: https://mercatoronline.si/izdelek/19119393/maslo-meggle-20-g | Value: 0.5
+
+Invalid 2 Decimal Format – regular_price:
+
+Row 372 | URL: https://mercatoronline.si/izdelek/17720502/maslo-mu-cuisine-20-g | Value: 0.4
+Row 388 | URL: https://mercatoronline.si/izdelek/19119393/maslo-meggle-20-g | Value: 0.5
+
+5) bayut_properties_rent_commercial_2026_09_23.json
+-----------------------------------------------------
+- Data count mismatch.
+- Missing image URLs in API: Image URLs are present in the file but are missing from the API for the following listing.
+
+URL: https://www.bayut.com/property/details-16156259.html
+- API/File timestamp mismatch: The API and file contain inconsistent values for the timestamp fields in the following listing.
+
+URL: https://www.bayut.com/property/details-16156259.html 
+createdAt: File 1786545387.0 vs API 1786545387 — same value, different numeric format.
+approvedAt: File 1786545387.0 vs API 1786545387 — same value, different numeric format.
+updatedAt: File 1790008655.0 vs API 1790141079 — value mismatch.
+touchedAt: File 1790008795.400597 vs API 1790143421.58671 — value mismatch.
+
+6) bayut_properties_buy_commercial_2026_09_23.json
+----------------------------------------------------
+- Data count mismatch.
+- API/File timestamp value mismatch: The timestamp values are consistent between the API and file, with only minor differences in numeric formatting/precision.
+
+createdAt: API 1771322126 vs File 1771322126.0 — same value, different numeric format.
+approvedAt: API 1771322126 vs File 1771322126.0 — same value, different numeric format.
+updatedAt: API 1788298842 vs File 1788298842.0 — same value, different numeric format.
+touchedAt: API 1788653070.06754 vs File 1788653070.067538 — minor decimal precision difference.
+reactivatedAt: API 1781278147.63814 vs File 1781278147.638143 — minor decimal precision difference.
+image url(url) : Missing in API but present in the file: https://images.bayut.com/thumbnails/849232795-800x600.jpeg
+
+listing_url: "https://www.bayut.com/property/details-14325273.html"
+
+7) DataHut_IT_Eurospin_PriceExtractions_20260923.CSV
+--------------------------------------------------------
+- Data count mismatch
+- Invalid 2 Decimal Format – regular_price:
+
+Row 790 | URL: https://online.eurospin.com/product/fontina-dop  | Value: 6.0
+Row 1362 | URL: https://online.eurospin.com/product/cuore-bovino-adulto1  | Value: 3.0
+
+Invalid 2 Decimal Format – selling_price:
+
+Row 790 | URL: https://online.eurospin.com/product/fontina-dop  | Value: 6.0
+Row 1362 | URL: https://online.eurospin.com/product/cuore-bovino-adulto1  | Value: 3.0
+
+8) DataHut_SI_Mercator_FullDump_20260924.CSV
+-----------------------------------------------
+- Data count mismatch.
+- Invalid 2 Decimal Format – selling_price:
+
+Row 316 | URL: https://mercatoronline.si/izdelek/17720502/maslo-mu-cuisine-20-g | Value: 0.4
+Row 331 | URL: https://mercatoronline.si/izdelek/19119393/maslo-meggle-20-g | Value: 0.5
+
+Invalid 2 Decimal Format – regular_price:
+
+Row 316 | URL: https://mercatoronline.si/izdelek/17720502/maslo-mu-cuisine-20-g | Value: 0.4
+Row 331 | URL: https://mercatoronline.si/izdelek/19119393/maslo-meggle-20-g | Value: 0.5
+-Whitespace issues: A total of 18 records contain whitespace issues.
+
+Row 220 | URL: https://mercatoronline.si/izdelek/15943683/bio-kefir-krepki-suhec-z-breskvijo-1-5-m-m-krepko-250-g | Field: brand
+
+9) DataHut_CH_Migros_FullDump_20260924.CSV
+--------------------------------------------
+- Missing promotion price and price was: promotion_price and price_was are missing even though a promotion/discount is present.
+
+Row 613 | URL: https://www.migros.ch/de/product/220651555510 | Promotion: 20% | Selling Price: 2.35 | Regular Price: 2.35
+Row 793 | URL: https://www.migros.ch/de/product/220260080011 | Promotion: 31% | Selling Price: 5.45 | Regular Price: 5.45
+- Invalid 2 Decimal Format – regular_price:
+
+Row 3 | URL: https://www.migros.ch/de/product/130600900000 | Value: 5.9
+Row 4 | URL: https://www.migros.ch/de/product/274583209300 | Value: 2.0
+
+Invalid 2 Decimal Format – selling_price:
+
+Row 3 | URL: https://www.migros.ch/de/product/130600900000 | Value: 5.9
+Row 4 | URL: https://www.migros.ch/de/product/274583209300 | Value: 2.0
+- Unexpected empty columns: 9
+
+variants
+age_recommendations
+dimensions
+feeding_recommendation
+color
+material
+size
+alchol_by_volume
+suitable_for
+
+- Unescaped | issues – distributor_address:
+
+Row 837 | URL: https://www.migros.ch/de/product/130939000000 | Value: Planted Foods AG Kemptpark 32/34 | 8310 Kemptthal
+Row 849 | URL: https://www.migros.ch/de/product/130913800000 | Value: Planted Foods AG Planted Foods AG | Kemptpark 32/34 | 8310 Kemptthal
+Row 900 | URL: https://www.migros.ch/de/product/130926100000 | Value: Planted Foods AG Planted Foods AG | Kemptpark 32/34 | 8310 Kemptthal
+
+10) DataHut_IT_Esselunga_PriceExtractions_20260923.CSV
+--------------------------------------------------------
+- Data count mismatch.
+- Whitespace issues: A total of 68 records contain whitespace issues.
+
+Row 228061 | URL: https://spesaonline.esselunga.it/commerce/nav/drive/store/prodotto/201068/misura-stevia-50-bustine-50-x-15-g  | Field: site_shown_uom
+Row 8744 | URL: https://spesaonline.esselunga.it/commerce/nav/drive/store/prodotto/552165/sore-valtenesi-riviera-del-garda-classico-doc-75-cl  | Field: brand
+Row 824 | URL: https://spesaonline.esselunga.it/commerce/nav/drive/store/prodotto/672102/grey-lacchiappa-smacchia-azione-totale-buste-12-x-30-g  | Field: grammage_quantity
+
+- Unescaped | issues – site_shown_uom:
+
+Row 853 | URL: https://spesaonline.esselunga.it/commerce/nav/drive/store/prodotto/672021/omino-bianco-sbianca-lana-cotone-e-seta-5-x-20-g  | Value: 100g (5x20g ¿) | 5 Bustine per complessivi 100g
+Row 1218 | URL: https://spesaonline.esselunga.it/commerce/nav/drive/store/prodotto/161771/equilibra-omega-3-6-32-capsule-384-g  | Value: 32 capsule | Contenuto netto 38,4g ¿
+- promotion_valid_from is populated, but price_valid_from is missing.
+
+Row 2 | URL: https://spesaonline.esselunga.it/commerce/nav/drive/store/prodotto/681674/mastro-lindo-liquido-detergente-per-pavimenti-multiuso-al-profumo-di-limone-di-sicilia-1-l | promotion_valid_from: 07/09/2026 | price_valid_from: Missing
+Row 3 | URL: https://spesaonline.esselunga.it/commerce/nav/drive/store/prodotto/681676/mastro-lindo-liquido-detergente-per-pavimenti-multiuso-al-profumo-di-fiore-delicato-1-l | promotion_valid_from: 07/09/2026 | price_valid_from: Missing
+- Invalid 2 Decimal Format – selling_price:
+
+Row 12 | URL: https://spesaonline.esselunga.it/commerce/nav/drive/store/prodotto/676041/coccolino-wonder-wash-detersivo-ultra-clean-37-lavaggi-1480-ml | Value: 4.0
+Row 32 | URL: https://spesaonline.esselunga.it/commerce/nav/drive/store/prodotto/114125/garofalo-scialatielli-100-pasta-di-gragnano-igp-500-g | Value: 1.4
+
+Invalid 2 Decimal Format – regular_price:
+
+Row 12 | URL: https://spesaonline.esselunga.it/commerce/nav/drive/store/prodotto/676041/coccolino-wonder-wash-detersivo-ultra-clean-37-lavaggi-1480-ml | Value: 8.0
+Row 32 | URL: https://spesaonline.esselunga.it/commerce/nav/drive/store/prodotto/114125/garofalo-scialatielli-100-pasta-di-gragnano-igp-500-g | Value: 1.4
+
