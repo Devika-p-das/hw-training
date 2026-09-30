@@ -1,0 +1,129 @@
+1) DataHut_SI_Spar_PriceExtractions_20260925.CSV
+----------------------------------------------------
+- Data count mismatch
+- Invalid 2 Decimal Format – regular_price:
+
+Row 226 | URL: https://online.spar.si/p/suhe-slive-izkoscicene-seeberger-200g-305593 | regular_price: 5.1
+Row 416 | URL: https://online.spar.si/p/fizol-pisani-s-budget-1kg-348544 | regular_price: 2.5
+
+Invalid 2 Decimal Format – selling_price:
+
+Row 226 | URL: https://online.spar.si/p/suhe-slive-izkoscicene-seeberger-200g-305593 | selling_price: 5.1
+Row 416 | URL: https://online.spar.si/p/fizol-pisani-s-budget-1kg-348544 | selling_price: 2.5
+- Suspicious quantity/unit issues: The grammage_unit is incorrectly represented as g and should be kg for the following records.
+
+Row 646 | URL: https://online.spar.si/p/nadomestek-kave-z-okusom-po-kakavu-calmrooty-62g-681408 | grammage_quantity: 0.062 | grammage_unit: g | Expected unit: kg
+Row 6653 | URL: https://online.spar.si/p/instant-ocvrti-riz-vegetarijanski-mama-80g-683913 | grammage_quantity: 0.080 | grammage_unit: g | Expected unit: kg
+Row 8555 | URL: https://online.spar.si/p/testenine-fusilli-feelingok-220g-679091 | grammage_quantity: 0.220 | grammage_unit: g | Expected unit: kg
+
+2) DataHut_AT_Dm_PriceExtractions_20260925.CSV
+------------------------------------------------
+- Data count mismatch.
+- Invalid 2 Decimal Format – regular_price:
+
+Row 2 | URL: https://www.dm.at/p/d/3160828/lcn-geschenkset-blush | regular_price: 9.9
+Row 6 | URL: https://www.dm.at/p/d/3119014/dm-box-jubilaeumsbox-50-jahre-dm-gesundheit-und-wohlbefinden | regular_price: 5.0
+- Whitespace issues: A total of 47 records contain whitespace issues.
+
+Row 9 | URL: https://www.dm.at/p/d/3155846/essence-lippenstift-gloss-stick-caramelted-01-sweet-lips-caramel-kiss | Column: product_name
+Row 1094 | URL: https://www.dm.at/p/d/3104287/mivolis-tabletten-vitamin-b12-350 | Column: product_name
+
+3) DataHut_AT_Billa_PriceExtractions_20260925.CSV
+---------------------------------------------------
+-Invalid 2 Decimal Format – regular_price:
+
+Row 70 | URL: https://shop.billa.at/produkte/rauch-weizenmehl-extra-fuer-kuchen-0015865 | regular_price: 1.8
+Row 136 | URL: https://shop.billa.at/produkte/oelz-mehrkorntoast-0014336 | regular_price: 3.8
+
+Invalid 2 Decimal Format – selling_price:
+
+Row 70 | URL: https://shop.billa.at/produkte/rauch-weizenmehl-extra-fuer-kuchen-0015865 | selling_price: 1.8
+Row 136 | URL: https://shop.billa.at/produkte/oelz-mehrkorntoast-0014336 | selling_price: 3.8
+- Invalid price relationship: The regular_price, selling_price, and promotion_price are all equal for the following records.
+
+Row 2747 | URL: https://shop.billa.at/produkte/clever-knoblauchbaguette-00422074 | regular_price: 0.99 | selling_price: 0.99 | promotion_price: 0.99
+Row 2915 | URL: https://shop.billa.at/produkte/clever-kraeuterbaguette-00427222 | regular_price: 0.99 | selling_price: 0.99 | promotion_price: 0.99
+
+4) DataHut_CH_Lidl_PriceExtractions_20260925.CSV
+--------------------------------------------------
+- Data count mismatch.
+- Whitespace issues: A total of 2 records contain whitespace issues.
+
+Row 3597 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/20869/s/mini-pizza-pancetta-provola-und-zwiebel-1015165/category/54/ | Column: product_name
+Row 3597 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/20869/s/mini-pizza-pancetta-provola-und-zwiebel-1015165/category/54/ | Column: breadcrumb
+- Missing promotion validity dates: promotion_description is populated, but promotion_valid_from and promotion_valid_upto are missing.
+
+Row 42 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/22168/s/thomy-mayonnaise-mit-senf-duo-1801731/category/54/ | Promotion: Aktion | promotion_valid_from: Missing | promotion_valid_upto: Missing
+Row 43 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/22167/s/asc-crevetten-vannamei-5701929/category/54/ | Promotion: Aktion | promotion_valid_from: Missing | promotion_valid_upto: Missing
+
+5) DataHut_SI_Mercator_PriceExtractions_20260924.CSV
+------------------------------------------------------
+- Data count mismatch.
+- Invalid 2 Decimal Format – regular_price:
+
+Row 313 | regular_price: 0.4
+Row 328 | regular_price: 0.5
+
+Invalid 2 Decimal Format – selling_price:
+
+Row 313 | selling_price: 0.4
+Row 328 | selling_price: 0.5
+
+6) ajmanded_uae_2026_10.json
+------------------------------
+- file name error: ajmanded_uae_2026_10.json instead of ajmanded_uae_2026_09.json
+- Data count mismatch.
+- Whitespace issues found in 2 fields — name and building_number — 123 occurrences across 1,150 records.
+
+Examples:
+
+Row 10 — name: Multiple consecutive spaces
+URL: https://eservices.ajmanded.ae/en/TradeLicense/License/23c94d4d-51a8-4cba-af5e-a10ab18f53c3
+Row 20 — building_number: Multiple consecutive spaces
+URL: https://eservices.ajmanded.ae/en/TradeLicense/License/fd16341b-0fd3-4174-b9af-7d6caa78fec8
+
+8) servicesbahrain_bah_2026_10.json
+------------------------------------
+- file name error
+servicesbahrain_bah_2026_10.json instead of servicesbahrain_bah_2026_09.json
+- Unique id completely empty
+- Data count mismatch
+- Whitespace issues: A total of 31 records contain whitespace issues.
+
+Row 20 | URL: https://services.bahrain.bh/wps/portal/RERA_en#toggle-id-1  | Field: name | Value: MALEEH HOUSE CONTIRACTING ETIATE
+
+9) bayut_properties_buy_commercial_2026_09_16.json
+-------------------------------------------------------
+coverPhoto is missing in the file, even though the photo is available on the website.
+
+Record 2154 | URL: https://www.bayut.com/property/details-16091595.html  | coverPhoto: Missing
+
+- API/File mismatch: The product and productVariant values differ between the API response and the file.
+
+product: File superhot | API premium
+productVariant: Present in file as Signature 14 days | Missing in API
+
+- API/File mismatch: The following fields have differences between the API response and the file:
+
+updatedAt: File 1789392240.0 | API 1790335636
+touchedAt: File 1789393319.390357 | API 1790335641.64633
+baths: File 0 | API null
+area: File 164.53128384000001 | API 164.53128384 — minor decimal precision difference
+score: File 75 | API 100
+score_l1: File 75 | API 88
+coverPhoto.nimaScore: File 5.999940497471496 | API 5.9999404974715 — minor decimal precision difference
+coverPhoto.url: Present in file but missing in API               
+ "listing_url": "https://www.bayut.com/property/details-16430456.html ",
+    
+10) bayut_properties_buy_commercial_metadata_2026_09_23.csv
+------------------------------------------------------------
+No issues found
+
+11) bayut_properties_buy_residential_2026_09_16.json
+-----------------------------------------------------
+Missing coverPhoto: coverPhoto is available on the website but missing in the file.
+eg
+URL: https://www.bayut.com/property/details-16446987.html 
+URL: https://www.bayut.com/property/details-16287660.html 
+
+- coverPhoto.url: Present in file but missing in API   

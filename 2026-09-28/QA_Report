@@ -1,0 +1,161 @@
+1) DataHut_SI_Spar_PriceExtractions_20260928.CSV
+--------------------------------------------------
+- Data count mismatch.
+- Invalid 2 Decimal Format – selling_price:
+
+Row 236 | URL: https://online.spar.si/p/suhe-slive-izkoscicene-seeberger-200g-305593 | selling_price: 5.1
+Row 365 | URL: https://online.spar.si/p/nastrgani-mandlji-spar-200g-274032 | selling_price: 2.2
+
+Invalid 2 Decimal Format – regular_price:
+
+Row 236 | URL: https://online.spar.si/p/suhe-slive-izkoscicene-seeberger-200g-305593 | regular_price: 5.1
+Row 365 | URL: https://online.spar.si/p/nastrgani-mandlji-spar-200g-274032 | regular_price: 2.2
+- Suspicious quantity/unit issues: The grammage_unit is incorrectly represented as g and should be kg for the following records.
+
+Row 683 | URL: https://online.spar.si/p/nadomestek-kave-z-okusom-po-kakavu-calmrooty-62g-681408 | grammage_quantity: 0.062 | grammage_unit: g | Expected unit: kg
+Row 6528 | URL: https://online.spar.si/p/instant-ocvrti-riz-vegetarijanski-mama-80g-683913 | grammage_quantity: 0.08 | grammage_unit: g | Expected unit: kg
+Row 8536 | URL: https://online.spar.si/p/testenine-fusilli-feelingok-220g-679091 | grammage_quantity: 0.22 | grammage_unit: g | Expected unit: kg
+- Missing promotion validity dates: promotion_description is populated, but promotion_valid_from and promotion_valid_upto are missing.
+
+Row 5251 | URL: https://online.spar.si/p/bela-zemlja-spar-60g-678329 | promotion_description: 3 za 0.44 € | promotion_valid_from: Missing | promotion_valid_upto: Missing
+
+2) DataHut_SI_Dm_PriceExtractions_20260928.CSV
+------------------------------------------------
+- Invalid 2 Decimal Format – regular_price:
+
+Row 2 | URL: https://www.dm.si/p/d/3156687/catrice-sponka-za-lase-beyond-the-mirror | regular_price: 4.2
+
+Invalid 2 Decimal Format – selling_price:
+
+Row 2 | URL: https://www.dm.si/p/d/3156687/catrice-sponka-za-lase-beyond-the-mirror | selling_price: 4.2
+- Whitespace issues:
+
+Row 10558 | URL: https://www.dm.si/p/d/1638248/maybelline-new-york-tekoce-rdecilo-za-ustnice-superstay-vinyl-ink-20-coy | Field: product_name
+Row 18 | URL: https://www.dm.si/p/d/1715572/babylove-naravna-mineralna-voda-brez-ogljikovega-dioksida | Field: breadcrumb
+
+3) DataHut_SI_Mercator_PriceExtractions_20260928.CSV
+-------------------------------------------------------
+- Data count mismatch.
+-Invalid 2 Decimal Format – selling_price:
+
+Row 365 | URL: https://mercatoronline.si/izdelek/17720502/maslo-mu-cuisine-20-g | selling_price: 0.4
+
+Invalid 2 Decimal Format – regular_price:
+
+Row 365 | URL: https://mercatoronline.si/izdelek/17720502/maslo-mu-cuisine-20-g | regular_price: 0.4
+
+4) DataHut_AT_Dm_PriceExtractions_20260928.CSV
+------------------------------------------------
+- Data count mismatch
+- Invalid 2 Decimal Format – regular_price:
+
+Row 5 | URL: https://www.dm.at/p/d/3160828/lcn-geschenkset-blush | regular_price: 9.9
+
+Invalid 2 Decimal Format – selling_price:
+
+Row 5 | URL: https://www.dm.at/p/d/3160828/lcn-geschenkset-blush | selling_price: 9.9
+
+- Whitespace issues: A total of 46 records contain whitespace issues.
+
+Row 16 | URL: https://www.dm.at/p/d/3155846/essence-lippenstift-gloss-stick-caramelted-01-sweet-lips-caramel-kiss | Field: product_name
+Row 1046 | URL: https://www.dm.at/p/d/3104287/mivolis-tabletten-vitamin-b12-350 | Field: product_name
+
+5) DataHut_CH_Lidl_FullDump_20260928.CSV
+------------------------------------------
+- Data count mismatch.
+- Invalid 2 Decimal Format – selling_price:
+
+Row 166 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/21852/s/waschmittel-0227829/category/54/ | selling_price: 3.2
+
+Invalid 2 Decimal Format – regular_price:
+
+Row 166 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/21852/s/waschmittel-0227829/category/54/ | regular_price: 3.2
+- Invalid promotion validity dates: promotion_valid_from is greater than promotion_valid_upto, which indicates an invalid promotion date range.
+
+Row 2330 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/13425/s/fondue-chinoise-kalb-0007130/category/54/ | promotion_valid_from: 29.12.2026 | promotion_valid_upto: 28.9.2026
+- Whitespace issues: A total of 4 columns contain whitespace issues.
+
+Row 3745 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/20869/s/mini-pizza-pancetta-provola-und-zwiebel-1015165/category/54/ | Column: product_name
+Row 3745 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/20869/s/mini-pizza-pancetta-provola-und-zwiebel-1015165/category/54/ | Column: producthierarchy_level3
+Row 3745 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/20869/s/mini-pizza-pancetta-provola-und-zwiebel-1015165/category/54/ | Column: breadcrumb
+Row 3032 | URL: https://www.lidl.ch/p/de-CH/esmara-filzhausschuhe/p10059057 | Column: product_description
+
+6) dari_ae_2026_09_05.json
+---------------------------
+- No issues found
+
+7) dubizzle_egp_2026_09_05.json
+-----------------------------------
+- Extra space issues: A total of 219,676 records contain multiple consecutive spaces.
+
+Row 1 | URL: https://www.dubizzle.com.eg/en/ad/unique-villa-for-rent-in-lake-view-compound-ultra-super-lux-full-furnished-in-5th-settlement-at-new-cairo-ID503568174.html | Field: description
+Row 1036 | URL: https://www.dubizzle.com.eg/en/ad/%D9%85%D8%AD%D9%84-%D9%84%D9%84%D8%AA%D9%86%D8%A7%D8%B2%D9%84-%D9%88%D9%84%D9%84%D8%A7%D9%8A%D8%AC%D8%A7%D8%B1-%D9%81%D9%89-%D8%A7%D9%84%D8%BA%D8%B1%D8%AF%D9%82%D8%A9-ID208730087.html | Field: broker_display_name
+Row 1036 | URL: https://www.dubizzle.com.eg/en/ad/%D9%85%D8%AD%D9%84-%D9%84%D9%84%D8%AA%D9%86%D8%A7%D8%B2%D9%84-%D9%88%D9%84%D9%84%D8%A7%D9%8A%D8%AC%D8%A7%D8%B1-%D9%81%D9%89-%D8%A7%D9%84%D8%BA%D8%B1%D8%AF%D9%82%D8%A9-ID208730087.html | Field: broker
+Row 1992 | URL: https://www.dubizzle.com.eg/en/ad/industrial-land-for-sale-on-belbeis-desert-road-suitable-for-all-activities-registered-in-the-real-estate-month-ID504152159.html | Field: location
+
+8) bayut_uae_project_2026_09_05.json
+--------------------------------------
+- Extra space issues: A total of 54 records contain extra spaces.
+
+Row 53 | URL: https://www.bayut.com/for-sale/off-plan/property/dubai/the-oasis-by-emaar/mareva-the-oasis | Field: unit_type
+Row 117 | URL: https://www.bayut.com/for-sale/off-plan/property/dubai/dubai-design-district/atelis-at-d3 | Field: unit_type
+Row 1977 | URL: https://www.bayut.com/for-sale/off-plan/property/abu-dhabi/al-shamkha/al-reeman-1/nourwatan | Field: developer_name
+
+8) aqarmap_egp_2026_09_05.json
+-------------------------------
+- Extra space issues: A total of 124,412 records contain extra spaces.
+
+Row 36 | URL: https://aqarmap.com.eg/en/listing/7254171-for-sale-qalyubia-shubra-el-khaima-el-shareaa-el-gadid-st/ | Field: description
+Row 205 | URL: https://aqarmap.com.eg/en/listing/7272759-for-sale-cairo-new-cairo-bait-el-watan-third-neighborhood/ | Field: title
+Row 443 | URL: https://aqarmap.com.eg/en/listing/7039619-for-sale-cairo-ljyz-shareaa-morad%20%20charel%20degol/ | Field: location
+Row 534 | URL: https://aqarmap.com.eg/en/listing/7223803-for-sale-dakahlia-mansoura-ring-road/ | Field: broker_display_name
+Row 534 | URL: https://aqarmap.com.eg/en/listing/7223803-for-sale-dakahlia-mansoura-ring-road/ | Field: broker
+- Invalid bathrooms values: The bathrooms field contains invalid/unexpected values such as leading-zero integers and decimal values.
+
+Record 47080 | URL: https://aqarmap.com.eg/en/listing/7082129-for-rent-alexandria-al-mamoura/ | bathrooms: 02
+Record 47132 | URL: https://aqarmap.com.eg/en/listing/7001498-for-rent-alexandria-borg-el-arab-compounds-in-borg-el-arab/ | bathrooms: 03
+Record 52486 | URL: https://aqarmap.com.eg/en/listing/7155474-for-sale-cairo-dokki-mydn-lmsh-almosekar-ali-ismail-st/ | bathrooms: 2.5
+Record 67894 | URL: https://aqarmap.com.eg/en/listing/6939476-for-rent-cairo-new-cairo-90th-street-northern-90th-street/ | bathrooms: 01
+Record 76792 | URL: https://aqarmap.com.eg/en/listing/7252376-for-sale-suez-el-arebaaen-el-sadat/ | bathrooms: 0.2
+
+9) bayut_bah_2026_09_05.json
+------------------------------
+- No issues found.
+
+10) qatarliving_qat_2026_09_05.json
+------------------------------------
+- data count mismatch.
+- Whitespace issue found in the description field — 4,092 occurrences across 27,015 records.
+
+Row 15 — description: Multiple consecutive spaces
+URL: https://qlp.qatarliving.com/en/properties/rent/residential/villa_apartment/fully_furnished_studio_available_at_thumama_behind_ansar_gallery/293594 
+
+11) nawy_egp_2026_09_05.json
+------------------------------
+- Data count mismatch.
+- no other issues found
+
+12) hepsiemlak_tur_2026_10.json
+---------------------------------
+- Data count mismatch.
+- file name error: hepsiemlak_tur_2026_10.json instead of hepsiemlak_tur_2026_09.json
+- Whitespace issues found in 6 fields — title, description, agent_name, location, broker_display_name, and broker — 20,895 occurrences across 315,766 records.
+
+Examples:
+
+Row 2 — title: Multiple consecutive spaces
+URL: https://www.hepsiemlak.com/en/kayseri-melikgazi-cumhuriyet-satilik/dukkan-magaza/132722-91 
+Row 74 — description: Multiple consecutive spaces
+URL: https://www.hepsiemlak.com/en/istanbul-beyoglu-kemankes-karamustafa-pasa-satilik/isyeri-bina/111213-930 
+Row 163 — agent_name: Multiple consecutive spaces
+URL: https://www.hepsiemlak.com/en/adana-cukurova-mahfesigmaz-satilik/dukkan-magaza/145385-652 
+Row 2031 — location: Multiple consecutive spaces
+URL: https://www.hepsiemlak.com/en/bolu-mengen-emirler-asagi-emirler-satilik/isyeri-ciftlik/164680-24 
+Row 3065 — broker_display_name: Multiple consecutive spaces
+URL: https://www.hepsiemlak.com/en/proje/bursa-nilufer/efe-yamac-evleri-projesi-6424 
+Row 3065 — broker: Multiple consecutive spaces
+URL: https://www.hepsiemlak.com/en/proje/bursa-nilufer/efe-yamac-evleri-projesi-6424 
+
+13) DataHut_AT_Dm_FullDump_20261001.CSV
+-----------------------------------------
+

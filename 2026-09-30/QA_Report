@@ -1,0 +1,126 @@
+1) DataHut_SI_Dm_PriceExtractions_20260930.CSV
+------------------------------------------------
+- Whitespace issues: A total of 2 columns contain whitespace issues.
+
+Row 296 | URL: https://www.dm.si/p/d/1321849/essence-maskara-i-love-extreme-volume  | Column: product_name
+Row 21 | URL: https://www.dm.si/p/d/3164723/snails-zelena-kreda-za-lase  | Column: breadcrumb
+
+2) DataHut_SI_Mercator_PriceExtractions_20260930.CSV
+----------------------------------------------------
+- Missing promotion price: The website has two prices, but the file contains only one price. regular_price and selling_price are both 2.09, while promotion_price is missing despite the promotion being present.
+
+Row 40 | URL: https://mercatoronline.si/izdelek/17533006/tekoci-jogurt-3-2-m-m-zelene-doline-1-kg  | promotion_description: Za imetnike Pika kartice 21% ceneje | regular_price: 2.09 | selling_price: 2.09 | promotion_price: Missing | promotion_valid_from: Missing | promotion_valid_upto: Missing
+
+3) DataHut_SI_Spar_PriceExtractions_20260930.CSV
+-------------------------------------------------
+- Suspicious quantity/unit issues: The grammage_unit is incorrectly represented as g and should be kg for the following records.
+ 
+Row 625 | URL: https://online.spar.si/p/nadomestek-kave-z-okusom-po-kakavu-calmrooty-62g-681408  | grammage_quantity: 0.062 | grammage_unit: g | Expected unit: kg
+Row 6555 | URL: https://online.spar.si/p/instant-ocvrti-riz-vegetarijanski-mama-80g-683913  | grammage_quantity: 0.08 | grammage_unit: g | Expected unit: kg
+Row 8575 | URL: https://online.spar.si/p/testenine-fusilli-feelingok-220g-679091  | grammage_quantity: 0.22 | grammage_unit: g | Expected unit: kg
+
+4) DataHut_AT_Spar_PriceExtractions_20260930.CSV
+------------------------------------------------
+- Missing price: The price field is missing in the file, even though the price is available on the website.
+
+Row 43168 | URL: https://www.spar.at/produktwelt/simpex-color-steckdose-4-fach-mit-schalter-weiss-p2020002366551  | price: Missing
+- Whitespace issues: A total of 1 record contains whitespace issues.
+
+Row 26144 | URL: https://www.spar.at/produktwelt/vorarlberg-milch-laendle-halbfettmilch-laenger-frisch-1-5-fett-p2020006312547  | Column: breadcrumb
+
+- Unescaped | issues – product_name:
+
+Row 9117 | URL: https://www.spar.at/produktwelt/isana-cleanser-aha-pha-peeling-125ml-p2020006024686  | product_name: Isana AHA | PHA Cleanser 125 ml
+
+Unescaped | issues – site_shown_uom:
+
+Row 18791 | URL: https://www.spar.at/produktwelt/mehrzweckschrauben-4x40-150stk-p2020005763197  | site_shown_uom: BGS Mehrzweckschrauben | 4,0 x 40 mm | 150 Stück
+
+5) DataHut_AT_Dm_PriceExtractions_20260930.CSV
+----------------------------------------------
+- "Whitespace issues: A total of 1 column contains whitespace issues.
+
+Row 52 | URL: https://www.dm.at/p/d/3155846/essence-lippenstift-gloss-stick-caramelted-01-sweet-lips-caramel-kiss  | Column: product_name" 
+
+6) haraj_ksa_2026_10.json
+--------------------------
+- Data count mismatch.
+- - Whitespace issues: A total of 14,999 records contain whitespace issues.
+
+Row 4 | URL: https://haraj.com.sa/11183129046/بيت_ريفي-_منتجع-_استراحة-_شقة_في_النماص | Field: description | Issue: Multiple consecutive spaces
+Row 43 | URL: https://haraj.com.sa/11183402027/دور_علوي_للإيجار___جديد___كراج_خاص | Field: title | Issue: Multiple consecutive spaces
+Row 416 | URL: https://haraj.com.sa/11188336528/ارغب_بمزرعه_متوفر_فيها_الماء | Field: broker_display_name | Issue: Multiple consecutive spaces
+Row 416 | URL: https://haraj.com.sa/11188336528/ارغب_بمزرعه_متوفر_فيها_الماء | Field: broker | Issue: Multiple consecutive spaces
+Row 416 | URL: https://haraj.com.sa/11188336528/ارغب_بمزرعه_متوفر_فيها_الماء | Field: user_id | Issue: Multiple consecutive spaces
+Row 22481 | URL: https://haraj.com.sa/11188460885/للبيع_أرض_تجارية_بمخطط_الوفاء(شمال_جدة) | Field: url | Issue: Leading/trailing whitespace
+Row 22481 | URL: https://haraj.com.sa/11188460885/للبيع_أرض_تجارية_بمخطط_الوفاء(شمال_جدة) | Field: title | Issue: Leading/trailing whitespace
+
+
+7) bayut_ksa_2026_10.json
+-------------------------
+- Whitespace issues: A total of 460 records contain whitespace issues.
+
+Row 56 | URL: https://www.bayut.sa/en/property/details-88129328.html  | Field: agent_name | Issue: Multiple consecutive spaces
+Row 269 | URL: https://www.bayut.sa/en/property/details-87948473.html  | Field: description | Issue: Multiple consecutive spaces
+Row 1121 | URL: https://www.bayut.sa/en/property/details-88119490.html  | Field: location | Issue: Multiple consecutive spaces
+
+8) compass_2026_10_05.json
+---------------------------
+- - Invalid email value: The email field contains an extra value attached to the email address.
+
+Row 24009 | URL: https://www.compass.com/agents/brandon-walls/  | email: brandon.walls@compass.com | DRE# 01806256
+
+- Whitespace issues: A total of 9 records contain whitespace issues.
+
+Row 4710 | Profile URL: https://www.compass.com/agents/tuite-group/  | Field: first_name | Issue: Multiple consecutive spaces
+Row 12230 | Profile URL: https://www.compass.com/agents/chelsea-hale/  | Field: website | Issue: Newline character
+
+
+9) bhgre_2026_10_05.json
+-------------------------
+- Invalid website:
+
+Record 135 | Website: https://www.mainstreetproperty.com/agents/1092162/Travis High 
+
+Invalid website URL: The URL is incorrectly formatted, as dorotachojnacki is used as the hostname while cocciarealty.sites.bhgrealestate.com is placed in the path.
+
+Record 9978 | Website: http://dorotachojnacki/cocciarealty.sites.bhgrealestate.com 
+- The country field is incorrectly populated as Jamaica instead of United States for the following records.
+
+Row 4413 | Country: Jamaica | URL: https://www.bhgre.com/jam/city-unavailable/agents/better-homes-and-gardens-real-estate-jamaica/aid-P00200000FDdscdXBZtMRb3oSgOQD9P9S6pLBP1I 
+Row 8591 | Country: Jamaica | URL: https://www.bhgre.comNone 
+Row 8592 | Country: Jamaica | URL: https://www.bhgre.com/jam/city-unavailable/agents/edwin-wint/aid-P00200000FDdqSekqCfO4OyzqGu2mbNGsFTEcVYL 
+
+10) century21_us_2026_10_05.json
+---------------------------------
+- Data count mismatch.
+- Whitespace issues: A total of 9 records contain whitespace issues.
+
+Row 4710 | Profile URL: https://www.compass.com/agents/tuite-group/  | Field: first_name | Issue: Multiple consecutive spaces
+Row 12230 | Profile URL: https://www.compass.com/agents/chelsea-hale/  | Field: website | Issue: Newline character
+
+11) sedd_uae_2026_10.json
+--------------------------
+- Data count mismatch
+- Invalid broker_licenses format: The broker_licenses field is expected to contain a list of dictionaries, but the data contains individual dictionaries separated by commas without being enclosed in a list ([]).
+- Whitespace issues: A total of 59 records contain whitespace issues.
+
+Row 712 | URL: https://eservices.sedd.ae/eservicesweb/license-transactions/search_license/main-inq-lic.xhtml?lang=en&filterTrdNameEn=  | Field: name | Issue: Multiple consecutive spaces
+
+12) emlakjet_tur_2026_10.json
+------------------------------
+currency contains values
+TL              297161
+empty            205
+£                121
+
+
+13) bayut_properties_rent_residential_2026_09_30.json
+------------------------------------------------------
+- Data count mismatch.
+- Cover Photo URL Missing
+coverPhoto.url is present in the file but missing in the API response.
+Data Type Difference
+createdAt, approvedAt, updatedAt, and reactivatedAt are float in the file but integer in the API, with the same underlying values.
+Value Difference
+

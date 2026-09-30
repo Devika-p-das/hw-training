@@ -1,0 +1,178 @@
+1) DataHut_AT_Dm_FullDump_20261001.CSV
+-----------------------------------------
+- Data count mismatch.
+- Empty column comparison:
+
+Expected empty but not empty:
+barcode
+Unexpected empty columns:
+producthierarchy_level5
+file_name_1
+file_name_2
+file_name_3
+file_name_4
+file_name_5
+file_name_6
+- Whitespace issues: A total of 11 columns contain whitespace issues.
+
+Row 23 | URL: https://www.dm.at/p/d/3155846/essence-lippenstift-gloss-stick-caramelted-01-sweet-lips-caramel-kiss  | Column: product_name
+Row 1784 | URL: https://www.dm.at/p/d/1712325/reell-e-toenungsshampoo-10-11-silbergrau  | Column: variants
+Row 2 | URL: https://www.dm.at/p/d/3160828/lcn-geschenkset-blush  | Column: product_description
+Row 41 | URL: https://www.dm.at/p/d/3139842/jean-und-len-duschschaum-sweet-soul-pistachio-und-vanilla  | Column: storage_instructions
+Row 35 | URL: https://www.dm.at/p/d/1617230/hipp-anfangsmilch-bio-combiotik-pre-von-geburt-an  | Column: preparationinstructions
+Row 839 | URL: https://www.dm.at/p/d/3115277/mivolis-tabletten-haut-haare-naegel | Column: country_of_origin
+Row 534 | URL: https://www.dm.at/p/d/3134117/dmbio-babysnack-mehrkornsterne-pastinake-und-rote-bete-ab-dem-10-monat  | Column: labelling
+Row 1229 | URL: https://www.dm.at/p/d/1690477/balea-fuss-und-nagelbalsam  | Column: label_information
+Row 543 | URL: https://www.dm.at/p/d/3114649/jessa-periodenunterwaesche-slip-teens-gr-158-164  | Column: material
+Row 3967 | URL: https://www.dm.at/p/d/1709020/manhattan-cosmetics-the-multi-tasker-concealer-25-rose-ivory  | Column: ingredients
+Row 30 | URL: https://www.dm.at/p/d/3078718/balea-gesichtshaarentferner  | Column: warning
+- Invalid 2 Decimal Format – regular_price:
+
+Row 2 | URL: https://www.dm.at/p/d/3160828/lcn-geschenkset-blush | regular_price: 9.9
+Row 10 | URL: https://www.dm.at/p/d/3154461/beurer-foehn-glamour | regular_price: 149.9
+Invalid 2 Decimal Format – selling_price:
+
+Row 2 | URL: https://www.dm.at/p/d/3160828/lcn-geschenkset-blush | selling_price: 9.9
+Row 10 | URL: https://www.dm.at/p/d/3154461/beurer-foehn-glamour | selling_price: 149.9
+
+2) DataHut_AT_Spar_PriceExtractions_20260929.CSV
+-------------------------------------------------
+- Missing price: The price field is missing in the file, even though the price is available on the website.
+
+Row 43187 | URL: https://www.spar.at/produktwelt/spar-premium-weinviertler-salat-erdaepfel-festkochend-p2020001582457 
+- Whitespace issues: A total of 1 record contains whitespace issues.
+
+Row 26068 | URL: https://www.spar.at/produktwelt/vorarlberg-milch-laendle-halbfettmilch-laenger-frisch-1-5-fett-p2020006312547  | Column: breadcrumb
+- Unescaped | issues – product_name:
+
+Row 8151 | URL: https://www.spar.at/produktwelt/isana-cleanser-aha-pha-peeling-125ml-p2020006024686 | product_name: Isana AHA | PHA Cleanser 125 ml
+
+Unescaped | issues – site_shown_uom:
+
+Row 19130 | URL: https://www.spar.at/produktwelt/mehrzweckschrauben-4x40-150stk-p2020005763197 | site_shown_uom: BGS Mehrzweckschrauben | 4,0 x 40 mm | 150 Stück
+
+3) DataHut_AT_Billa_PriceExtractions_20260929.CSV
+--------------------------------------------------
+- Invalid 2 Decimal Format – regular_price:
+
+Row 105 | URL: https://shop.billa.at/produkte/oelz-mehrkorntoast-0014336 | regular_price: 3.8
+
+Invalid 2 Decimal Format – selling_price:
+
+Row 131 | URL: https://shop.billa.at/produkte/rauch-weizenmehl-extra-fuer-kuchen-0015865 | selling_price: 1.8
+- Invalid price relationship: The regular_price, selling_price, and promotion_price are all equal for the following records.
+
+Row 2836 | URL: https://shop.billa.at/produkte/clever-knoblauchbaguette-00422074 | regular_price: 0.99 | selling_price: 0.99 | promotion_price: 0.99
+Row 2992 | URL: https://shop.billa.at/produkte/clever-kraeuterbaguette-00427222 | regular_price: 0.99 | selling_price: 0.99 | promotion_price: 0.99
+
+4) DataHut_AT_Dm_PriceExtractions_20260929.CSV
+-----------------------------------------------
+- Data count mismatch
+- Invalid 2 Decimal Format – selling_price:
+
+Row 4 | URL: https://www.dm.at/p/d/3160828/lcn-geschenkset-blush | selling_price: 9.9
+
+Invalid 2 Decimal Format – regular_price:
+
+Row 12 | URL: https://www.dm.at/p/d/3154461/beurer-foehn-glamour | regular_price: 149.9
+- Whitespace issues: A total of 1 column contains whitespace issues.
+
+Row 61 | URL: https://www.dm.at/p/d/3155846/essence-lippenstift-gloss-stick-caramelted-01-sweet-lips-caramel-kiss | Column: product_name
+
+5) bayut_egp_2026_09_05.json
+------------------------------
+
+6) DataHut_AU_Coles_FullDump_20260930.CSV
+------------------------------------------
+- Data count mismatch.
+- Invalid 2 Decimal Format – regular_price:
+Row 2 | URL: https://www.coles.com.au/product/coles-simply-salted-butter-500g-3169880 | regular_price: 7.0
+- Invalid 2 Decimal Format – selling_price:
+Row 3 | URL: https://www.coles.com.au/product/reese%27s-nutrageous-ice-cream-tub-1l-5016482 | regular_price: 11.0_
+- Expected empty but not empty:
+
+regular_price
+barcode
+
+Unexpected empty columns:
+
+store_name
+store_state
+store_postcode
+producthierarchy_level1
+producthierarchy_level2
+producthierarchy_level3
+promotion_price
+promotion_type
+promotion_description
+multi_buy_item_count
+multi_buy_items_price_total
+breadcrumb
+labelling
+file_name_1
+features
+promo_limit
+multibuy_items_pricesingle
+suitable_for
+environmental
+retail_limit
+
+7) evrealestate_2026_10_05.json
+--------------------------------
+- data count mismatch.
+- Whitespace issues: A total of 210 records contain whitespace issues.
+
+Row 6 | URL: https://www.evrealestate.com/en/our-advisors/aaron-kuehl/1c241a84-c5b3-4599-93cc-e2ad7a6058a2?userId=6913e3d7-53ea-4a37-bb50-5918c6e3540a | Field: title | Issue: Multiple consecutive spaces | Value: Real Estate Advisor | Personal Real Estate Corporation
+Row 89 | URL: https://www.evrealestate.com/en/our-advisors/alex-shaw/08522373-e78c-4e4e-8d79-7316fb9521cd?userId=be189a23-3a7a-408b-ab39-767aa0aac1ec | Field: city | Issue: Leading/trailing whitespace | Value: New York
+Row 656 | URL: https://www.evrealestate.com/en/our-advisors/braden-reimer/92457a29-96df-40d3-9404-d46e5699ed86?userId=987be37e-b6e9-46bf-9d2e-d6f654a230b1 | Field: zipcode | Issue: Leading/trailing whitespace | Value: V1M0E6
+
+8) dubizzle_uae_2026_09_05.json
+----------------------------------
+- Whitespace issues: A total of 93,826 records contain whitespace issues.
+
+Row 4 | URL: https://dubai.dubizzle.com/property-for-rent/short-term/apartmentflat/2026/8/4/modern-2br-retreat-near-downtown-dubai-2-261020/ | Field: description | Issue: Multiple consecutive spaces
+Row 15 | URL: https://dubai.dubizzle.com/property-for-rent/short-term/apartmentflat/2026/8/21/charming-1bhk-stay-vera-residence-near--2-311356/ | Field: agent_name | Issue: Multiple consecutive spaces | Value: Aram Said
+Row 152 | URL: https://dubai.dubizzle.com/property-for-rent/short-term/apartmentflat/2026/8/21/fully-furnished-studio-the-vogue-flexib-2-319636/ | Field: broker | Issue: Multiple consecutive spaces | Value: SEJOURNE HOLIDAY HOMES
+Row 152 | URL: https://dubai.dubizzle.com/property-for-rent/short-term/apartmentflat/2026/8/21/fully-furnished-studio-the-vogue-flexib-2-319636/ | Field: broker_display_name | Issue: Multiple consecutive spaces | Value: Sejourne Holiday Homes
+Row 2214 | URL: https://dubai.dubizzle.com/property-for-rent/short-term/apartmentflat/2026/9/2/jvc-studio-apt-ghalia-tower-5500-aed-inclu-2-785/ | Field: title | Issue: Multiple consecutive spaces | Value: Jvc studio apt ghalia tower 5500 aed inclusive all fix rate [/](https://file+.vscode-resource.vscode-cdn.net/) free comission/ bills/ parking
+Row 73519 | URL: https://sharjah.dubizzle.com/property-for-rent/residential/apartmentflat/2025/8/3/beautiful-1bhk-for-bachelors-central-ac-12-297613/ | Field: reference_number | Issue: Multiple consecutive spaces | Value: Usman 635
+
+9) bayut_properties_buy_commercial_2026_09_30.json
+--------------------------------------------------------
+Cover Photo URL Missing
+coverPhoto.url is present in the file but missing in the API.
+Data Type Difference
+createdAt: API integer | File float
+approvedAt: API integer | File float
+updatedAt: API integer | File float
+reactivatedAt: API integer | File float
+Value Difference
+touchedAt: API 1790666185.24168 | File 1790666185.241677 — minor decimal precision difference.
+coverPhoto.nimaScore: API 6.54583162029758 | File 6.545831620297577 — minor decimal precision difference.
+
+Listing URL: https://www.bayut.com/property/details-16602575.html
+
+
+10) bayut_properties_rent_commercial_2026_09_30.json
+-----------------------------------------------------
+Cover Photo URL Missing
+coverPhoto.url is present in the file but missing in the API response.
+Data Type Difference
+createdAt, approvedAt, updatedAt, and reactivatedAt are float in the file but integer in the API, with the same underlying values.
+Value Difference
+touchedAt: File 1790664018.334662 | API 1790664018.33466 — minor decimal precision difference.
+area: File 17.187062400000002 | API 17.1870624 — minor decimal precision difference.
+EG: "listing_url": "https://www.bayut.com/property/details-15830793.html"
+
+11) ewm_2026_10_05.json
+-------------------------
+- No issues found
+
+12) dubizzle_qat_2026_09_05.json
+----------------------------------
+- Whitespace issues: A total of 904 records contain whitespace issues.
+
+Row 1 | URL: https://www.dubizzle.qa/en/ad/warehouse-for-rent-in-birkat-al-awamer-land-area-1000-sqm-ID120349113.html | Field: title | Issue: Multiple consecutive spaces | Value: Warehouse for rent in Birkat Al-Awamer. Land area: 1000 sqm
+Row 3 | URL: https://www.dubizzle.qa/en/ad/fully-covered-warehouse-for-rent-al-khor-qatar-ID120372251.html | Field: description | Issue: Multiple consecutive spaces
+Row 1090 | URL: https://www.dubizzle.qa/en/ad/concrete-room-with-attached-bathroom-in-mansoura-for-2000-ID120378342.html | Field: broker_display_name | Issue: Multiple consecutive spaces | Value: Farhan Hussain
+Row 1090 | URL: https://www.dubizzle.qa/en/ad/concrete-room-with-attached-bathroom-in-mansoura-for-2000-ID120378342.html | Field: broker | Issue: Multiple consecutive spaces | Value: FARHAN HUSSAIN
