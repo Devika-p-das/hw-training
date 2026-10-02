@@ -1,0 +1,140 @@
+1) DataHut_AT_Spar_FullDump_20261001.CSV
+----------------------------------------
+- Data count mismatch.
+- Whitespace issues: A total of 4 columns contain whitespace issues.
+
+Row 23114 | URL: https://www.spar.at/produktwelt/vorarlberg-milch-laendle-halbfettmilch-laenger-frisch-1-5-fett-p2020006312547 | Column: producthierarchy_level6
+Row 482 | URL: https://www.spar.at/produktwelt/s-budget-toiletten-papier-10-rollen-p2020006211093 | Column: breadcrumb
+Row 208 | URL: https://www.spar.at/produktwelt/spar-natur-pur-weisser-bio-spritzer-p2020006162548 | Column: product_description
+Row 42323 | URL: https://www.spar.at/produktwelt/timi-apfelwuerfel-lamamix-p2020002737733 | Column: ingredients
+- Whitespace issues: A total of 4 columns contain whitespace issues.
+
+Row 23114 | URL: https://www.spar.at/produktwelt/vorarlberg-milch-laendle-halbfettmilch-laenger-frisch-1-5-fett-p2020006312547 | Column: producthierarchy_level6
+Row 482 | URL: https://www.spar.at/produktwelt/s-budget-toiletten-papier-10-rollen-p2020006211093 | Column: breadcrumb
+Row 208 | URL: https://www.spar.at/produktwelt/spar-natur-pur-weisser-bio-spritzer-p2020006162548 | Column: product_description
+Row 42323 | URL: https://www.spar.at/produktwelt/timi-apfelwuerfel-lamamix-p2020002737733 | Column: ingredients
+
+
+2) DataHut_AT_Dm_FullDump_20261001.CSV
+---------------------------------------
+- Data count mismatch.
+- Expected empty but not empty:
+
+barcode
+retail_limit
+
+Unexpected empty columns:
+
+producthierarchy_level5
+file_name_1
+file_name_2
+file_name_3
+file_name_4
+file_name_5
+file_name_6
+- Whitespace issues: A total of 10 columns contain whitespace issues.
+
+Row 22 | URL: https://www.dm.at/p/d/3155846/essence-lippenstift-gloss-stick-caramelted-01-sweet-lips-caramel-kiss | Column: product_name
+Row 1757 | URL: https://www.dm.at/p/d/1712325/reell-e-toenungsshampoo-10-11-silbergrau | Column: variants
+Row 4 | URL: https://www.dm.at/p/d/3160828/lcn-geschenkset-blush | Column: product_description
+Row 91 | URL: https://www.dm.at/p/d/1888537/dettol-allzwecktuecher-granatapfel-und-limette | Column: storage_instructions
+Row 34 | URL: https://www.dm.at/p/d/1617230/hipp-anfangsmilch-bio-combiotik-pre-von-geburt-an | Column: preparationinstructions
+Row 831 | URL: https://www.dm.at/p/d/3115277/mivolis-tabletten-haut-haare-naegel | Column: country_of_origin
+Row 529 | URL: https://www.dm.at/p/d/3134117/dmbio-babysnack-mehrkornsterne-pastinake-und-rote-bete-ab-dem-10-monat | Column: labelling
+Row 1211 | URL: https://www.dm.at/p/d/1690477/balea-fuss-und-nagelbalsam | Column: label_information
+Row 537 | URL: https://www.dm.at/p/d/3114649/jessa-periodenunterwaesche-slip-teens-gr-158-164 | Column: material
+Row 29 | URL: https://www.dm.at/p/d/3078718/balea-gesichtshaarentferner | Column: warning
+
+3) DataHut_CH_Coop_FullDump_20261001.CSV
+--------------------------------------------
+- Invalid price_was: According to the requirement, when producthierarchy_level3 is Fleisch & Fisch, the price_was field should be empty. However, price_was is populated in the following records.
+
+Row 1666 | URL: https://www.coop.ch/de/lebensmittel/fleisch-fisch/abgepacktes-frischfleisch/hackfleisch/rinds-hackfleisch-2x400g/p/6570396 | price_was: 1.95
+Row 1733 | URL: https://www.coop.ch/de/lebensmittel/fleisch-fisch/abgepacktes-frischfleisch/schwein/schweinsfilet-ca/p/3438152 | price_was: 4.34
+Row 1739 | URL: https://www.coop.ch/de/lebensmittel/fleisch-fisch/abgepacktes-frischfleisch/gefluegel/pouletschenkel-ca/p/6477605 | price_was: 1.30
+- Invalid breadcrumbs: The breadcrumb values contain consecutive > separators,
+Row 17955 | URL: https://www.coop.ch/de//chateau-du-tertre-margaux-ac-5eme-cru-classe/p/3174651024 | breadcrumb: Startseite > > Château du Tertre Margaux AC 5ème Cru Classé
+Row 19405 | URL: https://www.coop.ch/de//haut-medoc-ac-chateau-clement-pichon/p/3499535009 | breadcrumb: Startseite > > Haut-Médoc AC Château Clément Pichon 
+- Missing price: The price is available on the website, but the price fields are missing in the file.
+
+Row 1914 | URL: https://www.coop.ch/de/lebensmittel/fleisch-fisch/abgepacktes-frischfleisch/schwein/prix-garantie-schweinssteak-nierstueck-4-5-stueck-ca/p/3466031
+- Missing image: The image is available on the website but missing in the file.
+
+Row 7081 | URL: https://www.coop.ch/de/lebensmittel/suesses-snacks/schokolade-suessigkeiten/schokoladen-pralinen/pralinen-kugeln-carres/lindt-lindor-double-chocolate/p/6709231
+Row 13366 | URL: https://www.coop.ch/de/kosmetik-gesundheit/gesundheit-wohlbefinden/vitamine-mineralstoffe-spurenelemente/mineralstoffe-spurenelemente/conviva-electrolytes-brausetablette-20-stueck/p/7414962
+
+4) DataHut_CH_Denner_FullDump_20261001.CSV
+--------------------------------------------
+- Missing promotion price: The promotion price is available on the website but missing in the file, even though percentage_discount and promotion_description are populated.
+
+Row 511 | URL: https://www.denner.ch/de/aktionen/treize-Etoiles-fendant-du-valais-aoc~p1026475?variant=5e4f78f0-8ba7-41a4-a9fc-a693eaa25676 | percentage_discount: 26 | promotion_description: 26% | promotion_price: Missing
+
+5) DataHut_SI_Mercator_FullDump_20261001.CSV
+---------------------------------------------
+- Data count mismatch
+- Whitespace issues: A total of 1 column contains whitespace issues.
+
+Row 242 | URL: https://mercatoronline.si/izdelek/18712103/bio-kefir-3-2-m-m-krepko-250-g | Column: brand
+
+6) DataHut_CH_Migros_FullDump_20261001.CSV
+-------------------------------------------
+- Data count mismatch.
+- Whitespace issues: A total of 2 columns contain whitespace issues.
+
+Row 22291 | URL: https://www.migros.ch/de/product/720516100012 | Column: size
+Row 9424 | URL: https://www.migros.ch/de/product/120912100000 | Column: site_shown_uom
+- Missing breadcrumb: A total of 217 rows have missing breadcrumb values.
+
+Row 28014 | URL: https://www.migros.ch/de/product/521116600000
+Row 28016 | URL: https://www.migros.ch/de/product/521116800000
+- The percentage_discount and promotion_description are populated in the file, but no price or promotion description is present on the website.
+
+Row 788 | URL: https://www.migros.ch/de/product/220256055810 | percentage_discount: 22.0 | promotion_description: 22% | promotion_price: NaN
+
+7) DataHut_CH_Lidl_FullDump_20261001.CSV
+--------------------------------------------
+- Whitespace issues: A total of 4 columns contain whitespace issues.
+
+Row 3576 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/20869/s/mini-pizza-pancetta-provola-und-zwiebel-1015165/category/54/ | Column: product_name
+Row 3576 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/20869/s/mini-pizza-pancetta-provola-und-zwiebel-1015165/category/54/ | Column: producthierarchy_level3
+Row 3576 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/20869/s/mini-pizza-pancetta-provola-und-zwiebel-1015165/category/54/ | Column: breadcrumb
+Row 2968 | URL: https://www.lidl.ch/p/de-CH/esmara-steppweste/p10059132 | Column: product_description
+- Invalid 2 Decimal Format – regular_price: A total of 81 records contain invalid regular_price values that are not in 2-decimal format.
+
+Row 46 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/22213/s/mauro-5114696/category/54/  | regular_price: 29.5
+
+Invalid 2 Decimal Format – selling_price: A total of 82 records contain invalid selling_price values that are not in 2-decimal format.
+
+Row 46 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/22213/s/mauro-5114696/category/54/  | selling_price: 29.5
+
+- Missing price_was: A total of 3328 records have a populated regular_price, but price_was is missing.
+
+Row 4 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/16524/s/high-protein-reibkaese-0194555/category/54/  | regular_price: 2.49 | price_was: Missing
+Row 5 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/11808/s/zucchetti-0082345/category/54/  | regular_price: 2.49 | price_was: Missing
+Row 6 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/12790/s/trauben-hell-kernlos-0080505/category/54/  | regular_price: 1.75 | price_was: Missing
+- Missing promotion validity dates: promotion_description, promotion_price, and promotion_valid_from are populated, but promotion_valid_upto is missing.
+
+Row 2939 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/11267/s/bio-bluetenhonig-0052439/category/54/  | promotion_description: -20% | promotion_price: 3.95 | promotion_valid_from: 1.10.2026 | promotion_valid_upto: Missing
+Row 3412 | URL: https://www.lidl.ch/p/de-CH/halloween-kerzen-sortiment/p10059849  | promotion_description: -16% | promotion_price: 2.49 | promotion_valid_from: 1.10.2026 | promotion_valid_upto: Missing
+
+8) aqar_ksa_2026_10.json
+--------------------------
+- Data count mismatch.
+- currency is empty for 236 records
+- Fields with whitespace issues: 3
+ record_no                                                                                                                            url issue_field
+      3989 https://sa.aqar.fm/فلل-للبيع/الرياض/شرق-الرياض/حي-الروابي/شارع-\r\n\r\nأنوار-سهيل-حي-الروابي-مدينة-الرياض-منطقة-الرياض-6797938         url
+       244            https://sa.aqar.fm/شقق-للإيجار/جدة/شمال-جدة/حي-الروضة/شارع-حمد-الحقيل-حي-الروضة-مدينة-جدة-منطقة-مكة-المكرمة-6887688       title
+        49                     https://sa.aqar.fm/أراضي-للبيع/الدمام/حي-المطار/شارع-المؤذن-حي-المطار-مدينة-الدمام-المنطقة-الشرقية-6713478 description
+- Invalid URL: The url field contains newline (\r\n) characters, making the URL invalid.
+
+Row 3988 | URL: https://sa.aqar.fm/فلل-للبيع/الرياض/شرق-الرياض/حي-الروابي/شارع-\r\n\r\nأنوار-سهيل-حي-الروابي-مدينة-الرياض-منطقة-الرياض-6797938
+Row 4007 | URL: https://sa.aqar.fm/مزرعة-للبيع/الهفوف/حي-الجرن/شارع-سعود-بن-فيصل-بن-تركي\r\n-مدينة-الاحساء-المنطقة-الشرقية-6884492        
+
+9) royallepage_2026_10_05.json
+---------------------------------
+- Whitespace issues: A total of 3 fields contain whitespace issues.
+
+Record 5187 | URL: https://www.royallepage.ca/en/agent/ontario/mississauga/shervin-khajeh-hassani-mohammadian/95673/ | Field: first_name
+Record 4198 | URL: https://www.royallepage.ca/en/agent/ontario/kenora/jeff-vanwalleghem/31792/ | Field: office_name
+Record 6753 | URL: https://www.royallepage.ca/en/agent/ontario/stoney-creek/garry-singh/76784/ | Field: social
