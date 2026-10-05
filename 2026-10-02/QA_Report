@@ -1,0 +1,92 @@
+1) DataHut_SI_Spar_PriceExtractions_20261002.CSV
+-------------------------------------------------
+- Data count mismatch
+-Suspicious quantity/unit issues: A total of 3 records have grammage_unit incorrectly represented as g instead of kg.
+
+Row 708 | URL: https://online.spar.si/p/nadomestek-kave-z-okusom-po-kakavu-calmrooty-62g-681408  | grammage_quantity: 0.062 | grammage_unit: g | Expected unit: kg
+Row 6644 | URL: https://online.spar.si/p/instant-ocvrti-riz-vegetarijanski-mama-80g-683913  | grammage_quantity: 0.08 | grammage_unit: g | Expected unit: kg
+Row 8700 | URL: https://online.spar.si/p/testenine-fusilli-feelingok-220g-679091  | grammage_quantity: 0.22 | grammage_unit: g | Expected unit: kg
+
+- Missing promotion_valid_upto: The promotion_valid_upto date is available on the website but missing in the file.
+
+Row 3847 | URL: https://online.spar.si/p/ledeni-caj-z-okusom-gozdnih-sadezev-fructal-1l-663815 
+Row 3849 | URL: https://online.spar.si/p/ledeni-caj-z-okusom-breskve-fructal-15l-663814 
+Row 10496 | URL: https://online.spar.si/p/flips-z-arasidi-smoki-stark-50g-339150 
+
+2) DataHut_SI_Dm_PriceExtractions_20261002.CSV
+------------------------------------------------
+- Whitespace issues: A total of 2 columns contain whitespace issues.
+
+Row 222 | URL: https://www.dm.si/p/d/1321849/essence-maskara-i-love-extreme-volume | Column: product_name
+Row 8 | URL: https://www.dm.si/p/d/1715572/babylove-naravna-mineralna-voda-brez-ogljikovega-dioksida | Column: breadcrumb
+
+3) DataHut_SI_Mercator_PriceExtractions_20261002.CSV
+------------------------------------------------------
+- Data count mismatch.
+
+4) DataHut_AT_Dm_PriceExtractions_20261002.CSV
+------------------------------------------------
+- Invalid 2 Decimal Format – selling_price: A total of 1938 records contain invalid selling_price values that are not in 2-decimal format.
+
+Row 5 | URL: https://www.dm.at/p/d/3160828/lcn-geschenkset-blush  | selling_price: 9.9
+- Invalid 2 Decimal Format – regular_price: A total of 1932 records contain invalid regular_price values that are not in 2-decimal format.
+
+Row 5 | URL: https://www.dm.at/p/d/3160828/lcn-geschenkset-blush  | regular_price: 9.9
+
+- Whitespace issues: A total of 1 column contains whitespace issues.
+
+Row 13 | URL: https://www.dm.at/p/d/3155846/essence-lippenstift-gloss-stick-caramelted-01-sweet-lips-caramel-kiss  | Column: product_name
+
+5) DataHut_AT_Spar_PriceExtractions_20261002.CSV
+--------------------------------------------------
+Whitespace issues: A total of 1 column contains whitespace issues.
+
+Row 24661 | URL: https://www.spar.at/produktwelt/vorarlberg-milch-laendle-halbfettmilch-laenger-frisch-1-5-fett-p2020006312547  | Column: breadcrumb
+
+- Unescaped | issues:
+
+product_name (10 rows):
+
+- Row 8768 | URL: https://www.spar.at/produktwelt/isana-cleanser-aha-pha-peeling-125ml-p2020006024686  | product_name: Isana AHA | PHA Cleanser 125 ml
+
+site_shown_uom (9 rows):
+
+- Row 18447 | URL: https://www.spar.at/produktwelt/mehrzweckschrauben-4x40-150stk-p2020005763197  | site_shown_uom: BGS Mehrzweckschrauben | 4,0 x 40 mm | 150 Stück
+6) DataHut_CH_Lidl_PriceExtractions_20261002.CSV
+-------------------------------------------------
+- Whitespace issues: A total of 2 columns contain whitespace issues.
+
+Row 3546 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/20869/s/mini-pizza-pancetta-provola-und-zwiebel-1015165/category/54/ | Column: product_name
+Row 3546 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/20869/s/mini-pizza-pancetta-provola-und-zwiebel-1015165/category/54/ | Column: breadcrumb
+- Invalid 2 Decimal Format – regular_price:
+
+Row 55 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/22213/s/mauro-5114696/category/54/ | regular_price: 29.5
+
+Invalid 2 Decimal Format – selling_price:
+
+Row 55 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/22213/s/mauro-5114696/category/54/ | selling_price: 29.5
+
+- Invalid promotion validity dates: A total of 1 record has promotion_valid_from greater than promotion_valid_upto, indicating an invalid promotion date range.
+
+Row 1091 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/17960/s/emmi-toni-jogurt-5111645/category/54/ | promotion_valid_from: 20.11.2026 | promotion_valid_upto: 2.10.2026
+
+7) remax_us_2026_10_05.json 
+----------------------------
+- Whitespace issues: A total of 6 fields contain whitespace issues.
+
+Record 12 | URL: https://www.remax.com/real-estate-agents/suzette-&-doug--schuller-cape-coral-fl/102465903 | Field: first_name
+Record 8182 | URL: https://www.remax.com/real-estate-agents/dylan--cochran-labelle-fl/102454230 | Field: office_name
+Record 3924 | URL: https://www.remax.com/real-estate-agents/neil--anastas-topsfield-ma/100070027 | Field: address
+Record 865 | URL: https://www.remax.com/real-estate-agents/patty--miller-tumwater-wa/100032417 | Field: social
+Record 462 | URL: https://www.remax.com/real-estate-agents/lynda-r.--mahadeo-great-neck-ny/102036697 | Field: title
+Record 11880 | URL: https://www.remax.com/real-estate-agents/lorna--nunes-st.-mary-wi/102363218 | Field: zipcode
+
+8) machinerytrader_2026_10_02.csv
+----------------------------------
+- Whitespace issues: A total of 5 columns contain whitespace issues.
+
+Row 2416 | URL: https://www.machinerytrader.com/listing/for-sale/240679133/2020-volvo-ecr58d-mini-excavators | Column: company_name
+Row 2416 | URL: https://www.machinerytrader.com/listing/for-sale/240679133/2020-volvo-ecr58d-mini-excavators | Column: contact_person
+Row 3220 | URL: https://www.machinerytrader.com/listing/for-sale/187945287/2011-doosan-xp375-air-compressors | Column: EngineMake
+Row 1062 | URL: https://www.machinerytrader.com/listing/for-sale/252599581/2017-international-hx-dump-trucks | Column: StockNumber
+Row 2668 | URL: https://www.machinerytrader.com/listing/for-sale/63037713/2019-prinoth-panther-t6-crawler-carriers | Column: ProductConfiguration
