@@ -1,0 +1,58 @@
+1) DataHut_SI_Mercator_PriceExtractions_20261006.CSV
+------------------------------------------------------
+- Invalid 2 Decimal Format – selling_price:
+
+Row 369 | URL: https://mercatoronline.si/izdelek/17720502/maslo-mu-cuisine-20-g | selling_price: 0.4
+Row 380 | URL: https://mercatoronline.si/izdelek/19119393/maslo-meggle-20-g | selling_price: 0.5
+
+Invalid 2 Decimal Format – regular_price:
+
+Row 652 | URL: https://mercatoronline.si/izdelek/11847424/trajno-polnomastno-alpsko-mleko-3-5-m-m-ljubljanske-mlekarne-10x1-l-2-l-gratis | regular_price: 16.9
+Row 2653 | URL: https://mercatoronline.si/izdelek/16879812/instant-polenta-mercator-500-g | regular_price: 0.9
+
+2) DataHut_AU_Liquorland_FullDump_20261006.CSV
+-------------------------------------------------
+- Missing store/product data: The product Carlton Dry 3.5% Can 440mL is available on the website for additional stores but is missing from the file.
+
+Hoppers Crossing | 50 Old Geelong Road | Hoppers Crossing | VIC | 3029 | Store ID: 2418 | Product URL: https://www.liquorland.com.au/beer-and-cider/carlton-dry-3-5-can-440ml_1000671?uom=CTN24
+Wodonga (coles) | 1-13 South Street | Wodonga | VIC | 3690 | Store ID: 2421 | Product URL: https://www.liquorland.com.au/beer-and-cider/carlton-dry-3-5-can-440ml_1000671?uom=CTN24
+
+Missing price: For Canberra Civic | 148 Bunda Street | Canberra | ACT | 2601 | Store ID: 2433, the product is available on the website but the price is missing when checking that store location.
+eg:  Product URL: https://www.liquorland.com.au/beer-and-cider/carlton-dry-3-5-can-440ml_1000671?uom=CTN24 
+
+
+3) DataHut_AU_DanMurphys_FullDump_20261006.CSV
+-------------------------------------------------
+- File name error:DataHut_AU_DanMurphys_FullDump_20261006
+instead of DataHut_AU_danmurphys_FullDump_20261006
+- Column count mismatch: The requirement specifies 111 columns, whereas the file contains only 50 columns.
+- Requirement empty columns: 75 | File empty columns: 7
+'badges', 'specialprice1', 'specialsizedescription1', 'specialrequirements1', 'outofstock', 'multibuyspecial', 'bottomfooter'
+- site value dan_murphy instead of danmurphys
+
+4) dubizzle_bah_2026_10_01.json
+----------------------------------
+- Whitespace issues: A total of 4 fields contain whitespace issues.
+
+Row 427 | URL: https://www.dubizzle.com.bh/en/ad/%D8%B4%D9%82%D9%87-%D9%85%D9%81%D8%B1%D9%88%D8%B4%D8%A9-%D9%84%D9%84%D8%A7%D9%8A%D8%AC%D8%A7%D8%B1-ID105759706.html  | Column: broker_display_name
+Row 427 | URL: https://www.dubizzle.com.bh/en/ad/%D8%B4%D9%82%D9%87-%D9%85%D9%81%D8%B1%D9%88%D8%B4%D8%A9-%D9%84%D9%84%D8%A7%D9%8A%D8%AC%D8%A7%D8%B1-ID105759706.html  | Column: broker
+Row 13 | URL: https://www.dubizzle.com.bh/en/ad/%D8%B4%D9%82%D9%87-%D9%85%D8%B1%D8%AA%D8%A8%D9%87-%D9%81%D9%8A-%D8%A7%D9%84%D8%AD%D8%AC%D9%8A%D8%A7%D8%AA-%D8%AB%D9%84%D8%A7%D8%AB-%D8%BA%D8%B1%D9%81-%D8%B4%D8%A7%D9%85%D9%84-%D8%A7%D9%84%D9%83%D9%87%D8%B1%D8%A8%D8%A7%D8%A1-ID105758157.html  | Column: title
+Row 7 | URL: https://www.dubizzle.com.bh/en/ad/spacious-2bhk-flat-available-for-rent-in-prime-location-galali-ID105761729.html  | Column: description
+
+5) bayut_egp_2026_10_01.json
+-----------------------------
+- Extra columns found: ['completion_status', 'ownership']
+- Whitespace issues: A total of 2 fields contain whitespace issues.
+Row 26656 | URL: https://www.bayut.eg/en/property/details-504045357.html | Column: broker_display_name
+Row 26656 | URL: https://www.bayut.eg/en/property/details-504045357.html | Column: broker
+- price_per contains
+Empty       186248
+Monthly     52496
+Daily          3296
+Yearly        78
+Weekly       67
+
+6) DataHut_AU_Woolworths_FullDump_20261006.CSV
+----------------------------------------------
+
+

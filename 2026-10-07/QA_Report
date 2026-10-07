@@ -1,0 +1,139 @@
+1) DataHut_AU_Danmurphys_FullDump_20261007.CSV
+------------------------------------------------
+- Data count mismatch
+- Invalid producturl format: A total of 106 records contain producturl values that are not in a proper HTTP/HTTPS URL format. The field contains URL slugs instead of complete URLs (e.g., riddoch-coonawarra-cabernet-sauvignon). Some slugs are also invalid due to issues such as trailing hyphens.
+
+Row 10 | producturl: pierre-br-vin-selection-ros-
+Row 12 | producturl: saint-louis-de-provence-estandon-ros-
+Row 13 | producturl: la-plancheli-re-cabernet-d-anjou-ros-
+
+- Name and brand are missing for unique ID 965404.
+
+- Missing price1: A total of 1 record has a missing price1 value.
+
+Row 5759 | Unique ID: 709635 | price1: NaN
+
+2) DataHut_AU_Liquorland_FullDump_20261007.CSV
+-----------------------------------------------
+- Data count mismatch
+
+3) DataHut_AU_Coles_FullDump_20261007.CSV
+------------------------------------------
+- Data count mismatch
+- Duplicate records: A total of 26,267 duplicate records were found in the data.
+- Expected empty but not empty:
+
+regular_price
+barcode
+producthierarchy_level4
+producthierarchy_level5
+
+Unexpected empty columns:
+
+file_name_1
+features
+suitable_for
+environmental
+- Whitespace issues: A total of 4 columns contain whitespace issues.
+
+Row 43626 | URL: https://www.coles.com.au/product/queen-finest-natural-peppermint-extract-50ml-4358902  | Column: product_description
+Row 180131 | URL: https://www.coles.com.au/product/aldinga-smoked-turkey-breast-approx-1kg-5033197  | Column: instructions
+Row 568851 | URL: https://www.coles.com.au/product/gourmet-beef-chevups-original-400g-5175690  | Column: instructionforuse
+Row 97559 | URL: https://www.coles.com.au/product/coles-pink-himalayan-fine-salt-750g-3402500  | Column: ingredients
+- Extra stores in file:
+Coles Bendigo
+Coles Gawler
+Coles Churchill Centre
+Coles Bunbury Centrepoint
+Coles Bassendean
+- Expected empty but not empty:
+
+regular_price
+barcode
+producthierarchy_level4
+producthierarchy_level5
+
+Unexpected empty columns:
+
+file_name_1
+features
+suitable_for
+environmental
+
+4) DataHut_IT_Esselunga_PriceExtractions_20261007.CSV
+-------------------------------------------------------
+-  Whitespace issues: A total of 4 columns contain whitespace issues.
+
+Row 53 | URL: https://spesaonline.esselunga.it/commerce/nav/drive/store/prodotto/672102/grey-lacchiappa-smacchia-azione-totale-buste-12-x-30-g  | Column: grammage_quantity
+Row 2812 | URL: https://spesaonline.esselunga.it/commerce/nav/drive/store/prodotto/157442/elephant-baked-squeezed-pretzels-sea-salt-\t80-g   | Column: pdp_url
+Row 4734 | URL: https://spesaonline.esselunga.it/commerce/nav/drive/store/prodotto/311519/sterzing-vipiteno-sapori-di-vipiteno-yogurt-al-limone-2-x-125-g  | Column: site_shown_uom
+Row 8644 | URL: https://spesaonline.esselunga.it/commerce/nav/drive/store/prodotto/552165/sore-valtenesi-riviera-del-garda-classico-doc-75-cl  | Column: brand
+
+- Invalid site_shown_uom values: A total of 920 records contain invalid site_shown_uom values with unexpected characters such as ¿.
+
+Row 248 | PDP URL: https://spesaonline.esselunga.it/commerce/nav/drive/store/prodotto/672021/omino-bianco-sbianca-lana-cotone-e-seta-5-x-20-g  | site_shown_uom: 100g (5x20g ¿)   | 5 Bustine per complessivi 100g
+Row 326 | PDP URL: https://spesaonline.esselunga.it/commerce/nav/drive/store/prodotto/212537/lor-ristretto-11-50-capsule-caffe-compatibili-con-macchine-nespresso-original-260g  | site_shown_uom: 260g ¿ | 50 Capsule
+
+5) DataHut_IT_Eurospin_PriceExtractions_20261007.CSV
+------------------------------------------------------
+- Data count mismatch
+
+6) bayut_properties_rent_commercial_2026_10_07.json
+---------------------------------------------------------
+- Data count mismatch.
+-  Missing coverPhoto: The coverPhoto is present on the website but missing in the file.
+
+Row 2365 | URL: https://www.bayut.com/property/details-16745163.html  | Unique ID: 13241547 | Title: Expansive| Plug & Play Office |Mainland
+- API/File mismatches: Differences were found between the API response and the file for the following fields.
+
+slug mismatch:
+API: details_16714916
+File: well-maintained-3br-marina-view-furnished-16714916
+state mismatch:
+API: inactive
+File: active
+score mismatch:
+API: 100
+File: 75
+score_l1 mismatch:
+API: 88
+File: 75
+score_l2: 75 in both API and file — no difference.
+score_l3: 75 in both API and file — no difference.
+coverPhoto.nimaScore precision difference:
+API: 9.1929562015157
+File: 9.192956201515699
+coverPhoto.url: Present in the file but missing in the API.
+File: https://images.bayut.com/thumbnails/870322981-800x600.jpeg
+
+Listing URL: https://www.bayut.com/property/details-16714916.html
+
+7) bayut_properties_buy_commercial_2026_10_07.json
+---------------------------------------------------
+
+- Missing image: The property images are present on the website but missing in the file. The website shows 12 photos for the listing.
+
+Row 2537 | Unique ID: 12600640 | Title: ROI| Turn Key | Stunning Natural Light | URL: https://www.bayut.com/property/details-16092222.html
+
+- API/File differences:
+
+Data type difference: createdAt, approvedAt, updatedAt, and reactivatedAt are integers in the API but floats in the file.
+touchedAt value difference:
+API: 1790660691.34058
+File: 1790660681.923537
+coverPhoto.nimaScore precision difference:
+API: 9.59710083836581
+File: 9.597100838365805
+coverPhoto.url is present in the file but missing in the API:
+https://images.bayut.com/thumbnails/860724039-800x600.jpeg
+photos[0].nimaScore precision difference:
+API: 9.59710083836581
+File: 9.597100838365805
+photos[0].url is present in the file but missing in the API:
+https://images.bayut.com/thumbnails/860724039-800x600.jpeg
+
+rooms, baths, area, score, score_l1, score_l2, score_l3, photoCount, videoCount, and panoramaCount match between the API and file.
+
+8) bayut_properties_buy_commercial_metadata_2026_10_07.csv
+--------------------------------------------------------------
+- Data count mismatch.
