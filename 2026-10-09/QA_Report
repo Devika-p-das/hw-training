@@ -1,0 +1,80 @@
+1) DataHut_AT_Dm_PriceExtractions_20261009.CSV
+-------------------------------------------------
+- Data count mismatch.
+- Whitespace issue: A total of 1 column contains a whitespace issue.
+
+- Row 15 | URL: https://www.dm.at/p/d/3155846/essence-lippenstift-gloss-stick-caramelted-01-sweet-lips-caramel-kiss | Column: product_name
+
+2) DataHut_AT_Spar_PriceExtractions_20261009.CSV
+--------------------------------------------------
+- Data count mismatch
+- Whitespace issue: A total of 1 column contains a whitespace issue.
+ Row 25621 | URL: https://www.spar.at/produktwelt/vorarlberg-milch-laendle-halbfettmilch-laenger-frisch-1-5-fett-p2020006312547 | Column: breadcrumb
+ - Unescaped | issues: The | character is present unescaped in the following columns.
+
+product_name (10 rows):
+
+- Row 9528 | URL: https://www.spar.at/produktwelt/isana-cleanser-aha-pha-peeling-125ml-p2020006024686 | Value: Isana AHA | PHA Cleanser 125 ml
+
+site_shown_uom (9 rows):
+
+- Row 19036 | URL: https://www.spar.at/produktwelt/mehrzweckschrauben-4x40-150stk-p2020005763197 | Value: BGS Mehrzweckschrauben | 4,0 x 40 mm | 150 Stück
+
+3) DataHut_SI_Mercator_PriceExtractions_20261009.CSV
+-----------------------------------------------------
+- Data count mismatch
+- Missing promotion price: Two prices are available on the website, but the promotion_price is missing in the file.
+Row 37 | URL: https://mercatoronline.si/izdelek/876835/cvrsti-jogurt-3-2-m-m-mu-180-g | promotion_description: Za imetnike Pika kartice 20% ceneje | promotion_price: NaN
+
+4) DataHut_SI_Dm_PriceExtractions_20261009.CSV
+-----------------------------------------------
+- Data count mismatch.
+- Whitespace issues: A total of 2 columns contain whitespace issues.
+
+Row 291 | URL: https://www.dm.si/p/d/1321849/essence-maskara-i-love-extreme-volume | Column: product_name
+
+Row 34 | URL: https://www.dm.si/p/d/3164723/snails-zelena-kreda-za-lase | Column: breadcrumb
+
+5) DataHut_SI_Spar_PriceExtractions_20261009.CSV
+--------------------------------------------------
+- Data count mismatch
+- Unexpected empty columns : 'percentage_discount'
+- Missing promotion price and validity dates: The promotion_description is populated, but promotion_price, promotion_valid_from, and promotion_valid_upto are missing.
+
+Row 926 | URL: https://online.spar.si/p/jajca-proste-reje-m-brez-gso-humek-61-561861 | promotion_description: 3 za 7.58 € | promotion_price: NaN | promotion_valid_from: NaN | promotion_valid_upto: NaN
+
+Row 5479 | URL: https://online.spar.si/p/kajzerica-s-budget-60g-681401 | promotion_description: 3 za 0.42 € | promotion_price: NaN | promotion_valid_from: NaN | promotion_valid_upto: NaN
+
+Row 6334 | URL: https://online.spar.si/p/soncnico-olje-zvijezda-12l-682166 | promotion_description: 3 za 6.78 € | promotion_price: NaN | promotion_valid_from: NaN | promotion_valid_upto: NaN
+- Suspicious grammage quantity/unit issues: A total of 3 records have grammage_quantity values expressed in kilograms but incorrectly labelled with grammage_unit as g. The expected unit is kg.
+
+Row 704 | URL: https://online.spar.si/p/nadomestek-kave-z-okusom-po-kakavu-calmrooty-62g-681408 | grammage_quantity: 0.062 | grammage_unit: g | Expected unit: kg
+
+Row 6673 | URL: https://online.spar.si/p/instant-ocvrti-riz-vegetarijanski-mama-80g-683913 | grammage_quantity: 0.08 | grammage_unit: g | Expected unit: kg
+
+Row 8537 | URL: https://online.spar.si/p/testenine-fusilli-feelingok-220g-679091 | grammage_quantity: 0.22 | grammage_unit: g | Expected unit: kg
+
+6) DataHut_CH_Lidl_PriceExtractions_20261009.CSV
+-------------------------------------------------
+- Data count mismatch.
+- Whitespace issues: A total of 2 columns contain whitespace issues.
+
+Row 3755 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/20869/s/mini-pizza-pancetta-provola-und-zwiebel-1015165/category/54/ | Column: product_name
+
+Row 3755 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/20869/s/mini-pizza-pancetta-provola-und-zwiebel-1015165/category/54/ | Column: breadcrumb
+
+7) machinerytrader_2026_10_09.csv
+-----------------------------------
+-  The file contains 655 columns, whereas the requirement specifies only 654 columns
+- Extra field: ['AugerReady']
+- Whitespace issues: A total of 5 columns contain whitespace issues.
+
+Row 142 | URL: https://www.machinerytrader.com/listing/for-sale/258408365/2023-volvo-ec250el-crawler-excavators | Column: company_name
+
+Row 142 | URL: https://www.machinerytrader.com/listing/for-sale/258408365/2023-volvo-ec250el-crawler-excavators | Column: contact_person
+
+Row 826 | URL: https://www.machinerytrader.com/listing/for-sale/252599581/2017-international-hx-dump-trucks | Column: StockNumber
+
+Row 2755 | URL: https://www.machinerytrader.com/listing/for-sale/187945287/2011-doosan-xp375-air-compressors | Column: EngineMake
+
+Row 3626 | URL: https://www.machinerytrader.com/listing/for-sale/63037713/2019-prinoth-panther-t6-crawler-carriers | Column: ProductConfiguration

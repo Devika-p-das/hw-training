@@ -1,0 +1,98 @@
+1) DataHut_AT_Dm_PriceExtractions_20261012.CSV
+------------------------------------------------
+- data count mismatch
+- Whitespace issue: A total of 1 column contains a whitespace issue.
+Row 298 | URL: https://www.dm.at/p/d/3155846/essence-lippenstift-gloss-stick-caramelted-01-sweet-lips-caramel-kiss | Column: product_name
+
+2) DataHut_SI_Spar_PriceExtractions_20261012.CSV
+-------------------------------------------------
+- Data count mismatch
+- Suspicious grammage quantity/unit issues: A total of 3 records have grammage_quantity values expressed in kilograms but incorrectly labelled with grammage_unit as g. The expected unit is kg.
+Row 705 | URL: https://online.spar.si/p/nadomestek-kave-z-okusom-po-kakavu-calmrooty-62g-681408 | grammage_quantity: 0.062 | grammage_unit: g | Expected unit: kg
+Row 6482 | URL: https://online.spar.si/p/instant-ocvrti-riz-vegetarijanski-mama-80g-683913 | grammage_quantity: 0.080 | grammage_unit: g | Expected unit: kg
+Row 8475 | URL: https://online.spar.si/p/testenine-fusilli-feelingok-220g-679091 | grammage_quantity: 0.220 | grammage_unit: g | Expected unit: kg
+-- Missing promotion price and validity dates: A total of 3 records have promotion_description populated, but promotion_price, promotion_valid_from, and promotion_valid_upto are missing.
+- Row 907 | URL: https://online.spar.si/p/jajca-proste-reje-m-brez-gso-humek-61-561861 | promotion_description: 3 za 7.58 € | promotion_price: NaN | promotion_valid_from: NaN | promotion_valid_upto: NaN
+- Row 5299 | URL: https://online.spar.si/p/kajzerica-s-budget-60g-681401 | promotion_description: 3 za 0.42 € | promotion_price: NaN | promotion_valid_from: NaN | promotion_valid_upto: NaN
+- Row 6157 | URL: https://online.spar.si/p/soncnico-olje-zvijezda-12l-682166 | promotion_description: 3 za 6.78 € | promotion_price: NaN | promotion_valid_from: NaN | promotion_valid_upto: NaN
+
+3) DataHut_AT_Spar_PriceExtractions_20261012.CSV
+--------------------------------------------------
+- Data count mismatch
+- - Whitespace issue: A total of 1 column contains a whitespace issue.
+- Row 24185 | URL: https://www.spar.at/produktwelt/vorarlberg-milch-laendle-halbfettmilch-laenger-frisch-1-5-fett-p2020006312547  | Column: breadcrumb
+
+-- Unescaped | issues: The | character is present unescaped in the following columns.
+product_name (10 rows):
+- Row 8469 | URL: https://www.spar.at/produktwelt/isana-cleanser-aha-pha-peeling-125ml-p2020006024686  | Value: Isana AHA | PHA Cleanser 125 ml
+site_shown_uom (9 rows):
+- Row 19134 | URL: https://www.spar.at/produktwelt/mehrzweckschrauben-4x40-150stk-p2020005763197  | Value: BGS Mehrzweckschrauben | 4,0 x 40 mm | 150 Stück
+
+4) DataHut_AT_Billa_PriceExtractions_20261012.CSV
+---------------------------------------------------
+- Invalid price relationship: A total of 5 records have identical regular_price, selling_price, and promotion_price values.
+- Row 3145 | URL: https://shop.billa.at/produkte/aeterna-oellicht-00435589 | regular_price: 4.99 | selling_price: 4.99 | promotion_price: 4.99
+- Row 4851 | URL: https://shop.billa.at/produkte/ja-natuerlich-bio-rote-ruebe-vorgegart-00575149 | regular_price: 1.79 | selling_price: 1.79 | promotion_price: 1.79
+
+5) DataHut_CH_Lidl_FullDump_20261012.CSV
+------------------------------------------
+- Data count mismatch.
+-- Whitespace issues: A total of 4 columns contain whitespace issues.
+- Row 3831 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/20869/s/mini-pizza-pancetta-provola-und-zwiebel-1015165/category/54/ | Column: product_name
+- Row 3831 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/20869/s/mini-pizza-pancetta-provola-und-zwiebel-1015165/category/54/ | Column: producthierarchy_level3
+- Row 3831 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/20869/s/mini-pizza-pancetta-provola-und-zwiebel-1015165/category/54/ | Column: breadcrumb
+- Row 3161 | URL: https://www.lidl.ch/p/de-CH/milbona-maasdamer-spezialitaeten/p10059931 | Column: product_description
+-- Invalid promotion validity dates: A total of 2 records have promotion_valid_from greater than promotion_valid_upto, indicating an invalid promotion date range.
+- Row 1221 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/17700/s/super-alkaline-mignonzellen-aa-0167082/category/54/ | promotion_valid_from: 24.10.2026 | promotion_valid_upto: 12.10.2026
+- Row 1288 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/17678/s/raclette-scheiben-0006233/category/54/ | promotion_valid_from: 20.10.2026 | promotion_valid_upto: 12.10.2026
+
+6) DataHut_SI_Dm_PriceExtractions_20261012.CSV
+-----------------------------------------------
+- Data count mismatch
+-- Whitespace issues: A total of 2 columns contain whitespace issues.
+- Row 303 | URL: https://www.dm.si/p/d/1321849/essence-maskara-i-love-extreme-volume | Column: product_name
+- Row 22 | URL: https://www.dm.si/p/d/1715572/babylove-naravna-mineralna-voda-brez-ogljikovega-dioksida | Column: breadcrumb
+
+7) machinerytrader_2026_10_12.csv
+-----------------------------------
+- Extra collumns: ['SelfLoading', 'AugerReady']
+- - Whitespace issues: A total of 5 columns contain whitespace issues.
+- Row 314 | URL: https://www.machinerytrader.com/listing/for-sale/240679133/2020-volvo-ecr58d-mini-excavators  | Column: company_name
+- Row 314 | URL: https://www.machinerytrader.com/listing/for-sale/240679133/2020-volvo-ecr58d-mini-excavators  | Column: contact_person
+- Row 3462 | URL: https://www.machinerytrader.com/listing/for-sale/252599581/2017-international-hx-dump-trucks  | Column: StockNumber
+- Row 2676 | URL: https://www.machinerytrader.com/listing/for-sale/63037713/2019-prinoth-panther-t6-crawler-carriers  | Column: ProductConfiguration
+- Row 3438 | URL: https://www.machinerytrader.com/listing/for-sale/187945287/2011-doosan-xp375-air-compressors  | Column: EngineMake
+
+-- Unescaped | issues: A total of 43 rows contain unescaped | characters in the description column.
+- Row 335 | URL: https://www.machinerytrader.com/listing/for-sale/252524197/2023-case-580sv-loader-backhoes  
+
+8) bahrainfinder_bah_2026_10_02.json
+--------------------------------------
+- Whitespace issues: A total of 4 fields contain whitespace issues.
+- Row 572 | URL: https://www.dubizzle.com.bh/en/ad/%D8%B4%D9%82%D9%87-%D9%85%D9%81%D8%B1%D9%88%D8%B4%D8%A9-%D9%84%D9%84%D8%A7%D9%8A%D8%AC%D8%A7%D8%B1-ID105759706.html | Column: broker_display_name
+- Row 572 | URL: https://www.dubizzle.com.bh/en/ad/%D8%B4%D9%82%D9%87-%D9%85%D9%81%D8%B1%D9%88%D8%B4%D8%A9-%D9%84%D9%84%D8%A7%D9%8A%D8%AC%D8%A7%D8%B1-ID105759706.html | Column: broker
+- Row 3 | URL: https://www.dubizzle.com.bh/en/ad/%D9%84%D9%84%D8%A7%D9%8A%D8%AC%D8%A7%D8%B1-%D8%B3%D8%AA%D8%AF%D9%8A%D9%88-%D9%85%D9%81%D8%B1%D9%88%D8%B4-%D9%81%D9%8A-%D8%AC%D8%AF%D8%B9%D9%84%D9%8A-for-rent-f-f-studio-in-jidali-ID105767254.html | Column: title
+- Row 3 | URL: https://www.dubizzle.com.bh/en/ad/%D9%84%D9%84%D8%A7%D9%8A%D8%AC%D8%A7%D8%B1-%D8%B3%D8%AA%D8%AF%D9%8A%D9%88-%D9%85%D9%81%D8%B1%D9%88%D8%B4-%D9%81%D9%8A-%D8%AC%D8%AF%D8%B9%D9%84%D9%8A-for-rent-f-f-studio-in-jidali-ID105767254.html | Column: description
+
+
+9) qatarliving_qat_2026_10_02.json
+------------------------------------
+-- Whitespace issue: A total of 1 field contains a whitespace issue.
+- Row 5 | URL: https://qlp.qatarliving.com/en/properties/rent/residential/apartment/1_bhk_for_family_flat_at_old_al_ghanim/239160 | Column: description
+
+
+10) dubizzle_bah_2026_10_02.json
+-----------------------------------
+-- Whitespace issues: A total of 4 fields contain whitespace issues.
+- Row 572 | URL: https://www.dubizzle.com.bh/en/ad/%D8%B4%D9%82%D9%87-%D9%85%D9%81%D8%B1%D9%88%D8%B4%D8%A9-%D9%84%D9%84%D8%A7%D9%8A%D8%AC%D8%A7%D8%B1-ID105759706.html  | Column: broker_display_name
+- Row 572 | URL: https://www.dubizzle.com.bh/en/ad/%D8%B4%D9%82%D9%87-%D9%85%D9%81%D8%B1%D9%88%D8%B4%D8%A9-%D9%84%D9%84%D8%A7%D9%8A%D8%AC%D8%A7%D8%B1-ID105759706.html  | Column: broker
+- Row 3 | URL: https://www.dubizzle.com.bh/en/ad/%D9%84%D9%84%D8%A7%D9%8A%D8%AC%D8%A7%D8%B1-%D8%B3%D8%AA%D8%AF%D9%8A%D9%88-%D9%85%D9%81%D8%B1%D9%88%D8%B4-%D9%81%D9%8A-%D8%AC%D8%AF%D8%B9%D9%84%D9%8A-for-rent-f-f-studio-in-jidali-ID105767254.html  | Column: title
+- Row 3 | URL: https://www.dubizzle.com.bh/en/ad/%D9%84%D9%84%D8%A7%D9%8A%D8%AC%D8%A7%D8%B1-%D8%B3%D8%AA%D8%AF%D9%8A%D9%88-%D9%85%D9%81%D8%B1%D9%88%D8%B4-%D9%81%D9%8A-%D8%AC%D8%AF%D8%B9%D9%84%D9%8A-for-rent-f-f-studio-in-jidali-ID105767254.html  | Column: description
+
+11) nawy_egp_2026_10_02.json
+------------------------------
+- Data count mismatch
+-- Missing price: The price is available on the website but missing in the file.
+eg: 
+- Row 1304 | URL: https://www.nawy.com/compound/1272-begonia-residence/property/103096-apartment-for-sale-in-begonia-residence-with-1-bedroom-in-south-investors-by-menassat-developments
+- Row 1338 | URL: https://www.nawy.com/compound/2376-club-hill-solare/property/130325-chalet-typical-chalet-3-bedrooms-for-sale-in-club-hill-solare-by-misr-italia-properties

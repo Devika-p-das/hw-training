@@ -1,0 +1,113 @@
+1) DataHut_AU_Woolworths_FullDump_20261007.CSV
+------------------------------------------------
+- Invalid Variety values: A total of 81 records contain NULL as the Variety value.
+
+Row 1696 | Unique ID: 194648 | Variety: NULL
+Row 1798 | Unique ID: 96822 | Variety: NULL
+Row 1902 | Unique ID: 544365 | Variety: NULL
+
+2) DataHut_AT_Dm_FullDump_20261008.CSV
+---------------------------------------
+- Data count mismatch.
+- Expected empty but not empty:
+
+barcode
+retail_limit
+
+Unexpected empty columns:
+
+producthierarchy_level5
+file_name_1
+file_name_2
+file_name_3
+file_name_4
+file_name_5
+file_name_6
+- Whitespace issues: A total of 10 columns contain whitespace issues.
+
+Row 32 | URL: https://www.dm.at/p/d/3155846/essence-lippenstift-gloss-stick-caramelted-01-sweet-lips-caramel-kiss | Column: product_name
+Row 1519 | URL: https://www.dm.at/p/d/1712325/reell-e-toenungsshampoo-10-11-silbergrau | Column: variants
+Row 4 | URL: https://www.dm.at/p/d/1575911/babylove-wickelunterlagen-monatspack | Column: product_description
+Row 91 | URL: https://www.dm.at/p/d/1888537/dettol-allzwecktuecher-granatapfel-und-limette | Column: storage_instructions
+Row 5 | URL: https://www.dm.at/p/d/1617230/hipp-anfangsmilch-bio-combiotik-pre-von-geburt-an | Column: preparationinstructions
+Row 991 | URL: https://www.dm.at/p/d/3115277/mivolis-tabletten-haut-haare-naegel | Column: country_of_origin
+Row 196 | URL: https://www.dm.at/p/d/3134117/dmbio-babysnack-mehrkornsterne-pastinake-und-rote-bete-ab-dem-10-monat | Column: labelling
+Row 1428 | URL: https://www.dm.at/p/d/1690477/balea-fuss-und-nagelbalsam | Column: label_information
+Row 391 | URL: https://www.dm.at/p/d/2477093/jessa-periodenunterwaesche-slip-spitze-nature-schwarz-gr-m | Column: material
+Row 5 | URL: https://www.dm.at/p/d/1617230/hipp-anfangsmilch-bio-combiotik-pre-von-geburt-an | Column: warning
+
+3) DataHut_CH_Migros_FullDump_20261008.CSV
+--------------------------------------------
+- Data count mismatch
+- Invalid feeding_recommendation value: The feeding_recommendation field contains None in the file, while the corresponding value is undefined/not available on the website. The field should be empty instead of containing None.
+
+Row 11201 | URL: https://www.migros.ch/de/product/109123700000 | feeding_recommendation: None
+Row 11311 | URL: https://www.migros.ch/de/product/109135600000 | feeding_recommendation: None
+- Whitespace issues: A total of 2 columns contain whitespace issues.
+
+Row 23047 | URL: https://www.migros.ch/de/product/720516100012 | Column: size
+Row 9768 | URL: https://www.migros.ch/de/product/120912100000 | Column: site_shown_uom
+- Unescaped | issues: The | character is present unescaped in the following columns.
+
+product_description (1 row):
+
+Row 22701 | URL: https://www.migros.ch/de/product/793410600000  | Value: ... Funktioniert mit: mini 11 I mini 9 I mini 8 | mini 70 | mini 90 | SHARE SP-2 I mini LiPlay
+
+preparationinstructions (4 rows):
+
+Row 4623 | URL: https://www.migros.ch/de/product/102700900000  | Value: Dosierung: Lebensmittelfarbe rot: 8 g Farbpaste/ 1 kg Produkt | Lebensmittelfarbe gelb: 3 g Farbpaste/ 1 kg Produkt | Lebensmittelfarbe blau: quantum satis. Anwendung: Zum Einfärben von Glasuren, Teig, Cremen, Eis oder Getränken.
+
+instructionforuse (4 rows):
+
+Row 17874 | URL: https://www.migros.ch/de/product/511070500000  | Value: Roll-on unter den Achseln auftragen. Nicht auf gereizter Haut anwenden.||title\:Anwenden Roll-on vollständig trocknen lassen.||title\:Einwirken
+
+distributor_address (24 rows):
+
+Row 738 | URL: https://www.migros.ch/de/product/130939000000  | Value: Planted Foods AG Kemptpark 32/34 | 8310 Kemptthal
+
+
+4) DataHut_CH_Lidl_FullDump_20261008.CSV
+------------------------------------------
+- Data count mismatch.
+- Invalid promotion validity dates: A total of 2 records have promotion_valid_from greater than promotion_valid_upto, indicating an invalid promotion date range.
+
+Row 645 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/20551/s/emmi-aktifit-globi-5113836/category/54/ | promotion_valid_from: 30.10.2026 | promotion_valid_upto: 8.10.2026
+Row 1116 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/18302/s/cordon-bleu-vom-schwein-duopack-0005275/category/54/ | promotion_valid_from: 21.11.2026 | promotion_valid_upto: 8.10.2026
+
+- Whitespace issues:
+
+Row 3571 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/20869/s/mini-pizza-pancetta-provola-und-zwiebel-1015165/category/54/ | Column: product_name
+Row 3571 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/20869/s/mini-pizza-pancetta-provola-und-zwiebel-1015165/category/54/ | Column: producthierarchy_level3
+Row 3571 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/20869/s/mini-pizza-pancetta-provola-und-zwiebel-1015165/category/54/ | Column: breadcrumb
+Row 3134 | URL: https://www.lidl.ch/p/de-CH/parkside-jeans-im-handwerkerstil/p10059524 | Column: product_description
+
+
+5) DataHut_AT_Billa_FullDump_20261008.CSV
+-------------------------------------------
+- Expected empty but not empty:
+
+age_of_the_product
+packaging
+
+Unexpected empty columns:
+
+file_name_1
+file_name_2
+file_name_3
+file_name_4
+file_name_5
+file_name_6
+retail_limit
+- Missing product hierarchy levels: A total of 2 records have missing product hierarchy values even though the corresponding hierarchy levels are available in the breadcrumb.
+
+Row 10942 | URL: https://shop.billa.at/produkte/clever-jamon-serrano-00883858 | Missing: producthierarchy_level3 | Breadcrumb value: Wurst, Schinken & Speck
+Row 10942 | URL: https://shop.billa.at/produkte/clever-jamon-serrano-00883858 | Missing: producthierarchy_level4 | Breadcrumb value: Wurstspezialitäten
+
+6) DataHut_CH_Coop_FullDump_20261008.CSV
+-----------------------------------------
+- Missing images: The product image is present on the website but missing in the file.
+
+Row 670 | URL: https://www.coop.ch/de/lebensmittel/milchprodukte-eier/quark/quark-nature/prix-garantie-magerquark/p/6568630
+Row 2056 | URL: https://www.coop.ch/de/lebensmittel/fleisch-fisch/abgepacktes-frischfleisch/lamm-gitzi/cevapcici-rind-lamm/p/6774167
+Row 7008 | URL: https://www.coop.ch/de/lebensmittel/suesses-snacks/schokolade-suessigkeiten/kaugummi/mentos-white-green-mint-bottle/p/5731378
+Row 9230 | URL: https://www.coop.ch/de/lebensmittel/getraenke/soft-drinks/cola-limonaden/uebrige-limonaden/paulaner-spezi/p/7529726
