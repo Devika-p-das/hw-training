@@ -1,0 +1,44 @@
+1) DataHut_SI_Mercator_PriceExtractions_20261013.CSV
+------------------------------------------------------
+- Data count mismatch.
+
+2) dubizzle_uae_2026_10_02.json
+---------------------------------
+- Whitespace issues: A total of 6 fields contain whitespace issues.
+- Row 2139 | URL: https://sharjah.dubizzle.com/property-for-rent/residential/apartmentflat/2026/7/24/sunlight-filled-2-bhk-separate-hall-bal-12-177561/  | Column: agent_name
+- Row 8 | URL: https://sharjah.dubizzle.com/property-for-rent/rooms-for-rent-flatmates/apartmentflat/2026/5/22/beautifully-furnished-master-bedroom-with--12-343/  | Column: description
+- Row 38 | URL: https://sharjah.dubizzle.com/property-for-rent/rooms-for-rent-flatmates/apartmentflat/2026/9/21/room-for-rent-al-nahda-12-748/  | Column: title
+- Row 16660 | URL: https://sharjah.dubizzle.com/property-for-rent/residential/apartmentflat/2025/8/3/beautiful-1bhk-for-bachelors-central-ac-12-297613/  | Column: reference_number
+- Row 68606 | URL: https://dubai.dubizzle.com/property-for-rent/residential/townhouse/2026/9/18/vacant-community-view-2-cheques-2-125494/  | Column: broker
+- Row 68606 | URL: https://dubai.dubizzle.com/property-for-rent/residential/townhouse/2026/9/18/vacant-community-view-2-cheques-2-125494/  | Column: broker_display_name
+
+3) dari_ae_2026_10_02.json
+---------------------------
+- - Whitespace issue: A total of 1 field contains a whitespace issue.
+- Row 280 | URL: https://www.dari.ae/en/app/directory/profession?id=35403  | Column: company_employees
+
+4) DataHut_AT_Dm_FullDump_20261015.CSV
+----------------------------------------
+- Data count mismatch.
+- Expected empty but not empty: ['barcode']
+Unexpected empty columns     : ['producthierarchy_level5', 'file_name_1', 'file_name_2', 'file_name_3', 'file_name_4', 'file_name_5', 'file_name_6']
+- - Whitespace issues: A total of 10 fields contain whitespace issues.
+- Row 299 | URL: https://www.dm.at/p/d/3155846/essence-lippenstift-gloss-stick-caramelted-01-sweet-lips-caramel-kiss  | Column: product_name
+- Row 1438 | URL: https://www.dm.at/p/d/1712325/reell-e-toenungsshampoo-10-11-silbergrau  | Column: variants
+- Row 4 | URL: https://www.dm.at/p/d/3166385/gillette-venus-rasierklingen-party-edition  | Column: product_description
+- Row 219 | URL: https://www.dm.at/p/d/1460763/babylove-anfangsmilch-pre-von-geburt-an | Column: storage_instructions
+- Row 13 | URL: https://www.dm.at/p/d/1617230/hipp-anfangsmilch-bio-combiotik-pre-von-geburt-an  | Column: preparationinstructions
+- Row 842 | URL: https://www.dm.at/p/d/3101478/babylove-fruchtriegel-getreide-apfel-johannisbeere-ab-1-jahr  | Column: country_of_origin
+- Row 1913 | URL: https://www.dm.at/p/d/3134117/dmbio-babysnack-mehrkornsterne-pastinake-und-rote-bete-ab-dem-10-monat  | Column: labelling
+- Row 1306 | URL: https://www.dm.at/p/d/1690477/balea-fuss-und-nagelbalsam  | Column: label_information
+- Row 608 | URL: https://www.dm.at/p/d/2477093/jessa-periodenunterwaesche-slip-spitze-nature-schwarz-gr-m  | Column: material
+- Row 13 | URL: https://www.dm.at/p/d/1617230/hipp-anfangsmilch-bio-combiotik-pre-von-geburt-an  | Column: warning
+
+5) DataHut_AT_Billa_FullDump_20261015.CSV
+------------------------------------------
+- - Invalid price relationship: A total of 5 records have identical regular_price, selling_price, and promotion_price values.
+- Row 3149 | URL: https://shop.billa.at/produkte/aeterna-oellicht-00435589  | regular_price: 4.99 | selling_price: 4.99 | promotion_price: 4.99
+- Row 4749 | URL: https://shop.billa.at/produkte/ja-natuerlich-bio-rote-ruebe-vorgegart-00575149  | regular_price: 1.79 | selling_price: 1.79 | promotion_price: 1.79
+- Row 6459 | URL: https://shop.billa.at/produkte/corona-extra-00721783  | regular_price: 2.11 | selling_price: 2.11 | promotion_price: 2.11
+- Row 6467 | URL: https://shop.billa.at/produkte/corona-cero-00721796  | regular_price: 2.11 | selling_price: 2.11 | promotion_price: 2.11
+- Row 11264 | URL: https://shop.billa.at/produkte/ja-natuerlich-maroni-gegart-0089479  | regular_price: 1.99 | selling_price: 1.99 | promotion_price: 1.99
