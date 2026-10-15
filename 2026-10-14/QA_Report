@@ -1,0 +1,50 @@
+1) DataHut_SI_Spar_PriceExtractions_20261014.CSV
+--------------------------------------------------
+- Data count mismatch
+- Unexpected empty columns : 'percentage_discount'
+-- Suspicious quantity/unit issues: The grammage_unit is incorrectly represented as g and should be kg for the following records.
+- Row 641 | URL: https://online.spar.si/p/nadomestek-kave-z-okusom-po-kakavu-calmrooty-62g-681408 | grammage_quantity: 0.062 | grammage_unit: g | Expected unit: kg
+- Row 6575 | URL: https://online.spar.si/p/instant-ocvrti-riz-vegetarijanski-mama-80g-683913 | grammage_quantity: 0.08 | grammage_unit: g | Expected unit: kg
+- Row 8418 | URL: https://online.spar.si/p/testenine-fusilli-feelingok-220g-679091 | grammage_quantity: 0.22 | grammage_unit: g | Expected unit: kg
+Invalid price relationship: A total of 1 record has selling_price greater than regular_price.
+- Row 15381 | URL: https://online.spar.si/p/jedilni-servis-senaeai-riztenhofbrekker-161-670297 | regular_price: 10.00 | selling_price: 32.31
+
+2) DataHut_SI_Dm_PriceExtractions_20261014.CSV
+------------------------------------------------
+- Data count mismatch
+-- Whitespace issues: A total of 2 columns contain whitespace issues.
+- Row 243 | URL: https://www.dm.si/p/d/1321849/essence-maskara-i-love-extreme-volume  | Column: product_name
+- Row 39 | URL: https://www.dm.si/p/d/1715572/babylove-naravna-mineralna-voda-brez-ogljikovega-dioksida  | Column: breadcrumb
+
+3) DataHut_AT_Dm_PriceExtractions_20261014.CSV
+------------------------------------------------
+-- Whitespace issues: A total of 1 column contains whitespace issues.
+- Row 290 | URL: https://www.dm.at/p/d/3155846/essence-lippenstift-gloss-stick-caramelted-01-sweet-lips-caramel-kiss  | Column: product_name
+
+4) DataHut_CH_Lidl_PriceExtractions_20261014.CSV
+-------------------------------------------------
+- Missing promotion validity dates: A total of 293 records have promotion_description populated, but promotion_valid_from and promotion_valid_upto are missing.
+- Row 47 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/22328/s/schmelzkaese-scheiben-0149256/category/54/
+- Row 48 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/22327/s/erdnusskerne-xxl-0146517/category/54/
+
+5) bayut_dubai_properties_buy_commercial_2026_10_14.json
+------------------------------------------------------------
+- - touchedAt: Minor precision difference — API: 1790660691.34058 | File: 1790660691.340579
+- coverPhoto.nimaScore: Minor precision difference — API: 9.59710083836581 | File: 9.597100838365805
+- photos[0].nimaScore: Minor precision difference — API: 9.59710083836581 | File: 9.597100838365805
+- coverPhoto.url: Missing in API but present in the file.
+- photos[0].url: Missing in API but present in the file.
+ "listing_url": "https://www.bayut.com/property/details-16222577.html"
+ 2qa
+
+6) bayut_dubai_properties_buy_residential_2026_10_14.json
+----------------------------------------------------------
+- - updatedAt: API: 1791831179 | File: 1791725995.0 — value mismatch.
+- touchedAt: API: 1791887489.61156 | File: 1791728415.127593 — value mismatch.
+- area: API: 371.89086912 | File: 371.89086912000005 — minor floating-point precision difference.
+- coverPhoto.nimaScore: API: 5.99815472121594 | File: 5.998154721215937 — minor floating-point precision difference.
+- photos[0].nimaScore: API: 5.99815472121594 | File: 5.998154721215937 — minor floating-point precision difference.
+- coverPhoto.url and photos[0].url: Missing in the API but present in the file
+
+ "listing_url": "https://www.bayut.com/property/details-16663218.html "
+

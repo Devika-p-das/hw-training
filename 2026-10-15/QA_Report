@@ -1,0 +1,122 @@
+1) DataHut_SI_Mercator_FullDump_20261015.CSV
+----------------------------------------------
+- Data count mismatch
+- Whitespace issues: A total of 1 column contains whitespace issues.
+- Row 253 | URL: https://mercatoronline.si/izdelek/18134252/bio-kefir-krepki-suhec-1-5-m-m-krepko-250-g | Column: brand
+
+2) DataHut_CH_Coop_FullDump_20261015.CSV
+------------------------------------------
+- Data count mismatch
+
+3) DataHut_AT_Dm_FullDump_20261015.CSV
+----------------------------------------
+- Data count mismatch
+- Expected empty but not empty:
+- barcode
+- retail_limit
+Unexpected empty columns:
+- producthierarchy_level5
+- file_name_1
+- file_name_2
+- file_name_3
+- file_name_4
+- file_name_5
+- file_name_6
+-- - Whitespace issues: A total of 10 columns contain whitespace issues.
+- Row 296 | URL: https://www.dm.at/p/d/3155846/essence-lippenstift-gloss-stick-caramelted-01-sweet-lips-caramel-kiss  | Column: product_name
+- Row 1428 | URL: https://www.dm.at/p/d/1712325/reell-e-toenungsshampoo-10-11-silbergrau  | Column: variants
+- Row 4 | URL: https://www.dm.at/p/d/3166385/gillette-venus-rasierklingen-party-edition  | Column: product_description
+- Row 216 | URL: https://www.dm.at/p/d/1460763/babylove-anfangsmilch-pre-von-geburt-an  | Column: storage_instructions
+- Row 81 | URL: https://www.dm.at/p/d/3121701/dmbio-backmischung-soft-cookies-schokolade  | Column: preparationinstructions
+- Row 835 | URL: https://www.dm.at/p/d/3101478/babylove-fruchtriegel-getreide-apfel-johannisbeere-ab-1-jahr  | Column: country_of_origin
+- Row 1893 | URL: https://www.dm.at/p/d/3134117/dmbio-babysnack-mehrkornsterne-pastinake-und-rote-bete-ab-dem-10-monat  | Column: labelling
+- Row 1296 | URL: https://www.dm.at/p/d/1690477/balea-fuss-und-nagelbalsam  | Column: label_information
+- Row 603 | URL: https://www.dm.at/p/d/2477093/jessa-periodenunterwaesche-slip-spitze-nature-schwarz-gr-m  | Column: material
+- Row 48 | URL: https://www.dm.at/p/d/3078718/balea-gesichtshaarentferner  | Column: warning
+
+
+4) DataHut_AT_Billa_FullDump_20261015.CSV
+------------------------------------------
+--Expected empty but not empty:
+- age_of_the_product
+- packaging
+Unexpected empty columns:
+- file_name_1
+- file_name_2
+- file_name_3
+- file_name_4
+- file_name_5
+- file_name_6
+- retail_limit
+
+--Invalid price relationship: A total of 5 records have identical regular_price, selling_price, and promotion_price values.
+- Row 3143 | URL: https://shop.billa.at/produkte/aeterna-oellicht-00435589 | regular_price: 4.99 | selling_price: 4.99 | promotion_price: 4.99
+- Row 6452 | URL: https://shop.billa.at/produkte/corona-extra-00721783 | regular_price: 2.11 | selling_price: 2.11 | promotion_price: 2.11
+- Row 6460 | URL: https://shop.billa.at/produkte/corona-cero-00721796 | regular_price: 2.11 | selling_price: 2.11 | promotion_price: 2.11
+- Row 10715 | URL: https://shop.billa.at/produkte/vegavita-staebchen-fischart-00878830 | regular_price: 1.99 | selling_price: 1.99 | promotion_price: 1.99
+- Row 11253 | URL: https://shop.billa.at/produkte/ja-natuerlich-maroni-gegart-0089479 | regular_price: 1.99 | selling_price: 1.99 | promotion_price: 1.99
+
+5) DataHut_CH_Denner_FullDump_20261015.CSV
+-------------------------------------------
+--Missing promotion price: The promotion_price is available on the website but missing in the file.
+- Row 197 | URL: https://www.denner.ch/de/aktionen/badoux-murailles-blanc-aoc-chablais~p1026510?variant=37f4130d-2d64-4bfd-9afb-53686b7d3b46 
+- Row 1313 | URL: https://www.denner.ch/de/aktionen-und-sortiment/ip-suisse-sonnenblumenoel~p030135?variant=b5e6159f-14b0-44b0-96e9-2f2e13a8095c 
+
+6) DataHut_CH_Lidl_FullDump_20261015.CSV
+------------------------------------------
+--Unexpected empty columns : ['country_of_origin']
+-- Whitespace issues: A total of 4 columns contain whitespace issues.
+- Row 3469 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/20869/s/mini-pizza-pancetta-provola-und-zwiebel-1015165/category/54/ | Column: product_name
+- Row 3469 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/20869/s/mini-pizza-pancetta-provola-und-zwiebel-1015165/category/54/ | Column: producthierarchy_level3
+- Row 3469 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/20869/s/mini-pizza-pancetta-provola-und-zwiebel-1015165/category/54/ | Column: breadcrumb
+- Row 2991 | URL: https://www.lidl.ch/p/de-CH/lupilu-disney-marvel-teddy-fleecejacke/p10059871 | Column: product_description
+
+7) DataHut_CH_Migros_FullDump_20261015.CSV
+--------------------------------------------
+Whitespace issues: A total of 2 columns contain whitespace issues.
+- Row 21609 | URL: https://www.migros.ch/de/product/720516100012  | Column: size
+- Row 9785 | URL: https://www.migros.ch/de/product/120912100000  | Column: site_shown_uom
+
+-- Unescaped | issues: The | character is present unescaped in the following columns.
+product_description (1 row):
+- Row 21265 | URL: https://www.migros.ch/de/product/793410600000 
+preparationinstructions (4 rows):
+- Row 4567 | URL: https://www.migros.ch/de/product/102700900000 
+instructionforuse (4 rows):
+- Row 16939 | URL: https://www.migros.ch/de/product/511070500000 
+distributor_address (26 rows):
+- Row 748 | URL: https://www.migros.ch/de/product/130939000000 
+
+8) DataHut_SI_Dm_FullDump_20261015.CSV
+----------------------------------------
+-- Unexpected empty columns : ['price_was', 'promotion_price']
+--Unescaped | issues: The | character is present unescaped in the following columns.
+instructionforuse (6 rows):
+- Row 6092 | URL: https://www.dm.si/p/d/3101641/rimmel-london-tekoci-osvetljevalec-multi-tasker-turbocharged-glow-005-iconic-as-usual
+ingredients (87 rows):
+- Row 65 | URL: https://www.dm.si/p/d/3123738/balea-zascita-pred-drgnjenjem-koze-v-stiku-tropical-dream
+-- Whitespace issues: A total of 5 columns contain whitespace issues.
+- Row 50 | URL: https://www.dm.si/p/d/1715572/babylove-naravna-mineralna-voda-brez-ogljikovega-dioksida | Column: breadcrumb
+- Row 142 | URL: https://www.dm.si/p/d/3153630/babylove-bio-sadni-pripravek-s-sokom-pasijonke-jogurtom-in-polnozrnatimi-zitnimi-kosmici-10m | Column: storage_instructions
+- Row 126 | URL: https://www.dm.si/p/d/1462215/dmbio-bio-ovsena-zitna-kasica-po-dopolnjenem-5-mesecu | Column: preparationinstructions
+- Row 142 | URL: https://www.dm.si/p/d/3153630/babylove-bio-sadni-pripravek-s-sokom-pasijonke-jogurtom-in-polnozrnatimi-zitnimi-kosmici-10m | Column: country_of_origin
+- Row 1713 | URL: https://www.dm.si/p/d/1586730/dmbio-bio-otroski-masleni-pirini-piskoti-z-datlji-od-3-leta | Column: labelling
+
+9) DataHut_SI_Spar_FullDump_20261015.CSV
+-----------------------------------------
+- Expected empty but not empty: ['barcode', 'promotion_valid_upto', 'promotion_description', 'alchol_by_volume', 'netweight', 'price_was', 'promotion_price']
+Unexpected empty columns     : ['variants', 'preparationinstructions', 'country_of_origin', 'age_recommendations', 'flavour', 'labelling', 'packaging', 'special_information', 'label_information', 'dimensions', 'color', 'material', 'tasting_note', 'rating', 'review', 'file_name_1', 'file_name_2', 'file_name_3', 'file_name_4', 'file_name_5', 'file_name_6', 'competitor_product_key', 'features', 'retail_limit']
+-- Whitespace issues: A total of 4 columns contain whitespace issues.
+- Row 7191 | URL: https://online.spar.si/p/sardele-v-soncnicnem-olju-z-limono-s-budget-125g-477666 | Column: producthierarchy_level3
+- Row 13977 | URL: https://online.spar.si/p/zepni-robcki-4-slojni-lavender-essence-sensitive-care-paloma-8-x-9-458113 | Column: producthierarchy_level4
+- Row 7191 | URL: https://online.spar.si/p/sardele-v-soncnicnem-olju-z-limono-s-budget-125g-477666 | Column: breadcrumb
+- Row 705 | URL: https://online.spar.si/p/nadomestek-kave-z-okusom-prave-kave-magicrooty-60g-685208 | Column: warning
+-- Invalid price relationship: A total of 2 records have promotion_price greater than regular_price.
+- Row 9540 | URL: https://online.spar.si/p/cokolada-dorina-jaffa-kras-100g-341491 | regular_price: 1.69 | promotion_price: 1.79
+- Row 9564 | URL: https://online.spar.si/p/cokolada-dorina-ledena-kras-100g-40585 | regular_price: 1.69 | promotion_price: 1.79
+-- Suspicious quantity/unit issues: The grammage_unit is incorrectly represented as g and should be kg for the following records.
+- Row 717 | URL: https://online.spar.si/p/nadomestek-kave-z-okusom-po-kakavu-calmrooty-62g-681408 | grammage_quantity: 0.062 | grammage_unit: g | Expected unit: kg
+- Row 6643 | URL: https://online.spar.si/p/instant-ocvrti-riz-vegetarijanski-mama-80g-683913 | grammage_quantity: 0.080 | grammage_unit: g | Expected unit: kg
+- Row 8690 | URL: https://online.spar.si/p/testenine-fusilli-feelingok-220g-679091 | grammage_quantity: 0.220 | grammage_unit: g | Expected unit: kg
+Missing promotion validity dates: The promotion_description is populated, but promotion_valid_from and promotion_valid_upto are missing.
+- Row 4232 | URL: https://online.spar.si/p/svetlo-pivo-ale-nefiltrirano-s-budget-05l-596843
