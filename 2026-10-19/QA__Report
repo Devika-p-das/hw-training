@@ -1,0 +1,28 @@
+1) bayut_transactions_sold_residential_2026_10_14.json
+--------------------------------------------------------
+--- Completely empty fields
+rent_contract_duration_months           
+contract_monthly_amount
+--- date_transaction_nk outside the required date range are present in the file (2026-10-07 to 2026-10-14).
+- 7feacb1e148afa17 — 2026-10-06
+- 194d1fe6e7bd81c6 — 2026-10-05
+
+2) bayut_transactions_rented_commercial_2026_10_14.json
+---------------------------------------------------------
+--- date_transaction_nk outside the required date range (2026-10-07 to 2026-10-14).
+- 28cfad2af39a1249 — 2026-10-06
+- 519dd69eaf7d3eda — 2026-10-05
+--- completely emty fields
+-beds
+
+3) bayut_transactions_sold_commercial_2026_10_14.json
+------------------------------------------------------
+-- Empty fields
+beds                                  
+rent_contract_duration_months        
+contract_monthly_amount              
+-- 2 transactions have date_transaction_nk outside the required date range (2026-10-07 to 2026-10-14).
+- 4e91ad8a66fd0c4b — 2026-10-06
+- ec36721525a64fe — 2026-10-06
+
+

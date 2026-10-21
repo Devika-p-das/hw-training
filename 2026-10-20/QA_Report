@@ -1,0 +1,30 @@
+1) bahrainfinder_bah_2026_10_03.json
+-------------------------------------
+No value Fully Furnished
+ 2966      Empty
+مفروشة بالكامل     784
+غير مفروش          497
+مفروشة جزئيًا      279
+Furnished           39
+Semi Furnished      38
+Unfurnished         38
+
+2) dubizzle_egp_2026_10_03.json
+--------------------------------
+Whitespace issues: A total of 4 fields contain whitespace issues.
+- Row 1958 | URL: https://www.dubizzle.com.eg/en/ad/%D9%85%D8%AD%D9%84-%D9%84%D9%84%D8%A7%D9%8A%D8%AC%D8%A7%D8%B1-%D9%85%D8%AF%D9%8A%D9%86%D9%87-%D9%86%D8%B5%D8%B1-ID208940896.html | Column: broker_display_name
+- Row 1958 | URL: https://www.dubizzle.com.eg/en/ad/%D9%85%D8%AD%D9%84-%D9%84%D9%84%D8%A7%D9%8A%D8%AC%D8%A7%D8%B1-%D9%85%D8%AF%D9%8A%D9%86%D9%87-%D9%86%D8%B5%D8%B1-ID208940896.html | Column: broker
+- Row 3 | URL: https://www.dubizzle.com.eg/en/ad/for-the-end-of-the-month-a-100m2-chalet-is-available-at-the-cash-price-but-installments-are-also-available-a-great-deal-with-a-discount-of-225-mil-ID503742537.html | Column: description
+- Row 1630 | URL: https://www.dubizzle.com.eg/en/ad/fully-finished-commercial-shop-for-rent-directly-on-45-st-ID504037520.html | Column: location
+
+3) dubizzle_qat_2026_10_03.json
+---------------------------------
+- Whitespace issues: A total of 4 fields contain whitespace issues.
+- Row 165 | URL: https://www.dubizzle.qa/en/ad/high-quality-5bd-stand-alone-villa-ID120318475.html  | Column: broker_display_name
+- Row 165 | URL: https://www.dubizzle.qa/en/ad/high-quality-5bd-stand-alone-villa-ID120318475.html  | Column: broker
+- Row 15 | URL: https://www.dubizzle.qa/en/ad/studio-spacious-abu-hamour-m-e-s-school-ID120378560.html   | Column: title
+- Row 9 | URL: https://www.dubizzle.qa/en/ad/1bhk-for-rent-in-fereej-al-soudan-behind-metro-station-ID120293916.html  | Column: description
+
+- Images are available on the website, but the number of photos is empty in the file for the following records:
+- Row 914 | URL: https://www.dubizzle.qa/en/ad/fully-furnished-1bhk-apartment-for-monthly-stay-ID120378888.html 
+- Row 915 | URL: https://www.dubizzle.qa/en/ad/bright-3-bhk-un-furnished-umm-ghuwalina-area-ID120375200.html 

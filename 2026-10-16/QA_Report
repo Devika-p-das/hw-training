@@ -1,0 +1,23 @@
+1) data.json
+--------------
+- Completely empty field
+facilities 
+- primary_media is not empty, but the file_name field is empty for 200 records
+- 41 records in project_name_ar contain no Arabic characters. Example: Project number 2968 has the value 99 Park Place.
+- 39 rows contain inspection records older than the last 4 weeks,
+EG: project_number:  3551    old_inspection_dates:   17/09/2026
+- primary_media is an empty dictionary ({}) for 2020 records, and all required fields (type, url, thumbnail, description, and file_name) are missing.
+
+2) bayut_uae_2026_10_15.json
+-----------------------------
+- No value sale in completion_status
+- no value free in package_type
+- Whitespace issues: A total of 8 fields contain whitespace issues.
+- Row 1407 | URL: https://www.bayut.com/property/details-16850141.html | Column: broker_display_name
+- Row 1407 | URL: https://www.bayut.com/property/details-16850141.html | Column: broker
+- Row 13 | URL: https://www.bayut.com/property/details-16833656.html | Column: description
+- Row 433 | URL: https://www.bayut.com/property/details-16854160.html | Column: floorplan_type_identifier
+- Row 60342 | URL: https://www.bayut.com/property/details-16698671.html | Column: agent_name
+- Row 72669 | URL: https://www.bayut.com/property/details-9049781.html | Column: location
+- Row 102323 | URL: https://www.bayut.com/property/details-9121717.html | Column: title
+- Row 285359 | URL: https://www.bayut.com/property/details-7647106.html | Column: reference_number

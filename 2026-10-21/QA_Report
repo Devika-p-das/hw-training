@@ -1,0 +1,39 @@
+1) data.json
+---------------
+- Column order mismatch.
+- English values found in project_name_ar, e.g., project numbers 2968 (99 Park Place), 3338 (Olivo Park Residences By Evera), and 1612 (The Fields At D11 - Mbrmc)
+
+2) bayut_transactions_rented_commercial_2026_10_21.json
+---------------------------------------------------------
+- Data count mismatch
+- beds is completely empty
+- Dates outside the specified week range found:
+- date_transaction_nk: 2026-10-13 | transaction_hash_id: 75d1a610c0f1ffd0
+- date_transaction_nk: 2026-10-13 | transaction_hash_id: 61a4e931586cce89
+
+3) bayut_abudhabi_properties_buy_residential_2026_10_21.json
+-------------------------------------------------------------
+
+- Data count mismatch
+- touchedAt: API: 1791876073.54109 | File: 1791876073.541092 — minor floating-point precision difference.
+area: API: 78.5253655296 | File: 78.52536552960001 — minor floating-point precision difference.
+coverPhoto.nimaScore: API: 5.99609564943656 | File: 5.996095649436564 — minor floating-point precision difference
+photos[0].nimaScore: API: 5.99609564943656 | File: 5.996095649436564 — minor floating-point precision difference.
+coverPhoto.url and photos[0].url: Missing in the API but present in the file.
+"listing_url": "https://www.bayut.com/property/details-16361146.html "
+
+4) bayut_transactions_sold_commercial_2026_10_21.json
+-------------------------------------------------------------------------
+- Data count mismatch
+- Empty fields
+beds
+rent_contract_duration_months
+contract_monthly_amount
+-- Dates outside the specified week range found:
+- date_transaction_nk: 2026-10-13 | transaction_hash_id: 2114f2367ea6dd5d
+- date_transaction_nk: 2026-10-13 | transaction_hash_id: db558d6b6f728d2
+
+
+5) bayut_abudhabi_properties_buy_residential_metadata_2026_10_21.csv
+-------------------------------------------------------------------------
+- Data count mismatch
