@@ -1,0 +1,106 @@
+1) DataHut_CH_Coop_FullDump_20261022.CSV
+-------------------------------------------
+- mages are available on the website but missing in the file for the following records:
+- Row 288 | URL: https://www.coop.ch/de/lebensmittel/fruechte-gemuese/kohlgemuese/rosenkohl-kabis/betty-bossi-federkohl/p/4926834
+- Row 589 | URL: https://www.coop.ch/de/lebensmittel/milchprodukte-eier/milch/spezialmilch/naturaplan-bio-schafmilch-63-milchfett-pasteurisiert/p/3440746
+
+2) DataHut_CH_Lidl_FullDump_20261022.CSV
+-----------------------------------------
+- Expected empty but not empty: ['producthierarchy_level5']
+Unexpected empty columns : ['country_of_origin']
+--Whitespace issues: A total of 4 columns contain whitespace issues.
+- Row 3606 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/20869/s/mini-pizza-pancetta-provola-und-zwiebel-1015165/category/54/ | Column: product_name
+- Row 3606 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/20869/s/mini-pizza-pancetta-provola-und-zwiebel-1015165/category/54/ | Column: producthierarchy_level3
+- Row 3606 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/20869/s/mini-pizza-pancetta-provola-und-zwiebel-1015165/category/54/ | Column: breadcrumb
+- Row 3058 | URL: https://www.lidl.ch/p/de-CH/terea/p10060829 | Column: product_description
+-- Missing promotion validity end date: A total of 67 records have a missing promotion_valid_upto value.
+- Row 2688 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/12423/s/barilla-spaghettoni-no-7-0003356/category/54/
+- Row 2690 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/12422/s/barilla-fusilli-no-98-0001067/category/54/
+
+3) DataHut_CH_Migros_FullDump_20261022.CSV
+----------------------------------------------
+-- Whitespace issues: A total of 2 columns contain whitespace issues.
+- Row 24025 | URL: https://www.migros.ch/de/product/720516100012 | Column: size
+- Row 10088 | URL: https://www.migros.ch/de/product/120912100000 | Column: site_shown_uom
+-- Unescaped | issues: A total of 4 columns contain unescaped pipe characters.
+- Row 23590 | URL: https://www.migros.ch/de/product/793410600000 | Column: product_description
+- Row 4536 | URL: https://www.migros.ch/de/product/102700900000 | Column: preparationinstructions
+- Row 18676 | URL: https://www.migros.ch/de/product/511070500000 | Column: instructionforuse
+- Row 840 | URL: https://www.migros.ch/de/product/130939000000 | Column: distributor_address
+
+4) bayut_transactions_rented_residential_2026_10_21.json
+------------------------------------------------------------
+- Overall date range in dataset:
+Start date: 2025-02-10 
+End date: 2026-10-20 
+transactions have date_transaction_nk outside the required date range.
+- 40ed302c8c2e5c19 — 2026-10-12
+- 3a3e31a363f3254a — 2026-10-11
+
+5) bayut_transactions_sold_residential_2026_10_21.json
+-------------------------------------------------------
+- Completely empty fields:
+rent_contract_duration_months     
+contract_monthly_amount
+- Data count mismatch
+- Overall date range in dataset:
+Start date: 2025-10-30 
+End date: 2026-10-20
+transactions have date_transaction_nk outside the required date range
+eg:
+2026-10-13/hash_id: 55e99695ae50fcca
+2026-10-12/hash_id: 4d748d28d4d091d2
+
+6) DataHut_SI_Spar_FullDump_20261022.CSV 
+------------------------------------------
+-- Data count mismatch
+-- Expected empty but not empty: barcode, promotion_valid_upto, promotion_description, alchol_by_volume, netweight, price_was, promotion_price
+Unexpected empty columns: variants, preparationinstructions, country_of_origin, age_recommendations, flavour, labelling, packaging, special_information, label_information, 
+dimensions, color, material, tasting_note, rating, review, file_name_1, file_name_2, file_name_3, file_name_4, file_name_5, file_name_6, competitor_product_key, features, retail_limit
+- Suspicious quantity/unit issues: A total of 3 records have an incorrect grammage_unit (g instead of kg).
+- Row 705 | URL: https://online.spar.si/p/nadomestek-kave-z-okusom-po-kakavu-calmrooty-62g-681408 | grammage_quantity: 0.062 | grammage_unit: g | Expected unit: kg
+- Row 6625 | URL: https://online.spar.si/p/instant-ocvrti-riz-vegetarijanski-mama-80g-683913 | grammage_quantity: 0.080 | grammage_unit: g | Expected unit: kg
+- Row 8691 | URL: https://online.spar.si/p/testenine-fusilli-feelingok-220g-679091 | grammage_quantity: 0.220 | grammage_unit: g | Expected unit: kg
+- Data type issue: price_valid_from has an Object data type instead of the expected DateTime data type.
+-- Whitespace issues: A total of 4 columns contain whitespace issues.
+- Row 7166 | URL: https://online.spar.si/p/sardele-v-oljcnem-olju-s-budget-125g-616317 | Column: producthierarchy_level3
+- Row 13973 | URL: https://online.spar.si/p/univerzalni-robcki-s-budget-801-666299 | Column: producthierarchy_level4
+- Row 7166 | URL: https://online.spar.si/p/sardele-v-oljcnem-olju-s-budget-125g-616317 | Column: breadcrumb
+- Row 647 | URL: https://online.spar.si/p/nadomestek-kave-z-okusom-prave-kave-magicrooty-60g-685208 | Column: warning
+
+7) DataHut_SI_Dm_FullDump_20261022.CSV
+-----------------------------------------
+- Data count mismatch
+- Unexpected empty columns : ['price_was', 'promotion_price']
+-- Whitespace issues: A total of 5 columns contain whitespace issues.
+- Row 10 | URL: https://www.dm.si/p/d/1715572/babylove-naravna-mineralna-voda-brez-ogljikovega-dioksida | Column: breadcrumb
+- Row 2701 | URL: https://www.dm.si/p/d/1584366/dmbio-bio-veganski-posip-za-testenine | Column: storage_instructions
+- Row 64 | URL: https://www.dm.si/p/d/1462215/dmbio-bio-ovsena-zitna-kasica-po-dopolnjenem-5-mesecu | Column: preparationinstructions
+- Row 1799 | URL: https://www.dm.si/p/d/1494320/dmbio-bio-polnozrnati-pirini-krekerji | Column: country_of_origin
+- Row 1314 | URL: https://www.dm.si/p/d/1299311/denkmit-pro-climate-detergent-za-rocno-pomivanje-posode-ultra | Column: labelling
+--- Unescaped | issues:
+- Row 5728 | URL: https://www.dm.si/p/d/3101641/rimmel-london-tekoci-osvetljevalec-multi-tasker-turbocharged-glow-005-iconic-as-usual  | Column: instructionforuse
+- Row 12 | URL: https://www.dm.si/p/d/3123738/balea-zascita-pred-drgnjenjem-koze-v-stiku-tropical-dream  | Column: ingredients
+
+8) DataHut_AT_Spar_FullDump_20261022.CSV
+-------------------------------------------
+- Data count mismatch
+- age_of_the_product not empty
+- -- Whitespace issues: A total of 5 columns contain whitespace issues.
+- Row 19940 | URL: https://www.spar.at/produktwelt/vorarlberg-milch-laendle-halbfettmilch-laenger-frisch-1-5-fett-p2020006312547  | Column: producthierarchy_level6
+- Row 229 | URL: https://www.spar.at/produktwelt/s-budget-toiletten-papier-10-rollen-p2020006211093  | Column: breadcrumb
+- Row 1145 | URL: https://www.spar.at/produktwelt/spar-natur-pur-weisser-bio-spritzer-p2020006162548  | Column: product_description
+- Row 4611 | URL: https://www.spar.at/produktwelt/schlumberger-sparkling-0-alkoholfrei-p2020006352536  | Column: tasting_note
+- Row 37053 | URL: https://www.spar.at/produktwelt/timi-apfelwuerfel-lamamix-p2020002737733  | Column: ingredients
+
+-- Unescaped | issues:
+- Row 7680 | URL: https://www.spar.at/produktwelt/isana-cleanser-aha-pha-peeling-125ml-p2020006024686  | Column: product_name
+- Row 2 | URL: https://www.spar.at/produktwelt/s-budget-mascarpone-p2099873  | Column: nutritional_information
+- Row 17672 | URL: https://www.spar.at/produktwelt/mehrzweckschrauben-4x40-150stk-p2020005763197   | Column: site_shown_uom
+
+-- Invalid image URLs found 
+eg
+- Row 19647 | URL: https://cdn1.interspar.at/cachableservlets/articleImage.dam/at/2020005822139/ 
+- Row 28967 | URL: https://cdn1.interspar.at/cachableservlets/articleImage.dam/at/2020005822177/ 
+
+        
