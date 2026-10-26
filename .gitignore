@@ -1,0 +1,7 @@
+
+# DLD QA Agent
+dld_qa_agent/gemini_key.txt
+dld_qa_agent/incoming/
+dld_qa_agent/checked/
+dld_qa_agent/qa_results/
+dld_qa_agent/__pycache__/

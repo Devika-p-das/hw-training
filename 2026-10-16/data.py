@@ -273,14 +273,27 @@ LABEL = [pn if pn else f"Row {i + 1} (no project_number)" for i, pn in enumerate
 # ===================
 CHECK = "3. Data count"
 header(CHECK)
-required_count = ask_number("required data count", 3008)
- 
-issues = []
-if len(records) != required_count:
-    issues.append({"field": "data count",
-                   "issue": f"Expected {required_count}, found {len(records)}"})
-show_result(CHECK, issues, f"Data count is {len(records)}.")
- 
+
+while True:
+    answer = ask("Enter the required data count (press Enter to keep 3008): ").replace(",", "")
+    if not answer:
+        required_count = 3008
+        break
+    if answer.isdigit():
+        required_count = int(answer)
+        break
+    print("Please enter a whole number.", file=original_stdout)
+
+actual_count = len(records)
+
+if actual_count == required_count:
+    print(f"✅ SUCCESS: Data count is {actual_count}.")
+    RESULTS.append((CHECK, "PASS", 0))
+else:
+    print("❌ FAIL: Data count mismatch")
+    print(f" Expected count: {required_count}")
+    print(f" Actual count  : {actual_count}")
+    RESULTS.append((CHECK, "FAIL", 1))
  
 # %%
 # 4. Check fields and field order
@@ -657,16 +670,25 @@ else:
  
  
 # %%
-# 16. Check inspection dates are within the last 4 weeks
-# ======================================================
+# 16. Check inspection dates are within 4 weeks of the file date
+# ==============================================================
 CHECK = "16. Inspection dates"
 header(CHECK)
 
 MAX_WEEKS = 4
 DATE_FORMAT = "%d/%m/%Y"
-cutoff = pd.Timestamp.today().normalize() - pd.Timedelta(weeks=MAX_WEEKS)
-print(f"ℹ️ INFO: Today is {pd.Timestamp.today().strftime('%d/%m/%Y')}. "
-      f"Inspections before {cutoff.strftime('%d/%m/%Y')} are not allowed.")
+today = pd.Timestamp.today().normalize().strftime(DATE_FORMAT)
+
+while True:
+    answer = ask(f"Enter the file date as DD/MM/YYYY (press Enter to keep {today}): ") or today
+    file_date = pd.to_datetime(answer, format=DATE_FORMAT, errors="coerce")
+    if pd.notna(file_date):
+        break
+    print("Please enter a valid date like 21/10/2026.", file=original_stdout)
+
+cutoff = file_date - pd.Timedelta(weeks=MAX_WEEKS)
+print(f"ℹ️ INFO: File date is {file_date.strftime(DATE_FORMAT)}. "
+      f"Inspections before {cutoff.strftime(DATE_FORMAT)} ({MAX_WEEKS} weeks older) are not allowed.")
 
 
 def unique_date_sample(rows, limit):
@@ -712,9 +734,9 @@ else:
                 old_dates.append(row)
 
     if old_dates:
-        show_dates(f"inspection(s) older than {MAX_WEEKS} weeks", old_dates)
+        show_dates(f"inspection(s) older than {MAX_WEEKS} weeks from the file date", old_dates)
     else:
-        print(f"✅ SUCCESS: No inspection is older than {MAX_WEEKS} weeks.")
+        print(f"✅ SUCCESS: No inspection is older than {MAX_WEEKS} weeks from the file date.")
     if wrong_format:
         print()
         show_dates("inspection date(s) with wrong format (expected DD/MM/YYYY)", wrong_format)

@@ -1,0 +1,33 @@
+{
+  "dataset": "DLD projects",
+  "file_name": "data.json",
+  "data_count": 3008,
+  "required_fields": [
+    "input_project_number", "project_number", "developer_details",
+    "escrow_account", "inspection_details", "management_companies",
+    "project_name_en", "project_name_ar", "project_worth",
+    "building_detail", "main_developer", "project_rooms",
+    "project_sizing", "buildings", "lands", "project_dates",
+    "total_units", "total_area", "project_status", "project_status_ar",
+    "project_primarymedia_id", "primary_media", "facilities",
+    "project_is_followed", "project_ar_file_url", "location_details",
+    "completion_ratio"
+  ],
+  "whitespace_fields": [
+    "developer_details", "escrow_account", "inspection_details",
+    "management_companies", "input_project_number",
+    "project_name_en", "project_name_ar"
+  ],
+  "list_fields": [
+    "inspection_details", "building_detail", "buildings", "lands",
+    "project_rooms", "project_sizing", "facilities"
+  ],
+  "dict_fields": ["developer_details", "escrow_account"],
+  "arabic_fields": ["project_name_ar", "project_status_ar"],
+  "primary_media_keys": ["type", "url", "thumbnail", "description", "file_name"],
+  "inspection_image_keys": ["id", "type", "thumbnail", "description", "file_name"],
+  "file_name_format": "s3://pf-datahut-data-prod-ap/datahut/dld/projects/YYYY_MM_DD/dld_number/images/{project_number}_{order}.{image_extension}",
+  "file_date": "today",
+  "max_inspection_weeks": 4,
+  "contact_fields": ["developer_details", "management_companies"]
+}
