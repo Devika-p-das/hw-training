@@ -1,0 +1,86 @@
+1) DataHut_SI_Mercator_PriceExtractions_20261026.CSV
+------------------------------------------------------
+- Data count mismatch.
+
+2) DataHut_SI_Dm_PriceExtractions_20261026.CSV
+-----------------------------------------------
+- Data count mismatch
+-- Whitespace issues: A total of 2 columns contain whitespace issues.
+- Row 120 | URL: https://www.dm.si/p/d/3143521/balea-beauty-expert-vlazilni-gel-za-prhanje-s-25-glicerola-in-1-betaina  | Column: product_name
+- Row 25 | URL: https://www.dm.si/p/d/1715572/babylove-naravna-mineralna-voda-brez-ogljikovega-dioksida  | Column: breadcrumb
+
+3) DataHut_AT_Billa_PriceExtractions_20261026.CSV
+---------------------------------------------------
+--- 5 records have identical regular_price, selling_price, and promotion_price values.
+- Row 200 | URL: https://shop.billa.at/produkte/knorr-klare-suppe-pflanzlich-0017013 | Price: 1.89
+- Row 2600 | URL: https://shop.billa.at/produkte/knorr-gemuesesuppe-wuerfel-00414401 | Price: 1.89
+
+4) DataHut_AT_Dm_PriceExtractions_20261026.CSV
+-----------------------------------------------
+- Data count mismatch
+-- Whitespace issue: A total of 1 column contains whitespace issues.
+
+- Row 398 | URL: https://www.dm.at/p/d/3146833/dmbio-kraeutertee-deine-innere-ruhe-mit-kamille-minze-lavendel-und-ashwagandha-20-x-1-8g  | Column: product_name
+
+-- Invalid dates found in promotion_valid_from for 3 records. All contain 29.12.9999.On website the date is 29.12.1999(when translated to english)
+- Row 11219 | URL: https://www.dm.at/p/d/3117220/bali-bronze-trockenoel-golden-glow 
+- Row 11363 | URL: https://www.dm.at/p/d/3128037/bali-bronze-selbstbraeuner-spray-gesicht 
+- Row 11561 | URL: https://www.dm.at/p/d/3128016/bali-bronze-bronzing-drops 
+
+5) DataHut_AT_Spar_PriceExtractions_20261026.CSV
+--------------------------------------------------
+- Data count mismatch
+Whitespace issue: A total of 1 column contains whitespace issues.
+
+- Row 24549 | URL: https://www.spar.at/produktwelt/vorarlberg-milch-laendle-halbfettmilch-laenger-frisch-1-5-fett-p2020006312547  | Column: breadcrum
+
+Unescaped | issues: A total of 2 columns contain unescaped pipe characters.
+- Row 7691 | URL: https://www.spar.at/produktwelt/isana-cleanser-aha-pha-peeling-125ml-p2020006024686  | Column: product_name
+- Row 17669 | URL: https://www.spar.at/produktwelt/mehrzweckschrauben-4x40-150stk-p2020005763197  | Column: site_shown_uom
+
+6) aqarmap_egp_2026_10_04.json
+--------------------------------
+- Data count mismatch
+- Scraped_ts and date is 2026-10-16
+- depth, listing_type, seller_role also completely empty
+-- Whitespace issues: A total of 5 columns contain whitespace issues.
+- Row 1145 | URL: https://aqarmap.com.eg/en/listing/7330600-for-sale-alexandria-al-agamy-shataa-el-nakheel/  | Column: broker_display_name
+- Row 1145 | URL: https://aqarmap.com.eg/en/listing/7330600-for-sale-alexandria-al-agamy-shataa-el-nakheel/  | Column: broker
+- Row 7 | URL: https://aqarmap.com.eg/en/listing/7063937-for-rent-port-said-kmbwnd-fy-bwr-s-yd-porto-said-compound-amer-group/  | Column: title
+- Row 17 | URL: https://aqarmap.com.eg/en/listing/7018416-for-rent-port-said-kmbwnd-fy-bwr-s-yd-porto-said-compound-amer-group/  | Column: description
+- Row 353 | URL: https://aqarmap.com.eg/en/listing/7163022-for-sale-cairo-ljyz-shareaa-morad%20%20charel%20degol/  | Column: location
+
+bedrooms and bathrooms contain values like 03, 2.5, 02
+eg url:     https://aqarmap.com.eg/en/listing/7294234-for-rent-alexandria-lsywf-shamaa/ -- Whitespace issues: A total of 5 columns contain whitespace issues.
+- Row 1145 | URL: https://aqarmap.com.eg/en/listing/7330600-for-sale-alexandria-al-agamy-shataa-el-nakheel/  | Column: broker_display_name
+- Row 1145 | URL: https://aqarmap.com.eg/en/listing/7330600-for-sale-alexandria-al-agamy-shataa-el-nakheel/  | Column: broker
+- Row 7 | URL: https://aqarmap.com.eg/en/listing/7063937-for-rent-port-said-kmbwnd-fy-bwr-s-yd-porto-said-compound-amer-group/  | Column: title
+- Row 17 | URL: https://aqarmap.com.eg/en/listing/7018416-for-rent-port-said-kmbwnd-fy-bwr-s-yd-porto-said-compound-amer-group/  | Column: description
+- Row 353 | URL: https://aqarmap.com.eg/en/listing/7163022-for-sale-cairo-ljyz-shareaa-morad%20%20charel%20degol/  | Column: location
+
+bedrooms and bathrooms contain values like 03, 2.5, 02
+eg url:     https://aqarmap.com.eg/en/listing/7294234-for-rent-alexandria-lsywf-shamaa/ 
+
+7) dari_ae_2026_10_04.json
+---------------------------
+- Data count mismatch
+- Whitespace issue: A total of 1 field contains whitespace issues.
+
+- Row 280 | URL: https://www.dari.ae/en/app/directory/profession?id=35403  | Column: company_employees 
+
+8) bayut_bah_2026_10_04.json
+------------------------------
+- Data count mismatch
+
+9) bahrainfinder_bah_2026_10_04.json
+----------------------------------------
+- furnished has no no fully furnished,instead contains values
+مفروشة بالكامل, غير مفروش, مفروشة جزئيًا, Furnished, Unfurnished, Semi Furnished
+
+10) qatarliving_qat_2026_10_04.json
+--------------------------------------
+- Data count mismatch
+- Whitespace issue: A total of 1 field contains whitespace issues.
+
+- Row 22 | URL: https://qlp.qatarliving.com/en/properties/rent/residential/villa_apartment/2_bhk_with_one_bath_available_in_nuaija/310570  | Column: description
+
