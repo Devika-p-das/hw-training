@@ -1,0 +1,36 @@
+1) data.json
+--------------
+- Data count mismatch
+- inspection record has an inspection date older than 4 weeks from the file date (22/10/2026): project number 4504 — inspection date 30/06/2026.
+- English names found in project_name_ar for 41 records. Examples: project numbers 2968 (99 Park Place) and 3338 (Olivo Park Residences By Evera).
+
+2) DataHut_AT_Billa_PriceExtractions_20261023.CSV
+---------------------------------------------------
+-- - records have identical regular_price, selling_price, and promotion_price values.
+- Row 214 | URL: https://shop.billa.at/produkte/knorr-klare-suppe-pflanzlich-0017013  | Price: 1.89
+- Row 2703 | URL: https://shop.billa.at/produkte/knorr-gemuesesuppe-wuerfel-00414401  | Price: 1.89
+
+3)DataHut_SI_Spar_PriceExtractions_20261023.CSV
+------------------------------------------------
+-- Unexpected empty columns : 'percentage_discount'
+-- Promotion details are incomplete for 2 records. The website displays promotion dates, but promotion_price, promotion_valid_from, and promotion_valid_upto are empty in the file.
+- Row 5332 | URL: https://online.spar.si/p/bela-zemlja-spar-60g-678329 
+- Row 5333 | URL: https://online.spar.si/p/polnozrnata-strucka-z-otrobi-70g-672809 
+
+-- Price mismatch found for 1 record. The website price is €20.00 (€3.33/item), while the file contains regular_price: 25.00, selling_price: 47.92, and promotion_price: 47.92
+- Row 15340 | URL: https://online.spar.si/p/set-posode-delicious-tefal-61-668401 
+
+-- Grammage conversion issues: A total of 3 records have an incorrect grammage_unit (g instead of kg).
+- Row 718 | URL: https://online.spar.si/p/nadomestek-kave-z-okusom-po-kakavu-calmrooty-62g-681408  | grammage_quantity: 0.062 | grammage_unit: g | Expected unit: kg
+- Row 6668 | URL: https://online.spar.si/p/instant-ocvrti-riz-vegetarijanski-mama-80g-683913   | grammage_quantity: 0.08 | grammage_unit: g | Expected unit: kg
+- Row 8757 | URL: https://online.spar.si/p/testenine-fusilli-feelingok-220g-679091  | grammage_quantity: 0.22 | grammage_unit: g | Expected unit: kg
+
+4) DataHut_AT_Dm_PriceExtractions_20261023.CSV
+-----------------------------------------------
+- Data count mismatch
+-- Whitespace issue: A total of 1 column contains whitespace issues.
+-- Invalid promotion date found in row 11265. promotion_valid_from contains 29.12.9999, and promotion_valid_upto is empty.
+
+URL: https://www.dm.at/p/d/3117220/bali-bronze-trockenoel-golden-glow
+
+- Row 282 | URL: https://www.dm.at/p/d/3146833/dmbio-kraeutertee-deine-innere-ruhe-mit-kamille-minze-lavendel-und-ashwagandha-20-x-1-8g  | Column: product_name
