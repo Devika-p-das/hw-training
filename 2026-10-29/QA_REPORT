@@ -1,0 +1,82 @@
+1) DataHut_AT_Dm_FullDump_20261029.CSV
+----------------------------------------
+- Expected empty but not empty: ['barcode']
+Unexpected empty columns     : ['producthierarchy_level5', 'file_name_1', 'file_name_2', 'file_name_3', 'file_name_4', 'file_name_5', 'file_name_6']
+- A total of 10 columns contain whitespace issues.
+- Row 412 | URL: https://www.dm.at/p/d/3146833/dmbio-kraeutertee-deine-innere-ruhe-mit-kamille-minze-lavendel-und-ashwagandha-20-x-1-8g  | Column: product_name
+- Row 1444 | URL: https://www.dm.at/p/d/1712325/reell-e-toenungsshampoo-10-11-silbergrau  | Column: variants
+- Row 4 | URL: https://www.dm.at/p/d/3161020/essence-blush-book-lovers-club-cheek-balm-01-chapter-pink-poetry  | Column: product_description
+- Row 6 | URL: https://www.dm.at/p/d/3156120/pediakid-immunheld-sirup  | Column: storage_instructions
+- Row 82 | URL: https://www.dm.at/p/d/3121701/dmbio-backmischung-soft-cookies-schokolade  | Column: preparationinstructions
+- Row 921 | URL: https://www.dm.at/p/d/3115277/mivolis-tabletten-haut-haare-naegel  | Column: country_of_origin
+- Row 692 | URL: https://www.dm.at/p/d/3134117/dmbio-babysnack-mehrkornsterne-pastinake-und-rote-bete-ab-dem-10-monat  | Column: labelling
+- Row 853 | URL: https://www.dm.at/p/d/3143709/dresdner-essenz-geschenkset-herzenswaermer  | Column: label_information
+- Row 459 | URL: https://www.dm.at/p/d/2477093/jessa-periodenunterwaesche-slip-spitze-nature-schwarz-gr-m  | Column: material
+- Row 6 | URL: https://www.dm.at/p/d/3156120/pediakid-immunheld-sirup  | Column: warning
+
+Invalid dates found in promotion_valid_from for 3 records. All contain 29.12.9999.
+- Row 11219 | URL: https://www.dm.at/p/d/3117220/bali-bronze-trockenoel-golden-glow 
+- Row 11368 | URL: https://www.dm.at/p/d/3128037/bali-bronze-selbstbraeuner-spray-gesicht 
+- Row 11566 | URL: https://www.dm.at/p/d/3128016/bali-bronze-bronzing-drops 
+
+2) DataHut_CH_Denner_FullDump_20261029.CSV
+-------------------------------------------
+- Data count mismatch.
+-- promotion_price is missing in the file for 2 records, although the promotional price is available on the website.
+- Row 522 | URL: https://www.denner.ch/de/aktionen/badoux-murailles-blanc-aoc-chablais~p1026510?variant=37f4130d-2d64-4bfd-9afb-53686b7d3b46 
+- Row 1386 | URL: https://www.denner.ch/de/aktionen-und-sortiment/ip-suisse-sonnenblumenoel~p030135?variant=b5e6159f-14b0-44b0-96e9-2f2e13a8095c 
+
+3) century21_us_2026_11_05.json
+--------------------------------
+- Data count mismatch
+- Column order mismatch
+- email, title and social not empty.
+- A total of 3 fields contain whitespace issues.
+- Row 16410 | URL: https://www.century21.com/va/abingdon/agents/lisa-tyler-tn-va-sc/aid-P00200000Glaq1f5zZTxxCQ9vKNAcZvOaLFrO5OT  | Column: first_name
+- Row 7566 | URL: https://www.century21.com/fl/jacksonville/agents/kellie-baker/aid-P00200000GSxlKKsz9MbKIw5CRbmoCZ8Go6swCYh  | Column: office_name
+- Row 1590 | URL: https://www.century21.com/ca/temecula/agents/mario-aquino-rivera/aid-P00200000GIG133Euz9EXHumMpR0JF0qBQ1lYp5n  | Column: address
+
+4) bhgre_2026_11_05.json
+-------------------------
+- Column order mismatch
+- country also contain Jamaica               
+https://www.bhgre.com/jam/city-unavailable/agents/better-homes-and-gardens-real-estate-jamaica/aid-P00200000FDdscdXBZtMRb3oSgOQD9P9S6pLBP1I 
+
+https://www.bhgre.com/jam/city-unavailable/agents/edwin-wint/aid-P00200000FDdqSekqCfO4OyzqGu2mbNGsFTEcVYL 
+
+5) baity_bah_2026_11.json
+----------------------------
+- no issues found 
+
+6) DataHut_CH_Coop_FullDump_20261029.CSV
+-----------------------------------------
+- no issues found
+
+7) compass_2026_11_05.json
+---------------------------
+- Invalid values found in the website field for 3 records.
+- Row 27 | Profile URL: https://www.compass.com/agents/rona-lynn/ | Invalid value: mailto:rona.lynn@compass.com?subject=Requesting%20More%20Information%20
+- Row 197 | Profile URL: https://www.compass.com/agents/summer-che/ | Invalid value: mailto:sumer.che@compass.com
+- Row 5422 | Profile URL: https://www.compass.com/agents/smriti-khanna/ | Website contains a Compass email-notification/unsubscribe URL instead of a valid website URL.
+
+8) servicesbahrain_bah_2026_11.json
+------------------------------------
+- A total of 1 field contains whitespace issues.
+
+- Row 17 | URL: https://services.bahrain.bh/wps/portal/RERA_en#toggle-id-1 | Column: name
+- Invalid phone number formats found, including +973NA, (+973) 17533008, and (+973).
+
+9) emlakjet_tur_2026_11.json
+-------------------------------
+- currency contain
+TL: 299,955
+: 370
+£: 90
+$: 4
+€: 3
+
+10) hepsiemlak_tur_2026_11.json
+--------------------------------
+- Data count mismatch
+- The category field contains 6 unique values across multiple languages: For Rent, For Sale, Kiralık, Satılık, Sezonluk Kiralık, and Продается.
+

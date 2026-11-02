@@ -1,0 +1,103 @@
+1) aqarmap_egp_2026_10_04.json
+-------------------------------
+- Data count mismatch
+- depth, listing_type, seller_role also completely empty
+- Whitespace issues: A total of 5 fields contain whitespace issues.
+- Row 958 | URL: https://aqarmap.com.eg/en/listing/7330600-for-sale-alexandria-al-agamy-shataa-el-nakheel/  | Column: broker_display_name
+- Row 958 | URL: https://aqarmap.com.eg/en/listing/7330600-for-sale-alexandria-al-agamy-shataa-el-nakheel/  | Column: broker
+- Row 72 | URL: https://aqarmap.com.eg/en/listing/7247400-for-sale-cairo-el-sheikh-zayed-city-compounds-zayed-heights-compound/  | Column: title
+- Row 10 | URL: https://aqarmap.com.eg/en/listing/6933431-for-sale-kafr-el-sheikh-burullus-baltim-mryn-dlt/  | Column: description
+- Row 103 | URL: https://aqarmap.com.eg/en/listing/7163022-for-sale-cairo-ljyz-shareaa-morad%20%20charel%20degol/  | Column: location
+
+bedrooms and bathrooms contain values like 03, 2.5, 02
+eg: 
+  https://aqarmap.com.eg/en/listing/7294234-for-rent-alexandria-lsywf-shamaa/ 
+
+
+2) dubizzle_uae_2026_10_04.json
+--------------------------------
+- Whitespace issues: A total of 6 fields contain multiple consecutive spaces.
+- Row 2523 | URL: https://sharjah.dubizzle.com/property-for-rent/short-term/apartmentflat/2026/5/17/1bhk-for-rent-in-al-taawun-12-315649/  | Column: agent_name
+- Row 5688 | URL: https://dubai.dubizzle.com/property-for-rent/short-term/apartmentflat/2026/8/21/fully-furnished-studio-the-vogue-flexib-2-319636 / | Column: broker
+- Row 5688 | URL: https://dubai.dubizzle.com/property-for-rent/short-term/apartmentflat/2026/8/21/fully-furnished-studio-the-vogue-flexib-2-319636/  | Column: broker_display_name
+- Row 7 | URL: https://ajman.dubizzle.com/property-for-rent/short-term/apartmentflat/2026/8/26/the-most-luxurious-2room-and-hall-with--14-146438/  | Column: description
+- Row 3099 | URL: https://sharjah.dubizzle.com/property-for-rent/short-term/apartmentflat/2025/9/17/2-bhk-fully-furnished-free-wi-fi-al-taa-12-240127/  | Column: title
+- Row 150475 | URL: https://ajman.dubizzle.com/property-for-rent/rooms-for-rent-flatmates/apartmentflat/2026/10/17/furnished-room-for-rent-14-834/  | Column: reference_number
+- price_per has no value سنويا
+
+3) aqar_ksa_2026_11.json
+--------------------------
+- Data count mismatch.
+- aqar_ksa_2026_11.json instead of aqar_ksa_2026_10.json
+- iteration number is 2026_11
+- Whitespace issues: A total of 3 fields contain whitespace issues.
+- Row 1984 | URL: https://sa.aqar.fm/عمائر-للبيع/حائل/حي-المحطة/شارع-شــارع-الباحــة\r\n-حي-المحطة-مدينة-حائل-منطقة-حائل-6833709   | Column: url
+- Row 93 | URL: https://sa.aqar.fm/استوديوهات-للإيجار/الرياض/شمال-الرياض/حي-الفلاح/شارع-عبدالله-المخضوب-حي-الفلاح-مدينة-الرياض-منطقة-الرياض-6706247 | Column: title
+- Row 124 | URL: https://sa.aqar.fm/شقق-للإيجار/جدة/شمال-جدة/حي-مريخ/شارع-الخضر-الطائي-حي-مريخ-مدينة-جدة-منطقة-مكة-المكرمة-6782574 | Column: description
+
+4) bayut_egp_2026_10_04.json
+-----------------------------
+- Data count mismatch
+- Extra columns found: ['completion_status', 'ownership']
+- price per contains
+'empty,'Daily','Monthly','Weekly','Yearly'
+Whitespace issues: A total of 2 fields contain whitespace issues.
+- Row 11049 | URL: https://www.bayut.eg/en/property/details-504278672.htm l | Column: broker_display_name
+- Row 11049 | URL: https://www.bayut.eg/en/property/details-504278672.html  | Column: broker
+
+5) dubizzle_bah_2026_10_04.json
+----------------------------------
+- Data count mismatch
+- Whitespace issues: A total of 4 fields contain whitespace issues.
+- Row 382 | URL: https://www.dubizzle.com.bh/en/ad/larg-apartment-for-rent-in-bani-jamra-ID104302027.html  | Column: broker_display_name
+- Row 382 | URL: https://www.dubizzle.com.bh/en/ad/larg-apartment-for-rent-in-bani-jamra-ID104302027.html  | Column: broker
+- Row 36 | URL: https://www.dubizzle.com.bh/en/ad/%D9%85%D8%B7%D9%84%D9%88%D8%A8-%D9%85%D8%AE%D8%B2%D9%86-%D8%A7%D9%88-%D9%83%D8%B1%D8%A7%D8%AC-%D9%85%D9%86%D8%B2%D9%84-%D9%84%D9%84%D8%A5%D9%8A%D8%AC%D8%A7%D8%B1-ID105765011.html  | Column: title
+- Row 3 | URL: https://www.dubizzle.com.bh/en/ad/2bhk-apartment-for-rent-in-daih-area-ID105774507.html  | Column: description
+
+6) nawy_egp_2026_10_04.json
+----------------------------
+- Data count mismatch
+- - Missing price: The price is available on the website but missing in the file.
+Row 2686 | URL: https://www.nawy.com/compound/1261-hacienda-waters/property/137713-chalet-for-sale-in-hacienda-waters-with-1-bedrooms-in-ras-el-hekma-by-palm-hills-developments 
+Row 7481 | URL: https://www.nawy.com/compound/745-eastshire/property/29641-townhouse-for-sale-in-eastshire-with-7-bedrooms-in-new-cairo-by-al-qamzi-developments 
+Row 12833 | URL: https://www.nawy.com/compound/1904-spire-club-hills/property/132560-apartment-for-sale-in-spire-club-hills-with-21-bedrooms-in-northern-expansion-by-housing-and-development-properties-hdp - Missing price: The price is available on the website but missing in the file.
+Row 2686 | URL: https://www.nawy.com/compound/1261-hacienda-waters/property/137713-chalet-for-sale-in-hacienda-waters-with-1-bedrooms-in-ras-el-hekma-by-palm-hills-developments 
+Row 7481 | URL: https://www.nawy.com/compound/745-eastshire/property/29641-townhouse-for-sale-in-eastshire-with-7-bedrooms-in-new-cairo-by-al-qamzi-developments 
+Row 12833 | URL: https://www.nawy.com/compound/1904-spire-club-hills/property/132560-apartment-for-sale-in-spire-club-hills-with-21-bedrooms-in-northern-expansion-by-housing-and-development-properties-hdp 
+
+7) DataHut_AT_Billa_PriceExtractions_20261027.CSV
+--------------------------------------------------
+- 5 records have identical regular_price, selling_price, and promotion_price values.
+- Row 137 | URL: https://shop.billa.at/produkte/knorr-klare-suppe-pflanzlich-0017013 | Price: 1.89
+- Row 2595 | URL: https://shop.billa.at/produkte/knorr-gemuesesuppe-wuerfel-00414401 | Price: 1.89
+
+8) data.json
+-------------
+- Data count mismatch
+- English names found in project_name_ar for 41 records. Examples: project numbers 2968 (99 Park Place) and 3338 (Olivo Park Residences By Evera).
+
+9) DataHut_AU_Coles_FullDump_20261028.CSV
+-------------------------------------------
+- Data count mismatch
+- Expected empty but not empty (2 columns):
+
+regular_price, barcode
+
+Unexpected empty columns (20 columns):
+
+store_name, store_state, store_postcode, producthierarchy_level1, producthierarchy_level2, producthierarchy_level3, promotion_price, promotion_type, promotion_description, multi_buy_item_count, multi_buy_items_price_total, breadcrumb, labelling, file_name_1, features, promo_limit, multibuy_items_pricesingle, suitable_for, environmental, retail_limit
+
+10) DataHut_AT_Dm_FullDump_20261029.CSV
+-----------------------------------------
+- Data count mismatch
+-- Whitespace issues: A total of 10 columns contain whitespace issues.
+- Row 412 | URL: https://www.dm.at/p/d/3146833/dmbio-kraeutertee-deine-innere-ruhe-mit-kamille-minze-lavendel-und-ashwagandha-20-x-1-8g | Column: product_name
+- Row 1444 | URL: https://www.dm.at/p/d/1712325/reell-e-toenungsshampoo-10-11-silbergrau | Column: variants
+- Row 4 | URL: https://www.dm.at/p/d/3161020/essence-blush-book-lovers-club-cheek-balm-01-chapter-pink-poetry | Column: product_description
+- Row 6 | URL: https://www.dm.at/p/d/3156120/pediakid-immunheld-sirup | Column: storage_instructions
+- Row 82 | URL: https://www.dm.at/p/d/3121701/dmbio-backmischung-soft-cookies-schokolade | Column: preparationinstructions
+- Row 921 | URL: https://www.dm.at/p/d/3115277/mivolis-tabletten-haut-haare-naegel | Column: country_of_origin
+- Row 692 | URL: https://www.dm.at/p/d/3134117/dmbio-babysnack-mehrkornsterne-pastinake-und-rote-bete-ab-dem-10-monat | Column: labelling
+- Row 853 | URL: https://www.dm.at/p/d/3143709/dresdner-essenz-geschenkset-herzenswaermer | Column: label_information
+- Row 459 | URL: https://www.dm.at/p/d/2477093/jessa-periodenunterwaesche-slip-spitze-nature-schwarz-gr-m | Column: material
+- Row 6 | URL: https://www.dm.at/p/d/3156120/pediakid-immunheld-sirup | Column: warning

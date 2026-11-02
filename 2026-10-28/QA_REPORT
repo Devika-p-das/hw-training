@@ -1,0 +1,60 @@
+1) DataHut_AT_Dm_PriceExtractions_20261028.CSV
+-----------------------------------------------
+- Data count mismatch
+- Whitespace issue: A total of 1 column contains whitespace issues.
+Row 368 | URL: https://www.dm.at/p/d/3146833/dmbio-kraeutertee-deine-innere-ruhe-mit-kamille-minze-lavendel-und-ashwagandha-20-x-1-8g | Column: product_name
+Invalid dates found in promotion_valid_from for 3 records. The provided example contains 29.12.9999.
+
+- Row 11476 | URL: https://www.dm.at/p/d/31-28016/bali-bronze-bronzing-drops
+
+2) bayut_abudhabi_properties_buy_residential_2026_10_28.json
+--------------------------------------------------------------
+- Data count mismatch
+- The following differences were identified:
+- touchedAt: API: 1793133893.67066 | File: 1792994630.915633 — Value mismatch.
+- coverPhoto.nimaScore and photos[0].nimaScore: Minor floating-point precision differences.
+- coverPhoto.url and photos[0].url: Present in the file but absent from the API response.
+"listing_url": "https://www.bayut.com/property/details-16859092.html"
+
+3) bayut_abudhabi_properties_rent_residential_metadata_2026_10_28.csv
+-----------------------------------------------------------------------
+- Data count mismatch.
+
+4) bayut_dubai_properties_buy_residential_2026_10_28.json
+----------------------------------------------------------
+- Data count mismatch
+- Images are available on the website but missing in both the file and API.
+
+- Row 56458 | Project Number: 13297075 | URL: https://www.bayut.com/property/details-16801684.html 
+
+API vs File Comparison: No significant value mismatches found.
+- touchedAt: API: 1792993594.11279 | File: 1792993594.112791 — Minor floating-point precision difference.
+- coverPhoto.nimaScore and photosnimaScore: Minor floating-point precision differences.
+- coverPhoto.url and photos.url: Present in the file but absent from the API response.
+ "listing_url": "https://www.bayut.com/property/details-16287762.html "
+
+5) DataHut_SI_Mercator_PriceExtractions_20261028.CSV
+------------------------------------------------------
+- Data count mismatch
+
+6) bayut_dubai_properties_rent_residential_2026_10_28.json
+------------------------------------------------------------
+- Data count mismatch
+-- API vs File Comparison: The following differences were identified:
+- updatedAt: API: 1793102103 | File: 1792357247.0 — Value mismatch.
+- touchedAt: API: 1793102260.98681 | File: 1792992680.908798 — Value mismatch.
+- reactivatedAt: API: 1784353956.94259 | File: 1784353956.942585 — Minor floating-point precision difference.
+- coverPhoto.nimaScore and photos[0].nimaScore: Minor floating-point precision differences.
+- coverPhoto.url and photos.url: Present in the file but absent from the API response.
+- indyScore: API: 198 | File: 207
+- indyScore_l1: API: 198 | File: 207
+- indyScore_l2: API: 95 | File: 99
+- indyScore_l3: API: 95 | File: 99
+ "listing_url": "https://www.bayut.com/property/details-8503493.html "
+
+7) bayut_transactions_rented_residential_2026_10_28.json
+---------------------------------------------------------
+- Data count mismatch
+- Overall date range in dataset:
+Start date: 2024-08-09
+End date: 2026-10-28

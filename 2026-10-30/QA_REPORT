@@ -1,0 +1,64 @@
+1) haraj_ksa_2026_11.json
+-------------------------
+-A total of 6 fields contain whitespace issues.
+- Row 19727 | URL: https://haraj.com.sa/11188460885/للبيع_أرض_تجارية_بمخطط_الوفاء(شمال_جدة) | Column: url
+- Row 433 | URL: https://haraj.com.sa/11177434594/مطلوب_دور_ارضي_للإيجار_العزيزية | Columns: broker_display_name, broker, user_id
+- Row 19 | URL: https://haraj.com.sa/11190270218/دور_أرضي_مستقل_للإيجار___حي_الرمال_السعيدان_شارع_البساتين | Column: title
+- Row 5 | URL: https://haraj.com.sa/11191317796/للايجار_دور_ارضي_راكب_مطبخ_الرمال_التعمير | Column: description
+
+2) DataHut_SI_Spar_PriceExtractions_20261030.CSV
+-------------------------------------------------
+- Data count mismatch
+- The grammage_unit is incorrectly recorded as g instead of kg.
+- Row 709 | URL: https://online.spar.si/p/nadomestek-kave-z-okusom-po-kakavu-calmrooty-62g-681408 | Quantity: 0.062 | Actual unit: g | Expected unit: kg
+- Row 6687 | URL: https://online.spar.si/p/instant-ocvrti-riz-vegetarijanski-mama-80g-683913 | Quantity: 0.08 | Actual unit: g | Expected unit: kg
+- Row 8773 | URL: https://online.spar.si/p/testenine-fusilli-feelingok-220g-679091 | Quantity: 0.22 | Actual unit: g | Expected unit: kg
+
+3) DataHut_SI_Dm_PriceExtractions_20261030.CSV
+----------------------------------------------
+- Data count mismatch
+-- Whitespace issues found in 2 columns.
+- Row 149 | URL: https://www.dm.si/p/d/3143521/balea-beauty-expert-vlazilni-gel-za-prhanje-s-25-glicerola-in-1-betaina  | Column: product_name
+- Row 9 | URL: https://www.dm.si/p/d/1715572/babylove-naravna-mineralna-voda-brez-ogljikovega-dioksida  | Column: breadcrumb
+
+4) DataHut_AT_Dm_PriceExtractions_20261030.CSV
+----------------------------------------------
+Whitespace issue found in 1 column.
+
+- Row 478 | URL: https://www.dm.at/p/d/3146833/dmbio-kraeutertee-deine-innere-ruhe-mit-kamille-minze-lavendel-und-ashwagandha-20-x-1-8g | Column: product_name
+
+5) DataHut_AT_Spar_PriceExtractions_20261030.CSV
+--------------------------------------------------
+-- Unescaped pipe (|) characters found in 2 columns.
+- Row 7958 | URL: https://www.spar.at/produktwelt/isana-cleanser-aha-pha-peeling-125ml-p2020006024686 | Column: product_name
+- Row 16723 | URL: https://www.spar.at/produktwelt/mehrzweckschrauben-4x40-150stk-p2020005763197 | Column: site_shown_uom
+-- Whitespace issue found in 1 column.
+- Row 24952 | URL: https://www.spar.at/produktwelt/vorarlberg-milch-laendle-halbfettmilch-laenger-frisch-1-5-fett-p2020006312547 | Column: breadcrumb
+
+6) DataHut_CH_Lidl_PriceExtractions_20261030.CSV
+-------------------------------------------------
+- Data count mismatch
+- Whitespace issues found in 2 columns.
+
+- Row 3814 | URL: https://sortiment.lidl.ch/de/catalog/product/view/id/20869/s/mini-pizza-pancetta-provola-und-zwiebel-1015165/category/54/ | Columns: product_name, breadcrumb
+-- Promotional dates (promotion_valid_from and promotion_valid_to) are missing for 2 records.
+- Row 3173 | URL: https://www.lidl.ch/p/de-CH/weihnachtsbaumkugeln/p10060882
+- Row 3174 | URL: https://www.lidl.ch/p/de-CH/lambertz-lebkuchenmaennchen/p10060883
+
+7) wasalt_ksa_2026_11.json
+----------------------------
+- Data count mismatch
+-- The bathrooms value is recorded as +9 in the file, whereas the website displays it as 9+ for 3 records.
+- Row 15013 | URL: https://wasalt.com/en/property/sale/villa-544-sqm-with-3-apartments-facing-west-5895760
+- Row 15551 | URL: https://wasalt.com/en/property/sale/villa-721-sqm-facing-north-west-on-20m-width-street-5875733
+- Row 27474 | URL: https://wasalt.com/en/property/sale/villa-480-sqm-with-2-apartments-facing-east-5861344
+-- Whitespace issues found in 3 fields.
+- Row 463 | URL: https://wasalt.com/en/property/sale/apartment-19604-sqm-with-5-bedrooms-5922287 | Columns: broker_display_name, broker
+- Row 3 | URL: https://wasalt.com/en/property/sale/apartment-19598-sqm-with-5-bedrooms-5957227 | Column: description
+
+8) DataHut_AT_Billa_PriceExtractions_20261030.CSV
+---------------------------------------------------
+-- All three price fields (regular_price, selling_price, and promotion_price) have identical values for 9 records.
+- Row 183 | URL: https://shop.billa.at/produkte/knorr-klare-suppe-pflanzlich-0017013 | Price: 1.89
+- Row 2623 | URL: https://shop.billa.at/produkte/knorr-gemuesesuppe-wuerfel-00414401 | Price: 1.89
+
