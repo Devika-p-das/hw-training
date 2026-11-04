@@ -1,0 +1,61 @@
+1) DataHut_AT_Billa_PriceExtractions_20261103.CSV
+---------------------------------------------------
+-- All three price fields (regular_price, selling_price, and promotion_price) have identical values for 9 records.
+- Row 137 | URL: https://shop.billa.at/produkte/knorr-klare-suppe-pflanzlich-0017013 | Price: 1.89
+- Row 2609 | URL: https://shop.billa.at/produkte/knorr-gemuesesuppe-wuerfel-00414401 | Price: 1.89
+
+2) DataHut_SI_Dm_PriceExtractions_20261103.CSV
+-------------------------------------------------
+- Data count mismatch
+-- Whitespace issues found in 2 columns.
+- Row 328 | URL: https://www.dm.si/p/d/1321849/essence-maskara-i-love-extreme-volume | Column: product_name
+- Row 15 | URL: https://www.dm.si/p/d/1715572/babylove-naravna-mineralna-voda-brez-ogljikovega-dioksida | Column: breadcrumb
+
+3) DataHut_SI_Mercator_PriceExtractions_20261103.CSV
+-----------------------------------------------------
+- Data count mismatch
+
+4) DataHut_AT_Spar_PriceExtractions_20261103.CSV
+-----------------------------------------------------
+- Data count mismatch
+-- Whitespace issue found in 1 column.
+
+- Row 26688 | URL: https://www.spar.at/produktwelt/vorarlberg-milch-laendle-halbfettmilch-laenger-frisch-1-5-fett-p2020006312547  | Column: breadcrumb
+
+-- Unescaped pipe (|) characters found in 2 columns.
+- Row 7673 | URL: https://www.spar.at/produktwelt/isana-cleanser-aha-pha-peeling-125ml-p2020006024686  | Column: product_name
+- Row 16943 | URL: https://www.spar.at/produktwelt/mehrzweckschrauben-4x40-150stk-p2020005763197  | Column: site_shown_uom
+
+5) royallepage_2026_11_05.json
+-------------------------------
+-- - Whitespace issues found in 3 fields.
+- Row 270 | URL: https://www.royallepage.ca/en/agent/saskatchewan/saskatoon/george-west-fri-cmr/4766/  | Column: first_name
+- Row 4119 | URL: https://www.royallepage.ca/en/agent/ontario/kenora/jeff-vanwalleghem/31792/  | Column: office_name
+- Row 7815 | URL: https://www.royallepage.ca/en/agent/ontario/stoney-creek/garry-singh/76784/  | Column: social
+
+6) dubizzle_uae_2026_11_01.json
+---------------------------------
+- Data count mismatch
+-- Whitespace issues found in 6 fields.
+- Row 4 | URL: https://sharjah.dubizzle.com/property-for-rent/rooms-for-rent-flatmates/apartmentflat/2026/10/22/family-room-available-in-al-nahda-sharjah-12-886/   | Column: description
+- Row 14 | URL: https://sharjah.dubizzle.com/property-for-rent/rooms-for-rent-flatmates/apartmentflat/2026/8/25/fully-furnished-room-for-rent-female-tenan-12-906/  | Column: title
+- Row 4265 | URL: https://ajman.dubizzle.com/property-for-rent/rooms-for-rent-flatmates/apartmentflat/2026/10/17/furnished-room-for-rent-14-834/  | Column: reference_number
+- Row 5043 | URL: https://sharjah.dubizzle.com/property-for-sale/commercial/office/2026/4/6/high-value-office-space-in-aljada-cbd-s-12-342606/  | Column: agent_name
+- Row 5368 | URL: https://dubai.dubizzle.com/property-for-sale/commercial/office/2026/10/5/canal-view-vacant-close-to-metro-2-101536/  | Columns: broker, broker_display_name
+
+7) dubizzle_bah_2026_11_01.json
+----------------------------------
+-- Whitespace issues found in 5 fields.
+- Row 1180 | URL: https://aqarmap.com.eg/en/listing/7305443-for-sale-alexandria-al-agamy-shataa-el-nakheel/ | Columns: broker_display_name, broker
+- Row 35 | URL: https://aqarmap.com.eg/en/listing/7247400-for-sale-cairo-el-sheikh-zayed-city-compounds-zayed-heights-compound/ | Column: title
+- Row 30 | URL: https://aqarmap.com.eg/en/listing/7218646-for-sale-cairo-6th-of-october-el-tawsaat-el-shamalya-ltws-t-lsyhy-lshmly/ | Column: description
+- Row 376 | URL: https://aqarmap.com.eg/en/listing/7163022-for-sale-cairo-ljyz-shareaa-morad%20%20charel%20degol/ | Column: location
+-- depth, listing_type, seller_role also completely empty
+
+8) DataHut_AT_Dm_PriceExtractions_20261103.CSV
+-------------------------------------------------
+- Data count mismatch
+- Whitespace issue found in 1 column.
+Row 464 | URL: https://www.dm.at/p/d/3146833/dmbio-kraeutertee-deine-innere-ruhe-mit-kamille-minze-lavendel-und-ashwagandha-20-x-1-8g | Column: product_name
+
+

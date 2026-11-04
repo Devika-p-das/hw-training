@@ -1,0 +1,74 @@
+1) bayut_abudhabi_properties_buy_commercial_2026_11_04.json
+------------------------------------------------------------
+- data count mismatch.
+-touchedAt: API – 1793669915.04566 | File – 1793669915.045664
+coverPhoto.nimaScore: API – 6.00350546444694 | File – 6.003505464446944
+coverPhoto.url: Missing in API | Present in file – https://images.bayut.com/thumbnails/870734611-800x600.jpeg
+photos.url: Missing in API | Present in file – https://images.bayut.com/thumbnails/870734611-800x600.jpeg
+"listing_url": "https://www.bayut.com/property/details-16736529.html"
+   
+2) bayut_dubai_properties_buy_commercial_2026_11_04.json  
+---------------------------------------------------------
+- data count mismatch.
+- Mismatched values found in updatedAt, touchedAt, indyScore, indyScore_l1, indyScore_l2, and indyScore_l3 between the API response and the file.
+updatedAt: API – 1793726367 | File – 1793641487
+touchedAt: API – 1793756994.65777 | File – 1793683050.074372
+indyScore: API – 486 | File – 503
+indyScore_l1: API – 486 | File – 503
+indyScore_l2: API – 371 | File – 384
+indyScore_l3: API – 371 | File – 384
+"listing_url": "https://www.bayut.com/property/details-17021050.html "
+
+3) bayut_dubai_properties_rent_commercial_2026_11_04.json
+----------------------------------------------------------
+- data count mismatch
+- Minor decimal precision differences found in touchedAt and reactivatedAt between the API response and the file. All other compared values match.
+touchedAt: API – 1793483617.45447 | File – 1793483617.454472
+reactivatedAt: API – 1752329525.31389 | File – 1752329525.313888
+"listing_url": "https://www.bayut.com/property/details-8851241.html "
+
+4) bayut_abudhabi_properties_rent_commercial_2026_11_04.json
+-------------------------------------------------------------
+- Data count mismatch
+- Mismatched values found in
+touchedAt: API – 1793711240.27195 | File – 1793637278.826869
+indyScore: API – 616 | File – 637
+indyScore_l1: API – 616 | File – 637
+indyScore_l2: API – 503 | File – 520
+indyScore_l3: API – 503 | File – 520
+ "listing_url": "https://www.bayut.com/property/details-17013045.html "
+
+5) bayut_dubai_properties_rent_commercial_metadata_2026_11_04.csv
+-------------------------------------------------------------------
+- Data count mismatch.
+
+6) bayut_abudhabi_properties_rent_commercial_metadata_2026_11_04.csv
+----------------------------------------------------------------------
+- datacount mismatch
+
+7) bayut_dubai_properties_buy_commercial_metadata_2026_11_04.csv
+-----------------------------------------------------------------
+- Data count mismatch
+
+8) bayut_abudhabi_properties_buy_commercial_metadata_2026_11_04.csv
+-------------------------------------------------------------------
+- Data count mismatch
+
+9) bayut_transactions_rented_commercial_2026_11_04.json
+---------------------------------------------------------
+- Data count mismatch
+- beds is completely empty
+- Overall date range in dataset:
+Start date: 2024-10-16 00:00:00
+End date: 2026-11-04
+
+10) bayut_transactions_sold_commercial_2026_11_04.json:status(completed)
+------------------------------------------------------------------------
+- data count mismatch
+- Overall date range in dataset:
+Start date: 2025-11-11 
+End date: 2026-11-03
+- Empty fields
+beds        
+rent_contract_duration_months
+contract_monthly_amount

@@ -1,0 +1,57 @@
+1) nawy_egp_2026_11_01.json
+------------------------------
+- Data count mismatchh
+
+2) opensooq_bah_2026_11_01.json
+--------------------------------
+- Data count mismatch
+- Whitespace issues found in 2 fields.
+ Row 208 | URL: https://bh.opensooq.com/en/search/288606368  | Columns: broker_display_name, broker
+
+3) ajmanded_uae_2026_11.json
+------------------------------
+- Data count mismatch
+-- Whitespace issues found in 2 fields.
+- Row 77 | URL: https://eservices.ajmanded.ae/en/TradeLicense/License/65685802-2b02-450f-a049-ffb939a68d30 | Column: name
+- Row 31 | URL: https://eservices.ajmanded.ae/en/TradeLicense/License/fd16341b-0fd3-4174-b9af-7d6caa78fec8 | Column: building_number
+-- Trade licences expired more than two months before the November 2026 iteration date were found in 3 records:
+- Record 71 – Licence expiry date: 2026-08-11 – https://eservices.ajmanded.ae/en/TradeLicense/License/7e0ff999-b11a-49cd-8799-08ce1d853304
+- Record 73 – Licence expiry date: 2026-01-09 – https://eservices.ajmanded.ae/en/TradeLicense/License/6fa67d3b-67d5-4eef-a141-6e237405c3cd
+- Record 84 – Licence expiry date: 2026-02-12 – https://eservices.ajmanded.ae/en/TradeLicense/License/ae7ac71b-88d9-4ad8-b664-6a7cd2247c00
+
+4) machinerytrader_2026_11_02.csv
+-----------------------------------
+- Data count mismatch
+-- The file contains 626 columns, whereas the requirement specifies 654 columns.
+- 38 required columns are missing.
+- 10 extra columns are present in the file.
+-- Whitespace issues found in 5 columns.
+- Row 564 | URL: https://www.machinerytrader.com/listing/for-sale/258408365/2023-volvo-ec250el-crawler-excavators  | Columns: company_name, contact_person
+- Row 3144 | URL: https://www.machinerytrader.com/listing/for-sale/63037713/2019-prinoth-panther-t6-crawler-carriers  | Column: ProductConfiguration
+- Row 2859 | URL: https://www.machinerytrader.com/listing/for-sale/187945287/2011-doosan-xp375-air-compressors  | Column: EngineMake
+- Row 1938 | URL: https://www.machinerytrader.com/listing/for-sale/252599581/2017-international-hx-dump-trucks  | Column: StockNumber
+-- Unescaped pipe (|) characters found in 40 records in the description column.
+- Row 201 | URL: https://www.machinerytrader.com/listing/for-sale/255317923/2025-broderson-ic20-1k-carry-deck-cranes-slash-pick-and-carry-cranes
+
+5) data.json
+--------------
+- Data count mismatch
+- Column order mismatch.
+- English names found in project_name_ar for 41 records. Examples: project numbers 2968 (99 Park Place) and 3338 (Olivo Park Residences By Evera).
+
+6) bayut_uae_2026_11_02.json
+------------------------------
+- Data count mismatch
+- iteration number 2026_11_02 instead of 2026_11_01
+- free not present in the filein package type
+13 fields are completely empty in the file:
+
+ad_type, bln_number, ded_license_number, ded_number_2, ded_number_3, ded_number_4, depth, dtcm_licence, email, no_of_reviews, quality_lister, rating, sub_category_2
+- Whitespace issues found in 8 fields.
+- Row 6 | URL: https://www.bayut.com/property/details-17054062.html  | Column: description
+- Row 571 | URL: https://www.bayut.com/property/details-16564006.html  | Column: location
+- Row 1360 | URL: https://www.bayut.com/property/details-16965950.html  | Column: floorplan_type_identifier
+- Row 26193 | URL: https://www.bayut.com/property/details-17013377.html  | Columns: broker_display_name, broker
+- Row 68558 | URL: https://www.bayut.com/property/details-16937566.html  | Column: agent_name
+- Row 279342 | URL: https://www.bayut.com/property/details-7647106.html  | Column: reference_number
+- Row 290030 | URL: https://www.bayut.com/property/details-11375096.html  | Column: title
