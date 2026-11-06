@@ -1,0 +1,116 @@
+1) DataHut_SI_Dm_PriceExtractions_20261106.CSV
+----------------------------------------------------
+- Data count mismatch
+- Whitespace issues found in 2 columns.
+- Row 267 | URL: https://www.dm.si/p/d/1321849/essence-maskara-i-love-extreme-volume  | Column: product_name
+- Row 6 | URL: https://www.dm.si/p/d/1715572/babylove-naravna-mineralna-voda-brez-ogljikovega-dioksida  | Column: breadcrumb
+
+
+2) DataHut_SI_Mercator_PriceExtractions_20261106.CSV
+---------------------------------------------------------
+- Data count mismatch
+
+
+3) DataHut_AT_Spar_PriceExtractions_20261106.CSV
+--------------------------------------------------
+- Data count mismatch
+Whitespace issue found in 1 column.
+- Row 25711 | URL: https://www.spar.at/produktwelt/vorarlberg-milch-laendle-halbfettmilch-laenger-frisch-1-5-fett-p2020006312547  | Column: breadcrumb
+Unescaped pipe (|) characters found in 2 columns.
+- Row 9311 | URL: https://www.spar.at/produktwelt/isana-cleanser-aha-pha-peeling-125ml-p2020006024686  | Column: product_name
+- Row 18685 | URL: https://www.spar.at/produktwelt/mehrzweckschrauben-4x40-150stk-p2020005763197  | Column: site_shown_uom
+
+4) DataHut_CH_Lidl_PriceExtractions_20261106.CSV
+--------------------------------------------------
+- Data count mismatch
+- Promotional dates (promotion_valid_from and promotion_valid_to) are missing, although the promotional description (Aktion) is available on the website.
+
+- Row 3144 | URL: https://www.lidl.ch/p/de-CH/weihnachtsbaumkugeln/p10060882 
+
+
+5) DataHut_AT_Billa_PriceExtractions_20261106.CSV
+---------------------------------------------------
+- - All three price fields (regular_price, selling_price, and promotion_price) have identical values for 22 records.
+
+- Row 3535 | URL: https://shop.billa.at/produkte/argeta-jagdaufstrich-00462735  | Price: 1.69
+
+6) DataHut_AT_Dm_PriceExtractions_20261106.CSV
+------------------------------------------------
+- Data count mismatch
+-- Whitespace issue found in 1 column.
+- Row 513 | URL: https://www.dm.at/p/d/3146833/dmbio-kraeutertee-deine-innere-ruhe-mit-kamille-minze-lavendel-und-ashwagandha-20-x-1-8g | Column: product_name
+
+7) DataHut_IE_Tesco_FullDump_20261106.CSV
+-------------------------------------------
+- data count : 23846
+
+-- Whitespace issue found in 1 column.
+- Row 280 | URL: https://www.tesco.ie/shop/en-IE/products/308090553 | Column: nutritional_information
+- empty columns:  'store_name', 'store_addressline1', 'store_addressline2', 'store_suburb', 'store_state', 'store_postcode', 'store_addressid', 'brand_type', 'drained_weight', 'producthierarchy_level5', 'producthierarchy_level6', 'producthierarchy_level7', 'price_was', 'promotion_price', 'promotion_type', 'percentage_discount', 'package_sizeof_sellingprice', 'per_unit_sizedescription', 'price_valid_from', 'multi_buy_item_count', 'multi_buy_items_price_total', 'variants', 'instructions', 'instructionforuse', 'age_of_the_product', 'age_recommendations', 'flavour', 'nutritions', 'vitamins', 'labelling', 'grade', 'region', 'packaging', 'receipies', 'processed_food', 'frozen', 'chilled', 'organictype', 'cooking_part', 'handmade', 'max_heating_temperature', 'special_information', 'label_information', 'dimensions', 'special_nutrition_purpose', 'feeding_recommendation', 'warranty', 'color', 'model_number', 'material', 'usp', 'dosage_recommendation', 'tasting_note', 'food_preservation', 'size', 'file_name_1', 'file_name_2', 'file_name_3', 'file_name_4', 'file_name_5', 'file_name_6', 'competitor_product_key', 'fit_guide', 'occasion', 'material_composition', 'style', 'care_instructions', 'heel_type', 'heel_height', 'upc', 'features', 'dietary_lifestyle', 'importer_address', 'vinification_details', 'beer_deg', 'random_weight_flag', 'promo_limit', 'multibuy_items_pricesingle', 'perfect_match', 'servings_per_pack', 'suitable_for', 'standard_drinks', 'environmental', 'grape_variety', 'retail_limit'
+
+- promotion_valid_from is present, but the corresponding price_valid_from field is missing in the record.
+Example: Row 128 – https://www.tesco.ie/shop/en-IE/products/322543493
+
+8) DataHut_IE_Lidl_FullDump_20261106.CSV
+-----------------------------------------
+- Data count : 326
+
+- Empty columns: ['store_name', 'store_addressline1', 'store_addressline2', 'store_suburb', 'store_state', 'store_postcode', 'store_addressid', 'brand_type', 'drained_weight', 'producthierarchy_level6', 'producthierarchy_level7', 'promotion_type', 'package_sizeof_sellingprice', 'per_unit_sizedescription', 'price_per_unit', 'multi_buy_item_count', 'multi_buy_items_price_total', 'instructions', 'storage_instructions', 'preparationinstructions', 'instructionforuse', 'country_of_origin', 'allergens', 'age_of_the_product', 'age_recommendations', 'flavour', 'nutritions', 'nutritional_information', 'vitamins', 'labelling', 'grade', 'region', 'packaging', 'receipies', 'processed_food', 'barcode', 'frozen', 'chilled', 'organictype', 'cooking_part', 'handmade', 'max_heating_temperature', 'special_information', 'label_information', 'dimensions', 'special_nutrition_purpose', 'feeding_recommendation', 'warranty', 'color', 'model_number', 'material', 'usp', 'dosage_recommendation', 'tasting_note', 'food_preservation', 'size', 'rating', 'review', 'file_name_1', 'file_name_2', 'file_name_3', 'file_name_4', 'file_name_5', 'file_name_6', 'competitor_product_key', 'fit_guide', 'occasion', 'material_composition', 'style', 'care_instructions', 'heel_type', 'heel_height', 'upc', 'features', 'dietary_lifestyle', 'manufacturer_address', 'importer_address', 'distributor_address', 'vinification_details', 'recycling_information', 'return_address', 'alchol_by_volume', 'beer_deg', 'netcontent', 'netweight', 'ingredients', 'random_weight_flag', 'promo_limit', 'multibuy_items_pricesingle', 'perfect_match', 'servings_per_pack', 'warning', 'suitable_for', 'standard_drinks', 'environmental', 'grape_variety', 'retail_limit']
+
+- Unescaped pipe (|) characters were found in the product_description field in 12 records, which may cause issues with pipe-delimited file parsing.
+Example: Row 100 – https://www.lidl.ie/p/deluxe-pinot-gris-gisborne-new-zealand/p11004113
+
+- site_shown_uom missing for 322 products
+
+- Invalid promotion date ranges were found in 6 records, where promotion_valid_upto is earlier than promotion_valid_from.
+Examples:
+- Row 131 – Promotion valid from: 2026-11-12; valid upto: 2026-01-01 – https://www.lidl.ie/p/vitasia-10-chicken-breast-skewers/p11115738
+- Row 165 – Promotion valid from: 2026-10-29; valid upto: 2026-01-01 – https://www.lidl.ie/p/chef-select-indian-snack-selection/p11270957
+- Row 167 – Promotion valid from: 2026-11-12; valid upto: 2026-01-01 – https://www.lidl.ie/p/chicken-vegetable-gyozas/p11272692
+
+9) DataHut_IE_Supervalu_FullDump_20261106.CSV
+-----------------------------------------------
+- Data count :11285
+
+- Column-level data quality issues were identified in the nutritional_information field.
+Example: Row 791 – https://shop.supervalu.ie/sm/delivery/rsid/5550/product/supervalu-fresh-irish-gourmet-sirloin-beef-burgers-2-pack-260-g-id-1574099000
+
+- Empty columns: ['store_name', 'store_addressline1', 'store_addressline2', 'store_suburb', 'store_state', 'store_postcode', 'store_addressid', 'brand', 'brand_type', 'drained_weight', 'producthierarchy_level5', 'producthierarchy_level6', 'producthierarchy_level7', 'promotion_type', 'package_sizeof_sellingprice', 'per_unit_sizedescription', 'multi_buy_item_count', 'multi_buy_items_price_total', 'variants', 'instructions', 'preparationinstructions', 'age_of_the_product', 'age_recommendations', 'flavour', 'nutritions', 'vitamins', 'labelling', 'grade', 'region', 'packaging', 'receipies', 'processed_food', 'frozen', 'chilled', 'organictype', 'cooking_part', 'handmade', 'max_heating_temperature', 'special_information', 'label_information', 'dimensions', 'special_nutrition_purpose', 'feeding_recommendation', 'warranty', 'color', 'model_number', 'material', 'usp', 'dosage_recommendation', 'tasting_note', 'food_preservation', 'size', 'rating', 'review', 'file_name_1', 'file_name_2', 'file_name_3', 'file_name_4', 'file_name_5', 'file_name_6', 'competitor_product_key', 'fit_guide', 'occasion', 'material_composition', 'style', 'care_instructions', 'heel_type', 'heel_height', 'upc', 'dietary_lifestyle', 'manufacturer_address', 'importer_address', 'vinification_details', 'recycling_information', 'return_address', 'alchol_by_volume', 'beer_deg', 'netcontent', 'netweight', 'random_weight_flag', 'promo_limit', 'multibuy_items_pricesingle', 'perfect_match', 'servings_per_pack', 'suitable_for', 'standard_drinks', 'environmental', 'grape_variety', 'retail_limit']
+
+10) DataHut_IE_Dunnes_FullDump_20261106.CSV
+------------------------------------------------
+- Data count : 30863
+
+- Empty values:  ['store_name', 'store_addressline1', 'store_addressline2', 'store_suburb', 'store_state', 'store_postcode', 'store_addressid', 'brand_type', 'drained_weight', 'producthierarchy_level6', 'producthierarchy_level7', 'promotion_valid_from', 'promotion_valid_upto', 'promotion_type', 'percentage_discount', 'promotion_description', 'package_sizeof_sellingprice', 'per_unit_sizedescription', 'price_valid_from', 'price_per_unit', 'multi_buy_item_count', 'multi_buy_items_price_total', 'instructions', 'storage_instructions', 'preparationinstructions', 'instructionforuse', 'country_of_origin', 'allergens', 'age_of_the_product', 'age_recommendations', 'flavour', 'nutritions', 'nutritional_information', 'vitamins', 'labelling', 'grade', 'region', 'packaging', 'receipies', 'processed_food', 'frozen', 'chilled', 'organictype', 'cooking_part', 'handmade', 'max_heating_temperature', 'special_information', 'label_information', 'dimensions', 'special_nutrition_purpose', 'feeding_recommendation', 'warranty', 'model_number', 'material', 'usp', 'dosage_recommendation', 'tasting_note', 'food_preservation', 'rating', 'review', 'file_name_1', 'file_name_2', 'file_name_3', 'file_name_4', 'file_name_5', 'file_name_6', 'occasion', 'style', 'heel_type', 'heel_height', 'upc', 'features', 'dietary_lifestyle', 'manufacturer_address', 'importer_address', 'distributor_address', 'vinification_details', 'recycling_information', 'return_address', 'alchol_by_volume', 'beer_deg', 'netcontent', 'netweight', 'ingredients', 'random_weight_flag', 'promo_limit', 'multibuy_items_pricesingle', 'perfect_match', 'servings_per_pack', 'suitable_for', 'standard_drinks', 'environmental', 'grape_variety', 'retail_limit']
+
+- competitor_name is Dunnes not dunnes
+
+- Column-level data quality issues were identified in the image_url_2 field.
+Example: Row 6790 – https://www.dunnesstores.com/paul-costelloe-living-studio-black-stitch-front-trousers-3618358/p?skuId=271194
+
+- Unescaped pipe (|) characters were found in the fit_guide field in 6 records, which may cause issues with pipe-delimited file parsing.
+Example: Row 15849 – https://www.dunnesstores.com/rechareable-flameless-candles---pack-of-3-7715681/p?skuId=248968
+
+- Invalid or broken PDP URLs were found in 2 records. Both URLs lead to a "Page Not Found" error when accessed.
+Row 16564 – https://www.dunnesstores.com/pomegranate - orchid-luxury-diffuser---100ml-7780117whit/p?skuId=240684
+Row 16566 – https://www.dunnesstores.com/pomegranate - orchid-luxury-diffuser---100ml-7780117whit/p?skuId=240685
+
+11) dubailand_uae_2026_11_05_05.xlsx
+--------------------------------------
+- Data count : 10001
+
+- Invalid phone number values were identified in the Phone Number field, including incomplete numbers, zero-only values, invalid characters, and non-numeric entries.
+Examples:
+- Row 762 – 971-4-
+- Row 551 – 04
+- Row 1202 – 0000
+- Row 1222 – 0
+- Row 2927 – 971|L
+- Row 6795 – -
+
+- Invalid website values were identified in the Website field, including non-URL text, phone numbers, and numeric or zero-only values.
+Examples:
+- Row 78 – Simon
+- Row 159 – 0503002225
+- Row 5013 – 0
+
