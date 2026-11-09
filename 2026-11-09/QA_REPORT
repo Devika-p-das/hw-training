@@ -1,0 +1,105 @@
+1) DataHut_AT_Dm_PriceExtractions_20261109.CSV
+-----------------------------------------------
+- Data count mismatch
+- Whitespace issue found in 1 column.
+Row 398 | URL: https://www.dm.at/p/d/3146833/dmbio-kraeutertee-deine-innere-ruhe-mit-kamille-minze-lavendel-und-ashwagandha-20-x-1-8g | Column: product_name
+
+2) DataHut_AT_Spar_PriceExtractions_20261109.CSV
+-------------------------------------------------
+- Data count mismatch
+- Whitespace issue found in 1 column.
+Row 23790 | URL: https://www.spar.at/produktwelt/vorarlberg-milch-laendle-halbfettmilch-laenger-frisch-1-5-fett-p2020006312547 | Column: breadcrumb
+- Promotional dates (promotion_valid_from and promotion_valid_upto) are missing for 1,281 records, although promotional descriptions and prices are available.
+Row 43245 | URL: https://www.spar.at/produktwelt/kelly-s-chips-salt-vinegar-p2374239 | Promotion description: Mengenvorteil ab 2 Stk. je | Promotion price: 1.99
+
+3) DataHut_SI_Spar_PriceExtractions_20261109.CSV
+--------------------------------------------------
+- Data count mismatch
+- Unexpected empty columns : 'percentage_discount'
+- Suspicious quantity/unit values found in 3 records. The grammage_unit is incorrectly recorded as g instead of kg.
+Row 709 | URL: https://online.spar.si/p/nadomestek-kave-z-okusom-po-kakavu-calmrooty-62g-681408 | Quantity: 0.062 | Actual unit: g | Expected unit: kg
+Row 6556 | URL: https://online.spar.si/p/instant-ocvrti-riz-vegetarijanski-mama-80g-683913 | Quantity: 0.080 | Actual unit: g | Expected unit: kg
+Row 8556 | URL: https://online.spar.si/p/testenine-fusilli-feelingok-220g-679091 | Quantity: 0.220 | Actual unit: g | Expected unit: kg
+
+4) DataHut_SI_Dm_PriceExtractions_20261109.CSV
+----------------------------------------------
+- Data count mismatch
+- Whitespace issues found in 2 columns.
+Row 236 | URL: https://www.dm.si/p/d/1321849/essence-maskara-i-love-extreme-volume | Column: product_name
+Row 32 | URL: https://www.dm.si/p/d/1715572/babylove-naravna-mineralna-voda-brez-ogljikovega-dioksida | Column: breadcrumb
+
+5) bayut_bah_2026_11_02.json
+--------------------------------
+- Data count mismatch
+
+6) bahrainfinder_bah_2026_11_02.json
+-------------------------------------
+- The furnished column contains the values مفروشة بالكامل, غير مفروش, مفروشة جزئيًا, Furnished, Unfurnished, and Semi Furnished.
+
+7) qatarliving_qat_2026_11_02.json
+------------------------------------
+- Data count mismatch
+- Whitespace issue found in 1 field.
+Row 3 | URL: https://qlp.qatarliving.com/en/properties/rent/residential/apartment/amazing_furnished_studio_in_najma/160620  | Field: description
+
+8) nawy_egp_2026_11_02.json
+-----------------------------
+- Data count mismatch
+
+9) dari_ae_2026_11_02.json
+---------------------------
+- Data count mismatch
+- Whitespace issue found in 1 field.
+Row 280 | URL: https://www.dari.ae/en/app/directory/profession?id=35403 | Field: company_employees
+
+10) bayut_egp_2026_11_02.json
+-------------------------------
+- Data count mismatch
+- Additional columns:
++ completion_status
++ ownership
+- Whitespace issues found in 2 fields.
+Row 12711 | URL: https://www.bayut.eg/en/property/details-504319292.html | Fields: broker_display_name, broker
+- price per has values
+<BLANK>: 191,183
+Monthly: 53,206
+Daily: 3,119
+Yearly: 60
+Weekly: 42
+
+11) bayut_uae_2026_11_09.json
+------------------------------
+- Data count mismatch
+-- Whitespace issues found in 7 fields.
+- Row 8 | URL: https://www.bayut.com/property/details-17136634.html | Field: description
+- Row 191 | URL: https://www.bayut.com/property/details-17135323.html | Field: location
+- Row 429 | URL: https://www.bayut.com/property/details-17136603.html | Field: floorplan_type_identifier
+- Row 27119 | URL: https://www.bayut.com/property/details-17013377.html | Fields: broker_display_name, broker
+- Row 262209 | URL: https://www.bayut.com/property/details-7647106.html | Field: reference_number
+- Row 299966 | URL: https://www.bayut.com/property/details-11375096.html | Field: title
+- no value free in package type
+- no empty values in the file for currency
+
+12) data.json
+--------------
+- Data count mismatch
+- 1 inspection record has an inspection date (09/09/2026) older than the permitted cutoff date (12/10/2026).
+Project Number: 4559
+- Field order mismatch
+- invalid phone values found in the management_companies collection under the phone field. 
+Project Number: 2595 | Invalid Phone: 800 Nakheel
+
+13) machinerytrader_2026_11_09.csv
+-----------------------------------
+- Data count mismatch
+- 38 required columns are missing.
+13 extra columns are present in the file.
+-- Whitespace issues found in 5 columns.
+- Row 442 | URL: https://www.machinerytrader.com/listing/for-sale/240679133/2020-volvo-ecr58d-mini-excavators | Columns: company_name, contact_person
+- Row 3160 | URL: https://www.machinerytrader.com/listing/for-sale/187945287/2011-doosan-xp375-air-compressors | Column: EngineMake
+- Row 1943 | URL: https://www.machinerytrader.com/listing/for-sale/252599581/2017-international-hx-dump-trucks | Column: StockNumber
+- Row 3400 | URL: https://www.machinerytrader.com/listing/for-sale/63037713/2019-prinoth-panther-t6-crawler-carriers | Column: ProductConfiguration
+- Unescaped pipe (|) characters found in the description column for 35 records.
+Row 88 | URL: https://www.machinerytrader.com/listing/for-sale/259003661/2024-vermeer-navigator-d24x40-series-iii-directional-drills
+
+14) 
