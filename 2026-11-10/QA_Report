@@ -1,0 +1,66 @@
+1) bayut_uae_project_2026_11_02.json
+-------------------------------------
+- Data count mismatch
+--  Whitespace issues found in 2 fields.
+- Row 2052 | URL: https://www.bayut.com/for-sale/off-plan/property/abu-dhabi/al-shamkha/al-reeman-1/nourwatan | Field: developer_name
+- Row 64 | URL: https://www.bayut.com/for-sale/off-plan/property/dubai/the-oasis-by-emaar/mareva-the-oasis | Field: unit_type
+
+2) dubizzle_qat_2026_11_02.json
+---------------------------------
+Whitespace issues found in 4 fields.
+- Row 2125 | URL: https://www.dubizzle.qa/en/ad/high-quality-5bd-stand-alone-villa-ID120318475.html | Fields: broker_display_name, broker
+- Row 24 | URL: https://www.dubizzle.qa/en/ad/luxury-including-all-bills-first-month-free-hot-deal-ID120369201.html | Field: title
+- Row 3 | URL: https://www.dubizzle.qa/en/ad/family-studio-apartment-rent-ID120383943.html | Field: description
+The number_of_photos field is empty for 3 records, although images are available on the website.
+- Row 929 | URL: https://www.dubizzle.qa/en/ad/workshop-gla-ss-aluminum-or-similar-industrial-operations-ID120346151.html
+- Row 1913 | URL: https://www.dubizzle.qa/en/ad/high-quality-5bd-stand-alone-villa-ID120365384.html
+- Row 1915 | URL: https://www.dubizzle.qa/en/ad/open-storage-land-available-for-rent-upto-1000sqm-ID120381185.html
+
+3) aqarmap_egp_2026_11_02.json
+--------------------------------
+- Data count mismatch
+- Whitespace issues found in 5 fields.
+- Row 2 | URL: https://aqarmap.com.eg/en/listing/7133258-for-rent-port-said-kmbwnd-fy-bwr-s-yd-porto-said-compound-amer-group/ | Field: title
+- Row 3 | URL: https://aqarmap.com.eg/en/listing/7133258-for-rent-port-said-kmbwnd-fy-bwr-s-yd-porto-said-compound-amer-group/ | Field: description
+- Row 417 | URL: https://aqarmap.com.eg/en/listing/7163022-for-sale-cairo-ljyz-shareaa-morad%20%20charel%20degol/ | Field: location
+- Row 1072 | URL: https://aqarmap.com.eg/en/listing/7373512-for-sale-alexandria-al-agamy-shataa-el-nakheel/ | Fields: broker_display_name, broker
+
+4) DataHut_AT_Spar_PriceExtractions_20261110.CSV
+-------------------------------------------------
+- Data count mismatch
+- Whitespace issue found in 1 field.
+Row 25623 | URL: https://www.spar.at/produktwelt/vorarlberg-milch-laendle-halbfettmilch-laenger-frisch-1-5-fett-p2020006312547  | Field: breadcrumb
+-- Unescaped pipe (|) characters found in 2 columns:
+- product_name – 10 records.
+  - Row 8922 | URL: https://www.spar.at/produktwelt/isana-cleanser-aha-pha-peeling-125ml-p2020006024686 
+- site_shown_uom – 9 records.
+  - Row 16757 | URL: https://www.spar.at/produktwelt/mehrzweckschrauben-4x40-150stk-p2020005763197 
+
+5) DataHut_AU_Coles_FullDump_20261111.CSV
+------------------------------------------
+- DataHut_AU_Coles_FullDump_20261111.CSV instead of DataHut_AU_Coles_FullDump_20261110.CSV
+- Data count mismatch
+-- Whitespace issues found in 5 columns.
+- Row 117 | URL: https://www.coles.com.au/product/b.box-360-drinking-cup-250ml-6+-months-1-each-5245049 | Column: product_description
+- Row 718 | URL: https://www.coles.com.au/product/aldinga-smoked-turkey-breast-approx-1kg-5033197 | Column: instructions
+- Row 7926 | URL: https://www.coles.com.au/product/coles-finest-slow-cooked-pork-rib-rack-roast-approx.-1kg-2026559 | Column: preparationinstructions
+- Row 16141 | URL: https://www.coles.com.au/product/gourmet-beef-chevups-original-400g-5175690 | Column: instructionforuse
+- Row 7491 | URL: https://www.coles.com.au/product/whole-earth-blue-agave-sweetner-raw-330g-6576449 | Column: ingredients 
+- Expected empty but not empty: ['regular_price', 'barcode']
+- Unexpected empty columns     : ['store_name', 'store_state', 'store_postcode', 'producthierarchy_level1', 'producthierarchy_level2', 'producthierarchy_level3', 'promotion_price', 'promotion_type', 'promotion_description', 'multi_buy_item_count', 'multi_buy_items_price_total', 'breadcrumb', 'labelling', 'file_name_1', 'features', 'promo_limit', 'multibuy_items_pricesingle', 'suitable_for', 'environmental', 'retail_limit'] 
+
+6) data.json
+---------------
+- Data count mismatch
+- invalid phone values found in the management_companies collection under the phone field. 
+Project Number: 2595 | Invalid Phone: 800 Nakheel
+- English names found in project_name_ar for 41 records. Examples: project numbers 2968 (99 Park Place) and 3338 (Olivo Park Residences By Evera).
+
+7) DataHut_AT_Billa_FullDump_20261112.CSV
+-------------------------------------------
+- Data count mismatch
+- Expected empty but not empty: ['age_of_the_product', 'packaging']
+Unexpected empty columns     : ['file_name_1', 'file_name_2', 'file_name_3', 'file_name_4', 'file_name_5', 'file_name_6', 'retail_limit']
+All three price fields (regular_price, selling_price, and promotion_price) have identical values for 22 records.
+- Row 3480 | URL: https://shop.billa.at/produkte/argeta-jagdaufstrich-00462735  | Price: 1.69
+- Row 3669 | URL: https://shop.billa.at/produkte/argeta-thunfisch-mit-getrockneten-tomaten-aufstrich-00472274  | Price: 1.69

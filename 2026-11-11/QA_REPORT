@@ -1,0 +1,24 @@
+1) DataHut_AT_Dm_PriceExtractions_20261111.CSV
+------------------------------------------------
+- Data count mismatch
+- Whitespace issue found in 1 field.
+Row 72 | URL: https://www.dm.at/p/d/3153618/dmbio-kraeutertee-lose-brennnessel  | Field: product_name
+
+2) DataHut_AT_Billa_PriceExtractions_20261111.CSV
+--------------------------------------------------
+- All three price fields (regular_price, selling_price, and promotion_price) have identical values for 22 records.
+- Row 3491 | URL: https://shop.billa.at/produkte/argeta-jagdaufstrich-00462735 | Price: 1.69
+- Row 3707 | URL: https://shop.billa.at/produkte/argeta-thunfisch-mit-getrockneten-tomaten-aufstrich-00472274 | Price: 1.69
+
+3) bayut_abudhabi_properties_buy_residential_2026_11_11.json
+---------------------------------------------------------------
+- Data count mismatch
+- touchedAt has a minor decimal precision difference:
+File: 1794138437.381172
+API: 1794138437.38117
+
+4) bayut_abudhabi_properties_rent_commercial_2026_11_11.json
+---------------------------------------------------------------
+- Data count mismatch
+- area: API value is 225.01116288, whereas file value is 225.01116288000003.
+ touchedAt: API value is 1794226563.95143, whereas file value is 1794226563.951426.
